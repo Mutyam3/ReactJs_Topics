@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+// Akkada export chesinavi ani ikkada import cheyali 
+
+import Counter from "./Counter" // ikkada .jsx vadodhu anthe moddi rakam 
+import TodoList from "./Todo" 
+
+// idi main component anni component lu ikkada ki vachi sastai 
+// Gangarpanam.
+// Mother component [anni ikkadanunche load avuthai]
+// ee app.js file ni rename chestuna app.jsx laga endhuku raa ante closing tags vastai
+// time waste processing closing tags rasukunta kurchunte
+// ikkada jsx literal lo elements ki css add cheyali ante className ani ivvali class ani kadu 
+function App() { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="mainBox"> 
+            <h1>Mutyam Bhargav Reddy Counter and Todo App</h1>
+            <Counter></Counter>
+            <TodoList></TodoList>
     </div>
   );
 }
