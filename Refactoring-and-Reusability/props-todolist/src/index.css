@@ -1,0 +1,81 @@
+.App{
+
+    border : 2px solid black;
+    padding:10px;
+    margin:10px;
+    text-align: center;
+    width:75%;
+    margin:auto
+}
+
+.TodoBox{
+     
+   border:2px solid black;
+   padding:10px;
+   margin:10px;
+   text-align: center;
+}
+
+#itemsContainer{
+
+   display:flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   gap:20px;
+   
+}
+
+#itemsContainer button{
+
+       padding: 8px 15px; 
+       background-color: rgb(239, 237, 237);
+       border:0px;
+       border-radius:10px;
+
+      
+}
+
+.items 
+{
+    display : flex;
+    justify-content: space-evenly;
+    border:0px;
+    width :27%;
+    padding:10px;
+    background-color: red;
+    align-items: center;
+    border-radius:20px;
+    color:white;
+    font-size: large;
+    
+}
+
+#inputContainer
+{
+     border:2px solid black;
+     width: fit-content;
+     margin:0 auto;
+     border-radius:20px;
+     overflow: hidden;
+
+}
+
+#inputContainer input{
+    padding : 10px;
+    outline : 0px;
+    border: 0px;
+
+
+}
+
+#inputContainer button
+{
+     padding: 10px;
+     border:0px; 
+     font-size: medium;
+     background-color: crimson;
+     color: aliceblue;
+
+}
+
