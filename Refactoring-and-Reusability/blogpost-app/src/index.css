@@ -1,0 +1,84 @@
+.App{
+
+  border:2px solid black;
+  padding:20px;
+  margin:25px;
+  text-align: center;
+  border-radius: 20px;
+  font-family:Arial;
+}
+
+.App h1{
+  margin-bottom : 0px;
+}
+
+.App p{
+  margin-top:2px;
+  margin-left:40px;
+}
+
+#MainBox{
+    display :flex;
+    gap:20px;
+    border-radius: 20px;
+
+}
+
+#postBox
+{
+    border:2px solid black;
+    padding:25px;
+    border-radius:15px
+    
+}
+
+#postBtn
+{
+    display:flex;
+    justify-content: space-between;
+}
+
+.App button{
+   padding:15px 20px;
+   border:0px;
+   border-radius:15px;
+}
+
+.App span{
+    font-weight: bold;
+    font-size: medium;
+}
+
+#inputBox input, #inputBox textarea{
+   margin:10px;
+}
+
+#inputBox button 
+{
+    background-color: rgba(52, 136, 9, 0.967);
+    font-size: medium;
+    font-weight: bold;
+    color:white;
+}
+
+#inputBox
+{
+  border:2px solid black;
+  border-radius: 20px;
+  padding:20px;
+  height:50vh;
+  box-sizing: border-box;
+}
+
+#postBox
+{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+  margin-bottom:20px;
+}
+
+
+
+
+
