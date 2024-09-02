@@ -1,0 +1,21 @@
+
+.App{
+  border:2px solid black;
+  padding:20px;
+  width:50%;
+  margin:auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainBox{
+  display:flex;
+  justify-content: space-evenly;
+  gap:10px;
+}
+.playerBox{
+      border:2px solid black; 
+      padding:35px;
+}
+
+
