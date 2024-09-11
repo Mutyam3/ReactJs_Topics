@@ -1,0 +1,13 @@
+.App{
+  border:2px solid black;
+  padding:10px;
+  margin:10px;
+}
+
+button{
+  padding:10px 14px;
+  border:0px;
+  border-radius: 12px;
+  
+  
+}
