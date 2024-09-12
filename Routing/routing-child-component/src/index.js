@@ -10,7 +10,7 @@ import ContactUs from './ContactUs';
 import Service from './Services';
 import Countries from './Countries';
 import CountryDetails from './CountryDetails';
-
+import ServiceDetails from './ServiceDetails';
 
 
 
@@ -34,7 +34,13 @@ const myRouter = createBrowserRouter([
                          },
                          {
                               path : '/services',
-                              element : <Service></Service>
+                              element : <Service></Service>,
+                              children : [
+                                 {
+                                    path : '/services/:s',
+                                    element : <ServiceDetails></ServiceDetails>
+                                 }
+                              ]
                          },
                          {
                               path : '/countries',
