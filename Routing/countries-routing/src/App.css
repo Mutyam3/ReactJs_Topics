@@ -1,0 +1,44 @@
+.App{
+  border:2px solid black;
+  margin:10px;
+  padding:20px;
+
+}
+
+.filterSection{
+  border:2px solid black;
+  padding:20px
+}
+
+.countrySec{
+   display:flex;
+   /* justify-content: space-between; */
+}
+
+.countryGrid
+{
+   border:2px solid black;
+   width:200px;
+   padding: 15px;
+   margin:20px;
+   height:300px;
+}
+
+.GridContainer{
+
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+}
+
+.countryList{
+
+  display:flex;
+  border:2px solid black;
+  align-items: center;
+  padding:10px;
+  justify-content: space-between;
+  width:500px;
+  margin:20px;
+}
