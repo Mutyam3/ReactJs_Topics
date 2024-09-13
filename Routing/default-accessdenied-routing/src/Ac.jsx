@@ -4,10 +4,10 @@ function Ac()
 {
     return (
         <div className="App">
-            <h1>Air Conditioner -  Daikin </h1>
+            <h1>Air Conditioner -  Daikin Ac </h1>
         </div>
     )
 }
 
 
-export default Ac
+export default Ac 
