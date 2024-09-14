@@ -1,0 +1,26 @@
+
+.head{
+  border : 2px solid black;
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0px 20px;
+  border-radius: 15px;
+}
+
+.head button{
+
+  font-size: x-large;
+  border:0px;
+  background-color: crimson;
+  color:white;
+}
+
+
+.matter{
+
+  border:2px solid black;
+  padding:20px;
+  border:0px;
+  
+}
