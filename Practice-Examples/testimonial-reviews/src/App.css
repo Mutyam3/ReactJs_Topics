@@ -1,0 +1,60 @@
+
+
+.App{
+    border:2px solid black;
+    padding: 10px;
+    margin : 10px;
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+    height : 93vh;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.reviewSection{
+    border:2px solid black;
+    padding: 10px;
+    margin : 10px;
+    width:50%;
+    margin:auto
+}
+
+.imgDiv{
+
+    border:2px solid black;
+    width : 150px;
+    margin:auto;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imgDiv img{
+
+    object-fit:fill;
+    width : 100%;
+    height:100%;
+}
+
+button {
+
+    padding: 12px 17px;
+    color : whitesmoke;
+    background-color: crimson;
+    border:0px;
+    border-radius : 10px;
+    font-size: medium;
+   
+}
+
+#svgBtn{
+     
+    display:flex;
+    width :200px;
+    justify-content: space-between;
+    border:2px aolid black;
+    margin:auto;
+    padding:15px
+}
