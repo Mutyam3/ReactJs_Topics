@@ -1,0 +1,41 @@
+.App{
+
+    border : 2px solid black;
+    padding : 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.mainContainer{
+
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.listContainer
+{
+    border : 1px solid rgb(227, 225, 225);
+    padding :0px;
+    list-style-type: none;
+    width :fit-content;
+    
+}
+
+.listContainer h3
+{
+    margin : 0px 0px 0px 0px;
+    border : 1px solid rgb(204, 200, 200);
+    padding : 10px;
+    background-color: rgb(13,110,253);
+    
+}
+
+
+.listDiv
+{
+    border: 1px solid rgb(218, 213, 213);
+    padding : 10px;
+    
+}
