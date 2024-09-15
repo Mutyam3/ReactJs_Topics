@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Conditional styling a table 
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="data.js"></script>
+
+        <style>
+            #root {
+                font-family:'arial' ;
+                border:2px solid black;
+                padding:20px;  
+                height :50vh;
+                margin:20px;        
+            }
+
+            table{
+                width :50%;
+                margin:auto;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+       <div id="root">
+
+       </div>
+
+       <script type="text/babel">
+
+                    function MainCompo()
+                    {
+                        return (
+                            <table border="" >
+                                <thead style={{backgroundColor:'grey', color:'white'}}>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Course</th>
+
+                                </thead>
+                                <tbody>
+                                {
+                                   userDetails.map((el)=>{
+                                         return (
+                                            <tr style={el.gender=='Male' ?  {backgroundColor : 'crimson', color:'white'}: {backgroundColor : 'pink', color : 'black'}}>
+                                                <td>{el.firstName}</td>
+                                                <td>{el.lastName}</td>
+                                                <td>{el.age}</td>
+                                                <td>{el.gender}</td>
+                                                <td>{el.course}</td>
+                                            </tr> 
+                                        
+                                         )
+                                   })
+                                }
+                                </tbody>
+                            </table>
+
+                        )
+                    }
+
+                    ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+
+       </script>
+    </body>
+</html>
