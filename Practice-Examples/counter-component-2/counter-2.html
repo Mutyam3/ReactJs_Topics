@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Counter-2 
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+        <div id="root"> 
+
+        </div>
+
+
+        <script  type="text/babel">
+
+                function Counter()
+                {
+                    const [count, setCounter] = React.useState(10)
+
+                      function incByTen()
+                      {
+                          setCounter(count + 10)
+                      }
+
+                      function incByHund()
+                      {
+                           setCounter(count + 100)  
+                      }
+
+                      function dec()
+                      {
+                           setCounter(count - 10)
+                      }
+
+                    return (
+                        <div>
+                             <h2>welcome to components</h2>
+                             
+                             <h1>Counter : {count}</h1>
+
+                             <button onClick = {incByTen}>Inc count by 10</button>
+                             <button onClick = {incByHund}>Inc count by 100</button>
+                             <button onClick = {dec}>Decrement count by 10</button>
+                        </div>
+                    )
+                }
+
+                ReactDOM.render(<Counter/> ,document.getElementById('root'))
+
+        </script>
+    </body>
+</html>
