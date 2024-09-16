@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==>like_dislike
+        </title>
+
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+            #root{
+                  
+                text-align: center;
+                position : absolute;
+                top : 50%;
+                left:50%;
+                transform: translate(-50%, -50%)
+
+            }
+        </style>
+
+
+    </head>
+        <body>
+            
+            <div id="root">
+
+            </div>
+
+            <script type="text/babel">
+
+                 function LikeDislike()
+                 {
+
+                    const [like, setLike] = React.useState(0)
+                    const [dislike, setDisLike] = React.useState(0)
+
+                        function likeFn()
+                        {
+                              setLike(like+1)
+                        }
+
+                        function dislikeFn()
+                        {
+                                setDisLike(dislike + 1)
+                        }
+
+
+                    return (
+                        <div >
+                           <button onClick = {likeFn}>Like</button> <b>{like}</b>  &nbsp;&nbsp;&nbsp;&nbsp;
+                           <button onClick = {dislikeFn}>Dislike</button> <b>{dislike}</b>
+                        </div>
+                    )
+                 }
+
+
+                 ReactDOM.render(<LikeDislike/>, document.getElementById('root'))
+
+
+
+            </script>
+        </body>
+    
+</html>
