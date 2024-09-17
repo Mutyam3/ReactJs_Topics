@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==>  Accordian-2 
+        </title>
+             
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+            .headSec{
+
+                display:flex;
+                justify-content : space-between;
+                align-items : center;
+                border:2px solid black;
+                margin:10px;
+                padding:10px;
+                background-color: blueviolet;
+
+            }
+
+            .maindiv p{
+
+                padding:20px
+            }
+
+
+          
+        </style>
+
+    </head>
+
+    <body>
+
+         <div id="root">
+
+         </div>
+
+
+         <script type="text/babel">
+
+            var details = [
+                           {
+                               title : "Section 1",
+                               description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incclassclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                           },
+                           {
+                                title : 'Section 2',
+                                description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incclassclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+
+                           },
+                           {
+                                 title : 'Section 3',
+                                 description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incclassclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                           }
+                           ]
+
+                 function Accordion()
+                 {
+
+                         
+                         const [dis, setDis] = React.useState("none")
+                         const [indx, setIndx] = React.useState(null)
+
+                         function show(ind)
+                         {
+                               setIndx(ind)
+
+                               if(dis=="none")
+                               {
+                                   setDis("block")
+                                   
+                               }
+                               else 
+                               {
+                                   setDis("none") 
+                               }
+                         }
+
+                      return (
+                        <div>
+                            {
+                                details.map((el, ind)=>{
+                                    return (
+                                        <div className="maindiv">
+                                            <div className = 'headSec'><h2>{el.title}</h2>
+
+                                            <button onClick = {() => {show(ind)}}>
+                                                           {indx == ind ? dis == "none"  ? "+" : "-"   : "+"}
+                                             </button></div>
+
+                                            <p style={ indx == ind ? dis=="none" ? {display : "none"} : {display : "block"} : {display : "none"}}>{el.description}</p>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                      )
+                 }
+
+                 ReactDOM.render(<Accordion/> , document.getElementById('root'))
+
+         </script>
+
+         
+
+
+    </body>
+</html>
