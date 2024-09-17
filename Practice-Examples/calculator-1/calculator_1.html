@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> calculator_1
+        </title>
+
+        
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="root"> 
+
+        </div>
+
+        <script type="text/babel">
+
+                   function MainCompo()
+                   {
+                        const [text1, setText1] = React.useState("")
+                        const [text2, setText2] = React.useState("")
+                        const [dis, setDis] = React.useState(0)
+                        
+                        function txt1(e)
+                        {
+                              setText1( + e.target.value)
+                        }
+
+                        
+                        function txt2(e)
+                        {
+                              setText2( + e.target.value)
+                        }
+
+                        function add()
+                        {
+                           var temp = text1 + text2
+                               setDis(temp)
+                        }
+
+                      return (
+                        <div>
+                            <input type = "text" onChange = {txt1}/>
+                            <input type = "text" onChange = {txt2}/>
+                            <button onClick = {add}>Add Numbers</button>
+                             <h1>{dis}</h1>
+                        </div>
+                      )
+                   }
+
+                   ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+
+        </script>
+    </body>
+</html>
