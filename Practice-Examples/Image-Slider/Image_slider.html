@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Image-slider
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+        <style>
+             .MainDiv{
+
+                border :2px solid black;
+                width : fit-content;
+                margin : auto;
+
+             }
+
+             #d1{
+
+                display : flex;
+                justify-content: space-between;
+
+             }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+                  var imageDetails = [
+                                        "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg",
+                                        "https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg",
+                                        "https://images.pexels.com/photos/46505/swiss-shepherd-dog-dog-pet-portrait-46505.jpeg",
+                                        "https://images.pexels.com/photos/1906153/pexels-photo-1906153.jpeg",
+                                        "https://images.pexels.com/photos/245035/pexels-photo-245035.jpeg"
+
+                                     ]
+
+                function ImageSlider()
+                {
+                     const [indx, setIndx] = React.useState(0)
+
+                     function Prev()
+                     {        
+                           if(indx == 0 )
+                           {
+                               setIndx(imageDetails.length-1)   
+                           }
+                           else
+                           {
+                               setIndx(indx - 1) 
+
+                           }
+                           
+                     }
+
+                     function Next()
+                     {
+                          if(indx == imageDetails.length-1)
+                          {
+                               setIndx(0)
+                          }
+                          else 
+                          {
+                               setIndx(indx + 1)
+                          }
+                     }
+
+                    return (
+                        <div className = "MainDiv">
+                            <img src = {imageDetails[indx]} width = "400px" height = "500px"/>
+                            <div id="d1">
+                                  <button onClick = {Prev}>Prev</button>
+                                  <button onClick = {Next}>Next</button>
+                            </div>
+                        </div>
+                    )
+                }
+
+                ReactDOM.render(<ImageSlider/>, document.getElementById('root'))
+            
+        </script>
+    </body>
+</html>
