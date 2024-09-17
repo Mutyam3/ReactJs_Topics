@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Array-sort-buttons 
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+             .MainDiv{
+
+                border : 2px solid black;
+                width : fit-content;
+                margin : auto;
+                padding : 20px;
+             }
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+              var userDetails = [
+                                {
+                                    firstName : "Bhargav",
+                                    lastName : 'Mutyam',
+                                    age : 21,
+                                    salary : 25000,
+                                    gender : "male"
+                                },
+                                {
+                                    firstName : "Roja",
+                                    lastName : 'Rani',
+                                    age : 30,
+                                    salary : 45000,
+                                    gender : "female"
+                                },
+                                {
+                                    firstName : "Mahesh",
+                                    lastName : 'Babu',
+                                    age : 35,
+                                    salary : 80000,
+                                    gender : "male"
+                                }
+                                , {
+                                    firstName : "Parvathi",
+                                    lastName : 'Melton',
+                                    age : 30,
+                                    salary : 56000,
+                                    gender : "female"
+                                }, {
+                                    firstName : "Raj",
+                                    lastName : 'Kumar',
+                                    age : 35,
+                                    salary : 90000,
+                                    gender : "male"
+                                }, {
+                                    firstName : "Bhoomika",
+                                    lastName : 'Chowla',
+                                    age : 41,
+                                    salary : 95000,
+                                    gender : "female"
+                                },
+                                {
+                                    firstName : "Bhushan",
+                                    lastName : 'Kumar',
+                                    age : 41,
+                                    salary : 100000,
+                                    gender : "male"
+                                }
+                                ]
+
+
+
+                  function MainCompo()
+                  {
+                       const [data, setData]  = React.useState([...userDetails])
+
+                       function sortFNAsc()
+                       {
+                            var temp = [...data]
+                                  
+                            temp.sort((a,b)=>{
+
+                                return a.firstName > b.firstName ? 1 : -1
+
+                            })
+
+                            setData([...temp])
+                       }
+
+                       function sortFNDesc()
+                       {
+                            var temp = [...data]
+                                  
+                            temp.sort((a,b)=>{
+
+                                return a.firstName > b.firstName ? -1 : 1 
+
+                            })
+
+                            setData([...temp])
+                       }
+                       function sortLNAsc()
+                       {
+                            var temp = [...data]
+                                  
+                            temp.sort((a,b)=>{
+
+                                return a.lastName > b.lastName ? 1 : -1 
+
+                            })
+
+                            setData([...temp])
+                       }
+                       function sortLNDesc()
+                       {
+                            var temp = [...data]
+                                  
+                            temp.sort((a,b)=>{
+
+                                return a.lastName > b.lastName ? -1 : 1 
+
+                            })
+
+                            setData([...temp])
+                       }
+
+                       function sortGAsc()
+                       {
+                            var temp = [...data]
+                                  
+                            temp.sort((a,b)=>{
+
+                                return a.gender > b.gender ? 1 : -1
+
+                            })
+
+                            setData([...temp])
+                       }
+
+                       function sortGDesc()
+                       {
+                            var temp = [...data]
+                                  
+                            temp.sort((a,b)=>{
+
+                                return a.gender > b.gender ? -1 : 1 
+
+                            })
+
+                            setData([...temp])
+                       }
+                         
+                       return (
+                           <div className = "MainDiv">
+
+                               <h1>Students</h1>
+
+                               <button onClick = {sortFNAsc}>sort by First Name (A-Z)</button>
+                               <button onClick = {sortFNDesc}>sort by First Name (Z-A)</button><br/><br/>
+                               <button onClick = {sortLNAsc}>sort by Last Name (A-Z)</button>
+                               <button onClick = {sortLNDesc}>sort by Last Name (Z-A)</button><br/><br/>
+                               <button onClick = {sortGAsc}>sort by Gender (A-z)</button>
+                               <button onClick = {sortGDesc}>sort by Gender (Z-A)</button><br/><br/>
+
+                               <table border = "" width = "100%">
+
+                                   <thead>
+
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Gender</th>
+
+                                   </thead>
+
+                                   <tbody>
+                                       {
+                                            data.map((el)=>{
+                                                return (
+                                                    <tr>
+                                                        <td>{el.firstName}</td>
+                                                        <td>{el.lastName}</td>
+                                                        <td>{el.gender}</td>
+                                                    </tr>
+                                                )
+                                            })
+                                       }
+                                   </tbody>
+                               </table>
+                           
+                            </div>
+                       )
+                  }
+
+
+                  ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+
+        </script>
+
+    </body>
+</html>
