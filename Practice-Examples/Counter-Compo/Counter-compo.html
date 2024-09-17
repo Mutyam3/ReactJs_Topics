@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Counter-compo 
+        </title>
+
+        
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+                 function App()
+                 {
+                     return (
+                        <div> 
+                             
+                            <Counter initialVal = {10} val={100} /> 
+                            <Counter initialVal = {100} val={40}/>
+                            <Counter initialVal = {300} val={50}/>
+                        </div>
+                     )
+                 }
+
+                 ReactDOM.render(<App/>, document.getElementById('root'))
+              
+                 function Counter(props)
+                 {
+                      const [count, setCount] = React.useState(props.initialVal)
+
+                      function inc()
+                      {
+                           setCount(count + props.val)
+                      }
+
+                      function dec()
+                      {
+                            setCount (count - props.val)
+                      }
+
+
+                      return (
+                        <div style={{border:'2px solid black'}}>
+                            <h1>Count : {count}</h1>
+
+                            <button onClick = {inc}>Increment</button>
+                            <button onClick = {dec}>Decrement</button>
+                        </div>
+                      )
+                 }
+
+        </script>
+
+    </body>
+</html>
