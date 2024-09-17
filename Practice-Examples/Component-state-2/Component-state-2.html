@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Component-state-2
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+
+        </style>
+
+
+    </head>
+
+    <body>
+        
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+
+                   function TodoList()
+                   {
+                        const [todo, setTodo] = React.useState(['Mutyam', 'Bhargav', 'Reddy'])
+                        const [txt, setTxt]  = React.useState('')
+
+                         function handleText(e)
+                         {
+                            setTxt(e.target.value)
+                         }
+
+                         function add()
+                         {
+                             setTodo([...todo,txt])
+                             setTxt('')
+                         }
+
+                         function asc()
+                         {
+                               var temp = [...todo]
+                                    temp.sort()
+                                
+                                setTodo([...temp])
+
+
+                         }
+
+                         function desc()
+                         {
+                                var temp = [...todo]
+                                    temp.sort((a,b)=>{
+                                        if(a>b)
+                                        {
+                                             return -1
+                                        }
+                                        else 
+                                        {
+                                            return 1
+                                        }
+                                    })
+
+                            setTodo([...temp])
+                         }
+
+
+                       return (
+                        <div>
+                                 <h2>React students</h2>
+
+                                <input type="text" value={txt} onChange = {handleText}/>
+                                <button onClick = {add}>Add Student</button><br/><br/>
+
+                                <button onClick = {asc}>Ascending Order</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button onClick = {desc}>Descending Order</button>
+
+                                <ol>
+                                    {
+                                        todo.map((el)=>{
+                                            return (
+                                                <li>{el}</li>
+                                            )
+                                        })
+                                    }
+                                </ol>
+                        </div>
+                       )
+                   }
+
+                   ReactDOM.render(<TodoList/>, document.getElementById('root'))
+
+
+
+
+        </script>
+
+
+
+    </body>
+</html>
