@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> calculator-2
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+
+           <div id="root">
+              
+           </div>
+
+           <script type="text/babel">
+
+                function Calculator()
+                {
+                    const [text1, setText1] = React.useState("")
+                    const [text2, setText2] = React.useState("")
+                    const [dis, setDis] = React.useState(0)
+
+                      function handleText1(e)
+                      {
+                            setText1( + e.target.value)
+                      }
+
+                      function handleText2(e)
+                      {
+                            setText2( + e.target.value)
+                      }
+
+                      function add()
+                      {
+                            var temp = text1 + text2
+                            setDis(temp)
+                      }
+
+                      function sub()
+                      {
+                            var temp = text1 - text2 
+                            setDis(temp)
+                      }
+
+                      function mul()
+                      {
+                            var temp = text1 * text2 
+                            setDis(temp)
+                      }
+
+                      function div()
+                      {
+                            var temp = text1 / text2 
+                            setDis(temp)
+                      }
+
+
+                     return (
+                        <div>
+                             <input type="text" onKeyUp = {handleText1}/>
+                             <input type="text" onKeyUp = {handleText2}/>
+                             <button onClick = {add}>Add</button>
+                             <button onClick = {sub}>Sub</button>
+                             <button onClick = {mul}>Mul</button>
+                             <button onClick = {div}>div</button>
+
+                             <h1>{dis}</h1>
+                        </div>
+                     )
+                }
+
+                ReactDOM.render(<Calculator/>, document.getElementById('root'))
+
+
+           </script>
+    </body>
+
+</html>
