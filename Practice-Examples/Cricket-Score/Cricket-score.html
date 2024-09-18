@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>
+            MUtyam ==> Cricket-Score
+        </title>
+
+        <style>
+             button{
+                border : 0px;
+                margin : 10px;
+                padding : 15px 45px;
+                background-color: crimson;
+                color : white;
+                font-size :medium;
+                border-radius: 15px;
+             }
+
+
+        </style>
+
+       <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+       <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+              function CricketScore()
+              {
+                   const [score, setScore] = React.useState(0)
+                   const [ wicket, setWicket] = React.useState(0)
+
+                   function scoreFn(s)
+                   {
+                       setScore(score + s)
+                   }
+
+                   function wick(j)
+                   {
+                       if(wicket <= 9)
+                       {
+                          setWicket(wicket + j)
+                       }
+                        
+                   }
+
+                   function wideBall(wide)
+                   {
+                        setScore(score + wide)
+                   }
+
+                   function noBall(no)
+                   {
+                         setScore(score + no)
+                   }
+
+                     return (
+                        <div>
+
+                            <h1> {score} / {wicket} </h1>
+                            
+                         <div>
+                            <button onClick = {()=>{scoreFn(0)}}>0</button>
+                            <button onClick = {()=>{scoreFn(1)}}>1</button>
+                            <button onClick = {()=>{scoreFn(2)}}>2</button>
+                            <button onClick = {()=>{scoreFn(3)}}>3</button>
+                            <button onClick = {()=>{scoreFn(4)}}>4</button>
+                            <button onClick = {()=>{scoreFn(6)}}>6</button>
+                         </div>
+                         
+                         <div>
+                            <button onClick = {()=>{wick(1)}}>Wicket</button>
+                            <button onClick = {()=>{wideBall(1)}}>Wide Ball</button>
+                            <button onClick = {()=>{noBall(1)}}>No Ball</button>
+                         </div>
+
+                        </div>
+                     )
+              }
+
+              ReactDOM.render(<CricketScore/>, document.getElementById('root'))
+
+
+        </script>
+
+    </body>
+</html>
