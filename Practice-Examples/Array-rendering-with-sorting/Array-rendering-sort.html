@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Array-rendering-sort 
+        </title>
+
+        <style>
+             .stdDiv{
+
+                border : 2px solid black;
+                width : fit-content;
+                padding:30px;
+                margin:auto;
+                
+             }
+        </style>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+                   function MainCompo()
+                   {
+                         const [data, setData] = React.useState(["Mutyam" , "Bhargav", "Reddy", "Anushka", "Nagarjuna", "Dhanush"])
+                           
+                         function asc()
+                         {
+                              var temp = [...data]
+                                 temp.sort((a,b)=>{
+                                   return  a > b ? 1 : -1
+                                 })
+                              setData([...temp])
+                         }
+
+                         function desc()
+                         {
+                               var temp = [...data]
+                                 temp.sort((a,b)=>{
+                                   return  a > b ? -1 : 1
+                                 })
+                              setData([...temp])
+                         }
+
+                        return (
+                            <div className = "stdDiv">
+                                <h1>Students</h1>
+                                <button onClick= {asc}>Ascending</button><br/>
+                                <button onClick= {desc}>Descending</button>
+                               <ul>
+                                {
+                                    data.map((el)=>{
+                                        return (
+                                           <li>{el}</li> 
+                                        )
+                                    })
+                                }
+                            </ul>
+                            </div>
+                        )
+                   }
+
+
+        ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+
+        </script>
+
+
+    </body>
+</html>
