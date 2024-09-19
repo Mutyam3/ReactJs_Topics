@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> handling-radio-buttons 
+        </title>
+
+        <style>
+             .mainDiv{
+
+                border : 2px solid black;
+                padding: 10px;
+                width: fit-content;
+                margin : auto;
+                text-align: center;
+             }
+             
+        </style>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+            function RadioCompo()
+            {
+
+                const [data, setData] = React.useState(["NagMama", "Babu", "VenkyMama", "Balayya", "Chiru", "RaviAnna"])
+                const [val, setVal] = React.useState("")
+
+                function handleRadio(e)
+                {
+                   console.log(e.target.value)
+                    setVal(e.target.value)
+                }
+                 return(
+                    <div className = "mainDiv">
+                        {
+                            data.map((el)=>{
+                                return(
+                                    <div>
+                                    <input type="radio" name = "names" value = {el} onChange = {handleRadio}/>
+                                     {el}
+                                    </div>
+                                  
+                                )
+                            })
+                        }
+
+                        <h2>you have entered : {val}</h2>
+                    </div>
+                 )
+            }
+
+            ReactDOM.render(<RadioCompo/>, document.getElementById('root'))
+
+        </script>
+
+    </body>
+</html>
