@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> CheckboxCompo
+        </title>
+ 
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      
+       <style>
+
+           .mainDiv{
+                border : 2px solid black;
+                padding : 10px;
+                margin : 10px;
+           }
+       </style>
+
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+                  function CheckBoxesCompo()
+                  {
+
+                         const [checkVal, setCheckVal] = React.useState([])
+
+                        function handleCheck(e)
+                        {
+                              if(e.target.checked==true)
+                              {
+                                  setCheckVal([...checkVal, e.target.value])
+                              }
+                              else 
+                              {
+                                   var temp = [...checkVal]
+                                       
+                                 var f =  temp.filter((el)=>{
+                                         if(el == e.target.value)
+                                         {
+                                             return false 
+                                         }
+                                         else 
+                                         {
+                                             return true
+                                         }
+                                   })
+
+                                   setCheckVal([...f])
+                              }
+                        }
+
+
+                      return (
+                        <div className  = "mainDiv">
+                            <input type="checkbox" onChange = {handleCheck} value = "Reactjs"/>ReactJs   <br/>
+                            <input type="checkbox" onChange = {handleCheck} value = "Nextjs"/>NextJs     <br/>
+                            <input type="checkbox" onChange = {handleCheck} value = "Java"/>Java         <br/>
+                            <input type="checkbox" onChange = {handleCheck} value = "Python"/>Python     <br/>
+                            <input type="checkbox" onChange = {handleCheck} value = "Javascript"/>Javascript  <br/>
+                            <input type="checkbox" onChange = {handleCheck} value = "AI"/>AI    <br/>
+                            
+                            <ol>
+                                {
+                                    checkVal.map((el)=>{
+                                        return (
+                                            <li>{el}</li>
+                                        )
+                                    })
+                                }
+                            </ol>
+                            
+                        </div>
+                      )
+                  }
+
+
+                  ReactDOM.render(<CheckBoxesCompo/>, document.getElementById('root'))
+
+
+        </script>
+
+    </body>
+</html>
