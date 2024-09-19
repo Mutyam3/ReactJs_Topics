@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Todolist-Modal
+        </title>
+
+                       
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+        <style>
+
+         #modalStyle{
+
+            border : 2px solid black;
+            position: absolute;
+            top : 20%;
+            left :40%;
+            transform: translate(-20%,-40%);
+            width : 400px;
+            box-sizing: border-box;  
+            background-color: rgb(245, 248, 250);
+            opacity: 100%;
+         }   
+
+         #modalHead{
+              display : flex;
+              align-items: center;
+              justify-content: space-between;
+              border-bottom :1px solid black;
+              padding:10px;
+         }
+
+         #modalBody {
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding:20px;
+         }
+
+         #modalFooter{
+
+            padding:10px;
+            text-align: end;
+         }
+            
+         .childDivNone{
+            display: none;
+         }
+
+         .childDivBlock{
+            display : block;
+           
+         }
+
+         button {
+            border : 0px;
+            padding:10px 20px;
+            color:white;
+            background-color: crimson;
+            border-radius: 10px ;
+         }
+
+         .mainDiv{
+
+            border : 2px solid black;
+            width :fit-content;
+            padding:15px;
+            margin :auto;
+
+         }
+
+         /* body :not(#root){
+              filter: blur(2px);    
+        } */
+
+        
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+               function Child(props)
+               {
+                   console.log(props.dis)
+                   return (
+                      <div className = {props.dis == "none" ? 'childDivNone' : 'childDivBlock'} id="modalStyle" >
+                        <div id="modalHead">
+                          <h2>Modal Heading</h2>
+                          <button onClick = {props.closeTab}> X </button>
+                        </div> 
+
+                        <div id="modalBody">
+                            <input type="text"  value = {props.val} onChange = {(e) => {props.fn(e)}} />
+                    
+                        </div>
+
+                        <div id="modalFooter">
+                            <button onClick = {props.add}>Add</button>
+                        </div>
+        
+                      </div>
+                   )
+               }
+
+               function MainCompo()
+               {
+
+                     const [modalDis, setModalDis] = React.useState("none")
+                     const [todo, setTodo] = React.useState(["Current Bills", "Gas Bill", "Cinema"])
+                     const [newVal, setNewVal]  = React.useState("")
+
+
+                   function modal()
+                   {
+                        // document.getElementById("childDiv").style.display = "block"
+                        setModalDis('block')
+                        document.body.style.backgroundColor = '#7F7F7F'
+                   }
+
+                   function closeTab()
+                   {
+                       setModalDis('none')
+                       document.body.style.backgroundColor = 'white'
+                   }
+
+                   function handleInput(e)
+                   {
+                        console.log(e.target.value)
+                       setNewVal(e.target.value) 
+                   }
+
+                   function add()
+                   {
+                         setTodo([...todo, newVal])
+                         setNewVal('')
+                   }
+
+                   return(
+                    <div className = "mainDiv">
+                        <button onClick = {modal} >Add Todo</button>
+                         <ul>
+                            {
+                                todo.map((el)=>{
+                                    return (
+                                        <li>{el}</li>
+                                    )
+                                })
+                            } 
+                         </ul>
+                        <Child dis = {modalDis} closeTab = {closeTab} fn = {handleInput} add= {add} val ={newVal}></Child>
+                    </div>
+                   )
+               }
+
+
+               ReactDOM.render(<MainCompo/>, document.getElementById("root"))
+
+        </script>
+    </body>
+</html>
