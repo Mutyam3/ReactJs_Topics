@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Sorting-table-header
+        </title>
+
+               
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+
+        <style>
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+          <div id="root">
+
+          </div>
+
+          <script type="text/babel">
+
+              var userDetails = [
+                                {
+                                    firstName : "Bhargav",
+                                    lastName : 'Mutyam',
+                                    age : 21,
+                                    salary : 25000,
+                                    gender : "male"
+                                },
+                                {
+                                    firstName : "Roja",
+                                    lastName : 'Rani',
+                                    age : 30,
+                                    salary : 45000,
+                                    gender : "female"
+                                },
+                                {
+                                    firstName : "Mahesh",
+                                    lastName : 'Babu',
+                                    age : 35,
+                                    salary : 80000,
+                                    gender : "male"
+                                }
+                                , {
+                                    firstName : "Parvathi",
+                                    lastName : 'Melton',
+                                    age : 30,
+                                    salary : 56000,
+                                    gender : "female"
+                                }, {
+                                    firstName : "Raj",
+                                    lastName : 'Kumar',
+                                    age : 35,
+                                    salary : 90000,
+                                    gender : "male"
+                                }, {
+                                    firstName : "Bhoomika",
+                                    lastName : 'Chowla',
+                                    age : 41,
+                                    salary : 95000,
+                                    gender : "female"
+                                },
+                                {
+                                    firstName : "Bhushan",
+                                    lastName : 'Kumar',
+                                    age : 41,
+                                    salary : 100000,
+                                    gender : "male"
+                                }
+                                ]
+
+                  function MainCompo()
+                  {
+                      const[d, setD] = React.useState([...userDetails])
+
+                      function asc(valKey)
+                      {
+                           var temp = [...d]
+                               temp.sort((a,b)=>{
+                                    return a[valKey] > b[valKey] ? 1 : -1
+                               })
+
+                            setD([...temp])
+                      }
+
+                      return (
+                          <div>
+                              <table border="">
+                                   <thead>
+                                       <th onClick = {()=>{asc("firstName")}}>FirstName</th>
+                                       <th onClick = {()=>{asc("lastName")}}>LastName</th>
+                                       <th onClick = {()=>{asc("gender")}}>Gender</th>
+                                   </thead>
+
+                                   <tbody>
+                                       {
+                                          d.map((el)=>{
+                                               return (
+                                                <tr>
+                                                    <td>{el.firstName}</td>
+                                                    <td>{el.lastName}</td>
+                                                    <td>{el.gender}</td>
+                                                </tr>
+                                               )
+                                          }) 
+                                       }
+                                   </tbody>
+                              </table>
+                          </div>
+                      )
+                  }
+
+                 ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+
+
+          </script>
+
+
+
+    </body>
+</html>
