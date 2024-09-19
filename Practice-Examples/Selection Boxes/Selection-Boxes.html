@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Selection-Boxes 
+        </title>
+                 
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <Style>
+             .mainDiv{
+
+                border : 2px solid black;
+                padding:10px;
+                width :fit-content;
+                margin : auto;
+                text-align: center;
+             }
+        </Style>
+
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+               
+              function SelectedCompo()
+              {
+                   const [selected, setSelected] = React.useState("")
+
+                   function handleSelect(e)
+                   {
+                        console.log(e.target.value)
+                        setSelected(e.target.value)
+                   }
+                 
+                  return(
+                    <div className = "mainDiv">
+                        <select onChange = {handleSelect}>
+                             <option disabled selected>Select a course</option>
+                             <option value= "Angular">Angular</option>
+                             <option value= "Reactjs">Reactjs</option>
+                             <option value= "Nodejs">Nodejs</option>
+                             <option value= "Nextjs">Nextjs</option>
+                             <option value= "Java">Java</option>
+                             <option value= "Javascript">Javascript</option>
+                        </select>
+
+                        <h1>Selected Technology is : {selected}</h1>
+                    </div>
+                  )
+              }
+
+              ReactDOM.render(<SelectedCompo/>, document.getElementById('root'))
+
+        </script>
+
+    </body>
+</html>
