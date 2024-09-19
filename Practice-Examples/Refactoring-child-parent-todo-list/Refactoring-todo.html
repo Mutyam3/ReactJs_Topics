@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Refactoring-todo 
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+        <style>
+           .childCompo{
+               padding: 10px;
+               border : 2px solid black;
+               margin:10px;
+           }
+
+           .parentCompo{
+                padding:10px;
+                margin : 10px;
+                border:2px solid black;
+           }
+
+           .childCompo button{
+                  border : 2px solid black;
+                  margin : 10px;
+           }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="root">
+              
+        </div>
+
+        <script type="text/babel">
+
+                 function Child(props)
+                 {
+                    return(
+                        <div className = "childCompo">
+                            <li>{props.el}
+                                <button onClick = {()=>{props.fn(props.ind)}}>Delete</button>
+                            </li>
+                        </div>
+                    )
+                 }
+
+
+                 function Parent()
+                 {
+                      const [todo, setTodo] = React.useState(["current Bill", "water Bill", "gas Bill", "laptop repair"])
+
+                      function del(i)
+                      {
+                           var temp = [...todo]
+                                temp.splice(i,1)
+                            setTodo([...temp])
+                      }
+
+                     return (
+                        <div className = "parentCompo">
+                            <h1>Todolist</h1>
+                             {
+                                todo.map((el, ind)=>{
+                                    return (
+                                        <Child el = {el} ind = {ind} fn = {del}></Child>
+                                    )
+                                })
+                             }
+
+                        </div>
+                     )  
+                 }
+
+                 ReactDOM.render(<Parent/>, document.getElementById('root'))
+
+
+        </script>
+        
+
+    </body>
+</html>
