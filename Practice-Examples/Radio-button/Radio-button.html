@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Radio-button
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <Style>
+            .mainDiv{
+
+                border : 2px solid black;
+                padding:10px;
+                margin :10px;
+                width :fit-content;
+            }
+        </Style>
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+
+        <script type="text/babel">
+
+            function RadioCompo()
+            {
+                 const [gen, setGen] =  React.useState("")
+
+                 function handleGen(e)
+                 {
+                        setGen(e.target.value)
+                 }
+                   
+                  return (
+                    <div className = "mainDiv">
+                       <input type="radio"  name = "gender" value ="male"   onChange = {handleGen}/> Male  
+                       <input type="radio"  name = "gender" value = "female"  onChange = {handleGen}/> Female 
+                       <input type="radio"  name = "gender" value = "others"  onChange = {handleGen}/>Others 
+
+                       <h2>you selected Gender is : {gen}</h2>
+                    </div>
+                  )
+            }
+
+            ReactDOM.render(<RadioCompo/>, document.getElementById('root'))
+
+
+        </script>
+
+    </body>
+</html>
