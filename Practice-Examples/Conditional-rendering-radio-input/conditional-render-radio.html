@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> conditional-render-radio 
+        </title>
+
+        <style>
+            .mainDiv{
+
+                border :2px solid black;
+                width: fit-content;
+                padding:10px;
+                margin : auto;
+            }
+        </style>
+
+          <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+          <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+          <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      
+    </head>
+    
+    <body>
+     
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+
+               function ImageDisplay()
+               {
+                     const [imageData, setImageData] = React.useState("")
+                       
+                     function handleImage(e)
+                     {
+                           setImageData(e.target.value) 
+                     }
+
+                   return(
+                    <div className = "mainDiv">
+                        <input type="radio" name = "gender"  value = "male"  onChange ={handleImage} />Male
+                        <input type="radio" name = "gender"  value = "female" onChange ={handleImage} />Female
+                        
+                       
+                            { imageData === "male"  ?   <div><img src ="https://img.freepik.com/free-photo/portrait-man-cartoon-style_23-2151133939.jpg"  height = "300px"  width="300px"/></div> : "" }
+                            { imageData === "female"  ? <div><img src = "https://img.freepik.com/free-vector/happy-woman-waving-hello-white-background_1308-46925.jpg" height = "350px" width="200px" /></div> : "" }
+
+                                 
+                    </div>
+                   )
+               }
+
+               ReactDOM.render(<ImageDisplay/>, document.getElementById('root'))
+             
+
+
+        </script>
+
+    </body>
+
+</html>
