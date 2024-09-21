@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Text-box-data-binding 
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+            .mainDiv{
+                border : 2px solid black;
+                width:50%;
+                padding: 30px;
+                margin:auto;
+                text-align: center;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+
+        <div id="root">
+             
+        </div>
+
+         <script type="text/babel">
+
+                   function TextBox(){
+
+                      const [txt, setTxt] = React.useState("")
+
+                      function handleTxt(e)
+                      {
+                              setTxt(e.target.value)
+                      }
+
+                           return(
+                              <div className = "mainDiv">
+                                 <input type="text" onKeyUp= {handleTxt}/>
+                                 <h1>You have entered : {txt}</h1>
+                              </div>
+                           )
+                   }
+
+            ReactDOM.render(<TextBox/>, document.getElementById('root'))
+             
+         </script>
+    </body>
+</html>
