@@ -1,0 +1,175 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Controlled-Compo-Table
+        </title>
+
+        <style>
+
+        </style>
+
+          <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+          <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+          <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+        
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+
+            var userDetails = [
+                                {
+                                    firstName : "Bhargav",
+                                    lastName : 'Mutyam',
+                                    age : 21,
+                                    salary : 25000,
+                                    gender : "male"
+                                },
+                                {
+                                    firstName : "Roja",
+                                    lastName : 'Rani',
+                                    age : 30,
+                                    salary : 45000,
+                                    gender : "female"
+                                },
+                                {
+                                    firstName : "Mahesh",
+                                    lastName : 'Babu',
+                                    age : 35,
+                                    salary : 80000,
+                                    gender : "male"
+                                }
+                                , {
+                                    firstName : "Parvathi",
+                                    lastName : 'Melton',
+                                    age : 30,
+                                    salary : 56000,
+                                    gender : "female"
+                                }, {
+                                    firstName : "Raj",
+                                    lastName : 'Kumar',
+                                    age : 35,
+                                    salary : 90000,
+                                    gender : "male"
+                                }, {
+                                    firstName : "Bhoomika",
+                                    lastName : 'Chowla',
+                                    age : 41,
+                                    salary : 95000,
+                                    gender : "female"
+                                },
+                                {
+                                    firstName : "Bhushan",
+                                    lastName : 'Kumar',
+                                    age : 41,
+                                    salary : 100000,
+                                    gender : "male"
+                                }
+                                ]
+
+              function MainCompo()
+              {
+
+                    const [students, setStudents] = React.useState([...userDetails])
+
+                    const [fName, setFname] = React.useState('')
+                    const [lName, setLname] = React.useState('')
+                    const [age, setAge] = React.useState('')
+                    const [salary, setSalary] = React.useState('')
+                    const [gender, setGender] = React.useState('')
+
+                    function handleFirstName(e)
+                    {
+                         setFname(e.target.value) 
+                    }
+
+                    function handleLastName(e)
+                    {
+                        setLname(e.target.value)
+                    }
+
+                    function handleAge(e)
+                    {
+                        setAge(e.target.value)
+                    }
+
+                    function handleSalary(e)
+                    {
+                        setSalary(e.target.value)
+                    }
+
+                    function handleGender(e)
+                    {
+                        setGender(e.target.value)
+                    }
+
+                   
+
+                    function add()
+                    { 
+
+                     var tempNewStd = { 
+                                 
+                                 firstName : fName,
+                                 lastName : lName,
+                                 age : age,
+                                 salary : salary,
+                                 gender : gender
+                       }
+                          setStudents([...students, {...tempNewStd} ])
+                    }
+
+
+                   return(
+                    <div>
+                      <h1>React Students</h1>
+                         
+                      FirstName :   <input type="text" onKeyUp = {handleFirstName}/><br/>
+                      LastName :    <input type="text" onKeyUp = {handleLastName}/><br/>
+                      Age :         <input type="text" onKeyUp = {handleAge}/><br/>
+                      Salary :      <input type="text" onKeyUp = {handleSalary}/><br/>
+                      Gender :      <input type="text" onKeyUp = {handleGender}/><br/><br/>
+
+                      <button onClick = {add}>Add Students</button><br/><br/>
+
+                      <table border = "">
+                          <thead>
+                              <th>Fist Name</th>
+                              <th>Last Name</th>
+                              <th>Age</th>
+                              <th>Salary</th>
+                              <th>Gender</th>
+                          </thead>
+                          <tbody>
+                             {
+                                  students.map((el)=>{
+                                    return (
+                                        <tr>
+                                            <td>{el.firstName}</td>
+                                            <td>{el.lastName}</td>
+                                            <td>{el.age}</td>
+                                            <td>{el.salary}</td>
+                                            <td>{el.gender}</td>
+                                        </tr>
+                                    )
+                                  })
+                             }
+                          </tbody>
+                      </table>
+                        
+                    </div>
+                   )
+              }
+
+              ReactDOM.render(<MainCompo/>, document.getElementById("root"))
+             
+        </script>
+
+    </body>
+</html>
