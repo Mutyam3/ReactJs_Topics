@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> IPL-Team Selection
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+
+             .mainDiv{
+                display : flex;
+                border  : 2px solid black;
+                justify-content : space-between;
+                width  : 70%;
+                margin : auto;
+             }
+             .Team{
+                border : 2px solid black;
+                margin : 20px;
+                padding : 10px;
+             }
+
+             .teamDiv{
+                border : 2px solid black;
+                width  :  70%;
+                height :  50vh;
+                padding: 20px;
+                margin : auto;
+             }
+
+             .Players{
+                border :2px solid black;
+                margin :10px;
+                padding: 5px 25px;
+             }
+        </style>
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+            // Main COmponent 
+
+            function MainCompo()
+            {
+                const [teamOne, setTeamOne] = React.useState([
+                "Rohit", 
+                "Tilak",
+                "Ishan",
+                "Surya",
+                "Bhumra",
+                "Green",
+                "Bravis",
+                "Archer",
+                "Tim David"])
+
+                const [teamTwo, setTeamTwo] = React.useState([])
+
+
+                return (
+                    <div className = "mainDiv">
+                        <TeamOne setTeamOne = {setTeamOne} teamOne = {teamOne} setTeamTwo = {setTeamTwo} teamTwo= {teamTwo}></TeamOne>
+                        <TeamTwo setTeamTwo = {setTeamTwo} teamTwo = {teamTwo} setTeamOne = {setTeamOne} teamOne= {teamOne}></TeamTwo> 
+                    </div>
+                )
+            }
+
+            ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+           
+
+    // Team One 
+
+
+           function TeamOne(props){
+                  
+  
+                function remove(ind)
+                {
+                    var temp = [...props.teamOne]
+                    var del = temp.splice(ind,1)
+                    props.setTeamTwo([...props.teamTwo, ...del])
+                    props.setTeamOne([...temp])
+
+                }
+
+               return(
+                  <div className = "Team">
+                    <h1>Players Remaining</h1>
+                     <ul className = "teamDiv">
+                        {
+                            props.teamOne.map((el, ind)=>{
+                                return(
+                                    <div className = "Players">
+                                       
+                                        <Display el= {el} remove = {remove} ind={ind}></Display>
+                                    </div>
+                                )
+                            })
+                        }
+                     </ul>
+                  </div>
+               )
+           }
+
+
+      // Team Two
+
+
+           function TeamTwo(props)
+           {
+
+           
+
+            function remove(ind)
+            {
+                   var temp = [...props.teamTwo]
+                   var del = temp.splice(ind,1)
+                        props.setTeamOne([...props.teamOne,del])
+                        props.setTeamTwo([...temp])
+
+            }
+
+               return(
+                <div className = "Team">
+                    <h1>Players Selected</h1>
+                   <ul className = "teamDiv"> {
+                       props.teamTwo.map((el, ind)=>{
+                            return (
+                                <div className = "Players">
+                                    <Display el = {el} remove = {() => {remove(ind)}} ind = {ind}></Display>
+                                </div>
+                            )
+                        })
+                    }
+                   </ul>
+                </div>
+               )
+           }
+
+
+    // Display UI
+
+           function Display(props)
+           {
+               return (
+                <div>
+                    <li onClick = {props.remove}>{props.el} {props.ind}</li> 
+                </div>
+               )
+           }
+
+        </script>
+    </body>
+</html>
