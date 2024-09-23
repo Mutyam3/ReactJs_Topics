@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> React-food-cart-billing-level1
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+                 var foodDetails = [{
+                                        tiffinName  : "idly",
+                                        price : 20,
+                                        quantity : 1,
+                                        itemTotal  : 20
+
+                                    },
+                                    {
+                                        tiffinName : "dosa",
+                                        price : 40,
+                                        quantity : 1,
+                                        itemTotal : 40
+
+                                    },
+                                    {
+                                        tiffinName : "upma",
+                                        price : 25,
+                                        quantity : 1,
+                                        itemTotal : 25
+                                    },
+                                    {
+
+                                       tiffinName : "mysorebajji",
+                                       price : 30,
+                                       quantity : 1,
+                                       itemTotal : 30
+                                    }]
+
+                function MainCompo()
+                {
+                      const [menu, setMenu] = React.useState([...foodDetails])
+                      const [totalPrice, setTotalPrice] = React.useState("")
+                      
+
+                      function handleQuantity(e, indx)
+                      {
+                          console.log(indx)
+                          var temp = [...menu]
+                              temp[indx].quantity = e.target.value 
+                              temp[indx].itemTotal = temp[indx].quantity * temp[indx].price
+                          setMenu([...temp]) 
+
+                      }
+
+                      React.useEffect(()=>{
+                        
+                            var temp = [...menu]
+                            var gtotal =  temp.reduce((a,b)=>{
+                                      return a + b.itemTotal
+                                },0)
+
+                            // console.log(gtotal)
+                            setTotalPrice(gtotal)
+                       }) 
+            
+     
+                    return (
+                        <div>
+                            <table border = "">
+                                <thead>
+                                   <th>Name</th>
+                                   <th>Price</th>
+                                   <th>Quantity</th>
+                                   <th>Total</th>
+                                </thead>
+
+                                <tbody>
+                                    {
+                                       menu.map((el,ind)=>{
+                                            return(
+                                                <tr>
+                                                    <td>{el.tiffinName}</td>
+                                                    <td>{el.price}</td>
+                                                    <td><input type = "text" onKeyUp = {(e) => {handleQuantity(e, ind)}} defaultValue = {1}  /></td>
+                                                    <td>{el.itemTotal}</td> 
+                                                </tr>
+
+                                            )
+                                       }) 
+                                    }
+                                    <tr><td colspan="4" align="end" >Total : {totalPrice}</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    )
+                }
+
+                ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+
+        </script>
+    </body>
+</html>
