@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Routing-Basic 
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+            ul{
+                display : flex;
+                justify-content: space-evenly;
+                font-size: large;
+                font-family: Arial, Helvetica, sans-serif;
+                border : 2px solid black;
+                margin : 10px;
+                padding: 10px;
+            }
+
+            ul li {
+                 
+                padding: 10px;
+                border : 2px solid black;
+                background-color: crimson;
+                color:whitesmoke
+            }
+
+            #contentDiv{
+                border:2px solid black;
+                margin:20px;
+                padding:20px;
+                font-size: large;
+                font-weight: bolder;
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+              function App()
+              {
+                     function handleHome(){
+ 
+                        document.getElementById('contentDiv').innerHTML = "idi mana home mama"
+
+                     }
+
+                     function handleAboutUs()
+                     {
+                         document.getElementById('contentDiv').innerHTML = "Naa peru mutyam mama"
+                     }
+
+                     function handleContactUs()
+                     {
+                         document.getElementById('contentDiv').innerHTML = "contact avvaniki ee number vadandi mama"
+                     }
+
+                   return (
+                    <div>
+
+                       <ul type = "none">
+                          <li onClick = {handleHome}>Home</li>
+                          <li onClick = {handleAboutUs}>About us</li>
+                          <li onClick=  {handleContactUs}>Contact us</li>
+                       </ul>
+                        
+                       <div id="contentDiv">
+                           idi mana home mama 
+                       </div>
+                       
+
+                    </div>
+                   )
+              }
+
+              ReactDOM.render(<App/>, document.getElementById('root'))
+
+              
+
+        </script>
+    </body>
+</html>
