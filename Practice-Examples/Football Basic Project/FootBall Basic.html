@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> FootBall Basic
+        </title>
+
+        <style>
+
+            .teamDiv{
+
+                display: flex;
+                justify-content: space-between;
+
+            }
+
+            .mainDiv{
+
+                width : 50%;
+
+            }
+
+        </style>
+
+          <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+          <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+          <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+                 function Football()
+                 {
+                    const [scoreA, setScoreA] = React.useState('')
+                    const [scoreB, setScoreB] = React.useState('')
+
+                    function handleTeamA(e)
+                    {
+                        console.log(e.target.value)
+                        setScoreA((prev)=>{
+                              return +prev + 1
+                        })
+                    }
+
+
+                    function handleTeamB(e)
+                    {
+                        console.log(e.target.value)
+                        setScoreB((prev)=>{
+                            return +prev + 1
+                        })
+                    }
+
+
+                    return (
+                        <div className = "mainDiv">
+                              
+                            <select onChange = {handleTeamA}>
+
+                                <option disabled selected>Team A</option>
+                                <option value= "Messi">Messi</option>
+                                <option value = "Neymar">Neymar</option>
+                                <option value = "Pablo">Pablo</option>
+                                
+                            </select>
+
+                            <select onChange = {handleTeamB}>
+
+                                  <option disabled selected>Team B</option>
+                                  <option value="Ronaldo">Ronaldo</option>
+                                  <option value= "Mbapee">Mbapee</option>
+                                  <option value = "Bekham">Bekham</option>
+
+                            </select>
+
+                           <div className = "teamDiv">
+                               <h1>{scoreA ? scoreA : "Team A Goals"} </h1> 
+                               <h1>{scoreB ? scoreB : "Team B Goals"}</h1>
+                           </div>
+                        </div>
+                    )
+                 }
+
+                 ReactDOM.render(<Football/>, document.getElementById('root'))
+
+        </script>
+    </body>
+</html>
+
