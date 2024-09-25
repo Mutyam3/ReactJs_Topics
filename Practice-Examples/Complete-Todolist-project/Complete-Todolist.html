@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Complete-Todolist 
+        </title>
+
+        <style>
+             .line{
+                background-color: rgb(239, 154, 168);
+
+             }
+
+             .noline{
+                background-color: white;
+                text-decoration: line-through;
+             }
+        </style>
+
+             <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+             <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+             <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    </head>
+
+    <body>
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+            function Todolist()
+            {
+                const [todos, setTodos] = React.useState([
+                    {title : "Pay Bills", status: true},
+                    {title : "Electricity Bills" , status : false},
+                    {title : "Book Tickets", status : true},
+                    {title : "Paper bill", status : false} 
+
+                    ])
+
+
+                const [newTodo, setNewTodo] = React.useState({})
+                const [filteredTask, setFilteredTask] =  React.useState([])
+
+            
+
+                function handleNewTodo(e)
+                {
+                    setNewTodo(e.target.value)
+                }
+
+                function addTask()
+                {
+                    setTodos([...todos, {title : newTodo , status : true}])
+                }
+
+                React.useEffect(()=>{
+                   
+                    var temp = [...todos]
+                    setFilteredTask([...temp])
+                    console.log(temp)
+
+                },[todos])
+
+
+                function handleStatus(ind)
+                {
+                     var temp = [...todos]
+                        if(temp[ind].status == true)
+                        {
+                            temp[ind].status = false 
+                            setTodos([...temp])
+                        }
+                        else 
+                        {
+                            temp[ind].status = true 
+                            setTodos([...temp])
+                        }
+                }
+
+
+                function handleFilters(e)
+                {     
+                      var temp = [...todos]
+                    
+                      if(e.target.value == "all")
+                      {
+                           setFilteredTask([...temp])
+                      }
+
+                      if(e.target.value == "completed" ){
+                         
+                            var filterObj = temp.filter((el)=>{
+
+                                   if(el.status == false)
+                                   {
+                                       return true 
+                                   }
+                                   else 
+                                   {
+                                      return false 
+                                   }
+                            
+                            })
+
+                            setFilteredTask([...filterObj])
+                      }
+                      if(e.target.value == "notCompleted" ){
+                         
+                         var filterObj = temp.filter((el)=>{
+
+                                if(el.status == true)
+                                {
+                                    return true 
+                                }
+                                else 
+                                {
+                                   return false 
+                                }
+                         
+                         })
+
+                         setFilteredTask([...filterObj])
+                      
+                        }     
+                }
+            
+                return(
+                    <div>
+                        <h1>Mutyam Bhargav Reddy</h1>
+                        <input type="text" onKeyUp= {handleNewTodo}/>
+                        <button onClick = {addTask}>Add Task</button><br/><br/>
+
+                        <input type="radio" name = "radioFilter" value = "all" onChange = {handleFilters}/> : All
+                        <input type="radio" name = "radioFilter" value = "completed" onChange = {handleFilters}/> : Completed 
+                        <input type="radio" name = "radioFilter" value = "notCompleted" onChange = {handleFilters}/> : NotCompleted
+
+                        <ul>
+                            {
+                                 filteredTask.map((el, indx)=>{
+                                    return (
+                                        <li className = {el.status ? 'line' : 'noline'} onClick = {()=>{handleStatus(indx)}}>{el.title}</li>
+                                    )
+                                })
+                            }
+                        </ul>
+
+                    </div>
+                )
+            }
+
+            ReactDOM.render(<Todolist/>, document.getElementById('root'))
+
+        </script>
+
+    </body>
+</html>
