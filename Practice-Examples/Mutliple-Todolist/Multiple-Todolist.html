@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>
+            Mutyam => Multiple-Todolist 
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+            function MainCompo()
+            {
+                 const [todolists, setTodoLists] = React.useState([])
+
+                 function addTodolist(){
+
+                  var title = prompt("Enter your Todolist Name here : ")  
+                      
+                  setTodoLists([...todolists, title])
+                          
+                 }
+
+              return(
+                <div>
+                    <button onClick = {addTodolist}>Add Todolist</button>
+                    <div>
+                        {
+                            todolists.map((el)=>{
+                                return (
+                                    <div>
+                                        <h1>{el}</h1>
+                                        <Todolist></Todolist>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+              )
+            }
+
+
+            function Todolist()
+            {
+                    const [todo,setTodo] = React.useState(["pay bills", "book tickets", "save money"])
+                    const [txt, setTxt] = React.useState("")
+
+                    function handleTxt(e)
+                    {
+                          setTxt(e.target.value)
+                    }
+
+                    function addTask()
+                    {
+                          setTodo([...todo,txt])
+                            
+                    }
+
+                    return (
+                        <div>
+                            <h1></h1>
+                            <input type="text" onKeyUp = {handleTxt}/>
+                            <button onClick = {addTask}>Add Task</button>
+                            {
+                                todo.map((el)=>{
+                                    return (
+                                        <li>{el}</li>
+                                    )
+                                })
+                            }
+                        </div>
+                    )
+            }
+
+            ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+
+
+
+        </script>
+    </body>
+</html>
