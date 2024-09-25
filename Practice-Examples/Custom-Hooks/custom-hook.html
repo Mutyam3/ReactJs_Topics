@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> custom-hook
+        </title>
+
+        <style>
+              .mainDiv{
+
+                   border : 2px solid black;
+                   margin : 10px;
+                   padding: 10px;
+              }
+        </style>
+
+         <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+
+
+        <div id="root">
+
+        </div>
+
+        <script type="text/babel">
+
+          // higher order component ==> is a function  | 
+          // higher order component add functionality to component | 
+          // high order component takes component as an argument
+
+                    function useCounter(initialValue, step)
+                    {
+                         const [count, setCount] = React.useState(initialValue)
+
+                         function inc(){
+                             setCount(count + step)
+                         }
+                         function dec()
+                         {
+                            setCount(count - step)
+                         }
+
+                         function res()
+                         {
+                            setCount(initialValue)
+                         }
+
+                         return [count,inc,dec,res]
+                    }
+
+
+
+                  function MainCompo(){ 
+
+                      const [c,i,d,r] = useCounter(5,5)  
+
+                    return (
+                        <div className = "mainDiv">
+                            <h1>Mana component raa</h1>
+                            <h1>count : {c}</h1>
+                            <button onClick = {i}>Increment</button>
+                            <button onClick = {d}>Decrement</button>
+                            <button onClick = {r}>Reset</button>
+                        </div>
+                    )
+                  }
+
+                  ReactDOM.render(<MainCompo/>,document.getElementById('root'))
+               
+
+        </script>
+    </body>
+</html>
