@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Multiple-Todolist-state 
+        </title>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+
+
+        <script type="text/babel">
+
+            function Todolist(props)
+            {
+                const [txt, setTxt]  = React.useState("")
+                const [t, setT] = React.useState(props.title)  // ikkada nenu props lo nenu ichina title ni t state variable ki assign chestuna child and parent lo title undali dani dwara manam match chesukovochu
+                const [todos, setTodos] = React.useState(props.todos) // todos ki nenu props lo pampina todos ikkada ui display cheyaniki use aithadi 
+
+                function handleTxt(e)
+                {
+                    setTxt(e.target.value)
+                }
+
+                function addTask()
+                {
+                     props.addTodos(t,txt) // ikkada child nunchi data ni pass chestuna parent ki child to parent [ikkada nenu title and txt ni pass chestunna]
+                }
+                
+
+                return (
+                    <div>
+                        <input type="text" onChange= {handleTxt}/>
+                        <button onClick = {addTask}>Add Todo</button>
+
+                        <ul>
+                            {
+                              todos &&  todos.map((el)=>{
+
+                                console.log(el)
+                                    return(
+                                        <li>{el}</li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                )
+            }
+
+            function MainCompo()
+            {
+                const [todolist, setTodoList] = React.useState([])
+
+                function addTodoList()
+                {
+                    var naaTitle = prompt("Enter your Todolist Title : ")
+                        
+                    setTodoList([...todolist, {title : naaTitle, todos:[]}]) // ikkada maincompo lo manam oka array of object laga tesukuntunam 
+                                                                             // dantlo manam title ki prompt lo nunchi vachina title ni assign chestunam 
+                                                                             // and todos ki oka array ni assign chestunam todolist data ni store chesukoniki    
+                }
+
+                function addTodos(t,txt) // child component nunchi data ni techukoni store cheyali kabbatti nenu props dwara function ni pampinchi function arguments lo
+                                         // data ni parent component lo function definition ki paramters ga techukoni naa object lo unna todos array lo add chesukunta 
+                {
+                           var temp = [...todolist] 
+                                 
+                            temp =  temp.map((el)=>{
+
+                                    if(el.title == t){        // parent lo unna object lo title ki child lo unna title ki match aithene aa particular title unna object loki nenu input lo data ichindi aa particular todo array lopalaki vlethadi ledante ledu 
+                                        el.todos.push(txt)
+                                        return el             // push chesina tarvatha aa object ni return cheste adi temp lo ki velthadi 
+                                    }
+                                    else 
+                                    {
+                                        return el
+                                    }
+                                })
+
+                             setTodoList([...temp])
+                           
+                }
+
+                
+
+                return (
+                    <div>
+                        <button onClick = {addTodoList}>Add Todolist</button>
+                        {
+                           todolist && todolist.map((el)=>{
+                                return(
+                                    <div>
+                                        <h1>{el.title}</h1>
+                                        <Todolist title={el.title} todos = {el.todos} addTodos = {addTodos}></Todolist>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                )
+            }
+
+            ReactDOM.render(<MainCompo/>, document.getElementById('root'))
+
+
+        </script>
+    </body>
+</html>
