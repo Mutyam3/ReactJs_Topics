@@ -1,0 +1,24 @@
+.App{
+
+    border : 2px solid black;
+    margin : 10px;
+    padding: 10px;
+
+}
+
+.doneClass{
+
+    text-decoration: line-through;
+    background-color: rgb(159, 252, 18);
+    margin : 10px;
+    padding : 10px;
+
+}
+
+.undoClass{
+      
+    text-decoration: none;
+    background-color:  rgb(248, 153, 168);
+    margin : 10px;
+    padding :10px;
+}
