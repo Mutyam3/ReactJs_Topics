@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "json",
+      "author": "mahesh"
+    },
+    {
+      "id": "2",
+      "title": "Javscript",
+      "author": "bharath"
+    },
+    {
+      "id": "3",
+      "title": "Nodejs",
+      "author": "mutyam"
+    },
+    {
+      "id": "4",
+      "title": "Reactjs",
+      "author": "balu"
+    },
+    {
+      "title": "Mutyam",
+      "author": "Bhargva",
+      "id": "XGY8nlO"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,25 @@
+.App{
+
+  font-family: 'arial';
+  border:2px solid black;
+  margin:10px;
+  padding:10px;
+}
+
+.books{
+
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.books li {
+   
+  border:2px solid black;
+  width : 200px;
+  padding:20px;
+  box-sizing: border-box;
+  margin:10px;
+
+}
