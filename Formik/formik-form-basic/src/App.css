@@ -1,0 +1,244 @@
+
+
+
+.App{
+  border:2px solid black;
+  margin :10px;
+  padding:10px;
+}
+
+.navDiv{
+    border : 2px solid black;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    width : 75%;
+    justify-content: space-around;
+}
+
+.navDiv li{
+ 
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  background-color: crimson;
+  border-radius: 15px;
+  font-weight:bold ;
+}
+
+.formInnerDiv
+{
+  display: flex;
+  justify-content: space-between;
+  margin : 10px 20px 30px 20px
+}
+
+table tbody tr td{
+ 
+  padding:20px;
+  text-align: center;
+}
+
+select, input{
+  width : 300px;
+  height:30px;
+}
+
+.smallCompo{
+
+  border:2px solid black;
+  padding:25px;
+  border-radius: 15px;
+  margin:20px;
+}
+
+.stdFormDiv{
+
+  border:2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding:25px;
+  margin : 10px;
+
+}
+
+.StdFormLinks{
+   
+     display : flex;
+     justify-content: space-evenly;
+     border:2px solid black;
+     padding:10px;
+     border-radius: 20px;
+     margin:20px;
+     
+}
+
+i{
+  font-size: x-large;
+  color : black;
+}
+
+.parentCircle{
+
+  display : flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.circleDiv{
+  border : 2px solid black;
+  border-radius:50%;
+  width:50px;
+  height:50px;
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addressDiv{
+  display : flex;
+  gap : 20px;
+}
+
+.addressDiv input{
+  width : 280px;
+  height:30px;
+}
+
+.tickBox
+{
+  padding:10px;
+}
+
+.tickBox input{
+    width :20px;
+    vertical-align: middle;
+}
+
+.Btns{
+ 
+  text-align: end;
+
+}
+
+.Btns button{
+  margin:10px;
+  border:0px;
+  border-radius: 10px;
+  padding:10px 30px;
+}
+
+.innerSmallCompo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin : 20px;
+}
+
+.educateDiv{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.fileInput{
+
+  border:2px solid black;
+  width:320px;
+  
+}
+
+.PhotoDiv{
+
+  border:2px solid black;
+  width : 320px;
+  height : 240px;
+
+}
+
+.SignDiv{
+
+  border:2px solid black;
+  width : 320px;
+  height: 100px;
+}
+
+.UploadProfile{
+
+  border : 2px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  padding:35px;
+  align-items: center;
+  border-radius:20px;
+  margin:10px;
+
+}
+
+.specificIns{
+  border:2px solid black;
+  width : 50%;
+}
+
+.specificIns h5{
+
+  border-bottom:2px solid black;
+  padding:10px;
+
+}
+
+.contactDetails{
+
+  border:2px solid black;
+  padding:10px;
+  text-align: center;
+  margin : 10px;
+  
+}
+
+.SlideCompo{
+
+  /* border:2px solid black; */
+  margin :10px;
+  position : relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+
+.slideBtnLeft {
+  position: absolute;
+  top : 35%;
+  left: 5%;
+  font-size: 80px;
+  color:rgb(0, 0, 0);
+}
+
+.slideBtnRight{
+  position: absolute;
+  top : 35%;
+  Right: 5%;
+  font-size: 80px;
+  color:rgb(0, 0, 0);
+}
+
+.CardsParent{
+  display: flex;
+  flex-wrap: wrap;
+  margin:120px 20px;
+  
+  justify-content: center;
+}
+
+.Cards{
+
+  border:2px solid black;
+  width :200px;
+  margin:25px;
+  overflow: hidden;
+  border-radius: 12px;
+
+}
+
