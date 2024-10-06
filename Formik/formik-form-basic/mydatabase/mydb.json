@@ -10,6 +10,156 @@
          "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210210210704/Top-5-Government-Exams-That-You-Can-Take-After-Graduation.png"
   ],
 
+  
+    "about_us": 
+      [
+      {"organization_name": "Mutyam Testing Authority (MTA)",
+      "mission": {
+        "statement": "To facilitate a fair, transparent, and standardized examination system that identifies merit, ensures equal opportunities, and promotes academic and professional excellence across India.",
+        "details": [
+          "Establishing a credible, reliable, and accessible framework for conducting national-level entrance and recruitment examinations.",
+          "Utilizing modern technologies and secure systems to enhance the efficiency, speed, and integrity of the examination process.",
+          "Ensuring inclusivity by making exams accessible to candidates from diverse geographical, economic, and linguistic backgrounds.",
+          "Providing support to educational institutions and government bodies in their selection processes by offering accurate and unbiased results."
+        ]
+      },
+      "vision": {
+        "statement": "To become a globally recognized authority in the field of educational and professional assessments, contributing to a future where merit is the cornerstone of success and opportunity for all.",
+        "details": [
+          "To continuously evolve the testing and assessment ecosystem through innovation, adopting best practices from across the world.",
+          "To build trust and confidence in the examination system by maintaining the highest standards of fairness, integrity, and accountability.",
+          "To foster a learning-driven society by recognizing talent, enhancing employability, and enabling a smooth transition from education to employment."
+        ]
+      },
+      "core_values": [
+        {
+          "value": "Integrity",
+          "description": "Maintaining impartiality and fairness throughout the examination lifecycle, ensuring trustworthiness in our processes."
+        },
+        {
+          "value": "Excellence",
+          "description": "Striving to achieve the highest standards of accuracy and reliability in every aspect of exam management."
+        },
+        {
+          "value": "Inclusivity",
+          "description": "Ensuring equal opportunities by designing exams that cater to candidates from all regions, backgrounds, and abilities."
+        },
+        {
+          "value": "Innovation",
+          "description": "Consistently improving examination processes by incorporating state-of-the-art technology, research, and global best practices."
+        },
+        {
+          "value": "Accountability",
+          "description": "Upholding a sense of responsibility and transparency in delivering unbiased results and managing candidate data securely."
+        },
+        {
+          "value": "Service to Society",
+          "description": "Contributing to national progress by enabling a merit-based selection system for higher education and government recruitment."
+        }
+      ],
+
+      "objectives": [
+        "To administer entrance exams such as NEET, JEE, UGC-NET, and other government recruitment exams with the utmost precision and timeliness.",
+        "To ensure that all examinations are conducted securely, using technologies such as biometric authentication, encrypted data management, and AI-enabled invigilation.",
+        "To provide user-friendly platforms for candidates, allowing smooth registration, easy access to study materials, and instant result notifications.",
+        "To support government institutions and universities in their admission and recruitment processes by delivering accurate, reliable, and tamper-proof examination results.",
+        "To promote research and innovation in the field of educational assessments, encouraging continuous improvement in exam delivery systems."
+      ],
+      
+      "history": {
+        "establishment_year": 2017,
+        "background": "The National Testing Authority (NTA) was formed as an autonomous and self-sustained testing organization under the Ministry of Education, Government of India. It was established to meet the demand for a specialized body capable of conducting national-level entrance exams and recruitment tests in a transparent and efficient manner.",
+        "milestones": [
+          {
+            "year": 2019,
+            "achievement": "Successfully conducted the first JEE (Main) and NEET exams, enrolling over 15 lakh candidates across multiple cities."
+          },
+          {
+            "year": 2020,
+            "achievement": "Launched a computer-based testing system for UGC-NET, ensuring higher efficiency and accuracy in the examination process."
+          },
+          {
+            "year": 2021,
+            "achievement": "Implemented AI-powered proctoring and security measures during exams to combat cheating and malpractice."
+          },
+          {
+            "year": 2023,
+            "achievement": "Introduced a multilingual exam interface to accommodate candidates from diverse linguistic backgrounds, promoting inclusivity."
+          }
+        ]
+      },
+      "team": {
+        "leadership": [
+          {
+            "name": "Dr. Mutyam Bhargav Reddy",
+            "position": "Chairperson",
+            "bio": "Dr. Mutyam Bhargav Reddy is an esteemed educationist with over 30 years of experience in the field of academic assessments and public service. As Chairperson of the NTA, he is committed to driving innovation and ensuring fairness in the examination process."
+          },
+          {
+            "name": "Ms. Ganesh",
+            "position": "Executive Director",
+            "bio": "Ms. Ganesh has extensive expertise in examination management and policy implementation. Her leadership focuses on making the NTA a cutting-edge organization that meets global standards in assessment."
+          },
+          {
+            "name": "Mr. Mahesh",
+            "position": "Director of Technology",
+            "bio": "Mr. Mahesh is responsible for overseeing the technical infrastructure of NTA's operations, including computer-based testing, digital security, and AI-powered solutions for seamless exam management."
+          }
+        ],
+
+        "staff": {
+          "total_employees": 200,
+          "departments": [
+            "Examination Management",
+            "Technology and Security",
+            "Research and Development",
+            "Candidate Support",
+            "Administration and Finance"
+          ]
+        }
+      },
+      "services": {
+        "exam_portfolio": [
+          "Joint Entrance Examination (JEE Main)",
+          "National Eligibility cum Entrance Test (NEET)",
+          "University Grants Commission National Eligibility Test (UGC-NET)",
+          "Central Teacher Eligibility Test (CTET)",
+          "Central University Common Entrance Test (CUCET)"
+        ],
+        "technological_solutions": [
+          {
+            "service": "Online Registration System",
+            "description": "A user-friendly portal for candidates to register for exams, update their profiles, and track their applications."
+          },
+          {
+            "service": "Computer-Based Testing (CBT)",
+            "description": "A modern system that facilitates secure, real-time online examinations across various centers in India."
+          },
+          {
+            "service": "AI-Powered Proctoring",
+            "description": "An AI-enabled invigilation system that monitors candidate activity during exams to prevent malpractice."
+          },
+          {
+            "service": "Result Processing and Verification",
+            "description": "A robust framework for processing and delivering accurate results to candidates and institutions."
+          }
+        ]
+      },
+      "contact_info": {
+        "address": "123 National Testing Avenue, New Delhi, India",
+        "phone": "+91-11-23456789",
+        "email": "info@nta.org.in",
+        "social_media": {
+          "twitter": "https://twitter.com/ntaofficial",
+          "facebook": "https://facebook.com/ntaofficial",
+          "linkedin": "https://linkedin.com/company/nta-official"
+        },
+        "working_hours": "Mon-Fri, 9:00 AM - 5:00 PM"
+      }}
+      ],
+  
+  
+
   "ExamsInCard" : [
   {
     "examName": "Civil Services Examination (CSE)",

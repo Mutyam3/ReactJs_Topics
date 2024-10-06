@@ -6,8 +6,9 @@ function Cards()
 {
 
     const [cardsData, setCardsData] = React.useState([])
-    const [dis, setDis] = React.useState("none")
-    const [indx, setIndx] = React.useState(1)
+    const [Info, setInfo] = React.useState(false)
+    const [indx,setIndx] = React.useState(null)
+
     React.useEffect(()=>{
 
         axios.get('http://localhost:4000/ExamsInCard').then((res)=>{
@@ -17,32 +18,16 @@ function Cards()
         }).catch(()=>{})
     },[])
 
-    function moreInfo(ind)
+
+    function showInfo(i)
     {
-        
-        if(dis == 'none')
-        {
-              setDis('block')
-                
-            
-            setIndx(ind)
-           
-        }
-       
-          
+        setIndx(i)
+        setInfo(!Info)
+        console.log(indx)  
     }
 
-    function lessInfo(ind)
-    {
-          if(dis=="block")
-          {
-            
-                setDis('none')
-                setIndx(ind)
-            
-            
-          }
-    }
+    
+   
 
     return(
         <div className='CardsParent'>
@@ -52,26 +37,18 @@ function Cards()
                         <div className='Cards'>
                             <img src={el.imageUrl} width="200px" height ="300px"/>
                             <h5>{el.examName}</h5>
-                           
-                            <div style = { ind == indx ? {display : dis} : {display: "none"}}>
+                             
+                          {
+                            Info && indx == ind && (<div>
                                 <p>Exam Type : {el.examType}</p>
                                 <p>Eligibility : {el.eligibility}</p>
                                 <p>Exam Date : {el.examDate}</p>
-                            </div>
-
-                            {
-                               dis=="none" && <b onClick = {()=>{moreInfo(ind)}}>More Info</b> 
+                               </div>
+                                ) 
                               
-                            }
+                          }
 
-                            {
-                               dis == "block" && <b onClick = {()=>{lessInfo(ind)}}>Less Info</b>
-                            }
-
-      
-                             
-                             
-                             
+                         <b onClick = {()=>{ showInfo(ind)}}> {Info && indx == ind ? 'Less Info' : 'More Info'}</b>
                             
                         </div>
                     )
