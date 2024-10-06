@@ -1,6 +1,7 @@
 import React from 'react'
 import SlideCompo from './SlideCompo'
 import Cards from './Cards'
+import Footer from '../Footer'
 
 function Home()
 {
@@ -10,6 +11,7 @@ function Home()
             
             <SlideCompo/>
             <Cards/>
+            
             
 
         </div>

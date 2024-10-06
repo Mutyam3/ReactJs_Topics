@@ -15,6 +15,7 @@
     margin: auto;
     width : 75%;
     justify-content: space-around;
+    
 }
 
 .navDiv li{
@@ -228,17 +229,123 @@ i{
   display: flex;
   flex-wrap: wrap;
   margin:120px 20px;
-  
   justify-content: center;
+  background-color: rgb(247, 247, 247);
+  border-radius: 15px;
 }
 
 .Cards{
 
-  border:2px solid black;
+  /* border:2px solid black; */
   width :200px;
   margin:25px;
   overflow: hidden;
   border-radius: 12px;
+  
 
 }
+
+.footerDiv li{
+
+  color : rgb(253, 253, 253);
+  border:2px solid black;
+  width: 200px;
+  text-align: center;
+  background-color: rgb(34, 34, 34);
+  display:flex;
+  justify-content: space-between;
+  padding:0px 10px
+
+}
+
+.footerDiv li i{
+  color:white;
+}
+
+.FooterMain{
+  
+  border-radius: 20px;
+  background-color: black;
+  padding:20px;
+  margin:20px 20px 0px 20px;
+  align-items: center;
+  color : rgb(253, 253, 253);
+}
+
+.FooterSection {
+  display : flex;
+  justify-content: space-evenly;
+}
+
+.FooterEnd{
+
+  border:2px solid black;
+  text-align: center;
+  padding:5px;
+  margin:0px 20px;
+  border-radius: 12px;
+}
+
+.FooterMain div i {
+  color:white;
+}
+
+.FooterMain div p {
+  text-align: end;
+}
+
+.Mission 
+{
+   /* border:2px solid rgb(16, 16, 16); */
+   padding:10px;
+   background-color: rgb(124, 31, 137);
+   border-radius: 12px;
+   margin:40px;
+   width :fit-content;
+   color:white;
+}
+
+.Mission ul{
+  /* border:2px solid black; */
+  padding-left : 120px;
+  list-style-type: none;
+}
+
+.Mission ul li{
+  border:2px solid rgb(177, 175, 175);
+  padding:10px;
+  margin:10px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color:black;
+}
+
+.Core-Values {
+  /* border:2px solid black; */
+  margin:40px;
+  background-color: rgb(124, 31, 137);
+  color: white;
+  border-radius: 12px;
+  padding:10px;
+  
+}
+
+.Core-Values ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Core-Values ul div{
+  border:2px solid black;
+  margin:10px;
+  width : 180px;
+  border-radius: 12px;
+  text-align: center;
+ 
+}
+
+
+
+
 
