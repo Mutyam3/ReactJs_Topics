@@ -5,6 +5,8 @@ function AboutUs()
 {
 
     const [ aboutUsData, setAboutUsData] = React.useState([])
+    const [Info , setInfo] = React.useState(true)
+    const [indx , setIndx] = React.useState(null)
 
     React.useEffect(()=>{
 
@@ -15,6 +17,16 @@ function AboutUs()
 
     }, [])
 
+    
+        function hide(ind)
+        {
+                setIndx(ind)
+                setInfo(!Info)
+                
+        }
+
+      
+   
 
     return(
         <div className='App'>
@@ -26,34 +38,43 @@ function AboutUs()
                         <section>
                             <h5>{el.organization_name}</h5>
                             <div className='Mission'>
-                                <h5>Mission </h5>
+                               <div className='d-flex justify-content-between p-2'> <h5>Mission </h5>  <span onClick={()=>{hide(el.mission.id)}}> {Info && indx == el.mission.id ?'-' : '+'}</span></div>
 
                                   <p>{el.mission.statement}</p>
-                                  <ul>
-                                       {
-                                         el.mission.details.map((e)=>{
-                                            return (
-                                                <li>{e}</li>
-                                            )
-                                         })
-                                       }
-                                  </ul>
+                               {
+                                 Info && indx == el.mission.id && (
+                                    <ul>
+                                    {
+                                      el.mission.details.map((e)=>{
+                                         return (
+                                             <li>{e}</li>
+                                         )
+                                      })
+                                    }
+                                   </ul>
+                                 )
+                               }
                             </div>
 
                             <div className='Mission'>
-                                <h5>Vision</h5>
+                                <div className='d-flex justify-content-between p-2'><h5>Vision</h5>  <span onClick = {()=>{hide(el.vision.id)}}> {Info && indx == el.vision.id ?'-' : '+'}</span></div>
+                                
 
                                  <p>{el.vision.statement}</p>
-
-                                 <ul>
-                                    {
-                                        el.vision.details.map((e)=>{
-                                            return (
-                                                <li>{e}</li>
-                                            )
-                                        })
-                                    }
-                                 </ul>
+                                {
+                                    Info && indx == el.vision.id && (
+                                        <ul>
+                                        {
+                                            el.vision.details.map((e)=>{
+                                                return (
+                                                    <li>{e}</li>
+                                                )
+                                            })
+                                        }
+                                     </ul>
+                                    )
+                                }
+                                
                             </div>
 
                             <div className='Core-Values'>
@@ -77,92 +98,65 @@ function AboutUs()
 
                             <div className='Objectives Mission'>
 
-                                <h5>Objectives</h5>
-                                <ul>
+                            <div className='d-flex justify-content-between'><h5>Objectives</h5> &nbsp;&nbsp;&nbsp; <span onClick = {()=>{hide(el.objectives.id)}}>{Info && indx == el.objectives.id ? '-' : '+'}</span></div>
+
+                              { Info && indx == el.objectives.id && 
+                                (<ul>
                                     {
-                                        el.objectives.map((el)=>{
+                                        el.objectives.List.map((el)=>{
                                             return (
                                                 <li>{el}</li>
                                             )
                                         })
                                     }
-                                </ul>
+                                </ul>)
+                              }
 
                             </div>
 
                             <div className='History'>
-
-                                <h5>History</h5>
-                                <b> Establishment Year{el.history.establishment_year}</b>
-                                <p> Background : {el.history.background}</p>
-                                   <h5>Milestones</h5>
+                               <div className='HistoryOne'>
+                                    <h5>History</h5>
+                                    <b> Establishment Year{el.history.establishment_year}</b>
+                                    <p> Background : {el.history.background}</p>
+                                </div>
+                               <div className='Milestone Core-Values'>
+                                <h5>Milestones</h5>
                                 <ul>
 
                                     {
                                         el.history.milestones.map((el)=>{
                                             return <div>
-                                                    <b>{el.year}</b> 
+                                                    <p><b>{el.year}</b></p> 
                                                     <p>{el.achievement}</p>
                                             </div>
                                         })
                                         
                                     }
                                 </ul>
+                                </div>
 
                             </div>
 
                             <div className='Team'>
                                 <h5>Team</h5>
-                             
                              {
                                  el.team.leadership.map((el)=>{
                                     return <div>
-                                               <b> Name : {el.name}</b>
-                                               <p><b>Position :</b> {el.position}</p>
-                                               <p><b>Bio :</b> {el.bio}</p>
+                                              <div className='TeamOne'>
+                                                  <p><b> Name :   </b> {el.name}</p>
+                                                  <p><b>Position: </b> {el.position}</p>
+                                                  <span onClick = {()=>{hide(el.id)}}> { !Info && el.id == indx ? '-' : "+"  }</span>
+                                              </div>
+                                              
+                                              { indx == el.id && !Info && <p className='closedTeam'><b>Bio :</b> {el.bio}</p> } 
                                            </div>
                                  })
                              }
 
                             </div>
 
-                            <div className='Staff'> 
-                                <h5>Staff</h5>
-                                <b>Total_employees : {el.team.staff.total_employees}</b>
-                             <ul>
-                                {
-                                    el.team.staff.departments.map((e)=>{
-                                        return <li>{e}</li>
-                                    })
-                                }
-                             </ul>
-                               
-                            </div>
-
-                            <div className='Services'>
-                                <h5>Services</h5>
-                                <b>Exam Portfolio</b>
-                                <ul>
-                                    {
-                                        el.services.exam_portfolio.map((e)=>{
-                                            return <li>{e}</li>
-                                        })
-                                    }
-                                </ul>
-
-                                <b>Technological Solutions</b>
-
-                                <ul>
-                                    {
-                                        el.services.technological_solutions.map((e)=>{
-                                            return <div>
-                                                      <p><b>Service : </b> {e.service}</p> 
-                                                      <p><b>Description : </b> {e.description}</p>
-                                                  </div>
-                                        })
-                                    }
-                                </ul>
-                            </div>
+         
 
                         </section>
                    )

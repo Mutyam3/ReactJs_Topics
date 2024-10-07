@@ -15,6 +15,7 @@
       [
       {"organization_name": "Mutyam Testing Authority (MTA)",
       "mission": {
+        "id" : 1,
         "statement": "To facilitate a fair, transparent, and standardized examination system that identifies merit, ensures equal opportunities, and promotes academic and professional excellence across India.",
         "details": [
           "Establishing a credible, reliable, and accessible framework for conducting national-level entrance and recruitment examinations.",
@@ -24,6 +25,7 @@
         ]
       },
       "vision": {
+        "id" : 2,
         "statement": "To become a globally recognized authority in the field of educational and professional assessments, contributing to a future where merit is the cornerstone of success and opportunity for all.",
         "details": [
           "To continuously evolve the testing and assessment ecosystem through innovation, adopting best practices from across the world.",
@@ -58,13 +60,17 @@
         }
       ],
 
-      "objectives": [
-        "To administer entrance exams such as NEET, JEE, UGC-NET, and other government recruitment exams with the utmost precision and timeliness.",
-        "To ensure that all examinations are conducted securely, using technologies such as biometric authentication, encrypted data management, and AI-enabled invigilation.",
-        "To provide user-friendly platforms for candidates, allowing smooth registration, easy access to study materials, and instant result notifications.",
-        "To support government institutions and universities in their admission and recruitment processes by delivering accurate, reliable, and tamper-proof examination results.",
-        "To promote research and innovation in the field of educational assessments, encouraging continuous improvement in exam delivery systems."
-      ],
+      "objectives": 
+        { "id":  3,
+          "List" : [
+          "To administer entrance exams such as NEET, JEE, UGC-NET, and other government recruitment exams with the utmost precision and timeliness.",
+          "To ensure that all examinations are conducted securely, using technologies such as biometric authentication, encrypted data management, and AI-enabled invigilation.",
+          "To provide user-friendly platforms for candidates, allowing smooth registration, easy access to study materials, and instant result notifications.",
+          "To support government institutions and universities in their admission and recruitment processes by delivering accurate, reliable, and tamper-proof examination results.",
+          "To promote research and innovation in the field of educational assessments, encouraging continuous improvement in exam delivery systems."
+        ]}
+        ,
+        
       
       "history": {
         "establishment_year": 2017,
@@ -90,72 +96,26 @@
       },
       "team": {
         "leadership": [
-          {
+          { "id" : 10,
             "name": "Dr. Mutyam Bhargav Reddy",
             "position": "Chairperson",
-            "bio": "Dr. Mutyam Bhargav Reddy is an esteemed educationist with over 30 years of experience in the field of academic assessments and public service. As Chairperson of the NTA, he is committed to driving innovation and ensuring fairness in the examination process."
+            "bio": "Dr. Mutyam Bhargav Reddy is an esteemed educationist with over 30 years of experience in the field of academic assessments and public service. As Chairperson of the MTA, he is committed to driving innovation and ensuring fairness in the examination process."
           },
           {
+            "id" : 11,
             "name": "Ms. Ganesh",
             "position": "Executive Director",
-            "bio": "Ms. Ganesh has extensive expertise in examination management and policy implementation. Her leadership focuses on making the NTA a cutting-edge organization that meets global standards in assessment."
+            "bio": "Ms. Ganesh has extensive expertise in examination management and policy implementation. Her leadership focuses on making the MTA a cutting-edge organization that meets global standards in assessment."
           },
           {
+            "id" : 12,
             "name": "Mr. Mahesh",
             "position": "Director of Technology",
-            "bio": "Mr. Mahesh is responsible for overseeing the technical infrastructure of NTA's operations, including computer-based testing, digital security, and AI-powered solutions for seamless exam management."
-          }
-        ],
-
-        "staff": {
-          "total_employees": 200,
-          "departments": [
-            "Examination Management",
-            "Technology and Security",
-            "Research and Development",
-            "Candidate Support",
-            "Administration and Finance"
-          ]
-        }
-      },
-      "services": {
-        "exam_portfolio": [
-          "Joint Entrance Examination (JEE Main)",
-          "National Eligibility cum Entrance Test (NEET)",
-          "University Grants Commission National Eligibility Test (UGC-NET)",
-          "Central Teacher Eligibility Test (CTET)",
-          "Central University Common Entrance Test (CUCET)"
-        ],
-        "technological_solutions": [
-          {
-            "service": "Online Registration System",
-            "description": "A user-friendly portal for candidates to register for exams, update their profiles, and track their applications."
-          },
-          {
-            "service": "Computer-Based Testing (CBT)",
-            "description": "A modern system that facilitates secure, real-time online examinations across various centers in India."
-          },
-          {
-            "service": "AI-Powered Proctoring",
-            "description": "An AI-enabled invigilation system that monitors candidate activity during exams to prevent malpractice."
-          },
-          {
-            "service": "Result Processing and Verification",
-            "description": "A robust framework for processing and delivering accurate results to candidates and institutions."
+            "bio": "Mr. Mahesh is responsible for overseeing the technical infrastructure of MTA's operations, including computer-based testing, digital security, and AI-powered solutions for seamless exam management."
           }
         ]
-      },
-      "contact_info": {
-        "address": "123 National Testing Avenue, New Delhi, India",
-        "phone": "+91-11-23456789",
-        "email": "info@nta.org.in",
-        "social_media": {
-          "twitter": "https://twitter.com/ntaofficial",
-          "facebook": "https://facebook.com/ntaofficial",
-          "linkedin": "https://linkedin.com/company/nta-official"
-        },
-        "working_hours": "Mon-Fri, 9:00 AM - 5:00 PM"
       }}
+
       ],
   
   

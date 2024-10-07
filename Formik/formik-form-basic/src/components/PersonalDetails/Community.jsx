@@ -7,6 +7,7 @@ function Community()
         <div className='smallCompo'>
               
         <h5>Community Details</h5>
+        <form >
          <label>
               Community Details <br/>
 
@@ -19,6 +20,7 @@ function Community()
                </select>
 
          </label>
+         </form>
 
     </div>
     )

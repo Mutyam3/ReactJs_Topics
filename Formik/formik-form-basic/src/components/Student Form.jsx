@@ -1,26 +1,33 @@
 import React from 'react' // ila direct ga techukunte avi default exports
 
 import { Link, Outlet } from 'react-router-dom'  //ila {link} techukunte avi non-default exports 
+import { Formik,useFormik } from 'formik'
 
 
 function StudentForm()
 {
+    
 
     
     return (
         <div className='stdFormDiv'>
 
             <div className='StdFormLinks'>
+
                 <div className='parentCircle'>
-                  <Link to= "/studentForm/personal-Details"><div className='circleDiv'>
+                  <Link to = "/studentForm/personal-Details" ><div className='circleDiv'>
                           <i class="bi bi-person-circle"></i>
                         </div></Link><br/>
                         <h5>PersonalDetails</h5>
                 </div>
+
+
                 <div className='parentCircle'>
                    <Link to="/studentForm/Other-Details"><div className='circleDiv'><i class="bi bi-person-lines-fill"></i></div></Link><br/>
                    <h5>Other Details</h5>
                 </div>
+
+
 
                 <div className='parentCircle'>
                     <Link to="/studentForm/Educational-Qualification"><div className='circleDiv'>
@@ -31,10 +38,14 @@ function StudentForm()
                     <h5>Educational Qualification</h5>
                 </div>
 
+
+
                 <div className='parentCircle'>
                     <Link to="/studentForm/Upload-Profile-Documents"><div className='circleDiv'><i class="bi bi-cloud-upload"></i></div></Link>
                     <h5>Upload Profile Documents</h5>
                 </div>
+
+
 
                 <div className='parentCircle'>
                      <Link to="/studentForm/Preview"><div className='circleDiv'><i class="bi bi-file-earmark-text"></i></div></Link>
