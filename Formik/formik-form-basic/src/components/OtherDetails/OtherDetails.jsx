@@ -3,9 +3,12 @@ import CategoryDetails from './CategoryDetails'
 import EBCDetails from './EBCDetails'
 import BankDetails from './BankDetails'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-function OtherDetails()
+function OtherDetails(props)
 {
+
+
 
     function save()
     {
@@ -13,7 +16,7 @@ function OtherDetails()
     }
     return (
         <div>
-           
+           <form onSubmit={props.f.obj.handleSubmit}>
               
               <CategoryDetails/>
               <EBCDetails/>
@@ -25,10 +28,11 @@ function OtherDetails()
                  <button style={{backgroundColor:'crimson', color: 'white'}}>NEXT</button>
                  </Link>
             </div>
+            </form>
             
 
         </div>
     )
 }
 
-export default OtherDetails
+export default connect((store)=>{return store}) (OtherDetails)

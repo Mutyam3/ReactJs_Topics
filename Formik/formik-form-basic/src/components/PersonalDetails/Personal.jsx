@@ -1,7 +1,14 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
-function Personal()
+function Personal(props)
 {
+      
+     console.log(props)
+     
+
+     
+      
     return (
         <section className='smallCompo'>
         <h5>Personal Details</h5>
@@ -22,7 +29,7 @@ function Personal()
                       </td>
                       <td>
                            <label>Date of Birth as recorded in Matriculation <br/>(10th class) Marks list/certificate <br/> 
-                                  <input type="text" />
+                                  <input type="text"  />
                            </label> 
                       </td>
                       <td>

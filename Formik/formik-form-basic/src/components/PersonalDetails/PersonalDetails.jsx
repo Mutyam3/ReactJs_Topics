@@ -4,16 +4,17 @@ import Community from './Community'
 import Personal from './Personal'
 import PostalAddress from './PostalAddress'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-function PersonalDetails()
+function PersonalDetails(props)
 {
     const myStudentForm = useFormik({
         initialValues : {
               nationality : '',
               dateOfBirth :'',
               age : '',
-              firstName : '',
-              lastName : '',
+              fullName:'',
               fatherName : '',
               motherName : '',
               gender : '',
@@ -22,26 +23,33 @@ function PersonalDetails()
               maritalStatus : '',
               religion : '',
               choiceOfLanguage:'',
-              permanentMarkOfIdentification : ''
+              permanentMarkOfIdentification1: ''
         },
 
         onSubmit : (values)=>{
             console.log(values)
         }
+
+    })
+
+    console.log('form :: ' , props)
+
+    React.useEffect(()=>{
+
+        props.dispatch({type:'SENDDATA', payload : myStudentForm})
+
+    },[])
+
+     function save()
+     {
         
-
-})
-
-function save()
-{
-
-}
+     }
     return (
         <div>
-             <form onSubmit={myStudentForm.handleSubmit}>
+         <form  onSubmit = {myStudentForm.handleSubmit}>
             {/* {manam bind chesam handleSubmit tho} */}
 
-            <Personal/>
+            <Personal />
             <Community/>
             <PostalAddress/>
 
@@ -57,4 +65,4 @@ function save()
     )
 }
 
-export default PersonalDetails
+export default connect((store)=>{return store}) (PersonalDetails)
