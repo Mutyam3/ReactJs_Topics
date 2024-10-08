@@ -1,7 +1,24 @@
 import React from 'react'
 
-function PostalAddress()
+function PostalAddress(props)
 {
+     
+   
+      
+
+      function handleAddress(e)
+      {
+         if(e.target.checked == true)
+         {
+            props.st.setFieldValue('sameAsPresent', true)
+            props.st.setFieldValue('permanentState', props.st.values.presentState )
+            props.st.setFieldValue('permanentDistrict', props.st.values.presentDistrict)
+            props.st.setFieldValue('permanentAddress', props.st.values.presentAddress)
+            props.st.setFieldValue('permanentVillage', props.st.values.presentValue)
+            props.st.setFieldValue('permanentPincode', props.st.values.presentPincode)
+         }
+      }
+
     return (
         <section className='smallCompo'>
 
@@ -19,7 +36,7 @@ function PostalAddress()
                         <td>
                             <label>
                                 State/UT  <br/> 
-                                <input type="text"/>
+                                <input type="text"  {...props.st.getFieldProps('presentState')}/>
                                 
                             </label>
                         </td>
@@ -27,7 +44,7 @@ function PostalAddress()
                         <td>
                             <label>
                                 District  <br/>
-                                <input type="text"/>
+                                <input type="text" {...props.st.getFieldProps('presentDistrict')}/>
 
                             </label>
                         </td>
@@ -36,7 +53,7 @@ function PostalAddress()
                         <td colSpan="2" >
                             <label>
                                  Address  <br/>
-                               <textarea rows="4" cols = "78" >
+                               <textarea rows="4" cols = "78" {...props.st.getFieldProps('presentAddress')} >
                                      
                                </textarea>
                             </label>
@@ -47,13 +64,13 @@ function PostalAddress()
                         <td >
                             <label>
                                 Village  <br/>
-                                <input type = "text"/>
+                                <input type = "text" {...props.st.getFieldProps('presentVillage')}/>
                             </label>
                         </td>
                         <td>
                             <label>
                                 PinCode  <br/>
-                                <input type="text"/>
+                                <input type="text" {...props.st.getFieldProps('presentPincode')}/>
                             </label>
                         </td>
                     </tr>
@@ -73,7 +90,9 @@ function PostalAddress()
                         <td>
                             <label>
                                 State/UT  <br/> 
-                                <input type="text"/>
+
+                                <input type="text" {...props.st.getFieldProps('permanentState')} 
+                                value={props.st.values.sameAsPresent ? props.st.values.presentState : props.st.values.permanentState} />
                                 
                             </label>
                         </td>
@@ -81,7 +100,9 @@ function PostalAddress()
                         <td>
                             <label>
                                 District  <br/>
-                                <input type="text"/>
+
+                                <input type="text" {...props.st.getFieldProps('permanentDistrict')}
+                                 value={props.st.values.sameAsPresent ? props.st.values.presentDistrict : props.st.values.permanentDistrict}/>
 
                             </label>
                         </td>
@@ -90,7 +111,8 @@ function PostalAddress()
                         <td colSpan="2">
                             <label>
                                  Address  <br/>
-                               <textarea rows="4" cols = "78">
+                               <textarea rows="4" cols = "78" {...props.st.getFieldProps('permanentAddress')}
+                               value={props.st.values.sameAsPresent ? props.st.values.presentAddress : props.st.values.permanentAddress}>
                                      
                                </textarea>
                             </label>
@@ -101,13 +123,15 @@ function PostalAddress()
                         <td>
                             <label>
                                 Village  <br/>
-                                <input type = "text"/>
+                                <input type = "text" {...props.st.getFieldProps('permanentVillage')}
+                                value={props.st.values.sameAsPresent ? props.st.values.presentVillage : props.st.values.permanentVillage}/>
                             </label>
                         </td>
                         <td>
                             <label>
                                 PinCode  <br/>
-                                <input type="text"/>
+                                <input type="text" {...props.st.getFieldProps('permanentPincode')}
+                                value={props.st.values.sameAsPresent ? props.st.values.presentPincode : props.st.values.permanentPincode}/>
                             </label>
                         </td>
                     </tr>
@@ -118,7 +142,7 @@ function PostalAddress()
     </div>
 
         <div className='tickBox'>
-              <input type="checkbox"/> Tick if Permanent Address is same as Present Address
+              <input type="checkbox" onChange = {handleAddress} name = "sameAsPresent"/> Tick if Permanent Address is same as Present Address
         </div>
         
       </section>

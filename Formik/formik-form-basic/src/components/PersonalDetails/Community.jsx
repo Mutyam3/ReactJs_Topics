@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Community()
+function Community(props)
 {
     return(
         <div className='smallCompo'>
@@ -11,7 +11,7 @@ function Community()
          <label>
               Community Details <br/>
 
-               <select>
+               <select {...props.st.getFieldProps('communityDetails')}>
                      <option disabled selected>--Select your Community--</option>
                      <option value="UR(unreserved)">UR(unreserved)</option>
                      <option value="OBC">OBC</option>

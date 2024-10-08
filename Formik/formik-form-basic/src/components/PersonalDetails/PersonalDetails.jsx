@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-function PersonalDetails(props)
+function PersonalDetails()
 {
     const myStudentForm = useFormik({
         initialValues : {
@@ -23,7 +23,23 @@ function PersonalDetails(props)
               maritalStatus : '',
               religion : '',
               choiceOfLanguage:'',
-              permanentMarkOfIdentification1: ''
+              permanentMarkOfIdentification1: '',
+              permanentMarkOfIdentification2 : '',
+              communityDetails: '',
+              presentState : '',
+              presentDistrict : '',
+              presentAddress : '',
+              presentVillage : '',
+              presentPincode : '',
+            
+              permanentState : '',
+              permanentDistrict : '',
+              permanentAddress : '',
+              permanentVillage : '',
+              permanentPincode : '',
+              sameAsPresent : false
+            
+
         },
 
         onSubmit : (values)=>{
@@ -32,30 +48,28 @@ function PersonalDetails(props)
 
     })
 
-    console.log('form :: ' , props)
 
-    React.useEffect(()=>{
 
-        props.dispatch({type:'SENDDATA', payload : myStudentForm})
+    // React.useEffect(()=>{
 
-    },[])
+    //     dispatch({type:'SENDDATA', payload : myStudentForm})
 
-     function save()
-     {
-        
-     }
+    // },[])
+
+    
+
     return (
         <div>
          <form  onSubmit = {myStudentForm.handleSubmit}>
             {/* {manam bind chesam handleSubmit tho} */}
 
-            <Personal />
-            <Community/>
-            <PostalAddress/>
+            <Personal st = {myStudentForm}/>
+            <Community st = {myStudentForm}/>
+            <PostalAddress st = {myStudentForm}/>
 
             <div className='Btns'>
-                 <button onClick = {save} style={{backgroundColor:'green',color:'white'}}>SAVE</button>
-                 <Link to="/studentForm/Other-Details" style={{textDecoration:'none',color:'white'}}><button style={{backgroundColor:'crimson', color: 'white'}}>NEXT</button>
+                 <button style={{backgroundColor:'green',color:'white'}}>SAVE</button>
+                 <Link to="/studentForm/Other-Details" style={{textDecoration:'none',color:'white'}}><button type='button' style={{backgroundColor:'crimson', color: 'white'}}>NEXT</button>
                  </Link> 
 
             </div>
