@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CategoryDetails()
+function CategoryDetails(props)
 {
     return (
         <div className='smallCompo'>
@@ -11,7 +11,7 @@ function CategoryDetails()
 
                 <label>
                     Are you an Ex-Serviceman ? <br/>
-                    <select>
+                    <select {...props.od.getFieldProps('ex_serviceman')}>
                          <option disabled selected>Select</option>
                          <option value = 'Yes'>Yes</option>
                          <option value = 'No'>No</option>
@@ -24,7 +24,7 @@ function CategoryDetails()
 
                  <label>
                        Are you a person with benchmark disability ? <br/>
-                       <select>
+                       <select {...props.od.getFieldProps('personWithBenchmarkDisability')}>
                            <option disabled selected>Select</option>
                            <option value = 'Yes'>Yes</option>
                            <option value = 'No'>No</option>

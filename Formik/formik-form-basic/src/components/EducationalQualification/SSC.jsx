@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Matriculation()
+function Matriculation(props)
 {
     return(
          <div className='smallCompo'>
@@ -10,7 +10,7 @@ function Matriculation()
 
             <label>
                 State<br/>
-                <select>
+                <select  {...props.Ed.getFieldProps('SSC_State')}>
                     <option disabled selected>Select</option>
                     <option value="Telangana">Telangana</option>
                     <option value="AndhraPradesh">AndhraPradesh</option>
@@ -21,17 +21,17 @@ function Matriculation()
 
             <label>
                  Board <br/>
-                <input type="text"/>
+                <input type="text" {...props.Ed.getFieldProps('SSC_Board')}/>
             </label>
 
             <label>
                 Date of Passing <br/>
-                <input type="date"/>
+                <input type="date"  {...props.Ed.getFieldProps('SSC_DateOfPassing')}/>
             </label>
 
             <label>
                 Roll No <br/>
-                <input type="text"/>
+                <input type="text" {...props.Ed.getFieldProps('SSC_RollNo')}/>
             </label>
 
             

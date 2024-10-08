@@ -3,9 +3,6 @@ import React from 'react'
 function PostalAddress(props)
 {
      
-   
-      
-
       function handleAddress(e)
       {
          if(e.target.checked == true)

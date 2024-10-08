@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Inter()
+function Inter(props)
 {
     return(
         <div className='smallCompo'>
@@ -10,7 +10,7 @@ function Inter()
 
             <label>
                 Group <br/>
-                <select>
+                <select  {...props.Ed.getFieldProps('Inter_Group')}>
                     <option disabled selected>Select</option>
                     <option value="Mpc">Mpc</option>
                     <option value="Bipc">Bipc</option>
@@ -22,7 +22,7 @@ function Inter()
 
             <label>
                 State<br/>
-                <select>
+                <select {...props.Ed.getFieldProps('Inter_State')}> 
                     <option disabled selected>Select</option>
                     <option value="Telangana">Telangana</option>
                     <option value="AndhraPradesh">AndhraPradesh</option>
@@ -33,17 +33,17 @@ function Inter()
 
             <label>
                  Board <br/>
-                <input type="text"/>
+                <input type="text" {...props.Ed.getFieldProps('Inter_Board')}/>
             </label>
 
             <label>
                 Date of Passing <br/>
-                <input type="date"/>
+                <input type="date"  {...props.Ed.getFieldProps('Inter_DateOfPassing')}/>
             </label>
 
             <label>
                 Roll No <br/>
-                <input type="text"/>
+                <input type="text"  {...props.Ed.getFieldProps('Inter_RollNo')}/>
             </label>
 
             
