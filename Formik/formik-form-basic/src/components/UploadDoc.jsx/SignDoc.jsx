@@ -1,8 +1,17 @@
 import React from 'react'
 import { signatureInstructions } from '../../data'
 
-function SignDoc()
+function SignDoc(props)
 {
+
+  const [url, setUrl] = React.useState('')
+  function handleSign(e)
+  {
+     const signUrl =  window.URL.createObjectURL(e.target.files[0]);
+      props.Uf.setFieldValue('signature',signUrl)
+      setUrl(signUrl)
+
+  }
     return(
         <section className='UploadProfile'>
 
@@ -10,11 +19,11 @@ function SignDoc()
            <p>Applicant's Signature</p>
 
              <div className='SignDiv'>
-                
+               { url && <img src = {url} width = '270'  height = '80' /> }
              </div>   
 
               <div className='fileInput'>
-                  <input type="file"/>
+                  <input type="file"  name = 'signature' onChange = {handleSign} />
               </div>
 
         </div>

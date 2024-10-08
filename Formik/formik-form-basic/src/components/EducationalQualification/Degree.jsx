@@ -1,7 +1,8 @@
 import React from 'react'
 
-function Degree()
+function Degree(props)
 {
+
     return(
         <div className='smallCompo'>
         <h5>Degree/Bachelors</h5>
@@ -10,8 +11,8 @@ function Degree()
 
        <label>
            Group <br/>
-           <select>
-               <option disabled selected>Select</option>
+           <select  {...props.Ed.getFieldProps('Degree_Group')}>
+               <option disbaled selected>Select</option>
                <option value="Bsc">Bsc</option>
                <option value="BTech">BTech</option>
                
@@ -20,13 +21,13 @@ function Degree()
 
        <label>
            Discipline <br/>
-          <input type="text"/> 
+          <input type="text" {...props.Ed.getFieldProps('Degree_Discipline')}/> 
        </label>
 
 
        <label>
            State<br/>
-           <select>
+           <select  {...props.Ed.getFieldProps('Degree_State')}>
                <option disabled selected>Select</option>
                <option value="Telangana">Telangana</option>
                <option value="AndhraPradesh">AndhraPradesh</option>
@@ -37,17 +38,17 @@ function Degree()
 
        <label>
             Board <br/>
-           <input type="text"/>
+           <input type="text"  {...props.Ed.getFieldProps('Degree_Board')}/>
        </label>
 
        <label>
            Date of Passing <br/>
-           <input type="date"/>
+           <input type="date" {...props.Ed.getFieldProps('Degree_DateOfPassing')}/>
        </label>
 
        <label>
            Roll No <br/>
-           <input type="text"/>
+           <input type="text"  {...props.Ed.getFieldProps('Degree_RollNo')}/>
        </label>
 
        
