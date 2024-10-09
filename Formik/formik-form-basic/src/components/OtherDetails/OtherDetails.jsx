@@ -5,24 +5,34 @@ import BankDetails from './BankDetails'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { useFormik } from 'formik'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { useFormContext } from '../../FormContext'
 
 function OtherDetails()
 {
+     const {formData, updateFormData} = useFormContext()
+     const navigate  = useNavigate()
 
+     console.log('Form Data Od ::', formData)
      const myOtherDetails = useFormik({
+          
              initialValues : {
-                  ex_serviceman : '',
-                  personWithBenchmarkDisability : '',
-                  EBC_Certificate_Holder : '',
-                  AccountHolderName : '',
-                  AccountNumber : '',
-                  IFSC_Code : '',
-                  BankName : '',
-                  BankAddress : ''
+                  ex_serviceman : formData.ex_serviceman,
+                  personWithBenchmarkDisability : formData.personWithBenchmarkDisability,
+                  EBC_Certificate_Holder : formData.EBC_Certificate_Holder,
+                  AccountHolderName : formData.AccountHolderName,
+                  AccountNumber : formData.AccountNumber,
+                  IFSC_Code : formData.IFSC_Code,
+                  BankName : formData.BankName,
+                  BankAddress : formData.BankAddress
              },
 
              onSubmit : (values)=>{
                    console.log(values)
+                   updateFormData(values)
+                   navigate('/studentForm/Educational-Qualification')
+                
              }
       })
 
@@ -39,10 +49,10 @@ function OtherDetails()
               <BankDetails od={myOtherDetails}/>
 
             <div className='Btns'>
-                 <button style={{backgroundColor:'green',color:'white'}}>SAVE</button>
-                 <Link to="/studentForm/Educational-Qualification" style={{textDecoration:'none',color:'white'}}>
-                 <button style={{backgroundColor:'crimson', color: 'white'}}>NEXT</button>
-                 </Link>
+
+                 <button style={{backgroundColor:'green',color:'white'}} >SAVE</button>
+                 <button style={{backgroundColor:'crimson', color: 'white'}} onClick = {()=>{navigate('/studentForm/Educational-Qualification')}}>NEXT</button>
+                
             </div>
             </form>
             
@@ -51,4 +61,4 @@ function OtherDetails()
     )
 }
 
-export default connect((store)=>{return store}) (OtherDetails)
+export default  OtherDetails

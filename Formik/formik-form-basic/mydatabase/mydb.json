@@ -1,21 +1,16 @@
-
 {
-
-  "Header-Images" : [
-
-        "https://askfilo.com/blog/wp-content/uploads/2022/02/Exception_113-copy.jpg",
-         "https://www.ixambee.com/blog/wp-content/uploads/2024/01/2-3-1024x576.png",
-         "https://askfilo.com/blog/wp-content/uploads/2022/09/Exception_276-copy.jpg",
-         "https://www.careerguide.com/career/wp-content/uploads/2023/11/10th-Pass-Govt-Jobs.png",
-         "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210210210704/Top-5-Government-Exams-That-You-Can-Take-After-Graduation.png"
+  "Header-Images": [
+    "https://askfilo.com/blog/wp-content/uploads/2022/02/Exception_113-copy.jpg",
+    "https://www.ixambee.com/blog/wp-content/uploads/2024/01/2-3-1024x576.png",
+    "https://askfilo.com/blog/wp-content/uploads/2022/09/Exception_276-copy.jpg",
+    "https://www.careerguide.com/career/wp-content/uploads/2023/11/10th-Pass-Govt-Jobs.png",
+    "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210210210704/Top-5-Government-Exams-That-You-Can-Take-After-Graduation.png"
   ],
-
-  
-    "about_us": 
-      [
-      {"organization_name": "Mutyam Testing Authority (MTA)",
+  "about_us": [
+    {
+      "organization_name": "Mutyam Testing Authority (MTA)",
       "mission": {
-        "id" : 1,
+        "id": 1,
         "statement": "To facilitate a fair, transparent, and standardized examination system that identifies merit, ensures equal opportunities, and promotes academic and professional excellence across India.",
         "details": [
           "Establishing a credible, reliable, and accessible framework for conducting national-level entrance and recruitment examinations.",
@@ -25,7 +20,7 @@
         ]
       },
       "vision": {
-        "id" : 2,
+        "id": 2,
         "statement": "To become a globally recognized authority in the field of educational and professional assessments, contributing to a future where merit is the cornerstone of success and opportunity for all.",
         "details": [
           "To continuously evolve the testing and assessment ecosystem through innovation, adopting best practices from across the world.",
@@ -59,19 +54,16 @@
           "description": "Contributing to national progress by enabling a merit-based selection system for higher education and government recruitment."
         }
       ],
-
-      "objectives": 
-        { "id":  3,
-          "List" : [
+      "objectives": {
+        "id": 3,
+        "List": [
           "To administer entrance exams such as NEET, JEE, UGC-NET, and other government recruitment exams with the utmost precision and timeliness.",
           "To ensure that all examinations are conducted securely, using technologies such as biometric authentication, encrypted data management, and AI-enabled invigilation.",
           "To provide user-friendly platforms for candidates, allowing smooth registration, easy access to study materials, and instant result notifications.",
           "To support government institutions and universities in their admission and recruitment processes by delivering accurate, reliable, and tamper-proof examination results.",
           "To promote research and innovation in the field of educational assessments, encouraging continuous improvement in exam delivery systems."
-        ]}
-        ,
-        
-      
+        ]
+      },
       "history": {
         "establishment_year": 2017,
         "background": "The National Testing Authority (NTA) was formed as an autonomous and self-sustained testing organization under the Ministry of Education, Government of India. It was established to meet the demand for a specialized body capable of conducting national-level entrance exams and recruitment tests in a transparent and efficient manner.",
@@ -96,492 +88,800 @@
       },
       "team": {
         "leadership": [
-          { "id" : 10,
+          {
+            "id": 10,
             "name": "Dr. Mutyam Bhargav Reddy",
             "position": "Chairperson",
             "bio": "Dr. Mutyam Bhargav Reddy is an esteemed educationist with over 30 years of experience in the field of academic assessments and public service. As Chairperson of the MTA, he is committed to driving innovation and ensuring fairness in the examination process."
           },
           {
-            "id" : 11,
+            "id": 11,
             "name": "Ms. Ganesh",
             "position": "Executive Director",
             "bio": "Ms. Ganesh has extensive expertise in examination management and policy implementation. Her leadership focuses on making the MTA a cutting-edge organization that meets global standards in assessment."
           },
           {
-            "id" : 12,
+            "id": 12,
             "name": "Mr. Mahesh",
             "position": "Director of Technology",
             "bio": "Mr. Mahesh is responsible for overseeing the technical infrastructure of MTA's operations, including computer-based testing, digital security, and AI-powered solutions for seamless exam management."
           }
         ]
-      }}
-
-      ],
-  
-  
-
-  "ExamsInCard" : [
-  {
-    "examName": "Civil Services Examination (CSE)",
-    "examType": "National",
-    "eligibility": "Graduate",
-    "examDate": "October 10, 2024",
-    "imageUrl" : "https://static.india.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-04-at-12.16.19-PM.jpeg"
-  },
-  {
-    "examName": "Staff Selection Commission (SSC CGL)",
-    "examType": "National",
-    "eligibility": "Graduate",
-    "examDate": "July 15, 2024",
-    "imageUrl" : "https://www.ssccoachingchandigarh.in/assets/upload/course/SSC_CGL_Logo1.png"
-  },
-  {
-    "examName": "Banking (IBPS PO)",
-    "examType": "National",
-    "eligibility": "Graduate",
-    "examDate": "August 21, 2024",
-    "imageUrl" : "https://www.cheggindia.com/wp-content/uploads/2021/04/ibps-po.png"
-  },
-  {
-    "examName": "Railway Recruitment Board (RRB NTPC)",
-    "examType": "National",
-    "eligibility": "12th Pass",
-    "examDate": "September 5, 2024",
-    "imageUrl" : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpDzZ017i_YnTWzS9bYDjiF1YmeXm6YzpuDHURIZmlFQvzkyKjc2rZalJyWRQxZs4WTE40R4JUaqLTYmhL4jOa2rqOZmUtc0pFqH-aSiyz7HsCvSkveB_norbaz7to9c7bv_cDHaqC1mNpylQYaxwxNHBjUVt5LVx6Ev4Be73KHa3QbTvj_6O_TpAMyQ/s1201/RRB_NTPC_Varoius_Post_CBAT_Exam_Score_Card_&_Document_Verification.jpg"
-  },
-  {
-    "examName": "State Civil Services",
-    "examType": "State",
-    "eligibility": "Graduate",
-    "examDate": "November 12, 2024",
-    "imageUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtuvdD3iWgdW7VeJDSOzFS19PQgSuzGE-XKg&s"
-  },
-  {
-    "examName": "National Defence Academy (NDA)",
-    "examType": "National",
-    "eligibility": "12th Pass",
-    "examDate": "December 10, 2024",
-    "imageUrl" : "https://i.pinimg.com/originals/76/c9/76/76c9765694caa8ac835846fa5a797294.jpg"
-  },
-
-  {
-    "examName": "Graduate Aptitude Test in Engineering (GATE)",
-    "examType": "National",
-    "eligibility": "Engineering Graduate",
-    "examDate": "February 8, 2025",
-    "imageUrl" : "https://sushiljobs.com/wp-content/uploads/2023/08/GATE-2024-Apply-Online-And-Exam-Date-1.png"
-  },
-  {
-    "examName": "Indian Forest Services (IFS)",
-    "examType": "National",
-    "eligibility": "Graduate (Science/Engineering)",
-    "examDate": "March 10, 2025",
-    "imageUrl" : "https://www.clearias.com/up/indian-forest-service.jpg"
-  },
-  {
-    "examName": "UP Police Constable Exam",
-    "examType": "State",
-    "eligibility": "12th Pass",
-    "examDate": "April 7, 2025",
-    "imageUrl" : "https://images.news18.com/ibnkhabar/uploads/2021/12/upp-1.jpg"
-  },
-  {
-    "examName": "Combined Defence Services (CDS)",
-    "examType": "National",
-    "eligibility": "Graduate",
-    "examDate": "May 22, 2025",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOirCKebbczNRXMBh7QW4lHUpZqJt00ZNxx3IwqP5NUf4XIJXy_6ZCZteI9rNpGmHksGE&usqp=CAU"
-  },
-  {
-    "examName": "Indian Economic Services (IES)",
-    "examType": "National",
-    "eligibility": "Postgraduate (Economics)",
-    "examDate": "June 18, 2025",
-    "imageUrl":"https://media.licdn.com/dms/image/D5612AQFQsu8_GettMw/article-cover_image-shrink_600_2000/0/1695342766042?e=2147483647&v=beta&t=JaizbGkCf5o79MSU7tRH0DYCM8bPf1k9jQrcHXa3Qoo"
-  },
-  {
-    "examName": "Delhi Police Sub-Inspector (SI) Exam",
-    "examType": "State",
-    "eligibility": "Graduate",
-    "examDate": "July 20, 2025",
-    "imageUrl" : "https://m.media-amazon.com/images/I/61hmhER9njL._AC_UF1000,1000_QL80_.jpg"
-  },
-  {
-    "examName": "UPSC Geologist Exam",
-    "examType": "National",
-    "eligibility": "Postgraduate (Geology)",
-    "examDate": "August 5, 2025",
-    "imageUrl": "https://planet-geology.com/wp-content/uploads/2024/02/UPSC-Optinal-Category.png"
-  },
-  {
-    "examName": "RBI Grade B Officer Exam",
-    "examType": "National",
-    "eligibility": "Graduate",
-    "examDate": "September 14, 2025",
-    "imageUrl": "https://img.etimg.com/photo/msid-102092990,imgsize-97688/GuidetoRBIGradeBOfficersPhase1ExamwithPreviousYearQuestionsbyDishaExperts.jpg"
-  },
-  {
-    "examName": "LIC AAO (Assistant Administrative Officer)",
-    "examType": "National",
-    "eligibility": "Graduate",
-    "examDate": "October 1, 2025",
-    "imageUrl":"https://m.media-amazon.com/images/I/61gY+rhMqBL._AC_UF1000,1000_QL80_.jpg"
-  },
-  {
-    "examName": "UPTET (Uttar Pradesh Teacher Eligibility Test)",
-    "examType": "State",
-    "eligibility": "12th Pass + Teacher Certification",
-    "examDate": "November 28, 2025",
-    "imageUrl":"https://m.media-amazon.com/images/I/61sZJW0zCWL._AC_UF1000,1000_QL80_.jpg"
-  },
-  {
-    "examName": "Central Teacher Eligibility Test (CTET)",
-    "examType": "National",
-    "eligibility": "12th Pass + Teacher Certification",
-    "examDate": "December 18, 2025",
-    "imageUrl" : "https://staticimg.amarujala.com/assets/images/2023/08/19/cbse-ctet-exam-2023_1692425575.jpeg?w=414"
-  },
-  {
-    "examName": "Indian Coast Guard (Navik GD)",
-    "examType": "National",
-    "eligibility": "12th Pass (Science)",
-    "examDate": "January 10, 2026",
-    "imageUrl": "https://m.media-amazon.com/images/I/51mdrureoVL._AC_UF1000,1000_QL80_.jpg"
-  },
-  {
-    "examName": "Indian Army Technical Entry Scheme (TES)",
-    "examType": "National",
-    "eligibility": "12th Pass (Science)",
-    "examDate": "February 25, 2026",
-    "imageUrl" : "https://rukminim1.flixcart.com/image/300/300/kw104nk0/book/u/r/q/indian-army-technical-entry-scheme-course-tes-january-2022-original-imag8sn2vg3zdjhf.jpeg"
-  },
-  {
-    "examName": "State Eligibility Test (SET)",
-    "examType": "State",
-    "eligibility": "Postgraduate",
-    "examDate": "March 15, 2026",
-    "imageUrl":"https://d107tqdgn7te45.cloudfront.net/blog-assets/images/blog/blog1/set%20exam%20pattern.jpg"
-  }
-],
-
-
-  "Examinations" : [
+      }
+    }
+  ],
+  "ExamsInCard": [
+    {
+      "examName": "Civil Services Examination (CSE)",
+      "examType": "National",
+      "eligibility": "Graduate",
+      "examDate": "October 10, 2024",
+      "imageUrl": "https://static.india.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-04-at-12.16.19-PM.jpeg"
+    },
+    {
+      "examName": "Staff Selection Commission (SSC CGL)",
+      "examType": "National",
+      "eligibility": "Graduate",
+      "examDate": "July 15, 2024",
+      "imageUrl": "https://www.ssccoachingchandigarh.in/assets/upload/course/SSC_CGL_Logo1.png"
+    },
+    {
+      "examName": "Banking (IBPS PO)",
+      "examType": "National",
+      "eligibility": "Graduate",
+      "examDate": "August 21, 2024",
+      "imageUrl": "https://www.cheggindia.com/wp-content/uploads/2021/04/ibps-po.png"
+    },
+    {
+      "examName": "Railway Recruitment Board (RRB NTPC)",
+      "examType": "National",
+      "eligibility": "12th Pass",
+      "examDate": "September 5, 2024",
+      "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpDzZ017i_YnTWzS9bYDjiF1YmeXm6YzpuDHURIZmlFQvzkyKjc2rZalJyWRQxZs4WTE40R4JUaqLTYmhL4jOa2rqOZmUtc0pFqH-aSiyz7HsCvSkveB_norbaz7to9c7bv_cDHaqC1mNpylQYaxwxNHBjUVt5LVx6Ev4Be73KHa3QbTvj_6O_TpAMyQ/s1201/RRB_NTPC_Varoius_Post_CBAT_Exam_Score_Card_&_Document_Verification.jpg"
+    },
+    {
+      "examName": "State Civil Services",
+      "examType": "State",
+      "eligibility": "Graduate",
+      "examDate": "November 12, 2024",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtuvdD3iWgdW7VeJDSOzFS19PQgSuzGE-XKg&s"
+    },
+    {
+      "examName": "National Defence Academy (NDA)",
+      "examType": "National",
+      "eligibility": "12th Pass",
+      "examDate": "December 10, 2024",
+      "imageUrl": "https://i.pinimg.com/originals/76/c9/76/76c9765694caa8ac835846fa5a797294.jpg"
+    },
+    {
+      "examName": "Graduate Aptitude Test in Engineering (GATE)",
+      "examType": "National",
+      "eligibility": "Engineering Graduate",
+      "examDate": "February 8, 2025",
+      "imageUrl": "https://sushiljobs.com/wp-content/uploads/2023/08/GATE-2024-Apply-Online-And-Exam-Date-1.png"
+    },
+    {
+      "examName": "Indian Forest Services (IFS)",
+      "examType": "National",
+      "eligibility": "Graduate (Science/Engineering)",
+      "examDate": "March 10, 2025",
+      "imageUrl": "https://www.clearias.com/up/indian-forest-service.jpg"
+    },
+    {
+      "examName": "UP Police Constable Exam",
+      "examType": "State",
+      "eligibility": "12th Pass",
+      "examDate": "April 7, 2025",
+      "imageUrl": "https://images.news18.com/ibnkhabar/uploads/2021/12/upp-1.jpg"
+    },
+    {
+      "examName": "Combined Defence Services (CDS)",
+      "examType": "National",
+      "eligibility": "Graduate",
+      "examDate": "May 22, 2025",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOirCKebbczNRXMBh7QW4lHUpZqJt00ZNxx3IwqP5NUf4XIJXy_6ZCZteI9rNpGmHksGE&usqp=CAU"
+    },
+    {
+      "examName": "Indian Economic Services (IES)",
+      "examType": "National",
+      "eligibility": "Postgraduate (Economics)",
+      "examDate": "June 18, 2025",
+      "imageUrl": "https://media.licdn.com/dms/image/D5612AQFQsu8_GettMw/article-cover_image-shrink_600_2000/0/1695342766042?e=2147483647&v=beta&t=JaizbGkCf5o79MSU7tRH0DYCM8bPf1k9jQrcHXa3Qoo"
+    },
+    {
+      "examName": "Delhi Police Sub-Inspector (SI) Exam",
+      "examType": "State",
+      "eligibility": "Graduate",
+      "examDate": "July 20, 2025",
+      "imageUrl": "https://m.media-amazon.com/images/I/61hmhER9njL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "examName": "UPSC Geologist Exam",
+      "examType": "National",
+      "eligibility": "Postgraduate (Geology)",
+      "examDate": "August 5, 2025",
+      "imageUrl": "https://planet-geology.com/wp-content/uploads/2024/02/UPSC-Optinal-Category.png"
+    },
+    {
+      "examName": "RBI Grade B Officer Exam",
+      "examType": "National",
+      "eligibility": "Graduate",
+      "examDate": "September 14, 2025",
+      "imageUrl": "https://img.etimg.com/photo/msid-102092990,imgsize-97688/GuidetoRBIGradeBOfficersPhase1ExamwithPreviousYearQuestionsbyDishaExperts.jpg"
+    },
+    {
+      "examName": "LIC AAO (Assistant Administrative Officer)",
+      "examType": "National",
+      "eligibility": "Graduate",
+      "examDate": "October 1, 2025",
+      "imageUrl": "https://m.media-amazon.com/images/I/61gY+rhMqBL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "examName": "UPTET (Uttar Pradesh Teacher Eligibility Test)",
+      "examType": "State",
+      "eligibility": "12th Pass + Teacher Certification",
+      "examDate": "November 28, 2025",
+      "imageUrl": "https://m.media-amazon.com/images/I/61sZJW0zCWL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "examName": "Central Teacher Eligibility Test (CTET)",
+      "examType": "National",
+      "eligibility": "12th Pass + Teacher Certification",
+      "examDate": "December 18, 2025",
+      "imageUrl": "https://staticimg.amarujala.com/assets/images/2023/08/19/cbse-ctet-exam-2023_1692425575.jpeg?w=414"
+    },
+    {
+      "examName": "Indian Coast Guard (Navik GD)",
+      "examType": "National",
+      "eligibility": "12th Pass (Science)",
+      "examDate": "January 10, 2026",
+      "imageUrl": "https://m.media-amazon.com/images/I/51mdrureoVL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "examName": "Indian Army Technical Entry Scheme (TES)",
+      "examType": "National",
+      "eligibility": "12th Pass (Science)",
+      "examDate": "February 25, 2026",
+      "imageUrl": "https://rukminim1.flixcart.com/image/300/300/kw104nk0/book/u/r/q/indian-army-technical-entry-scheme-course-tes-january-2022-original-imag8sn2vg3zdjhf.jpeg"
+    },
+    {
+      "examName": "State Eligibility Test (SET)",
+      "examType": "State",
+      "eligibility": "Postgraduate",
+      "examDate": "March 15, 2026",
+      "imageUrl": "https://d107tqdgn7te45.cloudfront.net/blog-assets/images/blog/blog1/set%20exam%20pattern.jpg"
+    }
+  ],
+  "Examinations": [
     {
       "Name": "Sample Practice Test Centre",
       "Abbreviation": "SPTC",
       "Website": "https://sptc.sampleta.ex",
-      "Emails": ["sptc@sampleta.ex", "support@sptc.sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "sptc@sampleta.ex",
+        "support@sptc.sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Unified Graduate Certification Test",
       "Abbreviation": "UGCT",
       "Website": "https://ugct.sampleta.ex",
-      "Emails": ["ugct@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "ugct@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Joint Scholastic Entrance Examination",
       "Abbreviation": "JSEE",
       "Website": "https://jsee.sampleta.ex",
-      "Emails": ["jsee@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "jsee@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "National Eligibility Entrance Test",
       "Abbreviation": "NEET",
       "Website": "https://neet.sampleta.ex",
-      "Emails": ["neet@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "neet@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Common Management Admission Test",
       "Abbreviation": "CMAT",
       "Website": "https://cmat.sampleta.ex",
-      "Emails": ["cmat@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "cmat@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Graduate Pharmacy Aptitude Test",
       "Abbreviation": "GPAT",
       "Website": "https://gpat.sampleta.ex",
-      "Emails": ["gpat@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "gpat@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "All India Advanced Post Graduate Entrance Test",
       "Abbreviation": "AIAPGET",
       "Website": "https://aiapget.sampleta.ex",
-      "Emails": ["aiapget@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "aiapget@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Study Webs of Active Learning for Emerging Minds",
       "Abbreviation": "SWAYAM",
       "Website": "https://swayam.sampleta.ex",
-      "Emails": ["swayam@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "swayam@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Annual Refresher Programme in Education",
       "Abbreviation": "ARPE",
       "Website": "https://arpe.sampleta.ex",
-      "Emails": ["arpe@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "arpe@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "The Example Council of Agricultural Research",
       "Abbreviation": "ECAR",
       "Website": "https://ecar.sampleta.ex",
-      "Emails": ["ecar@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "ecar@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Example University Entrance Test",
       "Abbreviation": "EUET",
       "Website": "https://euet.sampleta.ex",
-      "Emails": ["euet@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "euet@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "National Council for Hospitality Management",
       "Abbreviation": "NCHM",
       "Website": "https://nchm.sampleta.ex",
-      "Emails": ["nchm@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "nchm@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Example National Open University",
       "Abbreviation": "ENOU",
       "Website": "https://enou.sampleta.ex",
-      "Emails": ["enou@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "enou@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Jawaharlal Example University Entrance Exam",
       "Abbreviation": "JEUEE",
       "Website": "https://jeuee.sampleta.ex",
-      "Emails": ["jeuee@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "jeuee@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "India Institute of Foreign Studies",
       "Abbreviation": "IIFS",
       "Website": "https://iifs.sampleta.ex",
-      "Emails": ["iifs@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "iifs@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Joint Scientific Research Entrance Test",
       "Abbreviation": "JSRET",
       "Website": "https://jsret.sampleta.ex",
-      "Emails": ["jsret@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "jsret@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Sports Authority Examination",
       "Abbreviation": "SAE",
       "Website": "https://sae.sampleta.ex",
-      "Emails": ["sae@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "sae@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Indian Scholastic Aptitude Test",
       "Abbreviation": "Ind-SAT",
       "Website": "https://ind-sat.sampleta.ex",
-      "Emails": ["indsat@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "indsat@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "All India Sainik Schools Entrance Exam",
       "Abbreviation": "AISSEE",
       "Website": "https://aissee.sampleta.ex",
-      "Emails": ["aissee@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "aissee@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Florence Example College of Nursing",
       "Abbreviation": "FECON",
       "Website": "https://fecon.sampleta.ex",
-      "Emails": ["fecon@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "fecon@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Lady Example Medical College",
       "Abbreviation": "LEMC",
       "Website": "https://lemc.sampleta.ex",
-      "Emails": ["lemc@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "lemc@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "National Institute of Sports Studies",
       "Abbreviation": "NISS",
       "Website": "https://niss.sampleta.ex",
-      "Emails": ["niss@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "niss@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Guru Example Dev University",
       "Abbreviation": "GEDU",
       "Website": "https://gedu.sampleta.ex",
-      "Emails": ["gedu@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "gedu@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Indian Institute of Mass Studies",
       "Abbreviation": "IIMS",
       "Website": "https://iims.sampleta.ex",
-      "Emails": ["iims@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "iims@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Maharshi Example Dayanand University",
       "Abbreviation": "MEDU",
       "Website": "https://medu.sampleta.ex",
-      "Emails": ["medu@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "medu@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "National Law Example University",
       "Abbreviation": "NLEU",
       "Website": "https://nleu.sampleta.ex",
-      "Emails": ["nleu@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "nleu@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "National Sports Example University",
       "Abbreviation": "NSEU",
       "Website": "https://nseu.sampleta.ex",
-      "Emails": ["nseu@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "nseu@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Joint Integrated Programme in Management Admission Test",
       "Abbreviation": "JIPMAT",
       "Website": "https://jipmat.sampleta.ex",
-      "Emails": ["jipmat@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "jipmat@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Recruitment for Example High Court of Judicature",
       "Abbreviation": "EHCH-JR",
       "Website": "https://recruitment.sampleta.ex",
-      "Emails": ["ehch-jr@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "ehch-jr@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Example Hindu University",
       "Abbreviation": "EHU",
       "Website": "https://ehuet.sampleta.ex",
-      "Emails": ["ehu@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "ehu@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Babasaheb Example Ambedkar University",
       "Abbreviation": "BEAU",
       "Website": "https://beau.sampleta.ex",
-      "Emails": ["beau@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "beau@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Recruitment for Example University Non-Teaching Posts",
       "Abbreviation": "EU-RECRUIT",
       "Website": "https://recruitment.sampleta.ex",
-      "Emails": ["eurecruit@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "eurecruit@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Scheme for Residential Education for Students in Targeted Areas",
       "Abbreviation": "SRESTA-NETS",
       "Website": "https://sresta-nets.sampleta.ex",
-      "Emails": ["sresta-nets@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "sresta-nets@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Recruitment for Example Space Research Organisation",
       "Abbreviation": "ESRO-RECRUIT",
       "Website": "https://esro.sampleta.ex",
-      "Emails": ["esro@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "esro@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Common University Entrance Test - Undergraduate",
       "Abbreviation": "CUET-UG",
       "Website": "https://cuetug.sampleta.ex",
-      "Emails": ["cuet-ug@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "cuet-ug@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Common University Entrance Test - Postgraduate",
       "Abbreviation": "CUET-PG",
       "Website": "https://cuetpg.sampleta.ex",
-      "Emails": ["cuet-pg@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "cuet-pg@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Graduate Aptitude Test – Biotechnology & Eligibility Test",
       "Abbreviation": "GAT-B & BET",
       "Website": "https://gat-b.bet.sampleta.ex",
-      "Emails": ["gat-b@sampleta.ex", "bet@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "gat-b@sampleta.ex",
+        "bet@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Young Achievers Scholarship Award Scheme for Vibrant Exampleland",
       "Abbreviation": "YASASVI",
       "Website": "https://yasasvi.sampleta.ex",
-      "Emails": ["yasasvi@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "yasasvi@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Recruitment for National Highways Example Authority",
       "Abbreviation": "NHEA-RECRUIT",
       "Website": "https://recruitment.sampleta.ex",
-      "Emails": ["nhea-recruit@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "nhea-recruit@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
     },
     {
       "Name": "Recruitment for Example National Open University",
       "Abbreviation": "ENOU-RECRUIT",
       "Website": "https://recruitment.sampleta.ex",
-      "Emails": ["enou-recruit@sampleta.ex"],
-      "Phones": ["012-34567890", "012-09876543"]
+      "Emails": [
+        "enou-recruit@sampleta.ex"
+      ],
+      "Phones": [
+        "012-34567890",
+        "012-09876543"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "otherDetails": {
+        "ex_serviceman": "No",
+        "personWithBenchmarkDisability": "No",
+        "EBC_Certificate_Holder": "",
+        "AccountHolderName": "37024772466",
+        "AccountNumber": "",
+        "IFSC_Code": "",
+        "BankName": "",
+        "BankAddress": ""
+      },
+      "id": 1
+    },
+    {
+      "userOne": {
+        "personalDetails": {
+          "nationality": "",
+          "dateOfBirth": "",
+          "age": "",
+          "fullName": "Mutyam",
+          "fatherName": "",
+          "motherName": "",
+          "gender": "",
+          "email": "",
+          "mobileNumber": "",
+          "maritalStatus": "",
+          "religion": "",
+          "choiceOfLanguage": "",
+          "permanentMarkOfIdentification1": "",
+          "permanentMarkOfIdentification2": "",
+          "communityDetails": "",
+          "presentState": "",
+          "presentDistrict": "",
+          "presentAddress": "",
+          "presentVillage": "",
+          "presentPincode": "",
+          "permanentState": "",
+          "permanentDistrict": "",
+          "permanentAddress": "",
+          "permanentVillage": "",
+          "permanentPincode": "",
+          "sameAsPresent": false
+        },
+        "otherDetails": ""
+      },
+      "id": 2
+    },
+    {
+      "userOne": {
+        "personalDetails": {
+          "nationality": "Germany",
+          "dateOfBirth": "2024-10-10",
+          "age": "25 Years, 5 Months, 11 Days",
+          "fullName": "Mutyam bhargav reddy",
+          "fatherName": "M koti Reddy ",
+          "motherName": "N Nagalakshmi",
+          "gender": "female",
+          "email": "bhargavreddy@gmail.com",
+          "mobileNumber": "9550354716",
+          "maritalStatus": "married",
+          "religion": "hindu",
+          "choiceOfLanguage": "English",
+          "permanentMarkOfIdentification1": "a",
+          "permanentMarkOfIdentification2": "A mole on the left hand",
+          "communityDetails": "OBC",
+          "presentState": "Telangana",
+          "presentDistrict": "RangaReddy",
+          "presentAddress": "",
+          "presentVillage": "Shamshabad",
+          "presentPincode": "501218",
+          "permanentState": "Telangana",
+          "permanentDistrict": "RangaReddy",
+          "permanentAddress": "",
+          "permanentPincode": "501218",
+          "sameAsPresent": true
+        },
+        "otherDetails": ""
+      },
+      "id": 3
+    },
+    {
+      "userOne": {
+        "personalDetails": {
+          "nationality": "Germany",
+          "dateOfBirth": "2024-10-10",
+          "age": "25 Years, 5 Months, 11 Days",
+          "fullName": "Mutyam bhargav reddy",
+          "fatherName": "M koti Reddy ",
+          "motherName": "N Nagalakshmi",
+          "gender": "female",
+          "email": "bhargavreddy@gmail.com",
+          "mobileNumber": "9550354716",
+          "maritalStatus": "married",
+          "religion": "hindu",
+          "choiceOfLanguage": "English",
+          "permanentMarkOfIdentification1": "a",
+          "permanentMarkOfIdentification2": "A mole on the left hand",
+          "communityDetails": "OBC",
+          "presentState": "Telangana",
+          "presentDistrict": "RangaReddy",
+          "presentAddress": "",
+          "presentVillage": "Shamshabad",
+          "presentPincode": "501218",
+          "permanentState": "Telangana",
+          "permanentDistrict": "RangaReddy",
+          "permanentAddress": "",
+          "permanentPincode": "501218",
+          "sameAsPresent": true
+        },
+        "otherDetails": ""
+      },
+      "id": 4
+    },
+    {
+      "userOne": {
+        "personalDetails": {
+          "nationality": "Germany",
+          "dateOfBirth": "2024-10-10",
+          "age": "25 Years, 5 Months, 11 Days",
+          "fullName": "Mutyam bhargav reddy",
+          "fatherName": "M koti Reddy ",
+          "motherName": "N Nagalakshmi",
+          "gender": "female",
+          "email": "bhargavreddy@gmail.com",
+          "mobileNumber": "9550354716",
+          "maritalStatus": "married",
+          "religion": "hindu",
+          "choiceOfLanguage": "English",
+          "permanentMarkOfIdentification1": "a",
+          "permanentMarkOfIdentification2": "A mole on the left hand",
+          "communityDetails": "OBC",
+          "presentState": "Telangana",
+          "presentDistrict": "RangaReddy",
+          "presentAddress": "8-28, Rudra Colony, Shamshabad",
+          "presentVillage": "Shamshabad",
+          "presentPincode": "501218",
+          "permanentState": "Telangana",
+          "permanentDistrict": "RangaReddy",
+          "permanentAddress": "8-28, Rudra Colony, Shamshabad",
+          "permanentPincode": "501218",
+          "sameAsPresent": true
+        },
+        "otherDetails": ""
+      },
+      "id": 5
     }
   ]
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
