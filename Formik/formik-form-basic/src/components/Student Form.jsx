@@ -2,6 +2,10 @@ import React from 'react' // ila direct ga techukunte avi default exports
 
 import { Link, Outlet } from 'react-router-dom'  //ila {link} techukunte avi non-default exports 
 import { Formik,useFormik } from 'formik'
+import PersonalDetails from './PersonalDetails/PersonalDetails'
+import OtherDetails from './OtherDetails/OtherDetails'
+import EducatQualification from './EducationalQualification/EducationalQualifications'
+import UploadProfileDoc from './UploadDoc.jsx/UploadProfileDoc'
 
 
 function StudentForm()
@@ -54,6 +58,7 @@ function StudentForm()
               
                
             </div>
+
 
             <Outlet></Outlet>
            

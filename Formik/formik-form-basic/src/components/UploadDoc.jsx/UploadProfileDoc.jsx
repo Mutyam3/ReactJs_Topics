@@ -3,17 +3,24 @@ import PhotoDoc from './PhotoDoc'
 import SignDoc from './SignDoc'
 import { Link } from 'react-router-dom'
 import { useFormik } from 'formik'
+import { useFormContext } from '../../FormContext'
 
 function UploadProfileDoc()
 {
 
+  const {formData, updateFormData} = useFormContext()
+
+  console.log('Form Data UF : :', formData)
+
+  
      const myUploadFiles = useFormik({
         initialValues : {
-            photo : '',
-            signature : ''
+            photo : formData.photo,
+            signature : formData.signature
         },
         onSubmit : (values)=>{
             console.log(values)
+            updateFormData(values)
         }
      })
 

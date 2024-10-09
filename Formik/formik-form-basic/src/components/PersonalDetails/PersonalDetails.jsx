@@ -3,58 +3,74 @@ import {useFormik} from 'formik'
 import Community from './Community'
 import Personal from './Personal'
 import PostalAddress from './PostalAddress'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { connect } from 'react-redux'
+import axios from 'axios'
+import OtherDetails from '../OtherDetails/OtherDetails'
+import { useFormContext } from '../../FormContext'
 
 function PersonalDetails()
 {
+    const { formData, updateFormData}  = useFormContext()
+    const navigator = useNavigate()
+
+
+    console.log("FORM DATA :: ",formData)
+    
     const myStudentForm = useFormik({
         initialValues : {
-              nationality : '',
-              dateOfBirth :'',
-              age : '',
-              fullName:'',
-              fatherName : '',
-              motherName : '',
-              gender : '',
-              email : '',
-              mobileNumber : '',
-              maritalStatus : '',
-              religion : '',
-              choiceOfLanguage:'',
-              permanentMarkOfIdentification1: '',
-              permanentMarkOfIdentification2 : '',
-              communityDetails: '',
-              presentState : '',
-              presentDistrict : '',
-              presentAddress : '',
-              presentVillage : '',
-              presentPincode : '',
-            
-              permanentState : '',
-              permanentDistrict : '',
-              permanentAddress : '',
-              permanentVillage : '',
-              permanentPincode : '',
+              nationality : formData.nationality,
+              dateOfBirth : formData.dateOfBirth,
+              age : formData.age,
+              fullName: formData.fullName,
+              fatherName : formData.fatherName,
+              motherName : formData.motherName,
+              gender : formData.gender,
+              email : formData.email,
+              mobileNumber : formData.mobileNumber,
+              maritalStatus : formData.maritalStatus,
+              religion : formData.religion,
+              choiceOfLanguage: formData.choiceOfLanguage,
+              permanentMarkOfIdentification1: formData.permanentMarkOfIdentification1,
+              permanentMarkOfIdentification2 : formData.permanentMarkOfIdentification2,
+              communityDetails: formData.communityDetails,
+              presentState : formData.presentState,
+              presentDistrict : formData.presentDistrict,
+              presentAddress : formData.presentAddress,
+              presentVillage : formData.presentVillage,
+              presentPincode : formData.presentPincode,
+              permanentState : formData.permanentState,
+              permanentDistrict : formData.permanentDistrict,
+              permanentAddress : formData.permanentAddress,
+              permanentVillage : formData.permanentVillage,
+              permanentPincode : formData.permanentPincode,
               sameAsPresent : false
-            
-
         },
 
         onSubmit : (values)=>{
             console.log(values)
+            updateFormData(values)
+            const userData = {
+                "userOne" : 
+                {
+                    personalDetails : values,
+                    otherDetails : ''
+                }
+            }
+           
+
+             axios.post('http://localhost:4000/users', userData).then((res)=>{
+                    
+                    console.log('after post', values)
+                 
+             })
         }
 
     })
 
 
-
-    // React.useEffect(()=>{
-
-    //     dispatch({type:'SENDDATA', payload : myStudentForm})
-
-    // },[])
+    
 
     
 
@@ -79,4 +95,4 @@ function PersonalDetails()
     )
 }
 
-export default connect((store)=>{return store}) (PersonalDetails)
+export default  PersonalDetails

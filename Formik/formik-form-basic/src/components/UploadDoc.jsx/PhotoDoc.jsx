@@ -4,9 +4,10 @@ import { photographInstructions } from '../../data'
 function PhotoDoc(props)
 {
     const [url, setUrl] = React.useState('')
+    var   imageUrl
     function handlePhoto(e)
     {
-       const imageUrl =  window.URL.createObjectURL(e.target.files[0]);
+        imageUrl =  window.URL.createObjectURL(e.target.files[0]);
         props.Uf.setFieldValue('photo',imageUrl)
         setUrl(imageUrl)
     }
@@ -21,7 +22,7 @@ function PhotoDoc(props)
                    </div>   
 
                     <div className='fileInput'>
-                        <input type="file" accept = "image/*" name="photo" onChange={handlePhoto}/>
+                        <input type="file" accept = "image/*"  name="photo" onChange={handlePhoto}/>
                     </div>
 
               </div>
