@@ -11,7 +11,7 @@ function Degree(props)
 
        <label>
            Group <br/>
-           <select  {...props.Ed.getFieldProps('Degree_Group')}>
+           <select  {...props.Ed.getFieldProps('EducationalDetails.Degree_Group')}>
                <option disbaled selected>Select</option>
                <option value="Bsc">Bsc</option>
                <option value="BTech">BTech</option>
@@ -21,13 +21,13 @@ function Degree(props)
 
        <label>
            Discipline <br/>
-          <input type="text" {...props.Ed.getFieldProps('Degree_Discipline')}/> 
+          <input type="text" {...props.Ed.getFieldProps('EducationalDetails.Degree_Discipline')}/> 
        </label>
 
 
        <label>
            State<br/>
-           <select  {...props.Ed.getFieldProps('Degree_State')}>
+           <select  {...props.Ed.getFieldProps('EducationalDetails.Degree_State')}>
                <option disabled selected>Select</option>
                <option value="Telangana">Telangana</option>
                <option value="AndhraPradesh">AndhraPradesh</option>
@@ -37,18 +37,18 @@ function Degree(props)
        </label>
 
        <label>
-            Board <br/>
-           <input type="text"  {...props.Ed.getFieldProps('Degree_Board')}/>
+            University Name <br/>
+           <input type="text"  {...props.Ed.getFieldProps('EducationalDetails.Degree_Board')}/>
        </label>
 
        <label>
            Date of Passing <br/>
-           <input type="date" {...props.Ed.getFieldProps('Degree_DateOfPassing')}/>
+           <input type="date" {...props.Ed.getFieldProps('EducationalDetails.Degree_DateOfPassing')}/>
        </label>
 
        <label>
            Roll No <br/>
-           <input type="text"  {...props.Ed.getFieldProps('Degree_RollNo')}/>
+           <input type="text"  {...props.Ed.getFieldProps('EducationalDetails.Degree_RollNo')}/>
        </label>
 
        

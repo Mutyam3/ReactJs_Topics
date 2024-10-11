@@ -1,26 +1,43 @@
 import React from 'react'
 import PhotoDoc from './PhotoDoc'
 import SignDoc from './SignDoc'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import { useFormContext } from '../../FormContext'
+import SuccessDisplay from '../SuccessDisplay'
 
 function UploadProfileDoc()
 {
 
   const {formData, updateFormData} = useFormContext()
+  const [dis, setDis] = React.useState(false)
 
-  console.log('Form Data UF : :', formData)
+ 
+
+  const navigator = useNavigate()
+
+  // console.log('Form Data UF : :', formData)
 
   
      const myUploadFiles = useFormik({
         initialValues : {
-            photo : formData.photo,
-            signature : formData.signature
+
+          UploadFileDetails : {
+
+              photo : formData.UploadFileDetails.photo,
+              signature : formData.UploadFileDetails.signature
+
+          }
+            
         },
         onSubmit : (values)=>{
             console.log(values)
             updateFormData(values)
+            setDis(true)
+
+            setTimeout(()=>{
+              setDis(false)
+            }, 2000)
         }
      })
 
@@ -34,10 +51,16 @@ function UploadProfileDoc()
             <PhotoDoc  Uf = {myUploadFiles}/>
             <SignDoc  Uf = {myUploadFiles}/>
 
+            <div style={{position : 'relative'}}>
+                {
+                    dis && <SuccessDisplay/>
+                }
+            </div>
+
             <div className='Btns'>
-                 <button  style={{backgroundColor:'green',color:'white'}}>SAVE</button>
-                 <Link to="/studentForm/Preview" style={{textDecoration:'none',color:'white'}}>
-                 <button type='button' style={{backgroundColor:'crimson', color: 'white'}}>NEXT</button></Link> 
+                 <button type="button" style={{backgroundColor:'crimson', color: 'white'}} onClick = {()=>{navigator('/studentForm/Educational-Qualification')}}>Previous</button>
+                 <button  style={{backgroundColor:'green',color:'white'}} >SAVE</button> 
+                 <button type='button' style={{backgroundColor:'crimson', color: 'white'}} onClick = {()=>{navigator('/studentForm/Preview')}}>NEXT</button>
             </div>
           </form>
             

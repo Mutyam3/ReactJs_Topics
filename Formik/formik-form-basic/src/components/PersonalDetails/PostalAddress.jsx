@@ -5,14 +5,14 @@ function PostalAddress(props)
      
       function handleAddress(e)
       {
-         if(e.target.checked == true)
+         if(e.target.checked === true)
          {
-            props.st.setFieldValue('sameAsPresent', true)
-            props.st.setFieldValue('permanentState', props.st.values.presentState )
-            props.st.setFieldValue('permanentDistrict', props.st.values.presentDistrict)
-            props.st.setFieldValue('permanentAddress', props.st.values.presentAddress)
-            props.st.setFieldValue('permanentVillage', props.st.values.presentValue)
-            props.st.setFieldValue('permanentPincode', props.st.values.presentPincode)
+            props.st.setFieldValue('PersonalDetails.sameAsPresent', true)
+            props.st.setFieldValue('PersonalDetails.permanentAddressDetails.permanentState', props.st.values.PersonalDetails.presentAddressDetails.presentState )
+            props.st.setFieldValue('PersonalDetails.permanentAddressDetails.permanentDistrict', props.st.values.PersonalDetails.presentAddressDetails.presentDistrict)
+            props.st.setFieldValue('PersonalDetails.permanentAddressDetails.permanentAddress', props.st.values.PersonalDetails.presentAddressDetails.presentAddress)
+            props.st.setFieldValue('PersonalDetails.permanentAddressDetails.permanentVillage', props.st.values.PersonalDetails.presentAddressDetails.presentVillage)
+            props.st.setFieldValue('PersonalDetails.permanentAddressDetails.permanentPincode', props.st.values.PersonalDetails.presentAddressDetails.presentPincode)
          }
       }
 
@@ -29,45 +29,45 @@ function PostalAddress(props)
                    <th>Present Address</th>
                </thead>
                <tbody>
-                    <tr>
-                        <td>
+                    <tr className='smallCompo_Tab'>
+                        <td className='smallCompo_Tab'>
                             <label>
                                 State/UT  <br/> 
-                                <input type="text"  {...props.st.getFieldProps('presentState')}/>
+                                <input type="text"  {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentState')}/>
                                 
                             </label>
                         </td>
 
-                        <td>
+                        <td className='smallCompo_Tab'>
                             <label>
                                 District  <br/>
-                                <input type="text" {...props.st.getFieldProps('presentDistrict')}/>
+                                <input type="text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentDistrict')}/>
 
                             </label>
                         </td>
                     </tr>
-                    <tr>
-                        <td colSpan="2" >
+                    <tr className='smallCompo_Tab'>
+                        <td colSpan="2" className='smallCompo_Tab'>
                             <label>
                                  Address  <br/>
-                               <textarea rows="4" cols = "78" {...props.st.getFieldProps('presentAddress')} >
+                               <textarea rows="4" cols = "78" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentAddress')} >
                                      
                                </textarea>
                             </label>
                         </td>
                         </tr>
 
-                      <tr>
-                        <td >
+                      <tr className='smallCompo_Tab'>
+                        <td className='smallCompo_Tab'>
                             <label>
                                 Village  <br/>
-                                <input type = "text" {...props.st.getFieldProps('presentVillage')}/>
+                                <input type = "text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentVillage')}/>
                             </label>
                         </td>
-                        <td>
+                        <td className='smallCompo_Tab'>
                             <label>
                                 PinCode  <br/>
-                                <input type="text" {...props.st.getFieldProps('presentPincode')}/>
+                                <input type="text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentPincode')}/>
                             </label>
                         </td>
                     </tr>
@@ -83,52 +83,56 @@ function PostalAddress(props)
                    <th>Permanent Address</th>
                </thead>
                <tbody>
-                    <tr>
-                        <td>
+                    <tr className='smallCompo_Tab'>
+                        <td className='smallCompo_Tab'>
                             <label>
                                 State/UT  <br/> 
 
-                                <input type="text" {...props.st.getFieldProps('permanentState')} 
-                                value={props.st.values.sameAsPresent ? props.st.values.presentState : props.st.values.permanentState} />
+                                <input type="text" {...props.st.getFieldProps('PersonalDetails.permanentAddressDetails.permanentState')} 
+                                value={props.st.values.PersonalDetails.sameAsPresent ? props.st.values.PersonalDetails.presentAddressDetails.presentState : 
+                                props.st.values.PersonalDetails.permanentAddressDetails.permanentState} />
                                 
                             </label>
                         </td>
 
-                        <td>
+                        <td className='smallCompo_Tab'>
                             <label>
                                 District  <br/>
 
-                                <input type="text" {...props.st.getFieldProps('permanentDistrict')}
-                                 value={props.st.values.sameAsPresent ? props.st.values.presentDistrict : props.st.values.permanentDistrict}/>
-
+                                <input type="text" {...props.st.getFieldProps('PersonalDetails.permanentAddressDetails.permanentDistrict')}
+                                 value={props.st.values.PersonalDetails.sameAsPresent ? props.st.values.PersonalDetails.presentAddressDetails.presentDistrict : 
+                                    props.st.values.PersonalDetails.permanentAddressDetails.permanentDistrict} />
                             </label>
                         </td>
                     </tr>
-                    <tr >
-                        <td colSpan="2">
+                    <tr className='smallCompo_Tab'>
+                        <td colSpan="2" className='smallCompo_Tab'>
                             <label>
                                  Address  <br/>
-                               <textarea rows="4" cols = "78" {...props.st.getFieldProps('permanentAddress')}
-                               value={props.st.values.sameAsPresent ? props.st.values.presentAddress : props.st.values.permanentAddress}>
+                               <textarea rows="4" cols = "78" {...props.st.getFieldProps('PersonalDetails.permanentAddressDetails.permanentAddress')}
+                               value={props.st.values.PersonalDetails.sameAsPresent ? props.st.values.PersonalDetails.presentAddressDetails.presentAddress : 
+                                props.st.values.PersonalDetails.permanentAddressDetails.permanentAddress}>
                                      
                                </textarea>
                             </label>
                         </td>
                         </tr>
 
-                      <tr>
-                        <td>
+                      <tr className='smallCompo_Tab'>
+                        <td className='smallCompo_Tab'>
                             <label>
                                 Village  <br/>
-                                <input type = "text" {...props.st.getFieldProps('permanentVillage')}
-                                value={props.st.values.sameAsPresent ? props.st.values.presentVillage : props.st.values.permanentVillage}/>
+                                <input type = "text" {...props.st.getFieldProps('PersonalDetails.permanentAddressDetails.permanentVillage')}
+                               value={props.st.values.PersonalDetails.sameAsPresent ? props.st.values.PersonalDetails.presentAddressDetails.presentVillage : 
+                                props.st.values.PersonalDetails.permanentAddressDetails.permanentVillage}/>
                             </label>
                         </td>
-                        <td>
+                        <td className='smallCompo_Tab'>
                             <label>
                                 PinCode  <br/>
-                                <input type="text" {...props.st.getFieldProps('permanentPincode')}
-                                value={props.st.values.sameAsPresent ? props.st.values.presentPincode : props.st.values.permanentPincode}/>
+                                <input type="text" {...props.st.getFieldProps('PersonalDetails.permanentAddressDetails.permanentPincode')}
+                                value={props.st.values.PersonalDetails.sameAsPresent ? props.st.values.PersonalDetails.presentAddressDetails.presentPincode : 
+                                    props.st.values.PersonalDetails.permanentAddressDetails.permanentPincode}/>
                             </label>
                         </td>
                     </tr>
@@ -139,7 +143,7 @@ function PostalAddress(props)
     </div>
 
         <div className='tickBox'>
-              <input type="checkbox" onChange = {handleAddress} name = "sameAsPresent"/> Tick if Permanent Address is same as Present Address
+              <input type="checkbox" onChange = {handleAddress}  name = "PersonalDetails.sameAsPresent"/> Tick if Permanent Address is same as Present Address
         </div>
         
       </section>
