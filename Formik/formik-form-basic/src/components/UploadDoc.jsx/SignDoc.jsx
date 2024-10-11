@@ -4,12 +4,12 @@ import { signatureInstructions } from '../../data'
 function SignDoc(props)
 {
 
-  const [url, setUrl] = React.useState('')
+  // const [url, setUrl] = React.useState('')
   function handleSign(e)
   {
      const signUrl =  window.URL.createObjectURL(e.target.files[0]);
-      props.Uf.setFieldValue('signature',signUrl)
-      setUrl(signUrl)
+      props.Uf.setFieldValue('UploadFileDetails.signature',signUrl)
+      // setUrl(signUrl)
 
   }
     return(
@@ -19,11 +19,12 @@ function SignDoc(props)
            <p>Applicant's Signature</p>
 
              <div className='SignDiv'>
-               { url && <img src = {url} width = '270'  height = '80' /> }
+               {props.Uf.values.UploadFileDetails.signature ?<img src = {props.Uf.values.UploadFileDetails.signature} width = '270'  height = '80' />  : 
+               <img src = 'https://raw.githubusercontent.com/ww6015132/SilkySignature/master/signature.png' width='290' height ='80'/>}
              </div>   
 
               <div className='fileInput'>
-                  <input type="file"  name = 'signature' onChange = {handleSign} />
+                  <input type="file"  name = 'UploadFileDetails.signature' onChange = {handleSign} />
               </div>
 
         </div>

@@ -53,6 +53,8 @@ select, input{
 
 }
 
+
+
 .stdFormDiv{
 
   border:2px solid black;
@@ -119,7 +121,8 @@ i{
 
 .Btns{
  
-  text-align: end;
+  display: flex;
+  justify-content: space-between;
 
 }
 
@@ -426,6 +429,42 @@ span{
    align-items: center;
 }
 
+
+.Preview table thead th , tbody tr, td {
+  border:2px solid black;
+
+}
+
+.Preview {
+  text-align: center;
+}
+.Preview button{
+   
+  border : 0px;
+  background-color: green;
+  color: whitesmoke;
+  font-size: large;
+  border-radius: 12px;
+  margin:50px 20px 30px 20px;
+  padding:15px;
+
+}
+
+.smallCompo_Tab
+{
+  border : 0px;
+}
+
+.SuccessDiv{
+  background-color : green;
+  padding : 10px;
+  color : whiteSmoke;
+  width : fit-content;
+  border-radius: 10px;
+  position :absolute;
+  left: 40%;
+  bottom:50%;
+}
 
 
 

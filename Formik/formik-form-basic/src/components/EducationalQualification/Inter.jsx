@@ -10,7 +10,7 @@ function Inter(props)
 
             <label>
                 Group <br/>
-                <select  {...props.Ed.getFieldProps('Inter_Group')}>
+                <select  {...props.Ed.getFieldProps('EducationalDetails.Inter_Group')}>
                     <option disabled selected>Select</option>
                     <option value="Mpc">Mpc</option>
                     <option value="Bipc">Bipc</option>
@@ -22,7 +22,7 @@ function Inter(props)
 
             <label>
                 State<br/>
-                <select {...props.Ed.getFieldProps('Inter_State')}> 
+                <select {...props.Ed.getFieldProps('EducationalDetails.Inter_State')}> 
                     <option disabled selected>Select</option>
                     <option value="Telangana">Telangana</option>
                     <option value="AndhraPradesh">AndhraPradesh</option>
@@ -33,17 +33,17 @@ function Inter(props)
 
             <label>
                  Board <br/>
-                <input type="text" {...props.Ed.getFieldProps('Inter_Board')}/>
+                <input type="text" {...props.Ed.getFieldProps('EducationalDetails.Inter_Board')}/>
             </label>
 
             <label>
                 Date of Passing <br/>
-                <input type="date"  {...props.Ed.getFieldProps('Inter_DateOfPassing')}/>
+                <input type="date"  {...props.Ed.getFieldProps('EducationalDetails.Inter_DateOfPassing')}/>
             </label>
 
             <label>
                 Roll No <br/>
-                <input type="text"  {...props.Ed.getFieldProps('Inter_RollNo')}/>
+                <input type="text"  {...props.Ed.getFieldProps('EducationalDetails.Inter_RollNo')}/>
             </label>
 
             

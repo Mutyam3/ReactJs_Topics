@@ -738,150 +738,72 @@
   ],
   "users": [
     {
-      "otherDetails": {
-        "ex_serviceman": "No",
-        "personWithBenchmarkDisability": "No",
-        "EBC_Certificate_Holder": "",
-        "AccountHolderName": "37024772466",
-        "AccountNumber": "",
-        "IFSC_Code": "",
-        "BankName": "",
-        "BankAddress": ""
+      "userOne": {
+        "PersonalDetails": {
+          "nationality": "Germany",
+          "dateOfBirth": "2024-10-10",
+          "age": "25",
+          "fullName": "Mutyam Bhargav Reddy",
+          "fatherName": "Mutyam Koti Reddy",
+          "motherName": "Mutyam Nagalakshmi",
+          "gender": "male",
+          "email": "bhargavreddymutyam@gmail.com",
+          "mobileNumber": "9550354716",
+          "maritalStatus": "unMarried",
+          "religion": "hindu",
+          "choiceOfLanguage": "English",
+          "permanentMarkOfIdentification1": "A MOLE ON THE HEAD",
+          "permanentMarkOfIdentification2": "A MOLE ON THE LEFT HAND",
+          "communityDetails": "UR(unreserved)",
+          "presentAddressDetails": {
+            "presentState": "Telangana",
+            "presentDistrict": "RangaReddy",
+            "presentAddress": "8-28, Rudra Colony , Shamshabad",
+            "presentVillage": "Shamshabad",
+            "presentPincode": "501218"
+          },
+          "permanentAddressDetails": {
+            "permanentState": "Telangana",
+            "permanentDistrict": "RangaReddy",
+            "permanentAddress": "8-28, Rudra Colony , Shamshabad",
+            "permanentVillage": "Shamshabad",
+            "permanentPincode": "501218"
+          },
+          "sameAsPresent": true
+        },
+        "OtherDetails": {
+          "ex_serviceman": "No",
+          "personWithBenchmarkDisability": "No",
+          "EBC_Certificate_Holder": "No",
+          "AccountHolderName": "Mutyam Bhargav Reddy",
+          "AccountNumber": "37024772466",
+          "IFSC_Code": "SBIN0022025",
+          "BankName": "STATE BANK OF INDIA",
+          "BankAddress": "Chinthapally"
+        },
+        "EducationalDetails": {
+          "SSC_State": "AndhraPradesh",
+          "SSC_Board": "Board of Secondary Education",
+          "SSC_DateOfPassing": "2024-10-07",
+          "SSC_RollNo": "1403106226",
+          "Inter_Group": "Bipc",
+          "Inter_State": "Telangana",
+          "Inter_Board": "Telangana Board of Intermediate Education",
+          "Inter_DateOfPassing": "2024-10-09",
+          "Inter_RollNo": "1628213607",
+          "Degree_Group": "BTech",
+          "Degree_Discipline": "Computer Science ",
+          "Degree_State": "Telangana",
+          "Degree_Board": "VIT BHOPAL",
+          "Degree_DateOfPassing": "2024-10-16",
+          "Degree_RollNo": "20BHI10036"
+        },
+        "UploadFileDetails": {
+          "photo": "blob:http://localhost:3000/28fe7d12-1b86-410b-9291-50dfd5bc7cce",
+          "signature": "blob:http://localhost:3000/20a006dc-c189-48ee-b4f3-d783f8b8b2e6"
+        }
       },
       "id": 1
-    },
-    {
-      "userOne": {
-        "personalDetails": {
-          "nationality": "",
-          "dateOfBirth": "",
-          "age": "",
-          "fullName": "Mutyam",
-          "fatherName": "",
-          "motherName": "",
-          "gender": "",
-          "email": "",
-          "mobileNumber": "",
-          "maritalStatus": "",
-          "religion": "",
-          "choiceOfLanguage": "",
-          "permanentMarkOfIdentification1": "",
-          "permanentMarkOfIdentification2": "",
-          "communityDetails": "",
-          "presentState": "",
-          "presentDistrict": "",
-          "presentAddress": "",
-          "presentVillage": "",
-          "presentPincode": "",
-          "permanentState": "",
-          "permanentDistrict": "",
-          "permanentAddress": "",
-          "permanentVillage": "",
-          "permanentPincode": "",
-          "sameAsPresent": false
-        },
-        "otherDetails": ""
-      },
-      "id": 2
-    },
-    {
-      "userOne": {
-        "personalDetails": {
-          "nationality": "Germany",
-          "dateOfBirth": "2024-10-10",
-          "age": "25 Years, 5 Months, 11 Days",
-          "fullName": "Mutyam bhargav reddy",
-          "fatherName": "M koti Reddy ",
-          "motherName": "N Nagalakshmi",
-          "gender": "female",
-          "email": "bhargavreddy@gmail.com",
-          "mobileNumber": "9550354716",
-          "maritalStatus": "married",
-          "religion": "hindu",
-          "choiceOfLanguage": "English",
-          "permanentMarkOfIdentification1": "a",
-          "permanentMarkOfIdentification2": "A mole on the left hand",
-          "communityDetails": "OBC",
-          "presentState": "Telangana",
-          "presentDistrict": "RangaReddy",
-          "presentAddress": "",
-          "presentVillage": "Shamshabad",
-          "presentPincode": "501218",
-          "permanentState": "Telangana",
-          "permanentDistrict": "RangaReddy",
-          "permanentAddress": "",
-          "permanentPincode": "501218",
-          "sameAsPresent": true
-        },
-        "otherDetails": ""
-      },
-      "id": 3
-    },
-    {
-      "userOne": {
-        "personalDetails": {
-          "nationality": "Germany",
-          "dateOfBirth": "2024-10-10",
-          "age": "25 Years, 5 Months, 11 Days",
-          "fullName": "Mutyam bhargav reddy",
-          "fatherName": "M koti Reddy ",
-          "motherName": "N Nagalakshmi",
-          "gender": "female",
-          "email": "bhargavreddy@gmail.com",
-          "mobileNumber": "9550354716",
-          "maritalStatus": "married",
-          "religion": "hindu",
-          "choiceOfLanguage": "English",
-          "permanentMarkOfIdentification1": "a",
-          "permanentMarkOfIdentification2": "A mole on the left hand",
-          "communityDetails": "OBC",
-          "presentState": "Telangana",
-          "presentDistrict": "RangaReddy",
-          "presentAddress": "",
-          "presentVillage": "Shamshabad",
-          "presentPincode": "501218",
-          "permanentState": "Telangana",
-          "permanentDistrict": "RangaReddy",
-          "permanentAddress": "",
-          "permanentPincode": "501218",
-          "sameAsPresent": true
-        },
-        "otherDetails": ""
-      },
-      "id": 4
-    },
-    {
-      "userOne": {
-        "personalDetails": {
-          "nationality": "Germany",
-          "dateOfBirth": "2024-10-10",
-          "age": "25 Years, 5 Months, 11 Days",
-          "fullName": "Mutyam bhargav reddy",
-          "fatherName": "M koti Reddy ",
-          "motherName": "N Nagalakshmi",
-          "gender": "female",
-          "email": "bhargavreddy@gmail.com",
-          "mobileNumber": "9550354716",
-          "maritalStatus": "married",
-          "religion": "hindu",
-          "choiceOfLanguage": "English",
-          "permanentMarkOfIdentification1": "a",
-          "permanentMarkOfIdentification2": "A mole on the left hand",
-          "communityDetails": "OBC",
-          "presentState": "Telangana",
-          "presentDistrict": "RangaReddy",
-          "presentAddress": "8-28, Rudra Colony, Shamshabad",
-          "presentVillage": "Shamshabad",
-          "presentPincode": "501218",
-          "permanentState": "Telangana",
-          "permanentDistrict": "RangaReddy",
-          "permanentAddress": "8-28, Rudra Colony, Shamshabad",
-          "permanentPincode": "501218",
-          "sameAsPresent": true
-        },
-        "otherDetails": ""
-      },
-      "id": 5
     }
   ]
 }

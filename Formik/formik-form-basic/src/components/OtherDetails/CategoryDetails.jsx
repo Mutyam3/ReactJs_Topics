@@ -11,7 +11,7 @@ function CategoryDetails(props)
 
                 <label>
                     Are you an Ex-Serviceman ? <br/>
-                    <select {...props.od.getFieldProps('ex_serviceman')}>
+                    <select {...props.od.getFieldProps('OtherDetails.ex_serviceman')}>
                          <option disabled selected>Select</option>
                          <option value = 'Yes'>Yes</option>
                          <option value = 'No'>No</option>
@@ -24,7 +24,7 @@ function CategoryDetails(props)
 
                  <label>
                        Are you a person with benchmark disability ? <br/>
-                       <select {...props.od.getFieldProps('personWithBenchmarkDisability')}>
+                       <select {...props.od.getFieldProps('OtherDetails.personWithBenchmarkDisability')}>
                            <option disabled selected>Select</option>
                            <option value = 'Yes'>Yes</option>
                            <option value = 'No'>No</option>

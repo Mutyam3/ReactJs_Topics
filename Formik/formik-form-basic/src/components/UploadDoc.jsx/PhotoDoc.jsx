@@ -3,14 +3,16 @@ import { photographInstructions } from '../../data'
 
 function PhotoDoc(props)
 {
-    const [url, setUrl] = React.useState('')
-    var   imageUrl
+   
+   
     function handlePhoto(e)
     {
-        imageUrl =  window.URL.createObjectURL(e.target.files[0]);
-        props.Uf.setFieldValue('photo',imageUrl)
-        setUrl(imageUrl)
+        const imageUrl =  window.URL.createObjectURL(e.currentTarget.files[0]);
+        props.Uf.setFieldValue('UploadFileDetails.photo',imageUrl)
+
     }
+
+    
 
     return (
         <section className='UploadProfile'>
@@ -18,11 +20,12 @@ function PhotoDoc(props)
                  <p>Applicant's Colour Passport Photograph</p>
 
                    <div className='PhotoDiv'>
-                     { url && <img  src = {url} width = '320' height = '240'/> }
+                     { props.Uf.values.UploadFileDetails.photo ? <img  src = {props.Uf.values.UploadFileDetails.photo} width = '320' height = '240'/>  : 
+                     <img src = 'https://www.aquasafemine.com/wp-content/uploads/2018/06/dummy-man-570x570.png' width='310' height = '230' />}
                    </div>   
 
                     <div className='fileInput'>
-                        <input type="file" accept = "image/*"  name="photo" onChange={handlePhoto}/>
+                        <input type="file" accept = "image/*"  name="UploadFileDetails.photo" onChange={handlePhoto}/>
                     </div>
 
               </div>

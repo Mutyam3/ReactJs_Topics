@@ -10,7 +10,7 @@ function Matriculation(props)
 
             <label>
                 State<br/>
-                <select  {...props.Ed.getFieldProps('SSC_State')}>
+                <select  {...props.Ed.getFieldProps('EducationalDetails.SSC_State')}>
                     <option disabled selected>Select</option>
                     <option value="Telangana">Telangana</option>
                     <option value="AndhraPradesh">AndhraPradesh</option>
@@ -21,17 +21,17 @@ function Matriculation(props)
 
             <label>
                  Board <br/>
-                <input type="text" {...props.Ed.getFieldProps('SSC_Board')}/>
+                <input type="text" {...props.Ed.getFieldProps('EducationalDetails.SSC_Board')}/>
             </label>
 
             <label>
                 Date of Passing <br/>
-                <input type="date"  {...props.Ed.getFieldProps('SSC_DateOfPassing')}/>
+                <input type="date"  {...props.Ed.getFieldProps('EducationalDetails.SSC_DateOfPassing')}/>
             </label>
 
             <label>
                 Roll No <br/>
-                <input type="text" {...props.Ed.getFieldProps('SSC_RollNo')}/>
+                <input type="text" {...props.Ed.getFieldProps('EducationalDetails.SSC_RollNo')}/>
             </label>
 
             
