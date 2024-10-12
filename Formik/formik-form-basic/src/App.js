@@ -12,9 +12,15 @@ function App() {
   return (
     <div className="App">
      <FormProvider>
+         <div className='manaHeader'>
+              <h3>Mutyam Testing Agency</h3>
+         </div>
         <Header></Header>
-
-        <Outlet></Outlet>
+         
+         <div className='OutletMania'>
+             <Outlet></Outlet>
+         </div>
+        
 
         <Footer/>
 

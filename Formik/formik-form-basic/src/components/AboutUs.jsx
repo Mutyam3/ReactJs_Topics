@@ -29,14 +29,14 @@ function AboutUs()
    
 
     return(
-        <div className='App'>
+        <div className='App' style={{backgroundColor:'rgb(27,56,125)', margin:'20px', borderRadius: '12px'}}>
 
            {
               aboutUsData.map((el)=>{
                 console.log(el)
                    return (
                         <section>
-                            <h5>{el.organization_name}</h5>
+                            <h5 style={{color:'whitesmoke'}}>{el.organization_name}</h5>
                             <div className='Mission'>
                                <div className='d-flex justify-content-between p-2'> <h5>Mission </h5>  <span onClick={()=>{hide(el.mission.id)}}> {Info && indx == el.mission.id ?'-' : '+'}</span></div>
 

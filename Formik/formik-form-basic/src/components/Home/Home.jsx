@@ -6,7 +6,7 @@ import Footer from '../Footer'
 function Home()
 {
     return (
-        <div className='App'>
+        <div className='manaDiv'>
 
             
             <SlideCompo/>
