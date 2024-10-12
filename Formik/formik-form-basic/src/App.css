@@ -1,19 +1,43 @@
 
-
+/* rgb(248,240,252)
+rgb(27,56,125) - main */
 .App{
-  border:2px solid black;
-  margin :10px;
+  /* border:2px solid black; */
+  /* margin :10px; */
+  padding:20px;
+  background-color: rgb(234,236,237);
+  
+}
+
+.manaHeader{
+  /* border:2px solid black; */
+  text-align: center;
+  margin:0px 20px 15px 20px;
   padding:10px;
+  border-radius: 12px;
+  background-color: black;
+  color:whitesmoke
+}
+
+.header{
+
+  display : flex;
+  justify-content: space-between;
+  /* border:2px solid black; */
+  margin:20px;
+  gap:20px;
+ 
 }
 
 .navDiv{
-    border : 2px solid black;
+    /* border : 2px solid rgb(247, 244, 244); */
     display: flex;
     padding: 20px;
     border-radius: 10px;
     margin: auto;
     width : 75%;
     justify-content: space-around;
+    background-color: rgb(27,56,125);
     
 }
 
@@ -24,6 +48,23 @@
   background-color: crimson;
   border-radius: 15px;
   font-weight:bold ;
+}
+
+.navDiv li:hover{
+     
+  background-color: rgb(247,135,48);
+  transition: 1s all;
+  color:rgb(18, 18, 18);
+
+}
+
+.manaDiv
+{
+  background-color: rgb(27,56,125);
+  /* border:2px solid black; */
+  margin :20px;
+  padding:20px;
+  border-radius: 12px;
 }
 
 .formInnerDiv
@@ -206,12 +247,13 @@ i{
 
 .SlideCompo{
 
-  /* border:2px solid black; */
+  /* border:2px solid rgb(253, 253, 253); */
   margin :70px 10px 10px 10px;
   position : relative;
   border-radius: 20px;
   overflow: hidden;
   height :450px;
+ 
 
 }
 
@@ -308,11 +350,11 @@ i{
 {
    /* border:2px solid rgb(16, 16, 16); */
    padding:10px;
-   background-color: rgb(124, 31, 137);
+   background-color: rgb(234,236,237);
    border-radius: 12px;
    margin:40px;
    width :fit-content;
-   color:white;
+   color:rgb(6, 6, 6);
 }
 
 .Mission ul{
@@ -333,8 +375,8 @@ i{
 .Core-Values {
   /* border:2px solid black; */
   margin:40px;
-  background-color: rgb(124, 31, 137);
-  color: white;
+  background-color: rgb(234,236,237);
+  color: rgb(0, 0, 0);
   border-radius: 12px;
   padding:10px;
   
@@ -361,7 +403,7 @@ i{
   padding:10px;
   margin : 40px;
   border-radius: 12px;
-  background-color: rgb(124, 31, 137);
+  background-color: rgb(234,236,237);
 }
 
 .HistoryOne p{
@@ -389,8 +431,8 @@ i{
   padding:20px;
   margin:40px;
   border-radius: 12px;
-  background-color: rgb(124, 31, 137);
-  color: white;
+  background-color: rgb(234,236,237);
+  color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;

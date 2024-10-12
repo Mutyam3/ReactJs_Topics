@@ -5,7 +5,13 @@ import {Link} from 'react-router-dom'
 function Header()
 {
     return(
-        <div>
+        <div className='header'>
+
+          <div style={{marginLeft :"70px"}}>
+               <img src="https://i.ibb.co/LxzsMFn/logoformta.png" alt="logoformta" border="0" width='120px'/>
+          </div>
+        
+        
 
           <ul type="none" className = "navDiv">
              <Link to="/home" style={{textDecoration:'none'}}><li>Home</li></Link> 
