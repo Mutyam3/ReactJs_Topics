@@ -2,9 +2,9 @@
   "Header-Images": [
     "https://askfilo.com/blog/wp-content/uploads/2022/02/Exception_113-copy.jpg",
     "https://www.ixambee.com/blog/wp-content/uploads/2024/01/2-3-1024x576.png",
+    "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210210210704/Top-5-Government-Exams-That-You-Can-Take-After-Graduation.png",
     "https://askfilo.com/blog/wp-content/uploads/2022/09/Exception_276-copy.jpg",
-    "https://www.careerguide.com/career/wp-content/uploads/2023/11/10th-Pass-Govt-Jobs.png",
-    "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210210210704/Top-5-Government-Exams-That-You-Can-Take-After-Graduation.png"
+    "https://www.careerguide.com/career/wp-content/uploads/2023/11/10th-Pass-Govt-Jobs.png"
   ],
   "about_us": [
     {
@@ -738,7 +738,7 @@
   ],
   "users": [
     {
-      "userOne": {
+      "user": {
         "PersonalDetails": {
           "nationality": "Germany",
           "dateOfBirth": "2024-10-10",
@@ -804,6 +804,77 @@
         }
       },
       "id": 1
+    },
+    {
+      "user": {
+        "SelectedExam": {
+          "selected_Exam": "Civil_Services_Examination"
+        },
+        "PersonalDetails": {
+          "nationality": "canada",
+          "dateOfBirth": "2024-10-10",
+          "age": "25",
+          "fullName": "Mutyam Mahesh Reddy",
+          "fatherName": "Mutyam Koti Reddy",
+          "motherName": "M.Nagalakshmi",
+          "gender": "male",
+          "email": "bhargavreddymutyam@gmail.com",
+          "mobileNumber": "9550354716",
+          "maritalStatus": "unMarried",
+          "religion": "hindu",
+          "choiceOfLanguage": "Telugu",
+          "permanentMarkOfIdentification1": "A MOLE ON THE CHEST",
+          "permanentMarkOfIdentification2": "A MOLE ON THE HEAD",
+          "communityDetails": "UR(unreserved)",
+          "presentAddressDetails": {
+            "presentState": "Telangana",
+            "presentDistrict": "RanagaReddy",
+            "presentAddress": "8-28, Rudra Colony, Shamshabad",
+            "presentVillage": "Shamshabad",
+            "presentPincode": "501218"
+          },
+          "permanentAddressDetails": {
+            "permanentState": "Telangana",
+            "permanentDistrict": "RanagaReddy",
+            "permanentAddress": "8-28, Rudra Colony, Shamshabad",
+            "permanentVillage": "Shamshabad",
+            "permanentPincode": "501218"
+          },
+          "sameAsPresent": true
+        },
+        "OtherDetails": {
+          "ex_serviceman": "No",
+          "personWithBenchmarkDisability": "No",
+          "EBC_Certificate_Holder": "No",
+          "AccountHolderName": "Mutyam Mahesh Reddy",
+          "AccountNumber": "3502882466",
+          "IFSC_Code": "SBIN0022056",
+          "BankName": "STATE BANK OF INDIA",
+          "BankAddress": "CHINTHAPALLY"
+        },
+        "EducationalDetails": {
+          "SSC_State": "AndhraPradesh",
+          "SSC_Board": "Board of Secondary Education",
+          "SSC_DateOfPassing": "2024-10-01",
+          "SSC_RollNo": "140245578",
+          "Inter_Group": "CEC",
+          "Inter_State": "AndhraPradesh",
+          "Inter_Board": "tsbie",
+          "Inter_DateOfPassing": "2024-10-01",
+          "Inter_RollNo": "6225478102",
+          "Degree_Group": "BTech",
+          "Degree_Discipline": "CSE",
+          "Degree_State": "AndhraPradesh",
+          "Degree_Board": "VITBHOPAL",
+          "Degree_DateOfPassing": "2024-10-22",
+          "Degree_RollNo": "547852145566"
+        },
+        "UploadFileDetails": {
+          "photo": "",
+          "signature": ""
+        }
+      },
+      "id": 2
     }
   ]
 }

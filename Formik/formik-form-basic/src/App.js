@@ -13,7 +13,8 @@ function App() {
     <div className="App">
      <FormProvider>
          <div className='manaHeader'>
-              <h3>Mutyam Testing Agency</h3>
+              <h3>Mutyam Board of Competitive Examination</h3>
+              <p>One Application For All Competitive Examinations</p>
          </div>
         <Header></Header>
          

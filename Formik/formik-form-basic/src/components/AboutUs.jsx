@@ -35,8 +35,8 @@ function AboutUs()
               aboutUsData.map((el)=>{
                 console.log(el)
                    return (
-                        <section>
-                            <h5 style={{color:'whitesmoke'}}>{el.organization_name}</h5>
+                        <section className='AboutusCompo'>
+                            <h4 style={{color:'whitesmoke'}}>{el.organization_name}</h4>
                             <div className='Mission'>
                                <div className='d-flex justify-content-between p-2'> <h5>Mission </h5>  <span onClick={()=>{hide(el.mission.id)}}> {Info && indx == el.mission.id ?'-' : '+'}</span></div>
 
@@ -86,7 +86,7 @@ function AboutUs()
                                             return (
 
                                                 <div>
-                                                    <h5 style={{borderBottom:"2px solid black",padding:'10px'}}>{el.value}</h5>
+                                                    <h6 style={{borderBottom:"2px solid black",padding:'10px', backgroundColor:'black', color:'white'}}>{el.value}</h6>
                                                     <p style={{padding:'10px'}}>{el.description}</p> 
                                                 </div>
                                             )

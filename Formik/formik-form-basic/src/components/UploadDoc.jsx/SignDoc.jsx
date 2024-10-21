@@ -16,7 +16,7 @@ function SignDoc(props)
         <section className='UploadProfile'>
 
         <div >
-           <p>Applicant's Signature</p>
+           <p><strong>Applicant's Signature</strong></p>
 
              <div className='SignDiv'>
                {props.Uf.values.UploadFileDetails.signature ?<img src = {props.Uf.values.UploadFileDetails.signature} width = '270'  height = '80' />  : 
@@ -30,7 +30,7 @@ function SignDoc(props)
         </div>
 
         <div className='specificIns'>
-            <h5>Specifications for Signature Image</h5>
+            <h5 style={{backgroundColor:'rgb(27,56,125)', color:'whitesmoke'}}>Specifications for Signature Image</h5>
              <ul>
                 {
                   signatureInstructions.map((el)=>{

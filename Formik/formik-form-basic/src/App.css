@@ -6,7 +6,7 @@ rgb(27,56,125) - main */
   /* margin :10px; */
   padding:20px;
   background-color: rgb(234,236,237);
-  
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .manaHeader{
@@ -91,19 +91,33 @@ select, input{
   padding:25px;
   border-radius: 15px;
   margin:20px;
+  background-color: rgb(255, 255, 255);
 
+}
+
+.smallCompo label{
+  font-weight: bold;
 }
 
 
 
-.stdFormDiv{
+.smallCompo h5{
 
+  /* font-weight: bold; */
+  background-color: rgb(27,56,125);
+  width: max-content;
+  padding:10px;
+  color:white;
+  border-radius:12px;
+}
+
+
+.stdFormDiv{
   border:2px solid black;
   display: flex;
   flex-direction: column;
   padding:25px;
   margin : 10px;
-
 }
 
 .StdFormLinks{
@@ -114,12 +128,14 @@ select, input{
      padding:10px;
      border-radius: 20px;
      margin:20px;
-     
+     background-color: rgb(255,193,7);
+     color: black
 }
 
 i{
   font-size: x-large;
   color : black;
+ 
 }
 
 .parentCircle{
@@ -127,6 +143,7 @@ i{
   display : flex;
   flex-direction: column;
   justify-content: space-between;
+  
 
 }
 .circleDiv{
@@ -138,11 +155,12 @@ i{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: aliceblue;
 }
 
 .addressDiv{
   display : flex;
-  gap : 20px;
+  gap : 10px;
 }
 
 .addressDiv input{
@@ -191,8 +209,12 @@ i{
 
   border:2px solid black;
   width:320px;
+  background-color: green;
+  color:whitesmoke
   
 }
+
+
 
 .PhotoDiv{
 
@@ -266,7 +288,7 @@ i{
   left: 5%;
   font-size: 80px;
   color:rgb(0, 0, 0);
-
+  
 }
 
 .slideBtnRight{
@@ -288,13 +310,27 @@ i{
 
 .Cards{
 
-  /* border:2px solid black; */
+  border:2px solid black;
   width :200px;
   margin:25px;
   overflow: hidden;
   border-radius: 12px;
-  
+  display :flex;
+  flex-direction: column; 
+  justify-content: space-between;
+}
 
+.Cards h5{
+  padding:10px;
+}
+
+.innerCard{
+   border-top: 2px solid black;
+   background-color: crimson;
+   padding:10px;
+   display : flex;
+   flex-direction: column;
+   color:white
 }
 
 .footerDiv li{
@@ -316,7 +352,7 @@ i{
 
 .FooterMain{
   
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   background-color: black;
   padding:20px;
   margin:20px 20px 0px 20px;
@@ -330,12 +366,14 @@ i{
 }
 
 .FooterEnd{
-
-  border:2px solid black;
+  border-top:2px solid white;
   text-align: center;
-  padding:5px;
+  padding:10px;
   margin:0px 20px;
-  border-radius: 12px;
+  background-color: black;
+  color:white;
+  border-radius: 0px 0px 20px 20px;
+
 }
 
 .FooterMain div i {
@@ -344,6 +382,15 @@ i{
 
 .FooterMain div p {
   text-align: end;
+}
+
+.AboutusCompo h5{
+  background-color: black;
+  width:max-content;
+  color: rgb(255, 255, 255);
+  /* border:2px solid black; */
+  padding:10px;
+  border-radius: 12px;
 }
 
 .Mission 
@@ -386,6 +433,7 @@ i{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+ 
 }
 
 .Core-Values ul div{
@@ -394,6 +442,8 @@ i{
   width : 180px;
   border-radius: 12px;
   text-align: center;
+  overflow: hidden;
+  
  
 }
 
@@ -421,9 +471,17 @@ i{
   color:white;
 }
 
+.Milestone div p{
+  padding:10px;
+}
+
+
+
 .Milestone div p:first-child{
   border-bottom: 2px solid black;
   padding:10px;
+  background-color: black;
+  color:whitesmoke
 }
 
 .Team {
@@ -460,8 +518,8 @@ i{
 }
 
 span{
-   background-color: white;
-   color:black;
+   background-color: black;
+   color:rgb(251, 249, 249);
    border-radius: 50%;
    width :30px;
    height:30px;
@@ -469,12 +527,15 @@ span{
    display: flex;
    justify-content: center;
    align-items: center;
+   font-weight: bolder;
 }
+
 
 
 .Preview table thead th , tbody tr, td {
   border:2px solid black;
-
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0)
 }
 
 .Preview {
@@ -508,6 +569,19 @@ span{
   bottom:50%;
 }
 
+.contactList :nth-last-child(2n)
+{
+   background-color:  rgb(27,56,125);
+   color:rgb(252, 250, 250);
+   font-size: large;
+}
+
+.contactList :nth-last-child(2n+1)
+{
+   background-color:  rgb(255,193,7);
+   color:black;
+   font-size: large;
+}
 
 
 

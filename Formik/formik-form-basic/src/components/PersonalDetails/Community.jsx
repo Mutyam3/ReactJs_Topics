@@ -12,7 +12,7 @@ function Community(props)
               Community Details <br/>
 
                <select {...props.st.getFieldProps('PersonalDetails.communityDetails')}>
-                     <option disabled selected>--Select your Community--</option>
+                     <option value='select' selected >--Select your Community--</option>
                      <option value="UR(unreserved)">UR(unreserved)</option>
                      <option value="OBC">OBC</option>
                      <option value="ST">ST</option>

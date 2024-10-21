@@ -44,7 +44,7 @@ function UploadProfileDoc()
    
     return(
         <div >
-            <h5>Upload your scanned photo and signature</h5>
+            <h5 style={{backgroundColor:'rgb(27,56,125)', color:'whitesmoke', borderRadius: '12px', padding:'10px', width:'fit-content'}}>Upload your scanned photo and signature</h5>
 
           <form onSubmit={myUploadFiles.handleSubmit}>
 

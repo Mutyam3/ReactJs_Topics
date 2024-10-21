@@ -50,7 +50,7 @@ function PostalAddress(props)
                         <td colSpan="2" className='smallCompo_Tab'>
                             <label>
                                  Address  <br/>
-                               <textarea rows="4" cols = "78" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentAddress')} >
+                               <textarea rows="4" cols = "58" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentAddress')} >
                                      
                                </textarea>
                             </label>
@@ -109,7 +109,7 @@ function PostalAddress(props)
                         <td colSpan="2" className='smallCompo_Tab'>
                             <label>
                                  Address  <br/>
-                               <textarea rows="4" cols = "78" {...props.st.getFieldProps('PersonalDetails.permanentAddressDetails.permanentAddress')}
+                               <textarea rows="4" cols = "58" {...props.st.getFieldProps('PersonalDetails.permanentAddressDetails.permanentAddress')}
                                value={props.st.values.PersonalDetails.sameAsPresent ? props.st.values.PersonalDetails.presentAddressDetails.presentAddress : 
                                 props.st.values.PersonalDetails.permanentAddressDetails.permanentAddress}>
                                      

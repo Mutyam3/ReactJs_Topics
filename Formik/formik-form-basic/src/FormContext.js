@@ -10,6 +10,10 @@ export const useFormContext = () => React.useContext(FormContext);
 export const FormProvider = ({ children }) => {
 
  const initialUserData = {
+
+   SelectedExam : {
+          selected_Exam : ''
+   },
        
     PersonalDetails: {
 

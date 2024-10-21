@@ -10,7 +10,7 @@ function Preview()
     const {formData,ResetFormData} = useFormContext()
     const [formDataTable, setFormDataTable] = React.useState([{...formData}])
     const [dis, setDis] = React.useState(false)
-
+     console.log(formData)
     // React.useState(()=>{
 
     //     const manaMap = new Map(Object.entries(formData)) 
@@ -25,7 +25,7 @@ function Preview()
     {
            const finalData = 
            {
-              "userOne" : {... manaFinalData} 
+              "user" : {... manaFinalData} 
            }
 
      
@@ -58,7 +58,7 @@ function Preview()
              <table border="2px">
                   <thead >
                       <tr align = 'center'>
-                        <th colSpan='7'>Mutyam Testing Agency One Application For ALL Competitive and Government Exams</th>
+                        <th colSpan='7'> <h5 style={{fontWeight:'bold'}}>Mutyam Board of Competitive Examinations</h5>  <p> [ One Application For All Competitive and Government Exams ]</p></th>
                       </tr>
                       <tr align='center'>
                         <th colSpan='7'>Application Form - 2024</th>
@@ -71,7 +71,13 @@ function Preview()
                            formDataTable.map((el)=>{
                             return (
                                 <>
-                                 
+                                 <tr>
+                                    <td colSpan='7'> <b>Choosen Exam</b> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colSpan='1'>Selected Exam</td>
+                                    <td colSpan='6'>{el.SelectedExam.selected_Exam}</td>
+                                 </tr>
                                 <tr>
                                     <td colSpan='7'>Personal Details</td>    
                                 </tr>
