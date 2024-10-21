@@ -38,18 +38,21 @@ function Cards()
                             <img src={el.imageUrl} width="200px" height ="300px"/>
                             <h5>{el.examName}</h5>
                              
-                          {
-                            Info && indx == ind && (<div>
-                                <p>Exam Type : {el.examType}</p>
-                                <p>Eligibility : {el.eligibility}</p>
-                                <p>Exam Date : {el.examDate}</p>
+                        
+                           { Info && indx == ind && (
+                               <div className='innerCard'>
+                                <p> <b>Exam Type :</b> {el.examType}</p>
+                                <p> <b>Eligibility :</b> {el.eligibility}</p>
+                                <p> <b> Exam Date : </b>{el.examDate}</p>
                                </div>
                                 ) 
                               
                           }
+                         
 
-                         <b onClick = {()=>{ showInfo(ind)}}> {Info && indx == ind ? 'Less Info' : 'More Info'}</b>
-                            
+                          <div className='innerCard' style={{textAlign:"end"}}>
+                              <b onClick = {()=>{ showInfo(ind)}}> {Info && indx == ind ? 'Less Info' : 'More Info'}</b>
+                          </div>
                         </div>
                     )
                 })

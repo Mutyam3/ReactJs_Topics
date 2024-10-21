@@ -11,7 +11,7 @@ function Inter(props)
             <label>
                 Group <br/>
                 <select  {...props.Ed.getFieldProps('EducationalDetails.Inter_Group')}>
-                    <option disabled selected>Select</option>
+                    <option value='select' selected >Select</option>
                     <option value="Mpc">Mpc</option>
                     <option value="Bipc">Bipc</option>
                     <option value="CEC">CEC</option>
@@ -23,7 +23,7 @@ function Inter(props)
             <label>
                 State<br/>
                 <select {...props.Ed.getFieldProps('EducationalDetails.Inter_State')}> 
-                    <option disabled selected>Select</option>
+                    <option value='select' selected >Select</option>
                     <option value="Telangana">Telangana</option>
                     <option value="AndhraPradesh">AndhraPradesh</option>
                     <option value="Assam">Assam</option>

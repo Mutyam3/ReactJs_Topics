@@ -12,7 +12,7 @@ function Degree(props)
        <label>
            Group <br/>
            <select  {...props.Ed.getFieldProps('EducationalDetails.Degree_Group')}>
-               <option disbaled selected>Select</option>
+               <option value='select' selected >Select</option>
                <option value="Bsc">Bsc</option>
                <option value="BTech">BTech</option>
                
@@ -28,7 +28,7 @@ function Degree(props)
        <label>
            State<br/>
            <select  {...props.Ed.getFieldProps('EducationalDetails.Degree_State')}>
-               <option disabled selected>Select</option>
+               <option value='select' selected >Select</option>
                <option value="Telangana">Telangana</option>
                <option value="AndhraPradesh">AndhraPradesh</option>
                <option value="Assam">Assam</option>

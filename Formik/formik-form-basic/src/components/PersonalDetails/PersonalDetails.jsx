@@ -10,6 +10,7 @@ import axios from 'axios'
 import OtherDetails from '../OtherDetails/OtherDetails'
 import { useFormContext } from '../../FormContext'
 import SuccessDisplay from '../SuccessDisplay'
+import SelectExam from './SelectExam'
 
 function PersonalDetails()
 {
@@ -25,7 +26,9 @@ function PersonalDetails()
     
     const myStudentForm = useFormik({
         initialValues : {
-
+            SelectedExam : {
+               selected_Exam : formData.SelectedExam.selected_Exam
+            },
             PersonalDetails : {
 
               nationality : formData.PersonalDetails.nationality,
@@ -69,7 +72,7 @@ function PersonalDetails()
         },
 
         onSubmit : (values)=>{
-            console.log(values)
+            console.log('Personal Details',values)
             updateFormData(values)
             // const userData = {
             //     "userOne" : 
@@ -103,6 +106,7 @@ function PersonalDetails()
          <form  onSubmit = {myStudentForm.handleSubmit}>
             {/* {manam bind chesam handleSubmit tho} */}
 
+            <SelectExam st={myStudentForm}/>
             <Personal st = {myStudentForm}/>
             <Community st = {myStudentForm}/>
             <PostalAddress st = {myStudentForm}/>

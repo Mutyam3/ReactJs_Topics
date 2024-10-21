@@ -20,8 +20,8 @@ function Personal(props)
                    <tr className='smallCompo_Tab'>
                       <td className='smallCompo_Tab'>
                           <label>Country of Nationality <br/>
-                                              <select  {...props.st.getFieldProps('PersonalDetails.nationality')}>
-                                                  <option disabled selected>---Select Your Nationality---</option>
+                                              <select  {...props.st.getFieldProps('PersonalDetails.nationality')} defaultValue='select'>
+                                                  <option value='select' selected >---Select Your Nationality---</option>
                                                   <option value = "India">India</option>
                                                   <option value = "Germany">Germany</option>
                                                   <option value = "Usa">USA</option>
@@ -66,7 +66,7 @@ function Personal(props)
                                 <label>
                                     Gender :  <br/>
                                        <select  {...props.st.getFieldProps('PersonalDetails.gender')}>
-                                               <option disabled selected>--Select your gender--</option>
+                                               <option value='select' selected>--Select your gender--</option>
                                                <option value="male">Male</option>
                                                <option value="female">Female</option>
                                                <option value="others">Others</option>
@@ -93,7 +93,7 @@ function Personal(props)
                                 <label>
                                       Marital Status  <br/> 
                                              <select  {...props.st.getFieldProps('PersonalDetails.maritalStatus')}>
-                                                  <option>--Select Marital Status--</option>
+                                                  <option value='select' selected >--Select Marital Status--</option>
                                                   <option value="married">Married</option>
                                                   <option value="unMarried">UnMarried</option>
                                              </select>
@@ -104,7 +104,7 @@ function Personal(props)
                                <label>
                                       Religion <br/>
                                             <select  {...props.st.getFieldProps('PersonalDetails.religion')}>
-                                                  <option>---Select Religion ---</option>
+                                                  <option value='select' selected >---Select Religion ---</option>
                                                   <option value = "hindu">Hindu</option>
                                                   <option value = "christian">Christian</option>
                                                   <option value = "muslim">Muslim</option>
@@ -115,7 +115,7 @@ function Personal(props)
                                <label>
                                       Choice of Language for Examination <br/>
                                             <select {...props.st.getFieldProps('PersonalDetails.choiceOfLanguage')}>
-                                                 <option>--Select a language--</option>
+                                                 <option value='select' selected >--Select a language--</option>
                                                  <option value="Telugu">Telugu</option>
                                                  <option value="English">English</option>
                                                  <option value="Hindi">Hindi</option>

@@ -17,7 +17,7 @@ function PhotoDoc(props)
     return (
         <section className='UploadProfile'>
               <div>
-                 <p>Applicant's Colour Passport Photograph</p>
+                 <p><strong>Applicant's Colour Passport Photograph</strong></p>
 
                    <div className='PhotoDiv'>
                      { props.Uf.values.UploadFileDetails.photo ? <img  src = {props.Uf.values.UploadFileDetails.photo} width = '320' height = '240'/>  : 
@@ -31,7 +31,7 @@ function PhotoDoc(props)
               </div>
 
               <div className='specificIns'>
-                  <h5>Specifications for Photograph</h5>
+                  <h5 style={{backgroundColor:'rgb(27,56,125)', color:'whitesmoke'}}>Specifications for Photograph</h5>
                    <ul>
                       {
                         photographInstructions.map((el)=>{

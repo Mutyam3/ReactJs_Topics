@@ -53,7 +53,7 @@ function SlideCompo()
                 } width ="100%" height = "500px" />
 
                <div className='slideBtn'>
-                    <i class="bi bi-caret-left-fill  slideBtnLeft" onClick={Previous}></i>
+                    <i class="bi bi-caret-left-fill slideBtnLeft" onClick={Previous}></i>
                     <i class="bi bi-caret-right-fill slideBtnRight" onClick = {Forward}></i>
                </div>
                

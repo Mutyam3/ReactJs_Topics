@@ -11,7 +11,7 @@ function Matriculation(props)
             <label>
                 State<br/>
                 <select  {...props.Ed.getFieldProps('EducationalDetails.SSC_State')}>
-                    <option disabled selected>Select</option>
+                    <option value='select' selected >Select</option>
                     <option value="Telangana">Telangana</option>
                     <option value="AndhraPradesh">AndhraPradesh</option>
                     <option value="Assam">Assam</option>

@@ -14,7 +14,7 @@ function EBCDetails(props)
             <label>
                 Are you an EBC Certificate Holder ?  <br/>
                 <select  {...props.od.getFieldProps('OtherDetails.EBC_Certificate_Holder')}>
-                    <option disabled selected>Select</option>
+                    <option value='select' selected >Select</option>
                     <option value = 'Yes'>Yes</option>
                     <option value = 'No'>No</option>
                 </select>
