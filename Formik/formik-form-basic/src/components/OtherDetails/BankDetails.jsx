@@ -14,21 +14,32 @@ function BankDetails(props)
                         <td className='smallCompo_Tab'>
                             <label>
                                 Name of Account Holder <br/>
-                                <input type="text" {...props.od.getFieldProps('OtherDetails.AccountHolderName')}/>
+                                <input type="text" {...props.od.getFieldProps('OtherDetails.AccountHolderName')}
+                                className = {props.od.touched.OtherDetails?.AccountHolderName && props.od.errors.OtherDetails?.AccountHolderName && 'ErrorField'}/>
                             </label>
+
+                            <div className='ErrorClass'>
+                                <b>{props.od.touched.OtherDetails?.AccountHolderName && props.od.errors.OtherDetails?.AccountHolderName && props.od.errors.OtherDetails.AccountHolderName}</b>
+                            </div>
                         </td>
                         <td className='smallCompo_Tab'>
                             <label>
                                 Account Number <br/>
-                                <input type="text" />
+                                <input type="text"  />
                             </label>
+
+                
+
                         </td>
                         <td className='smallCompo_Tab'>
                             <label>
 
                                 Confirm Account Number <br/>
-                                <input type="text" {...props.od.getFieldProps('OtherDetails.AccountNumber')}/>
-
+                                <input type="text" {...props.od.getFieldProps('OtherDetails.AccountNumber')}
+                                className = {props.od.touched.OtherDetails?.AccountNumber && props.od.errors.OtherDetails?.AccountNumber && 'ErrorField'}/>
+                               <div className='ErrorClass'>
+                                    <b>{props.od.touched.OtherDetails?.AccountNumber && props.od.errors.OtherDetails?.AccountNumber && props.od.errors.OtherDetails.AccountNumber}</b>
+                               </div>
                             </label>
                         </td>
                     </tr>

@@ -9,13 +9,15 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useFormContext } from '../../FormContext'
 import SuccessDisplay from '../SuccessDisplay'
+import * as Yup from 'yup'
+import ErrorDisplay from '../ErrorDisplay'
 
 function OtherDetails()
 {
      const {formData, updateFormData} = useFormContext()
-     const navigate  = useNavigate()
-     const [dis, setDis] = React.useState(false)
-
+     const navigator  = useNavigate()
+     const [successDis, setSuccessDis] = React.useState(false)
+     const [errorDis, setErrorDis] = React.useState(false)
 
 
     //  console.log('Form Data Od ::', formData)
@@ -38,17 +40,52 @@ function OtherDetails()
                   
              },
 
+             validationSchema : Yup.object({
+
+                   OtherDetails : Yup.object({
+                       ex_serviceman : Yup.string().required( ' * please fill this field'),
+                       personWithBenchmarkDisability : Yup.string().required( ' * please fill this field'),
+                       EBC_Certificate_Holder : Yup.string().required( ' * please fill this field'),
+                       AccountHolderName : Yup.string().required( ' * Account holder name ivvu babu'),
+                       AccountNumber : Yup.number().required(' * Account number ivvu'),
+                       
+                   })
+             }),
+
              onSubmit : (values)=>{
                    console.log(values)
                    updateFormData(values)
-                   setDis(true)
+                   setSuccessDis(true)
 
                    setTimeout(()=>{
-                    setDis(false)
+                    setSuccessDis(false)
                   }, 2000)
                 
+                  setErrorDis(false)
              }
+
+             
       })
+
+
+      function handleNext()
+      {  
+        if(myOtherDetails.isValid && myOtherDetails.submitCount && myOtherDetails.isSubmitting)
+        {
+          
+          navigator('/studentForm/Educational-Qualification')
+         
+        }
+        else{
+  
+          setErrorDis(true)
+  
+          setTimeout(()=>{
+            setErrorDis(false)
+          }, 2000)
+        }
+           
+      }
 
    
 
@@ -65,14 +102,21 @@ function OtherDetails()
               
             <div style={{position: 'relative'}}>
               {
-                  dis  &&  <SuccessDisplay/>
+                  successDis  &&  <SuccessDisplay/>
+              }
+            </div>
+
+            <div style={{position : 'relative'}}>
+              {
+                 errorDis && <ErrorDisplay></ErrorDisplay>
               }
             </div>
 
             <div className='Btns'>
-                 <button style={{backgroundColor:"crimson", color:"whitesmoke"}} onClick = {()=>{navigate('/studentForm/personal-Details')}}>Previous</button>
+              
+                 <button style={{backgroundColor:"crimson", color:"whitesmoke"}} type='button' onClick = {()=>{navigator('/studentForm/personal-Details')}}>Previous</button>
                  <button style={{backgroundColor:'green',color:'white'}}>SAVE</button>
-                 <button style={{backgroundColor:'crimson', color: 'white'}} onClick = {()=>{navigate('/studentForm/Educational-Qualification')}}>NEXT</button>
+                 <button style={{backgroundColor:'crimson', color: 'white'}} type='button' onClick = {handleNext}>NEXT</button>
                 
             </div>
             </form>

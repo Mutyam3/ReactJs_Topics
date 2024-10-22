@@ -11,7 +11,8 @@ function Community(props)
          <label>
               Community Details <br/>
 
-               <select {...props.st.getFieldProps('PersonalDetails.communityDetails')}>
+               <select {...props.st.getFieldProps('PersonalDetails.communityDetails')}
+               className = {props.st.touched.PersonalDetails?.communityDetails && props.st.errors.PersonalDetails?.communityDetails && 'ErrorField'}>
                      <option value='select' selected >--Select your Community--</option>
                      <option value="UR(unreserved)">UR(unreserved)</option>
                      <option value="OBC">OBC</option>
@@ -20,6 +21,9 @@ function Community(props)
                </select>
 
          </label>
+         <div className = 'ErrorClass'>
+               <b>{props.st.touched.PersonalDetails?.communityDetails && props.st.errors.PersonalDetails?.communityDetails && props.st.errors.PersonalDetails.communityDetails}</b>
+         </div>
          </form>
 
     </div>

@@ -13,12 +13,17 @@ function EBCDetails(props)
 
             <label>
                 Are you an EBC Certificate Holder ?  <br/>
-                <select  {...props.od.getFieldProps('OtherDetails.EBC_Certificate_Holder')}>
+                <select  {...props.od.getFieldProps('OtherDetails.EBC_Certificate_Holder')}
+                className = {props.od.touched.OtherDetails?.EBC_Certificate_Holder && props.od.errors.OtherDetails?.EBC_Certificate_Holder && 'ErrorField'}>
                     <option value='select' selected >Select</option>
                     <option value = 'Yes'>Yes</option>
                     <option value = 'No'>No</option>
                 </select>
             </label>
+
+            <div className='ErrorClass'>
+                <b>{props.od.touched.OtherDetails?.EBC_Certificate_Holder && props.od.errors.OtherDetails?.EBC_Certificate_Holder && props.od.errors.OtherDetails.EBC_Certificate_Holder}</b>
+            </div>
         </div>
     )
 }

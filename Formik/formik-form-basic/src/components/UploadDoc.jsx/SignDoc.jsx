@@ -24,7 +24,7 @@ function SignDoc(props)
              </div>   
 
               <div className='fileInput'>
-                  <input type="file"  name = 'UploadFileDetails.signature' onChange = {handleSign} />
+                  <input type="file"  name = 'UploadFileDetails.signature' onChange = {handleSign} required/>
               </div>
 
         </div>
