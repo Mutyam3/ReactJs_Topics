@@ -7,6 +7,8 @@ import { useFormik } from 'formik'
 import { useFormContext } from '../../FormContext'
 import OtherDetails from '../OtherDetails/OtherDetails'
 import SuccessDisplay from '../SuccessDisplay'
+import * as Yup from 'yup'
+import ErrorDisplay from '../ErrorDisplay'
 
 function EducatQualification()
 {
@@ -16,6 +18,7 @@ function EducatQualification()
     const navigator = useNavigate()
 
     const [dis, setDis] = React.useState(false)
+    const [errorDis, setErrorDis] =  React.useState(false)
 
     // console.log('Form Data ED ::', formData)
 
@@ -44,6 +47,30 @@ function EducatQualification()
             
 
         },
+
+        validationSchema : Yup.object({
+           
+            EducationalDetails : Yup.object({
+
+                   SSC_State : Yup.string().required(' * Nuvvu 10th ekkada chadivav bossuu'),   
+                   SSC_Board : Yup.string().required(' * 10th board name ivvu bossuu '),
+                   SSC_DateOfPassing : Yup.string().required( ' * 10th pass aina date ivvu bossuu'),
+                   SSC_RollNo: Yup.string().required(' * 10th rollnumber kooda ivvu bossuu'),
+                   Inter_Group: Yup.string().required(' * Nuvvu Inter eh group tesukunav bossuu'),
+                   Inter_State : Yup.string().required(' * Nuvvu Inter ekkada chadivav bossuu'),
+                   Inter_Board : Yup.string().required(' * Inter board name ivvu bossuu '),
+                   Inter_DateOfPassing : Yup.string().required( ' * Inter pass aina date ivvu bossuu'),
+                   Inter_RollNo : Yup.string().required(' * Inter rollnumber kooda ivvu bossuu'),
+                   Degree_Group : Yup.string().required(' * Nuvvu Degree eh group tesukunav bossuu'),
+                   Degree_Discipline : Yup.string().required(' * Nuvvu degree lo eh course tesukunav bossuu'),
+                   Degree_State : Yup.string().required(' * Nuvvu Degree ekkada chadivav bossuu'),
+                   Degree_Board : Yup.string().required(' * Degree university name ivvu bossuu '),
+                   Degree_DateOfPassing : Yup.string().required( ' * Degree pass aina date ivvu bossuu'),
+                   Degree_RollNo : Yup.string().required( ' * Degree studentId ivvu bossuu')
+            })
+
+        }),
+
         onSubmit : (values)=>{
               console.log( "Education : :" ,values)
               updateFormData(values)
@@ -52,14 +79,29 @@ function EducatQualification()
               setTimeout(()=>{
                 setDis(false)
               }, 2000)
+             setErrorDis(false) 
         }
     })
+
+    function handleNext()
+    {
+        if(myEducation.isValid && myEducation.submitCount && myEducation.isSubmitting)
+        {
+              
+            navigator('/studentForm/Upload-Profile-Documents')
+        }
+        else{
+             setErrorDis(true)
+
+             setTimeout(()=>{
+                setErrorDis(false)
+             },2000)
+        }
+    }
 
   
     return (
         <div>
-
-       
 
             <form onSubmit={myEducation.handleSubmit}>
 
@@ -73,10 +115,16 @@ function EducatQualification()
                 }
             </div>
 
+            <div style={{position : 'relative'}}>
+                {
+                    errorDis && <ErrorDisplay/>
+                }
+            </div>
+
             <div className='Btns'>
-                 <button style={{backgroundColor:"crimson" , color:'whitesmoke'}} onClick = {()=>{navigator('/studentForm/Other-Details')}}>Previous</button>
+                 <button style={{backgroundColor:"crimson" , color:'whitesmoke'}} type='button' onClick = {()=>{navigator('/studentForm/Other-Details')}}>Previous</button>
                  <button style={{backgroundColor:'green',color:'white'}}>SAVE</button>
-                 <button style={{backgroundColor:'crimson', color: 'white'}}  onClick = {()=>{navigator('/studentForm/Upload-Profile-Documents')}}>NEXT</button>
+                 <button style={{backgroundColor:'crimson', color: 'white'}} type='button' onClick = {()=>{handleNext()}}>NEXT</button>
             </div>
             
             </form>

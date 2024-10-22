@@ -21,12 +21,14 @@ function PhotoDoc(props)
 
                    <div className='PhotoDiv'>
                      { props.Uf.values.UploadFileDetails.photo ? <img  src = {props.Uf.values.UploadFileDetails.photo} width = '320' height = '240'/>  : 
-                     <img src = 'https://www.aquasafemine.com/wp-content/uploads/2018/06/dummy-man-570x570.png' width='310' height = '230' />}
+                     <img src = 'https://www.aquasafemine.com/wp-content/uploads/2018/06/dummy-man-570x570.png' width='310' height = '230'/>}
                    </div>   
 
                     <div className='fileInput'>
-                        <input type="file" accept = "image/*"  name="UploadFileDetails.photo" onChange={handlePhoto}/>
+                        <input type="file" accept = "image/*"  name="UploadFileDetails.photo" onChange={handlePhoto} required/>
                     </div>
+
+                
 
               </div>
 

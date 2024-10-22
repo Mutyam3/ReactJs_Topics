@@ -2,6 +2,8 @@ import React from 'react'
 
 function PostalAddress(props)
 {
+
+    console.log(props.st.errors)
      
       function handleAddress(e)
       {
@@ -33,27 +35,42 @@ function PostalAddress(props)
                         <td className='smallCompo_Tab'>
                             <label>
                                 State/UT  <br/> 
-                                <input type="text"  {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentState')}/>
+                                <input type="text"  {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentState')}
+                                className  = {props.st.touched.PersonalDetails?.presentAddressDetails?.presentState && props.st.errors.PersonalDetails?.presentAddressDetails?.presentState && 'ErrorField'}/>
                                 
                             </label>
+
+                            <div className='ErrorClass'>
+                               <b>{props.st.touched.PersonalDetails?.presentAddressDetails?.presentState && props.st.errors.PersonalDetails?.presentAddressDetails?.presentState && props.st.errors.PersonalDetails.presentAddressDetails.presentState }</b>
+                             </div>
                         </td>
 
                         <td className='smallCompo_Tab'>
                             <label>
                                 District  <br/>
-                                <input type="text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentDistrict')}/>
+                                <input type="text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentDistrict')}
+                                className={props.st.touched.PersonalDetails?.presentAddressDetails?.presentDistrict && props.st.errors.PersonalDetails?.presentAddressDetails?.presentDistrict && 'ErrorField'}/>
 
                             </label>
+
+                            <div className='ErrorClass'>
+                                 <b>{props.st.touched.PersonalDetails?.presentAddressDetails?.presentDistrict && props.st.errors.PersonalDetails?.presentAddressDetails?.presentDistrict && props.st.errors.PersonalDetails.presentAddressDetails.presentDistrict }</b>
+                            </div>
                         </td>
                     </tr>
                     <tr className='smallCompo_Tab'>
                         <td colSpan="2" className='smallCompo_Tab'>
                             <label>
                                  Address  <br/>
-                               <textarea rows="4" cols = "58" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentAddress')} >
+                               <textarea rows="4" cols = "58" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentAddress')} 
+                               className={props.st.touched.PersonalDetails?.presentAddressDetails?.presentAddress && props.st.errors.PersonalDetails?.presentAddressDetails?.presentAddress && 'ErrorField'}>
                                      
                                </textarea>
                             </label>
+
+                            <div className='ErrorClass'>
+                                  <b>{props.st.touched.PersonalDetails?.presentAddressDetails?.presentAddress && props.st.errors.PersonalDetails?.presentAddressDetails?.presentAddress && props.st.errors.PersonalDetails.presentAddressDetails.presentAddress }</b>
+                             </div>
                         </td>
                         </tr>
 
@@ -61,14 +78,26 @@ function PostalAddress(props)
                         <td className='smallCompo_Tab'>
                             <label>
                                 Village  <br/>
-                                <input type = "text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentVillage')}/>
+                                <input type = "text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentVillage')}
+                                className={props.st.touched.PersonalDetails?.presentAddressDetails?.presentVillage && props.st.errors.PersonalDetails?.presentAddressDetails?.presentVillage && 'ErrorField'}/>
+                                  
                             </label>
+
+                            <div className='ErrorClass'>
+                            <b>{props.st.touched.PersonalDetails?.presentAddressDetails?.presentVillage && props.st.errors.PersonalDetails?.presentAddressDetails?.presentVillage && props.st.errors.PersonalDetails.presentAddressDetails.presentVillage }</b>
+                             </div>
+
                         </td>
                         <td className='smallCompo_Tab'>
                             <label>
                                 PinCode  <br/>
-                                <input type="text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentPincode')}/>
+                                <input type="text" {...props.st.getFieldProps('PersonalDetails.presentAddressDetails.presentPincode')}
+                                className={props.st.touched.PersonalDetails?.presentAddressDetails?.presentPincode && props.st.errors.PersonalDetails?.presentAddressDetails?.presentPincode && 'ErrorField'}/>
                             </label>
+
+                            <div className='ErrorClass'>
+                            <b>{props.st.touched.PersonalDetails?.presentAddressDetails?.presentPincode && props.st.errors.PersonalDetails?.presentAddressDetails?.presentPincode && props.st.errors.PersonalDetails.presentAddressDetails.presentPincode }</b>
+                             </div>
                         </td>
                     </tr>
                </tbody>

@@ -9,7 +9,8 @@ function SelectExam(props)
             <label>
             
                 Select your Exam  &nbsp;&nbsp;&nbsp;
-                <select {...props.st.getFieldProps('SelectedExam.selected_Exam')}>
+                <select {...props.st.getFieldProps('SelectedExam.selected_Exam')}
+                className={props.st.touched.SelectedExam?.selected_Exam && props.st.errors.SelectedExam?.selected_Exam && 'ErrorField'}>
                     <option value='select' selected>---select your exam ---</option>
                     <option value='Civil_Services_Examination'>Civil-Service-Examination</option>
                     <option value='Staff_Selection_Commission'>Staff-Selection-Commission</option>
@@ -36,6 +37,11 @@ function SelectExam(props)
                  
                 </select>
             </label>
+
+          <div className='ErrorClass'>
+                <b>{props.st.touched.SelectedExam?.selected_Exam && props.st.errors.SelectedExam?.selected_Exam && props.st.errors.SelectedExam.selected_Exam}</b>
+          </div>
+           
             
         </div>
     )

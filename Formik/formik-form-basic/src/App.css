@@ -309,8 +309,7 @@ i{
 }
 
 .Cards{
-
-  border:2px solid black;
+  border:1px solid rgb(183, 179, 179);
   width :200px;
   margin:25px;
   overflow: hidden;
@@ -581,6 +580,34 @@ span{
    background-color:  rgb(255,193,7);
    color:black;
    font-size: large;
+}
+
+.ErrorClass{
+    /* text-align: center; */
+    color:red;
+    /* font-weight: bold; */
+    
+
+}
+
+.ErrorField{
+
+  border: 2px solid red;
+}
+
+.NoErrorField{
+  border: 1px solid black;
+}
+
+.ErrorDiv{
+  background-color : rgb(255, 0, 0);
+  padding : 10px;
+  color : whiteSmoke;
+  width : fit-content;
+  border-radius: 10px;
+  position :absolute;
+  right:15%;
+  
 }
 
 

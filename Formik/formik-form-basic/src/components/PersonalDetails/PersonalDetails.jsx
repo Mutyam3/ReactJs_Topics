@@ -11,15 +11,15 @@ import OtherDetails from '../OtherDetails/OtherDetails'
 import { useFormContext } from '../../FormContext'
 import SuccessDisplay from '../SuccessDisplay'
 import SelectExam from './SelectExam'
+import * as Yup from 'yup' 
+import ErrorDisplay from '../ErrorDisplay'
 
 function PersonalDetails()
 {
     const { formData, updateFormData }  = useFormContext()
-    const [dis, setDis] = React.useState(false)
-
+    const [successDis, setSuccessDis] = React.useState(false)
+    const [errorDis, setErrorDis] = React.useState(false)
     const navigator = useNavigate()
-
-  
 
 
     // console.log("FORM DATA :: ",formData)
@@ -71,8 +71,46 @@ function PersonalDetails()
               
         },
 
+        validationSchema : Yup.object({
+          
+          SelectedExam : Yup.object({
+            selected_Exam : Yup.string().required(' * Em exam ki apply chestavo enter chey babugaru')
+          }),
+
+           PersonalDetails: Yup.object({
+                 nationality : Yup.string().required(' * Dhora Ni Nationality ivvu'),
+                 dateOfBirth : Yup.date().required(' * Nee PuttinaRoju ivvu mama'),
+                 fullName : Yup.string().required(' * Rei Babu Nee Peru ivvu'),
+                 fatherName : Yup.string().required(' * Mee Nanna Peru kooda ivvu'),
+                 motherName : Yup.string().required(' * Mee Amma Peru kooda konchem ivvu'),
+                 gender : Yup.string().required(' * Ammayiva ah Abbayiva ah lekha others ah edokati ivvu'),
+                 email : Yup.string().required(' * mail id ivvu mail chesta  '),
+                 mobileNumber : Yup.number().required(' * mobileNumber ivvu connect aitha').min(10 , 'mobilenumber 10 digits untai tammudu'),
+                 maritalStatus : Yup.string().required(' * Pelli ainda leda cheppu '),
+                 religion : Yup.string().required(' * Nee religion ivvu '),
+                 choiceOfLanguage : Yup.string().required( ' * exam lo rase language ivvu '),
+                 permanentMarkOfIdentification1 : Yup.string().required( ' * oka Birth mark ivvu '),
+                 permanentMarkOfIdentification2 : Yup.string().required( ' * inko Birth mark ivvu '),
+                 communityDetails : Yup.string().required(' * Mee community ivvu ade caste ivvu '),
+              
+                 presentAddressDetails : Yup.object({
+                  presentState : Yup.string().required(' * Mee Present State ivvu'),
+                  presentDistrict : Yup.string().required(' * Mee present District ivvu'),
+                  presentAddress : Yup.string().required( ' * Mee present Address ivvu'),
+                  presentVillage : Yup.string().required( ' * Nee present Village ivvu'),
+                  presentPincode : Yup.string().required( ' * Mee Present Pincode ivvandi')
+                }),
+                
+           }),
+
+
+        }),
+
         onSubmit : (values)=>{
             console.log('Personal Details',values)
+            console.log('Final Ga Dirty :: ',myStudentForm)
+
+
             updateFormData(values)
             // const userData = {
             //     "userOne" : 
@@ -88,14 +126,37 @@ function PersonalDetails()
             //         console.log('after post', values)
                  
             //  })
-            setDis(true)
+            setSuccessDis(true)
 
             setTimeout(()=>{
-              setDis(false)
+              setSuccessDis(false)
             }, 2000)
+
+            setErrorDis(false)
         }
 
+        
+
     })
+
+    function handleNext()
+    {  
+      if(myStudentForm.isValid && myStudentForm.submitCount && myStudentForm.isSubmitting)
+      {
+        console.log('mana form ::',myStudentForm)
+        navigator('/studentForm/Other-Details')
+       
+      }
+      else{
+
+        setErrorDis(true)
+
+        setTimeout(()=>{
+          setErrorDis(false)
+        }, 2000)
+      }
+         
+    }
 
 
 
@@ -113,7 +174,13 @@ function PersonalDetails()
 
             <div style={{position: 'relative'}}>
               {
-                  dis  &&  <SuccessDisplay/>
+                  successDis  &&  <SuccessDisplay/>
+              }
+            </div>
+
+            <div style={{position : 'relative'}}>
+              {
+                  errorDis && <ErrorDisplay></ErrorDisplay>
               }
             </div>
             
@@ -122,7 +189,7 @@ function PersonalDetails()
 
                  <button type='button' style={{backgroundColor:'crimson', color:'white'}} onClick = {()=>{navigator('/home')}}>Previous</button>
                  <button style={{backgroundColor:'green',color:'white'}}>SAVE</button>
-                 <button type='button' style={{backgroundColor:'crimson', color: 'white'}} onClick = {()=>{navigator('/studentForm/Other-Details')}}>NEXT</button>   
+                 <button type='button' style={{backgroundColor:'crimson', color: 'white'}} onClick = {()=>{handleNext()}}  >NEXT</button>   
             
             </div>
 
