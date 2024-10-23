@@ -58,10 +58,10 @@ function Preview()
              <table border="2px">
                   <thead >
                       <tr align = 'center'>
-                        <th colSpan='7'> <h5 style={{fontWeight:'bold'}}>Mutyam Board of Competitive Examinations</h5>  <p> [ One Application For All Competitive and Government Exams ]</p></th>
+                        <th colSpan='7' style={{backgroundColor:'black',color:'white', padding:'10px'}}> <h5 style={{fontWeight:'bold'}}>Mutyam Board of Competitive Examinations</h5>  <p> [ One Application For All Competitive and Government Exams ]</p></th>
                       </tr>
                       <tr align='center'>
-                        <th colSpan='7'>Application Form - 2024</th>
+                        <th colSpan='7' style={{padding:'10px'}}>Application Form - 2024</th>
                       </tr>
                   </thead>
                   <tbody>
@@ -72,14 +72,14 @@ function Preview()
                             return (
                                 <>
                                  <tr>
-                                    <td colSpan='7'> <b>Choosen Exam</b> </td>
+                                    <td colSpan='7' style={{backgroundColor:'rgb(27,56,125)',color:'white'}}> <b>Choosen Exam</b> </td>
                                  </tr>
                                  <tr>
                                     <td colSpan='1'>Selected Exam</td>
                                     <td colSpan='6'>{el.SelectedExam.selected_Exam}</td>
                                  </tr>
-                                <tr>
-                                    <td colSpan='7'>Personal Details</td>    
+                                <tr >
+                                    <td colSpan='7' style={{backgroundColor:'rgb(27,56,125)',color:'white'}}>Personal Details</td>    
                                 </tr>
                                 <tr>
                                     
@@ -151,7 +151,7 @@ function Preview()
                                 </tr>
 
                                 <tr>
-                                    <td colspan='7'>Present Address Details</td>
+                                    <td colspan='7' style={{backgroundColor:'black',color:'white'}}>Present Address Details</td>
                                     
                                 </tr>
                                 <tr>
@@ -178,7 +178,7 @@ function Preview()
                                 </tr>
 
                                 <tr>
-                                     <td colSpan='7'>Permanent Address Details</td>
+                                     <td colSpan='7' style={{backgroundColor:'black',color:'white'}}>Permanent Address Details</td>
                                 </tr>
 
                                 <tr>
@@ -205,7 +205,7 @@ function Preview()
                                 </tr>
 
                                 <tr>
-                                       <td colspan = '7'>Other Details</td>
+                                       <td colspan = '7' style={{backgroundColor:'rgb(27,56,125)',color:'white'}}>Other Details</td>
                                 </tr>
                                 <tr>
                                       <td>Ex-Serviceman Details</td>
@@ -249,7 +249,7 @@ function Preview()
                                 </tr>
 
                                 <tr>
-                                     <td colspan = '7'>Education Qualifications </td>
+                                     <td colspan = '7' style={{backgroundColor:'rgb(27,56,125)',color:'white'}}>Education Qualifications </td>
                                 </tr>
 
                                 <tr>
