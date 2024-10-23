@@ -1,9 +1,40 @@
+import axios from 'axios'
 import React from 'react'
 
 function BankDetails(props)
 {
 
+    function handleIfsc_Code()
+    {
+         console.log(props.od.values.OtherDetails.IFSC_Code)
+        let naaIfsc_Code
+        axios.get('http://localhost:4000/bank_details').then((res)=>{
+            
+            console.log(res.data)
 
+         naaIfsc_Code =  res.data.filter((el)=>{
+                if(el.ifsc_code == props.od.values.OtherDetails.IFSC_Code.toUpperCase())
+                {
+                    return true 
+                }
+                else
+                {
+                    return false 
+                }
+            })
+
+            console.log('naaIfsc_code',naaIfsc_Code)
+
+            props.od.setFieldValue('OtherDetails.BankName', naaIfsc_Code[0].bank_name)
+            props.od.setFieldValue('OtherDetails.BankAddress', naaIfsc_Code[0].branch_name)
+
+        }).catch(()=>{
+
+
+        })
+
+    }
+     
     return(
         <div className='smallCompo'>
             <h5>Bank Details For Refund of Fee (Only AccountNumber and IFSC code used for refund. Fill them with caution)</h5>
@@ -37,9 +68,9 @@ function BankDetails(props)
                                 Confirm Account Number <br/>
                                 <input type="text" {...props.od.getFieldProps('OtherDetails.AccountNumber')}
                                 className = {props.od.touched.OtherDetails?.AccountNumber && props.od.errors.OtherDetails?.AccountNumber && 'ErrorField'}/>
-                               <div className='ErrorClass'>
+                                <div className='ErrorClass'>
                                     <b>{props.od.touched.OtherDetails?.AccountNumber && props.od.errors.OtherDetails?.AccountNumber && props.od.errors.OtherDetails.AccountNumber}</b>
-                               </div>
+                                </div>
                             </label>
                         </td>
                     </tr>
@@ -50,16 +81,22 @@ function BankDetails(props)
                         <label>
                                 IFSC Code <br/>
                                 <input type="text" {...props.od.getFieldProps('OtherDetails.IFSC_Code')}/>
-                                <button>Confirm</button>
+                                <button onClick = {handleIfsc_Code} type='button'>Confirm</button>
+
+                        <div className='ErrorClass'>
+                            <b>{props.od.touched.OtherDetails?.IFSC_Code && props.od.errors.OtherDetails?.IFSC_Code && props.od.errors.OtherDetails.IFSC_Code}</b>
+                        </div>
 
                         </label>
+
                     </td>
+
 
                     <td className='smallCompo_Tab'>
                         <label>
 
                                  Name of Bank <br/>
-                                <input type="text" {...props.od.getFieldProps('OtherDetails.BankName')}/>
+                                <input type="text" {...props.od.getFieldProps('OtherDetails.BankName')} disabled/>
 
                         </label>
                     </td>
@@ -67,7 +104,7 @@ function BankDetails(props)
                     <td className='smallCompo_Tab'>
                         <label>
                                 Bank Address <br/>
-                                <input type="text" {...props.od.getFieldProps('OtherDetails.BankAddress')}/>
+                                <input type="text" {...props.od.getFieldProps('OtherDetails.BankAddress')} disabled/>
                         </label>
                     </td>
 

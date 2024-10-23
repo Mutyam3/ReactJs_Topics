@@ -736,13 +736,78 @@
       ]
     }
   ],
+  "bank_details": [
+    {
+      "ifsc_code": "FKEB0001234",
+      "bank_name": "Fake Bank Ltd",
+      "branch_name": "Virtual Branch, Test City"
+    },
+    {
+      "ifsc_code": "TSTB0005678",
+      "bank_name": "Test Bank",
+      "branch_name": "Sample Branch, Demo Town"
+    },
+    {
+      "ifsc_code": "MOCKB0009123",
+      "bank_name": "Mock Bank Corp",
+      "branch_name": "Imaginary Branch, Alpha City"
+    },
+    {
+      "ifsc_code": "DUMYB0003456",
+      "bank_name": "Dummy Bank PLC",
+      "branch_name": "Beta Branch, Fictionville"
+    },
+    {
+      "ifsc_code": "SIMUB0007890",
+      "bank_name": "Simu Bank",
+      "branch_name": "Simulated Branch, Testopolis"
+    },
+    {
+      "ifsc_code": "EXPRB0001112",
+      "bank_name": "Experimental Bank",
+      "branch_name": "Trial Branch, Example City"
+    },
+    {
+      "ifsc_code": "PHNTB0003132",
+      "bank_name": "Phantom Bank",
+      "branch_name": "Ghost Branch, Mirage Town"
+    },
+    {
+      "ifsc_code": "FNTCB0004567",
+      "bank_name": "Fictional Bank Co.",
+      "branch_name": "Pretend Branch, Mythical City"
+    },
+    {
+      "ifsc_code": "FALSB0007894",
+      "bank_name": "False Bank",
+      "branch_name": "Bogus Branch, Pseudo Town"
+    },
+    {
+      "ifsc_code": "DEMO0000011",
+      "bank_name": "Demo Bank",
+      "branch_name": "Sample Branch, Virtual Valley"
+    },
+    {
+      "ifsc_code": "TRIAL0000022",
+      "bank_name": "Trial Bank",
+      "branch_name": "Prototype Branch, Model City"
+    },
+    {
+      "ifsc_code": "SBIN0022025",
+      "bank_name": "SBI",
+      "branch_name": "Chinthapally"
+    }
+  ],
   "users": [
     {
       "user": {
+        "SelectedExam": {
+          "selected_Exam": "Railway_Recruitment_Board(NPTC)"
+        },
         "PersonalDetails": {
-          "nationality": "Germany",
-          "dateOfBirth": "2024-10-10",
-          "age": "25",
+          "nationality": "India",
+          "dateOfBirth": "2011-06-15",
+          "age": "13  years",
           "fullName": "Mutyam Bhargav Reddy",
           "fatherName": "Mutyam Koti Reddy",
           "motherName": "Mutyam Nagalakshmi",
@@ -752,20 +817,20 @@
           "maritalStatus": "unMarried",
           "religion": "hindu",
           "choiceOfLanguage": "English",
-          "permanentMarkOfIdentification1": "A MOLE ON THE HEAD",
+          "permanentMarkOfIdentification1": "A Mole ON THE HEAD",
           "permanentMarkOfIdentification2": "A MOLE ON THE LEFT HAND",
           "communityDetails": "UR(unreserved)",
           "presentAddressDetails": {
             "presentState": "Telangana",
             "presentDistrict": "RangaReddy",
-            "presentAddress": "8-28, Rudra Colony , Shamshabad",
+            "presentAddress": "587",
             "presentVillage": "Shamshabad",
             "presentPincode": "501218"
           },
           "permanentAddressDetails": {
             "permanentState": "Telangana",
             "permanentDistrict": "RangaReddy",
-            "permanentAddress": "8-28, Rudra Colony , Shamshabad",
+            "permanentAddress": "587",
             "permanentVillage": "Shamshabad",
             "permanentPincode": "501218"
           },
@@ -776,105 +841,34 @@
           "personWithBenchmarkDisability": "No",
           "EBC_Certificate_Holder": "No",
           "AccountHolderName": "Mutyam Bhargav Reddy",
-          "AccountNumber": "37024772466",
+          "AccountNumber": "35025782599",
           "IFSC_Code": "SBIN0022025",
-          "BankName": "STATE BANK OF INDIA",
+          "BankName": "SBI",
           "BankAddress": "Chinthapally"
         },
         "EducationalDetails": {
           "SSC_State": "AndhraPradesh",
           "SSC_Board": "Board of Secondary Education",
-          "SSC_DateOfPassing": "2024-10-07",
+          "SSC_DateOfPassing": "2024-10-01",
           "SSC_RollNo": "1403106226",
-          "Inter_Group": "Bipc",
+          "Inter_Group": "Mpc",
           "Inter_State": "Telangana",
           "Inter_Board": "Telangana Board of Intermediate Education",
-          "Inter_DateOfPassing": "2024-10-09",
+          "Inter_DateOfPassing": "2024-10-01",
           "Inter_RollNo": "1628213607",
           "Degree_Group": "BTech",
           "Degree_Discipline": "Computer Science ",
-          "Degree_State": "Telangana",
+          "Degree_State": "TamilNadu",
           "Degree_Board": "VIT BHOPAL",
-          "Degree_DateOfPassing": "2024-10-16",
+          "Degree_DateOfPassing": "2024-10-09",
           "Degree_RollNo": "20BHI10036"
         },
         "UploadFileDetails": {
-          "photo": "blob:http://localhost:3000/28fe7d12-1b86-410b-9291-50dfd5bc7cce",
-          "signature": "blob:http://localhost:3000/20a006dc-c189-48ee-b4f3-d783f8b8b2e6"
+          "photo": "blob:http://localhost:3000/7be97eb6-4dcc-49ad-b360-a8931b829f60",
+          "signature": "blob:http://localhost:3000/ee94cca6-2694-4691-9c00-1bf3b4305f5e"
         }
       },
       "id": 1
-    },
-    {
-      "user": {
-        "SelectedExam": {
-          "selected_Exam": "Civil_Services_Examination"
-        },
-        "PersonalDetails": {
-          "nationality": "canada",
-          "dateOfBirth": "2024-10-10",
-          "age": "25",
-          "fullName": "Mutyam Mahesh Reddy",
-          "fatherName": "Mutyam Koti Reddy",
-          "motherName": "M.Nagalakshmi",
-          "gender": "male",
-          "email": "bhargavreddymutyam@gmail.com",
-          "mobileNumber": "9550354716",
-          "maritalStatus": "unMarried",
-          "religion": "hindu",
-          "choiceOfLanguage": "Telugu",
-          "permanentMarkOfIdentification1": "A MOLE ON THE CHEST",
-          "permanentMarkOfIdentification2": "A MOLE ON THE HEAD",
-          "communityDetails": "UR(unreserved)",
-          "presentAddressDetails": {
-            "presentState": "Telangana",
-            "presentDistrict": "RanagaReddy",
-            "presentAddress": "8-28, Rudra Colony, Shamshabad",
-            "presentVillage": "Shamshabad",
-            "presentPincode": "501218"
-          },
-          "permanentAddressDetails": {
-            "permanentState": "Telangana",
-            "permanentDistrict": "RanagaReddy",
-            "permanentAddress": "8-28, Rudra Colony, Shamshabad",
-            "permanentVillage": "Shamshabad",
-            "permanentPincode": "501218"
-          },
-          "sameAsPresent": true
-        },
-        "OtherDetails": {
-          "ex_serviceman": "No",
-          "personWithBenchmarkDisability": "No",
-          "EBC_Certificate_Holder": "No",
-          "AccountHolderName": "Mutyam Mahesh Reddy",
-          "AccountNumber": "3502882466",
-          "IFSC_Code": "SBIN0022056",
-          "BankName": "STATE BANK OF INDIA",
-          "BankAddress": "CHINTHAPALLY"
-        },
-        "EducationalDetails": {
-          "SSC_State": "AndhraPradesh",
-          "SSC_Board": "Board of Secondary Education",
-          "SSC_DateOfPassing": "2024-10-01",
-          "SSC_RollNo": "140245578",
-          "Inter_Group": "CEC",
-          "Inter_State": "AndhraPradesh",
-          "Inter_Board": "tsbie",
-          "Inter_DateOfPassing": "2024-10-01",
-          "Inter_RollNo": "6225478102",
-          "Degree_Group": "BTech",
-          "Degree_Discipline": "CSE",
-          "Degree_State": "AndhraPradesh",
-          "Degree_Board": "VITBHOPAL",
-          "Degree_DateOfPassing": "2024-10-22",
-          "Degree_RollNo": "547852145566"
-        },
-        "UploadFileDetails": {
-          "photo": "",
-          "signature": ""
-        }
-      },
-      "id": 2
     }
   ]
 }

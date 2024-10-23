@@ -48,7 +48,26 @@ function OtherDetails()
                        EBC_Certificate_Holder : Yup.string().required( ' * please fill this field'),
                        AccountHolderName : Yup.string().required( ' * Account holder name ivvu babu'),
                        AccountNumber : Yup.number().required(' * Account number ivvu'),
-                       
+                       IFSC_Code : Yup.string().required('Chinna nee bank ifsc code ivvu').test('Ifsc_Code validation', 'Default Ifsc_Code Error', (value, ctx)=>{
+                               return new Promise((resolve, reject)=>{
+                                // console.log(`http://localhost:4000/bank_details?ifsc_code=${value.toUpperCase()}`)
+                                    axios.get(`http://localhost:4000/bank_details?ifsc_code=${value.toUpperCase()}`)
+                                    .then((res)=>{
+                                            console.log('res :: ', res.data)
+                                            if(res.data.length > 0)
+                                            {
+  
+                                                resolve(true)
+
+                                            }
+                                            else
+                                            {
+                                                reject(ctx.createError({path:ctx.path, message : 'This IFSC_Code is not there'}))
+                                            }
+                                          }
+                                    )
+                               })
+                       })
                    })
              }),
 
