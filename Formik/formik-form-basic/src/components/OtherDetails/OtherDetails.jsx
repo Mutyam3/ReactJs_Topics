@@ -51,7 +51,7 @@ function OtherDetails()
                        IFSC_Code : Yup.string().required('Chinna nee bank ifsc code ivvu').test('Ifsc_Code validation', 'Default Ifsc_Code Error', (value, ctx)=>{
                                return new Promise((resolve, reject)=>{
                                 // console.log(`http://localhost:4000/bank_details?ifsc_code=${value.toUpperCase()}`)
-                                    axios.get(`http://localhost:4000/bank_details?ifsc_code=${value.toUpperCase()}`)
+                                    axios.get(`https://json-server-project-api-2.onrender.com/bank_details?ifsc_code=${value.toUpperCase()}`)
                                     .then((res)=>{
                                             console.log('res :: ', res.data)
                                             if(res.data.length > 0)
