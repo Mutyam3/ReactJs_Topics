@@ -5,11 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './Components/Main/Home';
-import Matches from './Components/Main/Matches';
+import Matches from './Components/Main/Matches/Matches';
 import ScoreBoard from './Components/Main/ScoreBoard';
 import AboutUs from './Components/Main/AboutUs';
 import ContactUs from './Components/Main/ContactUs';
 import Teams from './Components/Main/Teams';
+import CreateMatch from './Components/Main/Matches/CreateMatch';
+import SelectSquad from './Components/Main/Matches/SelectSquad';
+import AddPlayer from './Components/Main/Matches/AddPlayer';
+import MyGames from './Components/Main/Matches/MyGames';
 
 
 
@@ -28,8 +32,28 @@ const myrouter = createBrowserRouter([
       },
       {
          path : '/matches',
-         element : <Matches/>
-
+         element : <Matches/>,
+         children : [
+                    {
+                        path : '/matches/createMatch',
+                        element : <CreateMatch/>
+                    },
+                    {
+                        path : '/matches',
+                        element: <CreateMatch/>
+                    },
+                    {
+                        path : '/matches/selectSquad',
+                        element : <SelectSquad/>
+                    },
+                    {
+                         path : '/matches/addPlayer',
+                         element : <AddPlayer/>
+                    },
+                    {
+                         path : '/matches/myGames',
+                         element : <MyGames/>
+                    }]
       },
       {
          path : '/score-board',
