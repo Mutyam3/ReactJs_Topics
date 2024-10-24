@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Matches()
+function SelectSquad()
 {
     return (
         <section>
-               <h1>Matches</h1>
+            <h1>SelectSquad</h1>
         </section>
     )
 }
 
-export default Matches
+export default SelectSquad
