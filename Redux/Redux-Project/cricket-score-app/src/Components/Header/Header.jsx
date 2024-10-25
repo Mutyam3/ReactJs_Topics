@@ -10,7 +10,7 @@ function Header()
            <ul className='Navdiv'>
 
            <div>
-                   <img src="https://i.ibb.co/QQQD9CT/mutyam-cricscore.png" alt="mutyam-cricscore" border="0" width = '100px' height = '100px'/>
+           <img src="https://i.ibb.co/qWVdPJm/mutyam-cricscore.png" alt="mutyam-cricscore" border="0" width = '100px' height = '100px'/>
            </div>
                
                <Link to='/'><li>Home</li></Link>  
