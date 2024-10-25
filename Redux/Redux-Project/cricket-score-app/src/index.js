@@ -12,9 +12,8 @@ import ContactUs from './Components/Main/ContactUs';
 import Teams from './Components/Main/Teams';
 import CreateMatch from './Components/Main/Matches/CreateMatch';
 import SelectSquad from './Components/Main/Matches/SelectSquad';
-import AddPlayer from './Components/Main/Matches/AddPlayer';
 import MyGames from './Components/Main/Matches/MyGames';
-
+import AddPlayer from './Components/Main/Matches/AddPlayer';
 
 
 
@@ -47,8 +46,8 @@ const myrouter = createBrowserRouter([
                         element : <SelectSquad/>
                     },
                     {
-                         path : '/matches/addPlayer',
-                         element : <AddPlayer/>
+                      path : '/matches/addPlayer',
+                      element : <AddPlayer/>
                     },
                     {
                          path : '/matches/myGames',

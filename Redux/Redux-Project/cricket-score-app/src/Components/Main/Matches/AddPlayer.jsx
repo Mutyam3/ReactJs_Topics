@@ -30,56 +30,56 @@ function AddPlayer()
     return (
         <section className = 'AddPlayerDiv'>
              
-             <div>
+             <div style={{display: 'flex', flexDirection:'column', justifyContent:"space-between"}}>
                 <h1>Add Player</h1>
                 <button onClick = {addPlayerFn()}>Add Player</button>
              </div>
             
+           
+            <div style={{border:'2px solid black', padding:'10px', display:'flex', justifyContent:'space-around', width :'900px', alignItems:'center'}}>
+                <div>
+            <label>
 
-            <div>
+                Full Name :  &nbsp;&nbsp;&nbsp;
+                 <input type='text' onChange={(e)=>{setAddPlayer({...addpalyer,fullName:e.target.value})}} className='AddPlayerFields'/>
+
+            </label> <br/><br/>
 
             <label>
 
-                Full Name : 
-                 <input type='text' onChange={(e)=>{setAddPlayer({...addpalyer,fullName:e.target.value})}}/><br/>
+                 Date of Birth :  &nbsp;&nbsp;&nbsp;
+                 <input type='date' onChange={(e)=>{setAddPlayer({...addpalyer,dateOfBirth:e.target.value})}} className='AddPlayerFields'/>
 
-            </label>
-
-            <label>
-
-                 Date of Birth : 
-                 <input type='date' onChange={(e)=>{setAddPlayer({...addpalyer,dateOfBirth:e.target.value})}}/><br/>
-
-            </label>
+            </label><br/><br/>
             
             <label>
 
-                 Batting Style : 
-                 <input type='text' onChange={(e)=>{setAddPlayer({...addpalyer,battingStyle:e.target.value})}}/><br/>
+                 Batting Style :  &nbsp;&nbsp;&nbsp;
+                 <input type='text' onChange={(e)=>{setAddPlayer({...addpalyer,battingStyle:e.target.value})}} className='AddPlayerFields'/>
 
-            </label>
+            </label><br/><br/>
             
             <label>
 
-                Bowling Style : 
-                <input type='text' onChange={(e)=>{setAddPlayer({...addpalyer,bowlingStyle:e.target.value})}}/><br/>
+                Bowling Style :  &nbsp;&nbsp;&nbsp;
+                <input type='text' onChange={(e)=>{setAddPlayer({...addpalyer,bowlingStyle:e.target.value})}} className='AddPlayerFields'/>
 
-            </label>
+            </label><br/><br/>
             
 
             <label>
 
-                Phone Number : 
-                <input type='text' onChange={(e)=>{setAddPlayer({...addpalyer,phoneNumber:e.target.value})}}/><br/>
+                Phone Number :  &nbsp;&nbsp;&nbsp;
+                <input type='text' onChange={(e)=>{setAddPlayer({...addpalyer,phoneNumber:e.target.value})}} className='AddPlayerFields'/>
 
-            </label>
+            </label><br/><br/>
             
             <label>
-                   Email : 
-                  <input type='email' onChange={(e)=>{setAddPlayer({...addpalyer,emailId:e.target.value})}}/><br/>
+                   Email :  &nbsp;&nbsp;&nbsp;
+                  <input type='email' onChange={(e)=>{setAddPlayer({...addpalyer,emailId:e.target.value})}} className='AddPlayerFields'/>
 
             </label>
-
+            <br/><br/>
             </div>
             
 
@@ -89,11 +89,17 @@ function AddPlayer()
                      {
                         addpalyer.photo && <img src={addpalyer.photo} width='250px' height = '250px'/>
                      }
+                     
                  </div>
-                 <label>
-                    Photo : 
-                  <input type='file' onChange = {handlePhoto}/> 
-                  </label>
+                 <div style={{border: '2px solid black', borderTop : '0px', padding:'10px', boxSizing:'border-box', width : '254.2px', textAlign:'center'}}>
+                    <label>
+                          
+                         <input type='file' onChange = {handlePhoto}/> 
+                    </label>
+                  </div>
+                 
+            </div>
+
             </div>
 
             
