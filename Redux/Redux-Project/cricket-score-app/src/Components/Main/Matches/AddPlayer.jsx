@@ -1,5 +1,5 @@
 import React from 'react'
-
+import axios from 'axios'
 
 function AddPlayer()
 {
@@ -16,14 +16,18 @@ function AddPlayer()
 
     function handlePhoto(e)
     {
-             var imageUrl = window.URL.createObjectURL(e.currentTarget.files[0])
-             setAddPlayer({...addpalyer, photo : imageUrl })
+        var imageUrl = window.URL.createObjectURL(e.currentTarget.files[0])
+        setAddPlayer({...addpalyer, photo : imageUrl })
     }
 
     function addPlayerFn()
     {
         console.log(addpalyer)
+        // axios.post('http://localhost:5000/Players', addpalyer).then((res)=>{
+        //     console.log(res.data)
+        // })
     }
+
 
 
 
@@ -102,6 +106,7 @@ function AddPlayer()
 
             </div>
 
+                
             
              
         </section>
