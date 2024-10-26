@@ -9,7 +9,8 @@
     justify-content: space-around;
     list-style-type:none;
     align-items: center;
-    margin:0px
+    margin:0px;
+    position: sticky;
 }
 
 .Navdiv li {
@@ -48,6 +49,7 @@
     padding:20px;
     display: flex;
     justify-content: space-around;
+    margin :10px
 }
 
 .AddPlayerFields{
@@ -55,6 +57,7 @@
     border: 0px solid black;
     border-bottom: 2px solid black;
     outline:0px;
+
 }
 
 .NaaFlexBox{
@@ -68,8 +71,50 @@
 .createMatch{
     border : 2px solid black;
     border-radius : 12px;
-
+    overflow: hidden;
+   
 }
 
+.TeamsCustom{
+    display: flex;
+    width: 150px;
+    overflow-x: scroll;
+    height :170px;
+    margin :10px
+}
+
+h1{
+    font-size: large;
+}
+
+.selectSquad{
+
+    display: flex;
+    width : 100%;
+    height :260px;
+    /* margin:10px; */
+    overflow-x:scroll
+}
+
+.selectSquad h4{
+    margin-bottom: 5px;
+}
+
+.selectSquadBtns button{
+
+    background-color: crimson;
+    color:white;
+    border:0px ;
+    padding: 5px 15px;
+    border-radius: 12px;
+    margin:2px;
+}
+.playersCard{
+
+    border-right: 2px solid black;
+    padding:10px;
+    width : 200px;
+
+}
 
 
