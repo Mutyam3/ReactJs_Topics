@@ -14,6 +14,7 @@ import CreateMatch from './Components/Main/Matches/CreateMatch';
 import SelectSquad from './Components/Main/Matches/SelectSquad';
 import MyGames from './Components/Main/Matches/MyGames';
 import AddPlayer from './Components/Main/Matches/AddPlayer';
+import CustomMatch from './Components/Main/Matches/Custom Match';
 
 
 
@@ -33,22 +34,35 @@ const myrouter = createBrowserRouter([
          path : '/matches',
          element : <Matches/>,
          children : [
-                    {
-                        path : '/matches/createMatch',
-                        element : <CreateMatch/>
-                    },
+                    
                     {
                         path : '/matches',
-                        element: <CreateMatch/>
+                        element: <MyGames/>
                     },
                     {
-                        path : '/matches/selectSquad',
-                        element : <SelectSquad/>
+                        path : '/matches/customMatch',
+                        element : <CustomMatch/>,
+                        children:[
+                          {
+                              path : '/matches/customMatch/selectSquad',
+                              element : <SelectSquad/>
+                          },
+                          {
+                             path : '/matches/customMatch/addPlayer',
+                             element : <AddPlayer/>
+                          },
+                          {
+                            path : '/matches/customMatch/createMatch',
+                            element : <CreateMatch/>
+                          },
+                          {
+                            path : '/matches/customMatch',
+                            element : <CreateMatch/>
+                          }
+                          
+                        ]
                     },
-                    {
-                      path : '/matches/addPlayer',
-                      element : <AddPlayer/>
-                    },
+                     ,
                     {
                          path : '/matches/myGames',
                          element : <MyGames/>

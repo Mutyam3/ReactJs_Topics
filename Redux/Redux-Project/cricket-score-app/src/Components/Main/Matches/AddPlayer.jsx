@@ -5,6 +5,7 @@ function AddPlayer()
 {
 
     const [addpalyer, setAddPlayer] = React.useState({
+
         fullName : '',
         dateOfBirth : '',
         battingStyle : '',
@@ -12,6 +13,7 @@ function AddPlayer()
         phoneNumber : '',
         emailId : '',
         photo:''
+
     })
 
     function handlePhoto(e)
@@ -34,13 +36,13 @@ function AddPlayer()
     return (
         <section className = 'AddPlayerDiv'>
              
-             <div style={{display: 'flex', flexDirection:'column', justifyContent:"space-between"}}>
+             <div style={{display:'flex', alignItems:'center'}}>
                 <h1>Add Player</h1>
-                <button onClick = {addPlayerFn()}>Add Player</button>
+                
              </div>
             
            
-            <div style={{border:'2px solid black', padding:'10px', display:'flex', justifyContent:'space-around', width :'900px', alignItems:'center'}}>
+            <div style={{borderRight:'1px solid black', borderLeft:'1px solid black', padding:'10px', display:'flex', justifyContent:'space-around', width :'900px', alignItems:'center'}}>
                 <div>
             <label>
 
@@ -104,6 +106,10 @@ function AddPlayer()
                  
             </div>
 
+            </div>
+
+            <div style={{display:'flex', alignItems:'center'}}>
+                  <button onClick = {addPlayerFn}>Add Player</button>
             </div>
 
                 
