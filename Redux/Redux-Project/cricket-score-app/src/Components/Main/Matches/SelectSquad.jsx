@@ -9,6 +9,7 @@ function SelectSquad()
     const [TeamTwoData, setTeamTwoData] = React.useState([])
     const [toolTip, setToolTip] = React.useState(false)
     const [indx, setIndx] = React.useState('')
+    
     React.useEffect(()=>{
         
         axios.get('http://localhost:5000/PlayersDetails').then((res)=>{
@@ -56,6 +57,12 @@ function SelectSquad()
         var ob = [...TeamTwoData]
         ob.push({...obj})
         setTeamTwoData([...ob])
+    }
+
+
+    function handleSubmitSquad()
+    {
+
     }
 
     return (
@@ -128,6 +135,8 @@ function SelectSquad()
                 </div>
 
              </div>
+
+             <button onClick = {handleSubmitSquad}>Submit</button>
         </section>
     )
 }

@@ -295,22 +295,28 @@
           
     ,
 
-    "TeamImagesOne" : ["https://www.shutterstock.com/shutterstock/photos/2433721651/display_1500/stock-photo-sports-logo-vector-style-image-of-create-a-cricket-logo-with-name-power-hitters-2433721651.jpg",
-                       "https://www.shutterstock.com/shutterstock/photos/2482602591/display_1500/stock-photo-a-cricket-tournament-logo-with-name-fireballs-2482602591.jpg",
-                       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/87759/optimized_large_thumb_stage.jpg",
-                       "https://bcassetcdn.com/public/blog/wp-content/uploads/2021/10/14194103/cricket-logo-by-tabish-zaidi-dribbble.png",
-                       "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png",
-                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4LdEFuGK3twf0fjoS1YKvtZH7e0f1lSuD7g&s"
-                      ],
-    
-    "TeamImagesTwo" : [
-                       "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Generator-With-Elephant-Graphic3.jpg",
-                       "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Template-for-a-Cricket-Team.png",
-                       "https://placeit-assets0.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Team-Logo-Generator.png",
-                       "https://placeit-assets0.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Maker-with-a-Badge.png",
-                       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/56069/optimized_large_thumb_stage.jpg",
-                       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/57043/optimized_large_thumb_stage.jpg"
-                      ]
+    "TeamsImages" : {
+
+      "teamOneImages" : ["https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/56210/optimized_large_thumb_stage.jpg",
+      "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/33199/optimized_large_thumb_stage.jpg",
+      "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/87759/optimized_large_thumb_stage.jpg",
+      "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/33191/optimized_large_thumb_stage.jpg",
+      "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png",
+      "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/57925/optimized_large_thumb_stage.jpg"
+     ],
+
+      "teamTwoImages" : [
+      "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Generator-With-Elephant-Graphic3.jpg",
+      "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Template-for-a-Cricket-Team.png",
+      "https://placeit-assets0.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Team-Logo-Generator.png",
+      "https://placeit-assets0.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Maker-with-a-Badge.png",
+      "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/56069/optimized_large_thumb_stage.jpg",
+      "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/57043/optimized_large_thumb_stage.jpg"
+     ]
+
+    }
+
+
 ,
     "CustomMatch"  : {
 

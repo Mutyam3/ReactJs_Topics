@@ -46,10 +46,11 @@
 .AddPlayerDiv{
 
     border:2px solid black;
-    padding:20px;
+    /* padding:20px; */
     display: flex;
     justify-content: space-around;
-    margin :10px
+    margin :10px;
+    border-radius: 12px;
 }
 
 .AddPlayerFields{
