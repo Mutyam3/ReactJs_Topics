@@ -118,4 +118,23 @@ h1{
 
 }
 
+.matchFormat{
+
+    border: 1px 0px 1px 0px solid black;
+    padding:10px;
+    margin :5px;
+
+}
+
+.matchFormat button{
+
+    padding:10px 15px;
+    margin :5px;
+    border:0px;
+    border-radius: 12px;
+    
+
+
+}
+
 

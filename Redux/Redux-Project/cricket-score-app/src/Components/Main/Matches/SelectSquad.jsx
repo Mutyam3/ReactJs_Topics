@@ -5,8 +5,11 @@ function SelectSquad()
 {
 
     const [playersData, setPlayersData] = React.useState([])
-    const [TeamOneData, setTeamOneData] = React.useState([])
-    const [TeamTwoData, setTeamTwoData] = React.useState([])
+    const [teamPlayers, setTeamPlayers] = React.useState({
+        teamOnePlayers : [],
+        teamTwoPlayers : []
+    })
+    
     const [toolTip, setToolTip] = React.useState(false)
     const [indx, setIndx] = React.useState('')
     
@@ -36,27 +39,27 @@ function SelectSquad()
 
     function TeamA(obj, ind)
     {
-        console.log([{...obj}])
-        var temp = [...playersData]
-        temp[ind].status = true
-        setPlayersData([...playersData])
+        // console.log([{...obj}])
+        // var temp = [...playersData]
+        // temp[ind].status = true
+        // setPlayersData([...playersData])
 
 
-        var ob = [...TeamOneData]
-        ob.push({...obj})
-        setTeamOneData([...ob])
+        // var ob = [...TeamOneData]
+        // ob.push({...obj})
+        // setTeamOneData([...ob])
     }
 
     function TeamB(obj, ind)
     {
-        console.log([{...obj}])
-        var temp = [...playersData]
-        temp[ind].status = true
-        setPlayersData([...playersData])
+        // console.log([{...obj}])
+        // var temp = [...playersData]
+        // temp[ind].status = true
+        // setPlayersData([...playersData])
 
-        var ob = [...TeamTwoData]
-        ob.push({...obj})
-        setTeamTwoData([...ob])
+        // var ob = [...TeamTwoData]
+        // ob.push({...obj})
+        // setTeamTwoData([...ob])
     }
 
 
@@ -75,7 +78,8 @@ function SelectSquad()
                  <div className = 'createMatch selectSquad' >
                      {
                           playersData && playersData.map((el, ind)=>{
-                            return <div className='playersCard'  onMouseEnter =  {()=> {setIndx(ind); setToolTip(true)}} onMouseLeave={()=>{setToolTip(false)}} 
+                            return <div className='playersCard' 
+                             onMouseEnter =  {()=> {setIndx(ind); setToolTip(true)}} onMouseLeave={()=>{setToolTip(false)}} 
                               style={el.status ? {backgroundColor : 'red', pointerEvents:'none', position:'relative'} : {backgroundColor:'green'}} >
                                         
                                         
@@ -102,17 +106,17 @@ function SelectSquad()
              </div>
 
              <div>
-                 <h1>TEAM ONE  {TeamOneData.length}</h1>
+                 {/* <h1>TEAM ONE  {TeamOneData.length}</h1> */}
 
                  <div className = 'createMatch selectSquad'>
                      {
-                        TeamOneData && TeamOneData.map((el)=>{
-                            return <div className='playersCard'>
-                                      <img src={el.photo} width = '100px' height = '100px'/>
-                                      <h4 style={{borderTop:'2px solid black'}}>{el.fullName}</h4>
+                        // TeamOneData && TeamOneData.map((el)=>{
+                        //     return <div className='playersCard'>
+                        //               <img src={el.photo} width = '100px' height = '100px'/>
+                        //               <h4 style={{borderTop:'2px solid black'}}>{el.fullName}</h4>
 
-                                  </div>
-                        })
+                        //           </div>
+                        // })
                      }
                  </div>
 
@@ -120,17 +124,17 @@ function SelectSquad()
              </div>
 
              <div>
-                <h1>TEAM TWO  {TeamTwoData.length}</h1>
+                {/* <h1>TEAM TWO  {TeamTwoData.length}</h1> */}
 
                 <div className = 'createMatch selectSquad'>
                    {
-                        TeamTwoData && TeamTwoData.map((el)=>{
-                            return <div className='playersCard'>
-                                      <img src={el.photo} width = '100px' height = '100px'/>
-                                      <h4 style={{borderTop:'2px solid black'}}>{el.fullName}</h4>
+                        // TeamTwoData && TeamTwoData.map((el)=>{
+                        //     return <div className='playersCard'>
+                        //               <img src={el.photo} width = '100px' height = '100px'/>
+                        //               <h4 style={{borderTop:'2px solid black'}}>{el.fullName}</h4>
 
-                                  </div>
-                        })
+                        //           </div>
+                        // })
                      }
                 </div>
 
