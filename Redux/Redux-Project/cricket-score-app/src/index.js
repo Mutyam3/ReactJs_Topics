@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './Components/Main/Home/Home';
 import Matches from './Components/Main/Matches/Matches';
-import ScoreBoard from './Components/Main/ScoreBoard/ScoreBoard';
 import AboutUs from './Components/Main/AboutUs/AboutUs';
 import ContactUs from './Components/Main/ContactUs/ContactUs';
 import Teams from './Components/Main/Teams/Teams';
@@ -67,10 +66,6 @@ const myrouter = createBrowserRouter([
                          path : '/matches/myGames',
                          element : <MyGames/>
                     }]
-      },
-      {
-         path : '/score-board',
-         element : <ScoreBoard/>
       },
       {
          path : '/match-centers',

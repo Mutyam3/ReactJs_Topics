@@ -6,18 +6,18 @@ function CreateMatch()
 {
 
     const [teamData, setTeamData] = React.useState({})
-    
 
     const [match, setMatch] = React.useState({
-        teamOneImage:'',
-        teamTwoImage:'',
-        teamOneName :'',
-        teamTwoName :'',
-        series:'',
+        teamAImage:'',
+        teamBImage:'',
+        teamAName :'',
+        teamBName :'',
+        matchFormat:'',
         matchDate : '',
         matchTime :'',
         overs : '',
-        venue : ''
+        venue : '',
+        wickets:''
     })
     
     React.useEffect(()=>{
@@ -27,7 +27,7 @@ function CreateMatch()
                 setTeamData({...teamData, ...res.data}) 
                 console.log(res.data)
 
-            })
+            })  
         
     },[])
 
@@ -43,7 +43,7 @@ function CreateMatch()
         <section className = 'NaaFlexBox createMatch' style={{boxSizing:'border-box'}}>
             <div style = {{padding:'10px', textAlign:'center'}}>
 
-                <h1>Create Match</h1>
+                <h1 style={{margin :'10px'}}>Create Match</h1>
                
             </div>
              
@@ -52,30 +52,32 @@ function CreateMatch()
                 
                  <div className = 'NaaFlexBox'>
                      <div>
-                       <img src = {match.teamOneImage} width = '200px' height= '100px'/><br/>
-                       <input type="text" placeholder='Team01 Name' size='25' className='AddPlayerFields' name='teamOneName' onChange={(e)=>{setMatch({...match, teamOneName:e.target.value})}}/>
+                       <img src = {match.teamAImage} width = '200px' height= '100px'/><br/>
+                       <input type="text" placeholder='Team01 Name' size='25' className='AddPlayerFields' name='teamAName' onChange={(e)=>{setMatch({...match, teamAName:e.target.value})}}/>
                     </div>
 
                     <span> Vs </span>
                      
                      <div>
-                        <img src = {match.teamTwoImage} width = '200px' height= '100px'/><br/>
-                        <input type='text' placeholder='Team02 Name' size='25' className='AddPlayerFields'  name='teamTwoName' onChange = {(e)=>{setMatch({...match, teamTwoName : e.target.value})}}/>
+                        <img src = {match.teamBImage} width = '200px' height= '100px'/><br/>
+                        <input type='text' placeholder='Team02 Name' size='25' className='AddPlayerFields'  name='teamBName' onChange = {(e)=>{setMatch({...match, teamBName : e.target.value})}}/>
                      </div> 
                  </div>
 
 
-                 <div style={{margin:'40px', textAlign:'center'}}>
-                    <label for='series'> 
-                        Series : 
-                        <select id='series' className='AddPlayerFields' name='series' onChange={(e)=>{setMatch({...match, series: e.target.value})}}>
-                            <option value='select' selected disabled>--Select Series--</option>
-                            <option value='Test Series'>Test Series</option>
-                            <option value='T20'>T20</option>
-                            <option value='One-day Internationals'>One-Day Internationals</option>
-                            <option value='IPL'>IPL</option>
-                        </select> 
-                    </label> <br/><br/>
+                 <div style={{margin:'20px', textAlign:'center'}}>
+                    
+                    <div className='matchFormat'>
+                       <p>Match Format : </p> 
+
+                       <button onClick = {(e)=>{ setMatch({...match , matchFormat: e.target.innerHTML})}} type='button'> T10 </button> 
+                       <button onClick = {(e)=>{ setMatch({...match , matchFormat: e.target.innerHTML})}} type='button'> T20 </button> 
+                       <button onClick = {(e)=>{ setMatch({...match , matchFormat: e.target.innerHTML})}} type='button'> Club </button> 
+                       <button onClick = {(e)=>{ setMatch({...match , matchFormat: e.target.innerHTML})}} type='button'> One Day </button> 
+                       <button onClick = {(e)=>{ setMatch({...match , matchFormat: e.target.innerHTML})}} type='button'> TestMatch </button> 
+
+                    </div>
+                       
 
                     <label>
                          Match Date : 
@@ -94,31 +96,38 @@ function CreateMatch()
                     </label><br/><br/>
 
                     <label>
-                        Venue: 
-                        <input type='text' className='AddPlayerFields' name='venue' onChange = {(e)=>setMatch({...match, venue : e.target.value})}/>
+                        Venue: <img src={match.venue.GroundImage} width='50px' height='40px'/>
+                        <input type='text' className='AddPlayerFields' name='venue' value={match.venue.GroundName} onChange = {(e)=>setMatch({...match, venue : e.target.value})}/>
+
                     </label><br/><br/>
+
+                    <label>
+                        wickets: 
+                        <input type='text' className='AddPlayerFields' name='wickets' onChange = {(e)=>setMatch({...match, wickets : e.target.value})}/>
+                    </label><br/><br/>
+
 
                     
                  </div>
 
              </section>
 
-             <section  style = {{ borderRight : '1px solid black', padding:'30px', width :'400px'}}>
+             <section  style = {{ borderRight : '1px solid black', padding:'20px', width :'400px'}}>
 
-                   <h1>Customize your Team Logos</h1>
+                   <h1 style={{margin:'10px'}}>Customize your Team Logos</h1>
 
                    <div style={{display:'flex', gap:'20px'}}>
                         
 
                         <div>
-                        <h1>Team One : </h1>
+                        <h1 style={{margin :'10px'}}>Team A : </h1>
                         <div className='createMatch TeamsCustom'>
                           {console.log(teamData)}
                             {
                                 
-                               teamData.teamOneImages && teamData.teamOneImages.map((el)=>{
+                               teamData.teamAImages && teamData.teamAImages.map((el)=>{
                                 
-                                return <img src={el} width = '100%'  onClick={()=>{setMatch({...match,teamOneImage:el})}}/>
+                                return <img src={el} width = '100%'  onClick={()=>{setMatch({...match,teamAImage:el})}}/>
                             })
                             } 
 
@@ -126,23 +135,38 @@ function CreateMatch()
                         </div>
 
                        <div>
-                        <h1>Team Two : </h1>
+                        <h1 style={{margin :'10px'}}>Team B : </h1>
 
                         <div className='createMatch TeamsCustom'>
                             {
                                
-                                teamData.teamTwoImages && teamData.teamTwoImages.map((el)=>{
+                                teamData.teamBImages && teamData.teamBImages.map((el)=>{
                                     
-                                    return <img src={el} width = '100%'  onClick={()=>{setMatch({...match, teamTwoImage:el})}}/>
+                                    return <img src={el} width = '100%'  onClick={()=>{setMatch({...match, teamBImage:el})}}/>
                                 })
                             } 
 
                            </div>
                         </div>
                    </div>
+
+                   <h1 style={{margin : '10px'}}>Select Venue With Details</h1>
+
+                   <div className='createMatch' style={{display:'flex', width:'300px', height:'170px', overflowX :'scroll'}}>
+                           
+                           {
+                                teamData.venuesList && teamData.venuesList.map((el)=>{
+                                    return <div onClick = {()=>{setMatch({...match, venue : el})}}>
+                                               <img src= {el.GroundImage} width = '300px' height = '125px'/>
+                                               <p style={{fontSize: 'small', padding:'5px', textAlign:'center', margin:'0px'}}>{el.GroundName}</p>
+                                          </div>
+                                })
+                           }
+                         
+                   </div>
              </section>
 
-             <div style={{padding:'25px'}}>
+             <div style={{padding:'30px'}} >
 
                      <button onClick = {handleSubmit}>Submit</button>
              </div>
