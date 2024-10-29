@@ -9,11 +9,11 @@ import Matches from './Components/Main/Matches/Matches';
 import AboutUs from './Components/Main/AboutUs/AboutUs';
 import ContactUs from './Components/Main/ContactUs/ContactUs';
 import Teams from './Components/Main/Teams/Teams';
-import CreateMatch from './Components/Main/Matches/CreateMatch';
-import SelectSquad from './Components/Main/Matches/SelectSquad';
+import AddMatch from './Components/Main/Matches/AddMatch';
 import MyGames from './Components/Main/Matches/MyGames';
 import AddPlayer from './Components/Main/Matches/AddPlayer';
 import CustomMatch from './Components/Main/Matches/Custom Match';
+import AddTeam from './Components/Main/Matches/AddTeam';
 
 
 
@@ -43,8 +43,8 @@ const myrouter = createBrowserRouter([
                         element : <CustomMatch/>,
                         children:[
                           {
-                              path : '/matches/customMatch/selectSquad',
-                              element : <SelectSquad/>
+                              path : '/matches/customMatch/addTeam',
+                              element : <AddTeam/>
                           },
                           {
                              path : '/matches/customMatch/addPlayer',
@@ -52,11 +52,11 @@ const myrouter = createBrowserRouter([
                           },
                           {
                             path : '/matches/customMatch/createMatch',
-                            element : <CreateMatch/>
+                            element : <AddMatch/>
                           },
                           {
                             path : '/matches/customMatch',
-                            element : <CreateMatch/>
+                            element : <AddPlayer/>
                           }
                           
                         ]

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function Header()
 {
     return (
-        <section style={{border:'2px solid black', padding:'0px'}}>
+        <section style={{border:'2px solid black', padding:'0px', position:'sticky',top:'0px', backgroundColor : 'black', color:'white'}}>
            
            <ul className='Navdiv'>
 

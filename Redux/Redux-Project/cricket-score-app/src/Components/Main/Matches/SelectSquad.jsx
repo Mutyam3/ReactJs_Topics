@@ -1,17 +1,21 @@
 import React from 'react'
 import axios from 'axios'
+import {Link, Outlet} from 'react-router-dom'
+import AddPlayer from './AddPlayer'
 
 function SelectSquad()
 {
 
+
     const [playersData, setPlayersData] = React.useState([])
-    const [teamPlayers, setTeamPlayers] = React.useState({
-        teamOnePlayers : [],
-        teamTwoPlayers : []
+    const [newTeam, setNewTeam] = React.useState({
+        teamAPlayers : [],
+        teamBPlayers : []
     })
     
     const [toolTip, setToolTip] = React.useState(false)
     const [indx, setIndx] = React.useState('')
+
     
     React.useEffect(()=>{
         
@@ -27,6 +31,7 @@ function SelectSquad()
         })
 
     }, [])
+
 
 
     function handleSquad(obj, ind)
@@ -68,9 +73,15 @@ function SelectSquad()
 
     }
 
+  
+
     return (
         <section>
-            <h1>SelectSquad</h1>
+            <div style={{display : 'flex', alignItems:'center', justifyContent:'space-between'}}>
+                 <h1>SelectSquad</h1>
+            </div>
+
+            
 
              <div>
                  <h1>ALL PLAYERS {playersData.length}</h1>

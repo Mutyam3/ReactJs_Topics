@@ -1,578 +1,1089 @@
 {
-    "CricketTeams" : {
-
-
-
-    },
-
-    "Teams" : {
-
-    },
-
-    "PlayersDetails" : [
-            {
-              "fullName": "Virat Kohli",
-              "dateOfBirth": "1988-11-05",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm medium",
-              "phoneNumber": "123-456-7890",
-              "emailId": "virat.kohli@cricket.com",
-              "photo": "https://img.freepik.com/premium-vector/cartoon-virat-kohli-illustration-virat-kohli_1040609-47.jpg",
-              "status" : false,
-              "toolTip" : {
-                 "firstButton" : "TeamOne",
-                 "secondButton" : "TeamTwo"
-              }
-            },
-            {
+  "CricketMatches": [],
+  "Teams": [
+   
+  ],
+  "PlayersDetails": [
+    
+      {
+          "fullName": "David Warner",
+          "dateOfBirth": "1986-10-27",
+          "battingStyle": "Left-hand bat",
+          "bowlingStyle": "N/A",
+          "phoneNumber": "890-234-5678",
+          "emailId": "david.warner@cricket.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGdf1TwqcU2DuM4zKZE8UU0jZeoE-yT-032YFH1e3uR8WMQZs28l9Ifjk504y3rCkwOXc&usqp=CAU",
+          "status": false,
+          "id": 1
+      },
+      {
+          "fullName": "Kane Williamson",
+          "dateOfBirth": "1990-08-08",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "N/A",
+          "phoneNumber": "890-345-6789",
+          "emailId": "kane.williamson@cricket.com",
+          "photo": "https://www.creativehatti.com/wp-content/uploads/2022/10/Kane-Williamson-New-Zealand-Cricketer-Thumbnail-Small.jpg",
+          "status": false,
+          "id": 2
+      },
+      {
+          "fullName": "Bhuvneshwar Kumar",
+          "dateOfBirth": "1989-02-05",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm medium",
+          "phoneNumber": "890-456-7890",
+          "emailId": "bhuvneshwar.kumar@cricket.com",
+          "photo": "https://i.pinimg.com/736x/7d/87/92/7d8792d3ece76b80a84deabd20fa2180.jpg",
+          "status": false,
+          "id": 3
+      },
+      {
+          "fullName": "Rashid Khan",
+          "dateOfBirth": "1998-09-20",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm leg-spin",
+          "phoneNumber": "890-567-8901",
+          "emailId": "rashid.khan@cricket.com",
+          "photo": "https://pbs.twimg.com/profile_images/1464438297124499458/OhGTmoN__400x400.jpg",
+          "status": false,
+          "id": 4
+      },
+      {
+          "fullName": "Jonny Bairstow",
+          "dateOfBirth": "1989-09-26",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "N/A",
+          "phoneNumber": "890-678-9012",
+          "emailId": "jonny.bairstow@cricket.com",
+          "photo": "https://wallpapers.com/images/hd/jonny-bairstow-with-a-cricket-bat-5u7ce5g241zn1k6w.jpg",
+          "status": false,
+          "id": 5
+      },
+      {
+          "fullName": "Manish Pandey",
+          "dateOfBirth": "1989-09-10",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "N/A",
+          "phoneNumber": "890-789-0123",
+          "emailId": "manish.pandey@cricket.com",
+          "photo": "https://www.creativehatti.com/wp-content/uploads/2021/01/Manish-Panday-Vector-Illustration-Thumbnail-Small-02.jpg",
+          "status": false,
+          "id": 6
+      },
+      {
+          "fullName": "Jason Holder",
+          "dateOfBirth": "1991-11-05",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm fast-medium",
+          "phoneNumber": "890-890-1234",
+          "emailId": "jason.holder@cricket.com",
+          "photo": "https://www.cricnepal.com/wp-content/uploads/2023/06/Jason-Holder-West-Indies-cricketer-110.webp",
+          "status": false,
+          "id": 7
+      },
+      {
+          "fullName": "Shahbaz Nadeem",
+          "dateOfBirth": "1989-09-25",
+          "battingStyle": "Left-hand bat",
+          "bowlingStyle": "Left-arm orthodox",
+          "phoneNumber": "890-901-2345",
+          "emailId": "shahbaz.nadeem@cricket.com",
+          "photo": "https://documents.iplt20.com/playerheadshot/ipl/284/57.png",
+          "status": false,
+          "id": 8
+      },
+      {
+          "fullName": "Kedar Jadhav",
+          "dateOfBirth": "1985-03-26",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm off-spin",
+          "phoneNumber": "890-012-3456",
+          "emailId": "kedar.jadhav@cricket.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRsqVFa-dBEaLP7t2xxr2SsVRoBm2Su7quCg&s",
+          "status": false,
+          "id": 9
+      },
+      {
+          "fullName": "Priyam Garg",
+          "dateOfBirth": "2001-11-30",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "N/A",
+          "phoneNumber": "890-123-4568",
+          "emailId": "priyam.garg@cricket.com",
+          "photo": "https://images-cricketcom.imgix.net/players/66803_headshot_safari.png?auto=format,compress",
+          "status": false,
+          "id": 10
+      },
+      {
+          "fullName": "Vijay Shankar",
+          "dateOfBirth": "1991-04-26",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm medium",
+          "phoneNumber": "890-234-5679",
+          "emailId": "vijay.shankar@cricket.com",
+          "photo": "https://www.gujarattitansipl.com/static-assets/images/players/61738.png?v=4.86",
+          "status": false,
+          "id": 11
+      },
+      {
+          "fullName": "Abhishek Sharma",
+          "dateOfBirth": "2000-09-05",
+          "battingStyle": "Left-hand bat",
+          "bowlingStyle": "Left-arm orthodox",
+          "phoneNumber": "890-345-6780",
+          "emailId": "abhishek.sharma@cricket.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRymzYZzc_Vu13GfTe03QxZTlfLxZ_dukJNYg&s",
+          "status": false,
+          "id": 12
+      }
+      ,
+        {
+            "fullName": "Mahendra Singh Dhoni",
+            "dateOfBirth": "1981-07-07",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-123-4567",
+            "emailId": "ms.dhoni@cricket.com",
+            "photo": "https://wallpapers.com/images/hd/vector-cartoon-ms-dhoni-hd-575intsd0dxp6iwi.jpg",
+            "status": false,
+            "id": 13
+        },
+        {
+            "fullName": "Ravindra Jadeja",
+            "dateOfBirth": "1988-12-06",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Left-arm orthodox",
+            "phoneNumber": "890-234-5678",
+            "emailId": "ravindra.jadeja@cricket.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlsMrvzKeZ0gsHyTE5-bOwt5S95mhO80wtbA&s",
+            "status": false,
+            "id": 14
+        },
+        {
+            "fullName": "Suresh Raina",
+            "dateOfBirth": "1986-11-27",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Right-arm off-spin",
+            "phoneNumber": "890-345-6789",
+            "emailId": "suresh.raina@cricket.com",
+            "photo": "https://www.creativehatti.com/wp-content/uploads/2021/02/Suresh-Raina-Indian-Cricket-Player-Vector-Illustration-Thumbnail-2.jpg",
+            "status": false,
+            "id": 15
+        },
+        {
+            "fullName": "Dwayne Bravo",
+            "dateOfBirth": "1983-10-07",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium-fast",
+            "phoneNumber": "890-456-7890",
+            "emailId": "dwayne.bravo@cricket.com",
+            "photo": "https://staticg.sportskeeda.com/skm/assets/player-images/cricket/dwayne-bravo.png?w=268",
+            "status": false,
+            "id": 16
+        },
+        {
+            "fullName": "Faf du Plessis",
+            "dateOfBirth": "1984-07-13",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "N/A",
+            "phoneNumber": "890-567-8901",
+            "emailId": "faf.duplessis@cricket.com",
+            "photo": "https://pbs.twimg.com/media/Dx5O2c7XcAEkCz2.jpg",
+            "status": false,
+            "id": 17
+        },
+        {
+            "fullName": "Ruturaj Gaikwad",
+            "dateOfBirth": "1997-01-31",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "N/A",
+            "phoneNumber": "890-678-9012",
+            "emailId": "ruturaj.gaikwad@cricket.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQnjhVRclF4ATf0WemPmW57vJpEsnZvV-tLA&s",
+            "status": false,
+            "id": 18
+        },
+        {
+            "fullName": "Deepak Chahar",
+            "dateOfBirth": "1992-08-07",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium-fast",
+            "phoneNumber": "890-789-0123",
+            "emailId": "deepak.chahar@cricket.com",
+            "photo": "https://i.pinimg.com/originals/8c/3d/b2/8c3db2a73b7c0df43f99174905662311.jpg",
+            "status": false,
+            "id": 19
+        },
+        {
+            "fullName": "Sam Curran",
+            "dateOfBirth": "1998-06-03",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Left-arm medium-fast",
+            "phoneNumber": "890-890-1234",
+            "emailId": "sam.curran@cricket.com",
+            "photo": "https://cricketvectors.akamaized.net/players/org/CG.png?impolicy=default_web",
+            "status": false,
+            "id": 20
+        },
+        {
+            "fullName": "Moeen Ali",
+            "dateOfBirth": "1987-06-18",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Right-arm off-spin",
+            "phoneNumber": "890-901-2345",
+            "emailId": "moeen.ali@cricket.com",
+            "photo": "https://worcesterobserver.co.uk/wp-content/uploads/2021/11/Moeen-Ali-Colour-scaled-1-362x434.jpg",
+            "status": false,
+            "id": 21
+        },
+        {
+            "fullName": "Shivam Dube",
+            "dateOfBirth": "1993-06-26",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-012-3456",
+            "emailId": "shivam.dube@cricket.com",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/6/63/Shivam_Dube_in_PMO_New_Delhi.jpg",
+            "status": false,
+            "id": 22
+        },
+        {
+            "fullName": "Tushar Deshpande",
+            "dateOfBirth": "1995-07-15",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-123-4568",
+            "emailId": "tushar.deshpande@cricket.com",
+            "photo": "https://devdiscourse.blob.core.windows.net/devnews/06_05_2023_13_59_54_9458976.jpg",
+            "status": false,
+            "id": 23
+        },
+        {
+            "fullName": "Prashant Solanki",
+            "dateOfBirth": "1999-12-15",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Leg break",
+            "phoneNumber": "890-234-5679",
+            "emailId": "prashant.solanki@cricket.com",
+            "photo": "https://ipltable.in/wp-content/uploads/2024/02/image-38-700x700.jpeg",
+            "status": false,
+            "id": 24
+        },
+        
+          {
               "fullName": "Rohit Sharma",
               "dateOfBirth": "1987-04-30",
               "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm offbreak",
-              "phoneNumber": "098-765-4321",
-              "emailId": "rohit.sharma@cricket.com",
+              "bowlingStyle": "Right-arm off-spin",
+              "phoneNumber": "890-123-4567",
+              "emailId": "rohit.sharma@mumbaiindians.com",
               "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4v3hbzPQ3C6VUn_9FRJzfwipbBjvYb1Os_w&s",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "KL Rahul",
-              "dateOfBirth": "1992-04-18",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm medium",
-              "phoneNumber": "234-567-8901",
-              "emailId": "kl.rahul@cricket.com",
-              "photo": "https://cdn6.aptoide.com/imgs/2/f/c/2fc1e5f29818a724253dec1a7d8c7c2c_icon.png",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
+              "status": false,
+              "id": 25
+          },
+          {
               "fullName": "Jasprit Bumrah",
               "dateOfBirth": "1993-12-06",
               "battingStyle": "Right-hand bat",
               "bowlingStyle": "Right-arm fast",
-              "phoneNumber": "456-789-1230",
-              "emailId": "jasprit.bumrah@cricket.com",
-              "photo": "https://www.creativehatti.com/wp-content/uploads/2021/01/Jasprit-Bumrah-Vector-Illustration-Thumbnail-Small-02.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
+              "phoneNumber": "890-234-5678",
+              "emailId": "jasprit.bumrah@mumbaiindians.com",
+              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLFRTU-YdAU6CMF5dza5oga_VUD-9vc24gQ&s",
+              "status": false,
+              "id": 26
+          },
+          {
               "fullName": "Hardik Pandya",
               "dateOfBirth": "1993-10-11",
               "battingStyle": "Right-hand bat",
               "bowlingStyle": "Right-arm fast-medium",
-              "phoneNumber": "567-890-1234",
-              "emailId": "hardik.pandya@cricket.com",
+              "phoneNumber": "890-345-6789",
+              "emailId": "hardik.pandya@mumbaiindians.com",
               "photo": "https://www.creativehatti.com/wp-content/uploads/2021/01/Hardik-Pandya-Thumbnail-Medium-02.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Ravindra Jadeja",
-              "dateOfBirth": "1988-12-06",
-              "battingStyle": "Left-hand bat",
-              "bowlingStyle": "Left-arm orthodox",
-              "phoneNumber": "123-123-1234",
-              "emailId": "ravindra.jadeja@cricket.com",
-              "photo": "https://www.creativehatti.com/wp-content/uploads/2021/01/Ravindra-Jadeja-Vector-Illustration-indian-cricketer-Thumbnail-Small-02.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Shubman Gill",
-              "dateOfBirth": "1999-09-08",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm offbreak",
-              "phoneNumber": "321-654-9870",
-              "emailId": "shubman.gill@cricket.com",
-              "photo": "https://uat.sportiqo.com/wp-content/uploads/2023/03/Shubman-Gill-1.png",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Rishabh Pant",
-              "dateOfBirth": "1997-10-04",
-              "battingStyle": "Left-hand bat",
-              "bowlingStyle": "Wicketkeeper",
-              "phoneNumber": "678-543-2109",
-              "emailId": "rishabh.pant@cricket.com",
-              "photo": "https://mir-s3-cdn-cf.behance.net/projects/404/44f879121718991.Y3JvcCwxNjAwLDEyNTEsMCw2NTM.png",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Yuzvendra Chahal",
-              "dateOfBirth": "1990-07-23",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm legbreak",
-              "phoneNumber": "789-456-1230",
-              "emailId": "yuzvendra.chahal@cricket.com",
-              "photo": "https://pbs.twimg.com/media/FB55phWVIAE6XSx.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Suryakumar Yadav",
-              "dateOfBirth": "1990-09-14",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm medium",
-              "phoneNumber": "890-123-4567",
-              "emailId": "suryakumar.yadav@cricket.com",
-              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPSFgIgmE5dzLIa53XIgkVL7mpUY2fTDAnuQ&s",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Mohammed Shami",
-              "dateOfBirth": "1990-09-03",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm fast-medium",
-              "phoneNumber": "123-789-4561",
-              "emailId": "mohammed.shami@cricket.com",
-              "photo": "https://external-preview.redd.it/lx9loVtYlTS1zVbiJody4MRUeKlU26nFN7av5a7yYy8.jpg?width=1080&crop=smart&auto=webp&s=96b9b871ea0d64c398947ec9ad80f1629d026374",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Shikhar Dhawan",
-              "dateOfBirth": "1985-12-05",
-              "battingStyle": "Left-hand bat",
-              "bowlingStyle": "Right-arm offbreak",
-              "phoneNumber": "234-567-8901",
-              "emailId": "shikhar.dhawan@cricket.com",
-              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSPbZF8tbPEm-UFkADZjl5xDRc0LERTv7TgA&s",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Washington Sundar",
-              "dateOfBirth": "1999-10-05",
-              "battingStyle": "Left-hand bat",
-              "bowlingStyle": "Right-arm offbreak",
-              "phoneNumber": "321-654-9870",
-              "emailId": "washington.sundar@cricket.com",
-              "photo": "https://i0.wp.com/crictoday.com/wp-content/uploads/2023/02/Washington-Sundar-removebg-preview.png?ssl=1",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Deepak Chahar",
-              "dateOfBirth": "1992-08-07",
+              "status": false,
+              "id": 27
+          },
+          {
+              "fullName": "Kieron Pollard",
+              "dateOfBirth": "1987-05-12",
               "battingStyle": "Right-hand bat",
               "bowlingStyle": "Right-arm medium-fast",
-              "phoneNumber": "456-789-1230",
-              "emailId": "deepak.chahar@cricket.com",
-              "photo": "https://staticg.sportskeeda.com/skm/assets/player-images/cricket/deepak-chahar.png?w=268",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Navdeep Saini",
-              "dateOfBirth": "1992-11-23",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm fast",
-              "phoneNumber": "678-910-1112",
-              "emailId": "navdeep.saini@cricket.com",
-              "photo": "https://i.pinimg.com/736x/a7/6e/54/a76e5476a33da1821248cbf487bcdb84.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Sanju Samson",
-              "dateOfBirth": "1994-11-11",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Wicketkeeper",
-              "phoneNumber": "789-456-1230",
-              "emailId": "sanju.samson@cricket.com",
-              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxrpr_EfywB3KGX16QPiRH4MNsNKRyREc4byUp6xBjNzCb4-YTQIWuivwIr5cqLGd7vIk&usqp=CAU",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Shardul Thakur",
-              "dateOfBirth": "1991-10-16",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm medium-fast",
-              "phoneNumber": "123-890-4561",
-              "emailId": "shardul.thakur@cricket.com",
-              "photo": "https://i.pinimg.com/736x/75/07/61/750761d328ea999adc811a4b8726826a.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Manish Pandey",
-              "dateOfBirth": "1989-09-10",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm offbreak",
-              "phoneNumber": "234-890-5672",
-              "emailId": "manish.pandey@cricket.com",
-              "photo": "https://www.creativehatti.com/wp-content/uploads/2021/01/Manish-Panday-Vector-Illustration-Thumbnail-Small-02.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Bhuvneshwar Kumar",
-              "dateOfBirth": "1990-02-05",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm medium-fast",
-              "phoneNumber": "345-789-0123",
-              "emailId": "bhuvneshwar.kumar@cricket.com",
-              "photo": "https://i.pinimg.com/736x/7d/87/92/7d8792d3ece76b80a84deabd20fa2180.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Mayank Agarwal",
-              "dateOfBirth": "1991-02-16",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm offbreak",
-              "phoneNumber": "456-678-9012",
-              "emailId": "mayank.agarwal@cricket.com",
-              "photo": "https://img.wegreenkw.com/sites/4/2023/03/Mayank-Agarwal.webp",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Axar Patel",
-              "dateOfBirth": "1994-01-20",
+              "phoneNumber": "890-456-7890",
+              "emailId": "kieron.pollard@mumbaiindians.com",
+              "photo": "https://pbs.twimg.com/profile_images/1440567008827887618/XowiM5mW_400x400.jpg",
+              "status": false,
+              "id": 28
+          },
+          {
+              "fullName": "Quinton de Kock",
+              "dateOfBirth": "1993-12-17",
               "battingStyle": "Left-hand bat",
-              "bowlingStyle": "Left-arm orthodox",
-              "phoneNumber": "567-890-1234",
-              "emailId": "axar.patel@cricket.com",
-              "photo": "https://staticg.sportskeeda.com/skm/assets/player-images/cricket/axar-patel.png?w=268",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Dinesh Karthik",
-              "dateOfBirth": "1985-06-01",
-              "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Wicketkeeper",
-              "phoneNumber": "678-123-4567",
-              "emailId": "dinesh.karthik@cricket.com",
-              "photo": "https://media.tenor.com/-xqoqvG_gL0AAAAe/dinesh-karthik-dk.png",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
+              "bowlingStyle": "N/A",
+              "phoneNumber": "890-567-8901",
+              "emailId": "quinton.dekock@mumbaiindians.com",
+              "photo": "https://media.gettyimages.com/id/1434021872/photo/brisbane-australia-quinton-de-kock-poses-during-the-south-africa-icc-mens-t20-cricket-world.jpg?s=612x612&w=gi&k=20&c=TmnPk-65aPvCgH_fcg0ihdONTRa2O9-UaJ_mmxZ5YBQ=",
+              "status": false,
+              "id": 29
+          },
+          {
               "fullName": "Ishan Kishan",
               "dateOfBirth": "1998-07-18",
               "battingStyle": "Left-hand bat",
               "bowlingStyle": "Wicketkeeper",
-              "phoneNumber": "890-123-4567",
-              "emailId": "ishan.kishan@cricket.com",
-              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc5gHl2xR91i9T67AXhJiufIhfDDWHubp0g2UTPF5cmWJ2mHzrEi1P-vFraeiXm_Xml2s&usqp=CAU",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Prithvi Shaw",
-              "dateOfBirth": "1999-11-09",
+              "phoneNumber": "890-678-9012",
+              "emailId": "ishan.kishan@mumbaiindians.com",
+              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzEc3_bcP5od0v_3kZqshGdJGo_QqRjfUB2g&s",
+              "status": false,
+              "id": 30
+          },
+          {
+              "fullName": "Suryakumar Yadav",
+              "dateOfBirth": "1990-09-14",
               "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm offbreak",
-              "phoneNumber": "123-567-8901",
-              "emailId": "prithvi.shaw@cricket.com",
-              "photo": "https://wallpapers.com/images/hd/indian-cricket-team-player-prithvi-shaw-mllr06l4mvufhx5v.jpg",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Mohammad Siraj",
-              "dateOfBirth": "1994-03-13",
+              "bowlingStyle": "N/A",
+              "phoneNumber": "890-789-0123",
+              "emailId": "suryakumar.yadav@mumbaiindians.com",
+              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB3m-2MWpXUDinzFBXQGKyx8w9Pkbz3d-F8mvvHrQNOFH1Qs7y7ZsD2loW3Y7TnZY-tvU&usqp=CAU",
+              "status": false,
+              "id": 31
+          },
+          {
+              "fullName": "Rahul Chahar",
+              "dateOfBirth": "1999-08-04",
               "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm fast",
-              "phoneNumber": "234-890-5672",
-              "emailId": "mohammad.siraj@cricket.com",
-              "photo": "https://media.licdn.com/dms/image/v2/D4D22AQF7NmvQozOCAw/feedshare-shrink_800/feedshare-shrink_800/0/1696494917691?e=2147483647&v=beta&t=FvWo6YrdYvufF_eN2wSlXoFceuC20ys9lLVcQajd_Ko",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
+              "bowlingStyle": "Right-arm leg-spin",
+              "phoneNumber": "890-890-1234",
+              "emailId": "rahul.chahar@mumbaiindians.com",
+              "photo": "https://i.pinimg.com/736x/cf/a4/b2/cfa4b24c3aec78d8881c5df1acd90fef.jpg",
+              "status": false,
+              "id": 32
+          },
+          {
+              "fullName": "Trent Boult",
+              "dateOfBirth": "1989-07-22",
+              "battingStyle": "Right-hand bat",
+              "bowlingStyle": "Left-arm fast",
+              "phoneNumber": "890-901-2345",
+              "emailId": "trent.boult@mumbaiindians.com",
+              "photo": "https://opt.toiimg.com/recuperator/img/toi/m-57206512/57206512.jpg",
+              "status": false,
+              "id": 33
+          },
+          {
+              "fullName": "Mitchell McClenaghan",
+              "dateOfBirth": "1986-06-11",
+              "battingStyle": "Right-hand bat",
+              "bowlingStyle": "Left-arm fast-medium",
+              "phoneNumber": "890-012-3456",
+              "emailId": "mitchell.mcclenaghan@mumbaiindians.com",
+              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQepBF64ezuuK2u5TrGkG4A1nuhmiiV80noHA&s",
+              "status": false,
+              "id": 34
+          },
+          {
               "fullName": "Krunal Pandya",
               "dateOfBirth": "1991-03-24",
               "battingStyle": "Left-hand bat",
-              "bowlingStyle": "Left-arm orthodox",
-              "phoneNumber": "345-789-0123",
-              "emailId": "krunal.pandya@cricket.com",
-              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaH1KWyzXomBhT-B-cBKipLFgoGrr4VYsUTQ&s",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
-            },
-            {
-              "fullName": "Vijay Shankar",
-              "dateOfBirth": "1991-01-26",
+              "bowlingStyle": "Slow left-arm orthodox",
+              "phoneNumber": "890-123-4568",
+              "emailId": "krunal.pandya@mumbaiindians.com",
+              "photo": "https://staticg.sportskeeda.com/skm/assets/player-images/cricket/krunal-pandya.png?w=268",
+              "status": false,
+              "id": 35
+          },
+          {
+              "fullName": "Siddharth Desai",
+              "dateOfBirth": "1995-05-01",
               "battingStyle": "Right-hand bat",
-              "bowlingStyle": "Right-arm medium",
-              "phoneNumber": "456-678-9012",
-              "emailId": "vijay.shankar@cricket.com",
-              "photo": "https://www.gujarattitansipl.com/static-assets/images/players/61738.png?v=4.86",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
+              "bowlingStyle": "Right-arm fast",
+              "phoneNumber": "890-234-5679",
+              "emailId": "siddharth.desai@mumbaiindians.com",
+              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA8WoiZaMdr7PDi9bnaxJ3Vz4qboKUCdq0kw&s",
+              "status": false,
+              "id": 36
+          },
+          
+          {
+                "fullName": "Virat Kohli",
+                "dateOfBirth": "1988-11-05",
+                "battingStyle": "Right-hand bat",
+                "bowlingStyle": "Right-arm medium",
+                "phoneNumber": "890-123-4567",
+                "emailId": "virat.kohli@rcb.com",
+                "photo": "https://img.freepik.com/premium-vector/cartoon-virat-kohli-illustration-virat-kohli_1040609-47.jpg",
+                "status": false,
+                "id": 37
+          },
+            {
+                "fullName": "AB de Villiers",
+                "dateOfBirth": "1984-02-17",
+                "battingStyle": "Right-hand bat",
+                "bowlingStyle": "Right-arm medium",
+                "phoneNumber": "890-234-5678",
+                "emailId": "ab.devilliers@rcb.com",
+                "photo": "https://i.pinimg.com/736x/72/64/6f/72646fd5517c04c31b540231b4c77862.jpg",
+                "status": false,
+                "id": 38
             },
             {
-              "fullName": "Rahul Tewatia",
-              "dateOfBirth": "1993-05-20",
-              "battingStyle": "Left-hand bat",
-              "bowlingStyle": "Right-arm legbreak",
-              "phoneNumber": "567-890-1234",
-              "emailId": "rahul.tewatia@cricket.com",
-              "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMOkT5LJjyND1V-hxA53RD6rQsFkgy14VUX3nQ7y_18u7FCxRhh9i4_aT9znj0WZc2d8&usqp=CAU",
-              "status" : false,
-              "toolTip" : {
-                "firstButton" : "TeamOne",
-                "secondButton" : "TeamTwo"
-             }
-
+                "fullName": "Glenn Maxwell",
+                "dateOfBirth": "1989-10-08",
+                "battingStyle": "Right-hand bat",
+                "bowlingStyle": "Right-arm off-spin",
+                "phoneNumber": "890-345-6789",
+                "emailId": "glenn.maxwell@rcb.com",
+                "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8J3hPYuMw6s9WnReb2p2zy33Kwr8YdiydXw&s",
+                "status": false,
+                "id": 39
+            },
+            {
+                "fullName": "Mohammed Siraj",
+                "dateOfBirth": "1993-03-13",
+                "battingStyle": "Right-hand bat",
+                "bowlingStyle": "Right-arm fast",
+                "phoneNumber": "890-456-7890",
+                "emailId": "mohammed.siraj@rcb.com",
+                "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoWGUed_RGfaMeV5VKNNXsTNiXmv7oTP8Hdg&s",
+                "status": false,
+                "id": 40
+            },
+            {
+                "fullName": "Yuzvendra Chahal",
+                "dateOfBirth": "1990-07-23",
+                "battingStyle": "Right-hand bat",
+                "bowlingStyle": "Right-arm leg-spin",
+                "phoneNumber": "890-567-8901",
+                "emailId": "yuzvendra.chahal@rcb.com",
+                "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUV2D4OHlYkbsnmDD5n9qBcUNIV8ZaCNE9g&s",
+                "status": false,
+                "id": 41
+            },
+            {
+                "fullName": "Faf du Plessis",
+                "dateOfBirth": "1984-07-13",
+                "battingStyle": "Right-hand bat",
+                "bowlingStyle": "Right-arm medium",
+                "phoneNumber": "890-678-9012",
+                "emailId": "faf.duplessis@rcb.com",
+                "photo": "https://pbs.twimg.com/media/Dx5O2c7XcAEkCz2.jpg",
+                "status": false,
+                "id": 42
+            },
+            {
+                "fullName": "Karn Sharma",
+                "dateOfBirth": "1993-06-26",
+                "battingStyle": "Left-hand bat",
+                "bowlingStyle": "Right-arm medium",
+                "phoneNumber": "890-789-0123",
+                "emailId": "Karn.Sharma@rcb.com",
+                "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73Z_xlZyaFRJvrtMuLdyFHu-OHm7PiPMGRQ&s",
+                "status": false,
+                "id": 43
+            },
+            {
+                "fullName": "Kyle Jamieson",
+                "dateOfBirth": "1994-12-30",
+                "battingStyle": "Right-hand bat",
+                "bowlingStyle": "Right-arm fast",
+                "phoneNumber": "890-890-1234",
+                "emailId": "kyle.jamieson@rcb.com",
+                "photo": "https://crictoday.com/wp-content/uploads/2023/02/1500x900_1664-kyle-jamieson-NOW-800x600.jpg?crop=1",
+                "status": false,
+                "id": 44
+            },
+            {
+                "fullName": "Devdutt Padikkal",
+                "dateOfBirth": "1999-07-07",
+                "battingStyle": "Left-hand bat",
+                "bowlingStyle": "N/A",
+                "phoneNumber": "890-901-2345",
+                "emailId": "devdutt.padikkal@rcb.com",
+                "photo": "https://static-gi.asianetnews.com/images/01epbdxkm4345hwpn0bj72ygrj/926489-925159-devdutt-padikkal-jpg.jpg?impolicy=All_policy&im=Resize=(1200)",
+                "status": false,
+                "id": 45
+            },
+            {
+                "fullName": "Washington Sundar",
+                "dateOfBirth": "1999-10-05",
+                "battingStyle": "Left-hand bat",
+                "bowlingStyle": "Right-arm off-spin",
+                "phoneNumber": "890-012-3456",
+                "emailId": "washington.sundar@rcb.com",
+                "photo": "https://i0.wp.com/crictoday.com/wp-content/uploads/2023/02/Washington-Sundar-removebg-preview.png?ssl=1",
+                "status": false,
+                "id": 46
+            },
+            {
+                "fullName": "Dinesh Karthik",
+                "dateOfBirth": "1985-06-01",
+                "battingStyle": "Right-hand bat",
+                "bowlingStyle": "N/A",
+                "phoneNumber": "890-123-4568",
+                "emailId": "dinesh.karthik@rcb.com",
+                "photo": "https://media.tenor.com/-xqoqvG_gL0AAAAe/dinesh-karthik-dk.png",
+                "status": false,
+                "id": 47
             }
-          ]
-          
-          
-    ,
+            ,
+              {
+                  "fullName": "Sanju Samson",
+                  "dateOfBirth": "1994-11-11",
+                  "battingStyle": "Right-hand bat",
+                  "bowlingStyle": "Right-arm medium",
+                  "phoneNumber": "890-123-4567",
+                  "emailId": "sanju.samson@rr.com",
+                  "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKW6tCFbsZmWC1X6DhZTHxQI9mxPVjJ10CWoxdNGPWkAsNFbjXa6-Y8Q45jbhuV_qcAyw&usqp=CAU",
+                  "status": false,
+                  "id": 48
+              },
+              {
+                  "fullName": "Jos Buttler",
+                  "dateOfBirth": "1990-09-08",
+                  "battingStyle": "Right-hand bat",
+                  "bowlingStyle": "Right-arm medium",
+                  "phoneNumber": "890-234-5678",
+                  "emailId": "jos.buttler@rr.com",
+                  "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-7SRJ1WWedeRxt3j0CZIi6cAQLccZ5nUEXA&s",
+                  "status": false,
+                  "id": 49
+              },
+              {
+                  "fullName": "Ben Stokes",
+                  "dateOfBirth": "1991-06-04",
+                  "battingStyle": "Left-hand bat",
+                  "bowlingStyle": "Right-arm fast-medium",
+                  "phoneNumber": "890-345-6789",
+                  "emailId": "ben.stokes@rr.com",
+                  "photo": "https://i2.wp.com/crictoday.com/wp-content/uploads/2023/02/stream-18.jpg?ssl=1",
+                  "status": false,
+                  "id": 50
+              },
+              {
+                  "fullName": "Jofra Archer",
+                  "dateOfBirth": "1995-04-01",
+                  "battingStyle": "Right-hand bat",
+                  "bowlingStyle": "Right-arm fast",
+                  "phoneNumber": "890-456-7890",
+                  "emailId": "jofra.archer@rr.com",
+                  "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi9azs-0nZV6N8Ka9llgHoeUHkXzZtIt9DWQ&s",
+                  "status": false,
+                  "id": 51
+              },
+              {
+                  "fullName": "Shreyas Gopal",
+                  "dateOfBirth": "1993-09-04",
+                  "battingStyle": "Right-hand bat",
+                  "bowlingStyle": "Right-arm leg-spin",
+                  "phoneNumber": "890-567-8901",
+                  "emailId": "shreyas.gopal@rr.com",
+                  "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg82G22sbrp8WdbOPLEw0gFF9NYn8njZ6Exw&s",
+                  "status": false,
+                  "id": 52
+              },
+              {
+                  "fullName": "Steve Smith",
+                  "dateOfBirth": "1989-06-02",
+                  "battingStyle": "Right-hand bat",
+                  "bowlingStyle": "Right-arm leg-spin",
+                  "phoneNumber": "890-678-9012",
+                  "emailId": "steve.smith@rr.com",
+                  "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE58fi1JD-PFaOfEttYlEH9zOyhX_Fvz-g8w&s",
+                  "status": false,
+                  "id": 53
+              },
+              {
+                  "fullName": "David Miller",
+                  "dateOfBirth": "1989-06-10",
+                  "battingStyle": "Left-hand bat",
+                  "bowlingStyle": "Right-arm medium",
+                  "phoneNumber": "890-789-0123",
+                  "emailId": "david.miller@rr.com",
+                  "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO_B8PEuiN5r6HbIUMaQKJ_xPPdPsULUp3A&s",
+                  "status": false,
+                  "id": 54
+              },
+              {
+                  "fullName": "Rahul Tewatia",
+                  "dateOfBirth": "1993-05-20",
+                  "battingStyle": "Left-hand bat",
+                  "bowlingStyle": "Right-arm off-spin",
+                  "phoneNumber": "890-890-1234",
+                  "emailId": "rahul.tewatia@rr.com",
+                  "photo": "https://media.tenor.com/TF9WMmvxjgkAAAAe/rahul-tewatia.png",
+                  "status": false,
+                  "id": 55
+              },
+              {
+                  "fullName": "Mustafizur Rahman",
+                  "dateOfBirth": "1995-09-06",
+                  "battingStyle": "Right-hand bat",
+                  "bowlingStyle": "Left-arm fast-medium",
+                  "phoneNumber": "890-901-2345",
+                  "emailId": "mustafizur.rahman@rr.com",
+                  "photo": "https://staticg.sportskeeda.com/editor/2024/06/942a4-17194584871812-1920.jpg",
+                  "status": false,
+                  "id": 56
+              },
+              {
+                  "fullName": "Jaydev Unadkat",
+                  "dateOfBirth": "1991-10-18",
+                  "battingStyle": "Left-hand bat",
+                  "bowlingStyle": "Left-arm medium-fast",
+                  "phoneNumber": "890-012-3456",
+                  "emailId": "jaydev.unadkat@rr.com",
+                  "photo": "https://www.lucknowsupergiants.in/static-assets/images/players/5448.png?v=12.22",
+                  "status": false,
+                  "id": 57
+              },
+              {
+                  "fullName": "Shimron Hetmyer",
+                  "dateOfBirth": "1993-06-26",
+                  "battingStyle": "Left-hand bat",
+                  "bowlingStyle": "Right-arm medium",
+                  "phoneNumber": "890-123-4568",
+                  "emailId": "Shimron.Hetmyer@rr.com",
+                  "photo": "https://www.sportiqo.com/wp-content/uploads/2022/12/Shimron-Hetmyer-1-1.png",
+                  "status": false,
+                  "id": 58
+              },
+              {
+                  "fullName": "Kartik Tyagi",
+                  "dateOfBirth": "2000-11-08",
+                  "battingStyle": "Right-hand bat",
+                  "bowlingStyle": "Right-arm fast",
+                  "phoneNumber": "890-234-5679",
+                  "emailId": "kartik.tyagi@rr.com",
+                  "photo": "https://www.gujarattitansipl.com/static-assets/images/players/67735.png?v=4.86",
+                  "status": false,
+                  "id": 59
+              },
+              {
+                  "fullName": "Prasidh Krishna",
+                  "dateOfBirth": "1996-05-19",
+                  "battingStyle": "Right-hand bat",
+                  "bowlingStyle": "Right-arm fast",
+                  "phoneNumber": "890-345-6780",
+                  "emailId": "prasidh.krishna@rr.com",
+                  "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCo01gnvO0i1n_aDndk5ApHIdZcDSF6so6Hw&s",
+                  "status": false,
+                  "id": 60
+              }
+              ,
+                {
+                    "fullName": "Shreyas Iyer",
+                    "dateOfBirth": "1994-06-06",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm medium",
+                    "phoneNumber": "890-123-4567",
+                    "emailId": "shreyas.iyer@kkr.com",
+                    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyAbxqgNyX9VU9rXC1IRtOJNXAhY-x0sSf2g&s",
+                    "status": false,
+                    "id": 61
+                },
+                {
+                    "fullName": "Andre Russell",
+                    "dateOfBirth": "1988-04-29",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm fast",
+                    "phoneNumber": "890-234-5678",
+                    "emailId": "andre.russell@kkr.com",
+                    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQkSuUO29Hl-ixX38SGY5XPBjC8qtbWO0uQ&s",
+                    "status": false,
+                    "id": 62
+                },
+                {
+                    "fullName": "Sunil Narine",
+                    "dateOfBirth": "1988-05-26",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm off-spin",
+                    "phoneNumber": "890-345-6789",
+                    "emailId": "sunil.narine@kkr.com",
+                    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_NkntY0jPI9P1pU8ih1Y4Xp7J9e-MxLOpg&s",
+                    "status": false,
+                    "id": 63
+                },
+                {
+                    "fullName": "Nitish Rana",
+                    "dateOfBirth": "1993-12-27",
+                    "battingStyle": "Left-hand bat",
+                    "bowlingStyle": "Right-arm off-spin",
+                    "phoneNumber": "890-456-7890",
+                    "emailId": "nitish.rana@kkr.com",
+                    "photo": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202410/nitish-rana-22503467-16x9.jpg?VersionId=ARSXaLRELg4nSbCldR57XCuPgOb0VUd2&size=690:388",
+                    "status": false,
+                    "id": 64
+                },
+                {
+                    "fullName": "Venkatesh Iyer",
+                    "dateOfBirth": "1994-12-25",
+                    "battingStyle": "Left-hand bat",
+                    "bowlingStyle": "Right-arm medium",
+                    "phoneNumber": "890-567-8901",
+                    "emailId": "venkatesh.iyer@kkr.com",
+                    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGmCrrwE_emTLaqQihdxbmwteejjo858tng&s",
+                    "status": false,
+                    "id": 65
+                },
+                {
+                    "fullName": "Lockie Ferguson",
+                    "dateOfBirth": "1991-06-13",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm fast",
+                    "phoneNumber": "890-678-9012",
+                    "emailId": "lockie.ferguson@kkr.com",
+                    "photo": "https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2023/09/02/f475f254226fe3555ca549db58449929.jpg?quality=80&zoom=1&ssl=1",
+                    "status": false,
+                    "id": 66
+                },
+                {
+                    "fullName": "Rahul Tripathi",
+                    "dateOfBirth": "1990-03-02",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm off-spin",
+                    "phoneNumber": "890-789-0123",
+                    "emailId": "rahul.tripathi@kkr.com",
+                    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVmqKrKz0VgUUIlBQqVHL2tWSFT_bdAwl4_Q&s",
+                    "status": false,
+                    "id": 67
+                },
+                {
+                    "fullName": "Kuldeep Yadav",
+                    "dateOfBirth": "1994-12-14",
+                    "battingStyle": "Left-hand bat",
+                    "bowlingStyle": "Left-arm wrist-spin",
+                    "phoneNumber": "890-890-1234",
+                    "emailId": "kuldeep.yadav@kkr.com",
+                    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzp4DzJANk7dg179iG1kltgFB9MDmv_6c8irRYUMuPQURlM_6ANAqgAlALFnbjt67xKrA&usqp=CAU",
+                    "status": false,
+                    "id": 68
+                },
+                {
+                    "fullName": "Prasidh Krishna",
+                    "dateOfBirth": "1996-05-19",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm fast",
+                    "phoneNumber": "890-901-2345",
+                    "emailId": "prasidh.krishna@kkr.com",
+                    "photo": "https://pbs.twimg.com/profile_images/1493970538875670533/VYoaS6zi_400x400.jpg",
+                    "status": false,
+                    "id": 69
+                },
+                {
+                    "fullName": "Shivam Mavi",
+                    "dateOfBirth": "1998-11-26",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm fast",
+                    "phoneNumber": "890-012-3456",
+                    "emailId": "shivam.mavi@kkr.com",
+                    "photo": "https://i.pinimg.com/736x/2e/48/aa/2e48aa049ac77e634ef8280247a4cf7b.jpg",
+                    "status": false,
+                    "id": 70
+                },
+                {
+                    "fullName": "Rinku singh",
+                    "dateOfBirth": "1990-09-14",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm medium",
+                    "phoneNumber": "890-123-4568",
+                    "emailId": "Rinku singh@kkr.com",
+                    "photo": "https://i.pinimg.com/736x/85/18/39/85183939dde0b7982579c2044e80a2ab.jpg",
+                    "status": false,
+                    "id": 71
+                },
+                {
+                    "fullName": "Ankul Roy",
+                    "dateOfBirth": "1988-05-26",
+                    "battingStyle": "Right-hand bat",
+                    "bowlingStyle": "Right-arm off-spin",
+                    "phoneNumber": "890-234-5679",
+                    "emailId": "Ankul.Roy@kkr.com",
+                    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZITF9oxzCb8evYKoBq5h73oKds3e_2-4Dbw&s",
+                    "status": false,
+                    "id": 72
+                },
+                
+                  {
+                      "fullName": "Shikhar Dhawan",
+                      "dateOfBirth": "1985-12-05",
+                      "battingStyle": "Left-hand bat",
+                      "bowlingStyle": "Right-arm medium",
+                      "phoneNumber": "890-123-4567",
+                      "emailId": "shikhar.dhawan@punjabkings.com",
+                      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSPbZF8tbPEm-UFkADZjl5xDRc0LERTv7TgA&s",
+                      "status": false,
+                      "id": 73
+                  },
+                  {
+                      "fullName": "KL Rahul",
+                      "dateOfBirth": "1992-04-18",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm medium",
+                      "phoneNumber": "890-234-5678",
+                      "emailId": "kl.rahul@punjabkings.com",
+                      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP6rs3eziY1l4ASRkjIZy42qar1xSqTEA5Rw&s",
+                      "status": false,
+                      "id": 74
+                  },
+                  {
+                      "fullName": "Mayank Agarwal",
+                      "dateOfBirth": "1990-09-10",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm medium",
+                      "phoneNumber": "890-345-6789",
+                      "emailId": "mayank.agarwal@punjabkings.com",
+                      "photo": "https://images.thequint.com/thequint%2F2019-02%2F8f157cb8-771e-4d36-bc9b-11bb833aa695%2FMayank_Agarwal.jpg?rect=0%2C0%2C2880%2C1620&auto=format%2Ccompress&fmt=webp&width=720&w=1200",
+                      "status": false,
+                      "id": 75
+                  },
+                  {
+                      "fullName": "Bhanuka Rajapaksa",
+                      "dateOfBirth": "1991-10-24",
+                      "battingStyle": "Left-hand bat",
+                      "bowlingStyle": "Right-arm off-spin",
+                      "phoneNumber": "890-456-7890",
+                      "emailId": "bhanuka.rajapaksa@punjabkings.com",
+                      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP994UEF-6oPInOAhwfmKYbIofiA7fYTciLQ&s",
+                      "status": false,
+                      "id": 76
+                  },
+                  {
+                      "fullName": "Liam Livingstone",
+                      "dateOfBirth": "1993-08-04",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm medium",
+                      "phoneNumber": "890-567-8901",
+                      "emailId": "liam.livingstone@punjabkings.com",
+                      "photo": "https://c8.alamy.com/comp/2G7MKHP/englands-liam-livingstone-during-the-nets-session-at-trent-bridge-nottingham-picture-date-thursday-july-15-2021-2G7MKHP.jpg",
+                      "status": false,
+                      "id": 77
+                  },
+                  {
+                      "fullName": "Shahrukh Khan",
+                      "dateOfBirth": "1994-05-27",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm medium",
+                      "phoneNumber": "890-678-9012",
+                      "emailId": "shahrukh.khan@punjabkings.com",
+                      "photo": "https://staticg.sportskeeda.com/skm/assets/player-images/cricket/shahrukh-khan-1.png?w=268",
+                      "status": false,
+                      "id": 78
+                  },
+                  {
+                      "fullName": "Rahul Chahar",
+                      "dateOfBirth": "1999-08-04",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm leg-spin",
+                      "phoneNumber": "890-789-0123",
+                      "emailId": "rahul.chahar@punjabkings.com",
+                      "photo": "https://media.gettyimages.com/id/1347540657/photo/dubai-united-arab-emirates-rahul-chahar-of-india-poses-for-a-headshot-prior-to-the-icc-mens.jpg?s=612x612&w=gi&k=20&c=jVVXbdRUpj1X3B-9R5_DReyAGLNBV1A6JpsaKSoNdOM=",
+                      "status": false,
+                      "id": 79
+                  },
+                  {
+                      "fullName": "Kagiso Rabada",
+                      "dateOfBirth": "1995-05-25",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm fast",
+                      "phoneNumber": "890-890-1234",
+                      "emailId": "kagiso.rabada@punjabkings.com",
+                      "photo": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_960,q_50/esci/media/motion/2020/1024/dm_201024_ipl20_pressconference_nonbranded_rabada/dm_201024_ipl20_pressconference_nonbranded_rabada.jpg",
+                      "status": false,
+                      "id": 80
+                  },
+                  {
+                      "fullName": "Arshdeep Singh",
+                      "dateOfBirth": "1998-02-05",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Left-arm medium",
+                      "phoneNumber": "890-901-2345",
+                      "emailId": "arshdeep.singh@punjabkings.com",
+                      "photo": "https://www.kreedon.in/wp-content/uploads/2021/11/Arshdeep-3.webp",
+                      "status": false,
+                      "id": 81
+                  },
+                  {
+                      "fullName": "Harpreet Brar",
+                      "dateOfBirth": "1991-09-16",
+                      "battingStyle": "Left-hand bat",
+                      "bowlingStyle": "Left-arm orthodox",
+                      "phoneNumber": "890-012-3456",
+                      "emailId": "harpreet.brar@punjabkings.com",
+                      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCeiG85ZvjE5Pp14zvrGl8kW849ANb0czocQ&s",
+                      "status": false,
+                      "id": 82
+                  },
+                  {
+                      "fullName": "Mohammed Shami",
+                      "dateOfBirth": "1990-09-03",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm fast",
+                      "phoneNumber": "890-123-4568",
+                      "emailId": "mohammed.shami@punjabkings.com",
+                      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUQVp0G6TpV6NWv8mbRGhfMIIsB-EyxUzWA&s",
+                      "status": false,
+                      "id": 83
+                  },
+                  {
+                      "fullName": "Vaibhav Arora",
+                      "dateOfBirth": "1993-09-20",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm medium",
+                      "phoneNumber": "890-234-5679",
+                      "emailId": "vaibhav.arora@punjabkings.com",
+                      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYzYm2bID9ZsBUk7aQDhxR-OZsr_8WFBHAXQ&s",
+                      "status": false,
+                      "id": 84
+                  },
+                  {
+                      "fullName": "Sandeep Sharma",
+                      "dateOfBirth": "1993-12-18",
+                      "battingStyle": "Right-hand bat",
+                      "bowlingStyle": "Right-arm medium",
+                      "phoneNumber": "890-345-6780",
+                      "emailId": "sandeep.sharma@punjabkings.com",
+                      "photo": "https://staticg.sportskeeda.com/skm/assets/player-images/cricket/sandeep-sharma.png?w=268",
+                      "status": false,
+                      "id": 85
+                  }
+             
+      
+    ]
+    
+  
+  ,
 
-    "TeamsImages" : {
 
-      "teamAImages" : ["https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/56210/optimized_large_thumb_stage.jpg",
+
+
+
+
+  
+  "CustomTeams": {
+    "teamAImages": [
+      "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/56210/optimized_large_thumb_stage.jpg",
       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/33199/optimized_large_thumb_stage.jpg",
       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/87759/optimized_large_thumb_stage.jpg",
       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/33191/optimized_large_thumb_stage.jpg",
       "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png",
       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/57925/optimized_large_thumb_stage.jpg"
-     ],
-
-      "teamBImages" : [
+    ],
+    "teamBImages": [
       "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Generator-With-Elephant-Graphic3.jpg",
       "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Template-for-a-Cricket-Team.png",
       "https://placeit-assets0.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Team-Logo-Generator.png",
       "https://placeit-assets0.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Maker-with-a-Badge.png",
       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/56069/optimized_large_thumb_stage.jpg",
       "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/57043/optimized_large_thumb_stage.jpg"
-     ],
-
-     "venuesList" :  [
-           {
-               "GroundName" : "NARENDRA MODI STADIUM",
-               "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Ahmedabad_compress.jpg",
-               "Address " : "AHMEDABAD, INDIA",
-               "Capacity" : "1,32,000",
-               "CityImage" : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Sheth_Hutheesinh_Temple.jpg/1024px-Sheth_Hutheesinh_Temple.jpg"
-           },
-           {
-               "GroundName" : "M.CHINNASWAMY STADIUM",
-               "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Bangalore_compress.jpg",
-               "Address " : "BENGALURU, INDIA",
-               "Capacity" : "33,800",
-               "CityImage" : "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcREJnJP6aCA6rxQZ69GIwOn3m0PuW_RJ7VXQs9QMx7ygpOe8zyj3dcA_7d2CdpTQqnDckkxdqc74SDBPRSpyvNilmIKOLHFDVk891UodA"
-           },
-           {
-               "GroundName" : "M.A.CHIDAMBARAM STADIUM",
-               "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Chennai_compress.jpg",
-               "Address " : "CHENNAI, INDIA",
-               "Capacity" : "38,200",
-               "CityImage" : "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRJi0rbSVppoYY2NRMAJApq06kkoWdOf6Yvm2Ug7FNcGM3JXAsJgGHKlpLXLtWeZxJFY9MRSrPBQr2YZQQMXHVR6kJdmzs8AolxDY6YJA"
-          },
-          {
-            "GroundName" : "ARUN JAITLEY STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Delhi_compress.jpg",
-            "Address " : "DELHI, INDIA",
-            "Capacity" : "35,200",
-            "CityImage" : "https://lh5.googleusercontent.com/proxy/Wjn-MZbtcTiGNoeguVIHalSW8ACnEK8aQKGeg47MacSlJHLitMkIsyGghAR1ZNlh1A8mKYcOhhd51ZFwzU8EBxqByuIiGNoBLC4DFR68wHOhye6SHpXywLUZUtZzPQVScZwaSu2jHRvwdko0o6m66RxcstOFQG8=w675-h390-n-k-no"
-          },
-          {
-            "GroundName" : "HPCA STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Dharamshala_compress.jpg",
-            "Address " : "DHARAMSALA, INDIA",
-            "Capacity" : "21,200",
-            "CityImage" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Dharamshala_03_%28Cropped%29.jpg/450px-Dharamshala_03_%28Cropped%29.jpg"
-        },
-        {
-            "GroundName" : "EDEN GARDENS",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Kolkata_compress.jpg",
-            "Address " : "KOLKATA, INDIA",
-            "Capacity" : "68,000",
-            "CityImage" : "https://lh5.googleusercontent.com/p/AF1QipNsIVE7E2eQ_MI9RFNeE9i96IK8fTY8RtX41tDX=w675-h390-n-k-no"
-        },
-        {
-          "GroundName" : "BHARAT RATNA SHRI ATAL BIHARI VAJPAYEE EKANA CRICKET STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Lucknow_compress.jpg",
-            "Address " : "LUCKNOW, INDIA",
-            "Capacity" : "50,100",
-            "CityImage" : "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQJC8uGpWpEdg2xgsY5szXWazBDOPskIL1i0REEHXlfiBoFL1UOPVoAxIERjAl09mcdAk1CvPk3ytfw0Rk1cKPoyJ6qJ9NyrdWOnZqEow"
-        }, {
-          "GroundName" : "WANKHEDE STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Wankhede_compress.jpg",
-            "Address " : "MUMBAI, INDIA",
-            "Capacity" : "33,100",
-            "CityImage" : "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTGKxvuBeZn2GTGCJ20jpJ0aadk6utyL47MOTtqQPDp8ATpCPhOzJ3-czEOAuCXCzb_TMar_jL7XAlZoCkVziY2iv-6NeiSO-CYpkmn5g"
-        }, {
-          "GroundName" : "MCA INTERNATIONAL STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Maharashtra_Cricket_Association_Stadium_compressed.jpg",
-            "Address " : "PUNE, INDIA",
-            "Capacity" : "42,700",
-            "CityImage" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Front_view_of_Shaniwar_Wada_illuminated.jpg/432px-Front_view_of_Shaniwar_Wada_illuminated.jpg"
-        }, {
-          "GroundName" : "RAJIV GANDHI INTERNATIONAL STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/RajivGandhiINTHYD_compress.jpeg",
-            "Address " : "HYDERABAD, INDIA",
-            "Capacity" : "39,200",
-            "CityImage" : "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTM5JnW_h3k9TjNgaqJuNSjVtTMBd2b6UewjrluFs-zidZpYdJ88uKTOs7rxOYkkw5v1u0WvlJUB2WeJ5hjUd6gj7c4Zhr_QwIaOS8GFA"
-        }, {
-          "GroundName" : "GREENFIELD INTERNATIONAL STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Greenfield_International_Stadium_compressed.jpg",
-            "Address " : "TRIVANDRUM, INDIA",
-            "Capacity" : "50,000",
-            "CityImage" : "https://lh5.googleusercontent.com/p/AF1QipPK2jNUPwTNK9m2I9IBDHpYohXf5ijgGUHYnYA3=w675-h390-n-k-no"
-        }, {
-          "GroundName" : "BARSAPARA CRICKET STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/Guwahati_compress.jpg",
-            "Address " : "GUWAHATI, INDIA",
-            "Capacity" : "46,000",
-            "CityImage" : "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQQ8jihUWIx_uRpTX4nvJOUMyaINrUDja3GsIS8f-BS_QcvPvvFsEipeKOJ7RKc6PnRj0wBwTigmCYHVXn3cGjy7s8d6wyCEDmpZ3wwzmA"
-        }, {
-          "GroundName" : "ACA VDCA STADIUM",
-            "GroundImage" : "https://documents.bcci.tv/resizedimageskirti/ACA_VDCA_Stadium.jpg",
-            "Address " : "VISAKHAPATNAM, INDIA",
-            "Capacity" : "25,000",
-            "CityImage" : "https://lh5.googleusercontent.com/p/AF1QipN_Z0joVA6fBgcigLASUpXpZuCAovi5PDAMmp6C=w675-h390-n-k-no"
-        }, {
-          "GroundName" : "BARABATI STADIUM",
-            "GroundImage" : "https://www.bcci.tv/img/venue/venue-img8.png",
-            "Address " : "CUTTACK, INDIA",
-            "Capacity" : "45,000",
-            "CityImage" : "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR-NIy4l9iI6-KFDIqaOCC4Qq9gf7KcBYcpQX1CjoQhW8UQXHbw5lA0woBOA5npKej5pt_RJAj4eZHo9j4iUQQXG8ak2vY2MI-yrvSO5kc"
-        }
-     ]
-
+    ],
+    "venuesList": [
+      {
+        "GroundName": "NARENDRA MODI STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Ahmedabad_compress.jpg",
+        "Address ": "AHMEDABAD, INDIA",
+        "Capacity": "1,32,000",
+        "CityImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Sheth_Hutheesinh_Temple.jpg/1024px-Sheth_Hutheesinh_Temple.jpg"
+      },
+      {
+        "GroundName": "M.CHINNASWAMY STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Bangalore_compress.jpg",
+        "Address ": "BENGALURU, INDIA",
+        "Capacity": "33,800",
+        "CityImage": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcREJnJP6aCA6rxQZ69GIwOn3m0PuW_RJ7VXQs9QMx7ygpOe8zyj3dcA_7d2CdpTQqnDckkxdqc74SDBPRSpyvNilmIKOLHFDVk891UodA"
+      },
+      {
+        "GroundName": "M.A.CHIDAMBARAM STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Chennai_compress.jpg",
+        "Address ": "CHENNAI, INDIA",
+        "Capacity": "38,200",
+        "CityImage": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRJi0rbSVppoYY2NRMAJApq06kkoWdOf6Yvm2Ug7FNcGM3JXAsJgGHKlpLXLtWeZxJFY9MRSrPBQr2YZQQMXHVR6kJdmzs8AolxDY6YJA"
+      },
+      {
+        "GroundName": "ARUN JAITLEY STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Delhi_compress.jpg",
+        "Address ": "DELHI, INDIA",
+        "Capacity": "35,200",
+        "CityImage": "https://lh5.googleusercontent.com/proxy/Wjn-MZbtcTiGNoeguVIHalSW8ACnEK8aQKGeg47MacSlJHLitMkIsyGghAR1ZNlh1A8mKYcOhhd51ZFwzU8EBxqByuIiGNoBLC4DFR68wHOhye6SHpXywLUZUtZzPQVScZwaSu2jHRvwdko0o6m66RxcstOFQG8=w675-h390-n-k-no"
+      },
+      {
+        "GroundName": "HPCA STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Dharamshala_compress.jpg",
+        "Address ": "DHARAMSALA, INDIA",
+        "Capacity": "21,200",
+        "CityImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Dharamshala_03_%28Cropped%29.jpg/450px-Dharamshala_03_%28Cropped%29.jpg"
+      },
+      {
+        "GroundName": "EDEN GARDENS",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Kolkata_compress.jpg",
+        "Address ": "KOLKATA, INDIA",
+        "Capacity": "68,000",
+        "CityImage": "https://lh5.googleusercontent.com/p/AF1QipNsIVE7E2eQ_MI9RFNeE9i96IK8fTY8RtX41tDX=w675-h390-n-k-no"
+      },
+      {
+        "GroundName": "BHARAT RATNA SHRI ATAL BIHARI VAJPAYEE EKANA CRICKET STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Lucknow_compress.jpg",
+        "Address ": "LUCKNOW, INDIA",
+        "Capacity": "50,100",
+        "CityImage": "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQJC8uGpWpEdg2xgsY5szXWazBDOPskIL1i0REEHXlfiBoFL1UOPVoAxIERjAl09mcdAk1CvPk3ytfw0Rk1cKPoyJ6qJ9NyrdWOnZqEow"
+      },
+      {
+        "GroundName": "WANKHEDE STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Wankhede_compress.jpg",
+        "Address ": "MUMBAI, INDIA",
+        "Capacity": "33,100",
+        "CityImage": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTGKxvuBeZn2GTGCJ20jpJ0aadk6utyL47MOTtqQPDp8ATpCPhOzJ3-czEOAuCXCzb_TMar_jL7XAlZoCkVziY2iv-6NeiSO-CYpkmn5g"
+      },
+      {
+        "GroundName": "MCA INTERNATIONAL STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Maharashtra_Cricket_Association_Stadium_compressed.jpg",
+        "Address ": "PUNE, INDIA",
+        "Capacity": "42,700",
+        "CityImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Front_view_of_Shaniwar_Wada_illuminated.jpg/432px-Front_view_of_Shaniwar_Wada_illuminated.jpg"
+      },
+      {
+        "GroundName": "RAJIV GANDHI INTERNATIONAL STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/RajivGandhiINTHYD_compress.jpeg",
+        "Address ": "HYDERABAD, INDIA",
+        "Capacity": "39,200",
+        "CityImage": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTM5JnW_h3k9TjNgaqJuNSjVtTMBd2b6UewjrluFs-zidZpYdJ88uKTOs7rxOYkkw5v1u0WvlJUB2WeJ5hjUd6gj7c4Zhr_QwIaOS8GFA"
+      },
+      {
+        "GroundName": "GREENFIELD INTERNATIONAL STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Greenfield_International_Stadium_compressed.jpg",
+        "Address ": "TRIVANDRUM, INDIA",
+        "Capacity": "50,000",
+        "CityImage": "https://lh5.googleusercontent.com/p/AF1QipPK2jNUPwTNK9m2I9IBDHpYohXf5ijgGUHYnYA3=w675-h390-n-k-no"
+      },
+      {
+        "GroundName": "BARSAPARA CRICKET STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Guwahati_compress.jpg",
+        "Address ": "GUWAHATI, INDIA",
+        "Capacity": "46,000",
+        "CityImage": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQQ8jihUWIx_uRpTX4nvJOUMyaINrUDja3GsIS8f-BS_QcvPvvFsEipeKOJ7RKc6PnRj0wBwTigmCYHVXn3cGjy7s8d6wyCEDmpZ3wwzmA"
+      },
+      {
+        "GroundName": "ACA VDCA STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/ACA_VDCA_Stadium.jpg",
+        "Address ": "VISAKHAPATNAM, INDIA",
+        "Capacity": "25,000",
+        "CityImage": "https://lh5.googleusercontent.com/p/AF1QipN_Z0joVA6fBgcigLASUpXpZuCAovi5PDAMmp6C=w675-h390-n-k-no"
+      },
+      {
+        "GroundName": "BARABATI STADIUM",
+        "GroundImage": "https://www.bcci.tv/img/venue/venue-img8.png",
+        "Address ": "CUTTACK, INDIA",
+        "Capacity": "45,000",
+        "CityImage": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR-NIy4l9iI6-KFDIqaOCC4Qq9gf7KcBYcpQX1CjoQhW8UQXHbw5lA0woBOA5npKej5pt_RJAj4eZHo9j4iUQQXG8ak2vY2MI-yrvSO5kc"
+      }
+    ]
+  },
+  "CustomMatch": {
+    "CreateMatchDetails": {
+      "MatchDetails": {},
+      "TeamOne": {
+        "logo": ""
+      },
+      "TeamTwo": {}
     }
-
-
-,
-    "CustomMatch"  : {
-
-        "CreateMatchDetails" : {
-              
-             "MatchDetails" : {
-
-             },
-
-            "TeamOne" : {
-                "logo" : ""
-
-            },
-
-            "TeamTwo" : {
-
-            }
-
-             
-
-        }
-
-        
-        
-    }
+  }
 }
