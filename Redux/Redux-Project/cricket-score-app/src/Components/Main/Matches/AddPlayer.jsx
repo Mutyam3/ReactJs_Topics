@@ -3,7 +3,6 @@ import axios from 'axios'
 
 function AddPlayer()
 {
-
     const [addpalyer, setAddPlayer] = React.useState({
 
         fullName : '',
@@ -25,20 +24,16 @@ function AddPlayer()
     function addPlayerFn()
     {
         console.log(addpalyer)
-        // axios.post('http://localhost:5000/Players', addpalyer).then((res)=>{
-        //     console.log(res.data)
-        // })
+        axios.post('http://localhost:5000/PlayersDetails', addpalyer).then((res)=>{
+            console.log(res.data)
+        })
     }
-
-
-
 
     return (
         <section className = 'AddPlayerDiv'>
              
              <div style={{display:'flex', alignItems:'center'}}>
                 <h1>Add Player</h1>
-                
              </div>
             
            
@@ -109,7 +104,9 @@ function AddPlayer()
             </div>
 
             <div style={{display:'flex', alignItems:'center'}}>
-                  <button onClick = {addPlayerFn}>Add Player</button>
+                  <button onClick = {addPlayerFn}>Submit</button>
+                  
+
             </div>
 
                 

@@ -11,9 +11,11 @@ function App() {
 
          <div>
               <Outlet/>
+              
+              <Footer/>
          </div>
 
-         <Footer/>
+         
     </section>
   );
 }
