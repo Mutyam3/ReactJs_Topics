@@ -42,6 +42,16 @@ function CreateMatch()
     function handleSubmit()
     {
           console.log('match :: ', addMatch)
+
+          axios.post('http://localhost:5000/CricketMatches', addMatch).then((res)=>{
+
+               console.log(res.data)
+
+          }).catch((err)=>{
+
+            console.log(err)
+            
+          })
           
     }
 
@@ -65,7 +75,7 @@ function CreateMatch()
                             {      
                                    teamsData && teamsData.map((el)=>{
                                          return (
-                                            <option value={el.id}>{el.teamName.toUpperCase()}</option>
+                                            <option value={el.id}  disabled = {addMatch.teamBName == el.id}>{el.teamName.toUpperCase()}</option>
                                          )
                                    })
                             }
@@ -78,11 +88,11 @@ function CreateMatch()
                      <div>
                         <img src = {addMatch.teamBImage} width = '200px' height= '100px'/><br/>
 
-                        <select name='teamBName' className = 'AddPlayerFields'>
+                        <select name='teamBName' className = 'AddPlayerFields' onChange={(e)=>{setAddMatch({...addMatch, teamBName:e.target.value})}}>
                             <option value={null} disabled selected>Select Team B Name</option>
                             {
                                 teamsData && teamsData.map((el)=>{
-                                    return <option value={el.id}>{el.teamName.toUpperCase()}</option>
+                                    return <option value={el.id}  disabled = {addMatch.teamAName == el.id} >{el.teamName.toUpperCase()}</option>
                                 })
                             }
                         </select>

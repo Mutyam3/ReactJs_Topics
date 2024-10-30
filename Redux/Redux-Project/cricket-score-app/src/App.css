@@ -134,5 +134,43 @@ h1{
 }
 
 
+.MatchCards{
+
+    border:2px solid black;
+    border-radius: 12px;
+    width : 500px;
+    /* padding: 10px; */
+    margin : 15px;
+    text-align: center;
+    color:black;
+
+}
+
+
+
+.CardFirstLine p {
+    margin-bottom: 0px;
+}
+
+.CardFirstLine{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:10px;
+}
+
+
+.CardBody 
+{
+    border-top: 1px solid black;
+    border-bottom : 1px solid black;
+}
+
+.CardLastLine{
+    padding:10px
+}
+
+
 
 

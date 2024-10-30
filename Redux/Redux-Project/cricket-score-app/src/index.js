@@ -10,10 +10,15 @@ import AboutUs from './Components/Main/AboutUs/AboutUs';
 import ContactUs from './Components/Main/ContactUs/ContactUs';
 import Teams from './Components/Main/Teams/Teams';
 import AddMatch from './Components/Main/Matches/AddMatch';
-import MyGames from './Components/Main/Matches/MyGames';
+import MyGames from './Components/Main/Matches/MyGames/MyGames';
 import AddPlayer from './Components/Main/Matches/AddPlayer';
 import CustomMatch from './Components/Main/Matches/Custom Match';
 import AddTeam from './Components/Main/Matches/AddTeam';
+import MatchScoring from './Components/Main/Matches/MyGames/MyMatches/MatchScoring';
+import MatchOverview from './Components/Main/Matches/MyGames/MyMatches/MatchOverview';
+import SelectSquad from './Components/Main/Matches/MyGames/MyMatches/SelectSquad';
+import GiveScore from './Components/Main/Matches/MyGames/MyMatches/GiveScore';
+import ScoreCard from './Components/Main/Matches/MyGames/MyMatches/ScoreCard';
 
 
 
@@ -36,7 +41,8 @@ const myrouter = createBrowserRouter([
                     
                     {
                         path : '/matches',
-                        element: <MyGames/>
+                        element: <MyGames/>,
+                       
                     },
                     {
                         path : '/matches/customMatch',
@@ -64,8 +70,38 @@ const myrouter = createBrowserRouter([
                      ,
                     {
                          path : '/matches/myGames',
-                         element : <MyGames/>
-                    }]
+                         element : <MyGames/>,
+                         
+                    },
+                    {
+                      path : '/matches/:cname',
+                      element : <MatchScoring/>,
+                      children : [ 
+                                 {
+                                      path : '/matches/:cname/matchOverview',
+                                      element : <MatchOverview/>
+                                  },
+                                  {
+                                       path : '/matches/:cname/matchSelectSquad',
+                                       element: <SelectSquad/>
+                                  },
+                                  {  
+                                       path : '/matches/:cname/matchGiveScore',
+                                       element : <GiveScore/>
+
+                                  },
+                                  {
+                                       path : '/matches/:cname/matchScoreCard',
+                                       element: <ScoreCard/>
+
+                                  },
+                                  {
+                                      path :  '/matches/:cname',
+                                      element : <MatchOverview/>
+                                  }]
+                    }
+                    
+                  ]
       },
       {
          path : '/match-centers',
@@ -81,6 +117,7 @@ const myrouter = createBrowserRouter([
       }]
   },
   {
+
       
   }
   ])

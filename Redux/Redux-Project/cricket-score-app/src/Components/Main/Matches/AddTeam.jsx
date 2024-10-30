@@ -125,13 +125,13 @@ function AddTeam()
 
                  <label>
                         Team Name : 
-                       <input type="text" name = "teamName" className = 'AddPlayerFields' placeholder='Team Name' onChange={(e)=>{setNewTeam({...newTeam, teamName : e.target.value})}}/>
+                       <input type="text" name = "teamName" className = 'AddPlayerFields' placeholder='Team Name' value={newTeam.teamName} onChange={(e)=>{setNewTeam({...newTeam, teamName : e.target.value})}}/>
                  </label><br/><br/>
 
 
                  <label>
                         Team Owner :
-                       <input type="text" name= "teamOwner" className = 'AddPlayerFields' placeholder='Team Owner' onChange={(e)=>{setNewTeam({...newTeam, teamOwner :e.target.value})}}/>
+                       <input type="text" name= "teamOwner" className = 'AddPlayerFields' placeholder='Team Owner' value={newTeam.teamOwner} onChange={(e)=>{setNewTeam({...newTeam, teamOwner :e.target.value})}}/>
                  </label> <br/><br/>
 
 

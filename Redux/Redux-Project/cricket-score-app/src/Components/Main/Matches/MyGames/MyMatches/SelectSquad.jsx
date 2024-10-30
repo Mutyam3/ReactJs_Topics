@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import {Link, Outlet} from 'react-router-dom'
-import AddPlayer from './AddPlayer'
 
 function SelectSquad()
 {
