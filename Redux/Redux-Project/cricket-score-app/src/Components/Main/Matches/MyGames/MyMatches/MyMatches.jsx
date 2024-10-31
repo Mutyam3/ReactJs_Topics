@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom'
 function MyMatches({matches,teams})
 {
 
-  
 
     function handleCards(el)
     {
-        console.log('el ::', el)      
+        console.log('el ::', el)     
     }
 
     function getTeamNameById(manaId)
