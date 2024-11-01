@@ -14,7 +14,7 @@ function Todolist(props)
       React.useEffect(()=>{},[]) 
       // idi okavela use cheste aa time ki mana deggara data undochu undokapovochu 
       //[ante redux nunchi data eppudaina ravochu ]so manam idi use cheyam
-      React.useEffect(()=>{},[]) // idi aithe prathisari execute aithadi component rerender aina prathisari 
+      React.useEffect(()=>{}) // idi aithe prathisari execute aithadi component rerender aina prathisari 
 
       React.useEffect(()=>{
        
@@ -37,7 +37,7 @@ function Todolist(props)
 
                  setFilterTodos([...temp])
            }
-      },[props.todos, , filterKey])
+      },[props.todos,  filterKey])
     
     
     return (
