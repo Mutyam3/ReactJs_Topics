@@ -5,3 +5,12 @@
     padding:10px;
     border : 2px solid black;
 }
+
+.ListItems{
+
+    display : flex; 
+    width :  300px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
