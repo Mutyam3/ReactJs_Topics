@@ -2,7 +2,7 @@ import React from 'react'
 import {useFormik} from 'formik'
 import { useAddProductsMutation } from '../../services/products'
 
-function AddProducts()
+function AddProducts(props)
 {
 
         const [addProductFn]  =  useAddProductsMutation()
@@ -26,6 +26,7 @@ function AddProducts()
                   
                 addProductFn(values).then(()=>{
                     alert('product added successfully')
+                    props.fn()
                 })
 
               }

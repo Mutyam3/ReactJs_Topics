@@ -21,7 +21,7 @@ function Products()
 
         <h1>Products</h1>
 
-        <AddProducts/>
+        <AddProducts fn = {rqFn}/>
 
         <br/><br/><br/><br/>
 
