@@ -11,8 +11,11 @@
         {
           "task": "send bank statements to CA",
           "status": true
+        },
+        {
+          "task": "apply gold loan",
+          "status": false
         }
-      
       ]
     },
     {
@@ -27,7 +30,6 @@
           "task": "get a new Tennis ball",
           "status": false
         }
-      
       ]
     }
   ]
