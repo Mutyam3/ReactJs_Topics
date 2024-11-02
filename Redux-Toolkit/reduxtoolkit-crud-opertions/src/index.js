@@ -8,6 +8,7 @@ import { store } from './app/store';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Todolist from './features/Todolist/Todolist';
 import Products from './features/Products/Products';
+import EditProducts from './features/Products/EditProducts';
 
 const myRouter =  createBrowserRouter([
                     {
@@ -23,6 +24,11 @@ const myRouter =  createBrowserRouter([
                           {
                             path : '/products',
                             element : <Products/>
+                          },
+
+                          {
+                            path : '/editProducts/:pid',
+                            element : <EditProducts/>
                           }
                          ]
 

@@ -9,6 +9,9 @@ function Navbar()
 
             <Link to='/todolist'>Todolist</Link>
             <Link to='/products'>Products</Link>
+            {/* <Link>EditProducts</Link> */}
+
+
         </section>
     )
 }
