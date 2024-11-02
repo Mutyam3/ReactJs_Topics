@@ -4,12 +4,12 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App m-5 ">
    
             <h3>Mutyam App</h3>
 
 
-          <div className='m-4 p-2 border border-dark'>
+          <div className='m-4 p-2 '>
                 <Outlet/>
           </div>
 

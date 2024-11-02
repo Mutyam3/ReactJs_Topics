@@ -15,6 +15,10 @@
         {
           "task": "apply gold loan",
           "status": false
+        },
+        {
+          "task": "get money from bank",
+          "status": false
         }
       ]
     },
