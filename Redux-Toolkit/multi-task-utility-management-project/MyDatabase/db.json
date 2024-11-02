@@ -1,0 +1,34 @@
+{
+  "board": [
+    {
+      "id": 1,
+      "title": "accounts",
+      "todos": [
+        {
+          "task": "apply bank loan",
+          "status": false
+        },
+        {
+          "task": "send bank statements to CA",
+          "status": true
+        }
+      
+      ]
+    },
+    {
+      "id": 2,
+      "title": "institute",
+      "todos": [
+        {
+          "task": "get a new laptop",
+          "status": false
+        },
+        {
+          "task": "get a new Tennis ball",
+          "status": false
+        }
+      
+      ]
+    }
+  ]
+}
