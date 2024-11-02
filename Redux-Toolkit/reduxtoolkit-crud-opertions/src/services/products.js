@@ -10,6 +10,10 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
                    query : ()=> '/' 
             }),
 
+            getProductsById : builder.query({
+                   query : (id)=> `/${id}`
+            }),
+
             delProducts : builder.mutation(
                   {
                        query : (id)=> ({
@@ -32,11 +36,21 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
                       })
                      
                 }
+            ),
+
+            updateProducts : builder.mutation(
+              {
+                   query : (product)  => ({
+                           url :  `/${product.id}`,
+                           method : 'PUT',
+                           body :  product 
+                   }) 
+              }
             )
         })
     }
   )
 
-  export  const {useGetProductsQuery, useDelProductsMutation, useLazyGetProductsQuery, useAddProductsMutation} = productsApi
+  export  const {useGetProductsQuery, useDelProductsMutation, useLazyGetProductsQuery, useAddProductsMutation, useGetProductsByIdQuery, useUpdateProductsMutation} = productsApi
 
   
