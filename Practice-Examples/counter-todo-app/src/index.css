@@ -1,0 +1,86 @@
+
+#appBox{
+
+  border:2px solid black;
+  padding:25px;
+  text-align: center;
+  width :50%;
+  margin:auto;
+  font-family: Arial;
+
+}
+
+#counterBox {
+   
+    border:2px solid black;
+    padding:20px;
+    margin:10px;
+
+}
+
+#counterBox button 
+{
+    margin:15px;
+    padding:10px 20px 10px 20px;
+    border:0px;
+    border-radius:10px;
+    font-size: medium;
+}
+
+#todoBox
+{
+     border:2px solid black;
+     margin:10px;
+     padding:10px
+}
+
+#todoBox ul
+{
+  /* border:2px solid black; */
+  width :50%;
+  margin:0 auto; 
+  padding:20px 10px 20px 10px;
+}
+
+#todoBox ul li 
+{
+    padding:10px;
+}
+
+#todoBox ul li button 
+{
+    padding: 8px 15px 8px 15px;
+    color:white;
+    background-color: crimson;
+    border-radius: 10px;
+    border:0px;
+}
+
+#todoBox div
+{
+    width : 50%;
+    margin:0px auto;
+    border:2px solid black;
+    width: fit-content;
+    border-radius: 15px;
+    overflow: hidden;
+
+
+}
+
+#todoBox div input{
+      border:0px; 
+      outline:0px;
+      padding:10px;
+}
+
+#todoBox div button 
+{
+     border:0px;
+     padding:10px 15px 10px 15px; 
+     background-color: rgb(155, 155, 161);
+     color:white;
+     font-weight: bold;
+}
+
+
