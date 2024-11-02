@@ -16,17 +16,28 @@ function Todolist()
 
         // console.log(data)
 
-       function addTodo()
-       {
-           var temp = JSON.parse(JSON.stringify(data))
-           temp.todos.push({task : newTodo, status: false})
-           console.log(temp)
-           addTodoFn(temp).then((res)=>{        // ikkada addTodoFn(temp) di asynchronous function so request velli response vachinake rqFn() call cheyali 
-                                                // so then tho handle chestadi 
-                rqFn(id)
-           })
+    //    function addTodo()
+    //    {
+    //        var temp = JSON.parse(JSON.stringify(data))
+    //        temp.todos.push({task : newTodo, status: false})
+    //        console.log(temp)
+    //        addTodoFn(temp).then((res)=>{        // ikkada addTodoFn(temp) di asynchronous function so request velli response vachinake rqFn() call cheyali 
+    //                                             // so then tho handle chestadi [ee function call aithe data automatic ga update aithadi]
+    //             rqFn(id)
+    //        })
 
-       }
+
+    //    }
+
+   async function addTodo()
+   {
+       var temp = JSON.parse(JSON.stringify(data))
+       temp.todos.push({task : newTodo, status : false})
+       console.log(temp)
+       await addTodoFn(temp)        // ikkada await addTodoFn anedi asynchronous function dani temporary ga marchesindi synchronous ga  
+                                   // [basic ga asynchronous functions are non-blocking , await will convert that non-blocking nature to blocking nature]
+              rqFn(id)
+   }
 
     return (
         <section>
