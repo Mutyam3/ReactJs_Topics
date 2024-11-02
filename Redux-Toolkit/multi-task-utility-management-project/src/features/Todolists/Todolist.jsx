@@ -39,6 +39,15 @@ function Todolist()
               rqFn(id)
    }
 
+
+  async function delTodo(i)
+   {
+         var temp = JSON.parse(JSON.stringify(data))
+         temp.todos.splice(i,1)
+         await addTodoFn(temp)
+                 rqFn(id)
+   }
+
     return (
         <section>
              
@@ -53,8 +62,10 @@ function Todolist()
                  <button onClick = {()=>{addTodo()}}>Add Task</button>
 
                  {
-                    !isLoading && data.todos.map((t)=>{
-                           return <li>{t.task}</li>
+                    !isLoading && data.todos.map((t, ind)=>{
+                           return <li  key = {`${t.title}+${ind}`} >{t.task}
+                                       <button onClick={()=>{delTodo(ind)}}>Delete</button>
+                                  </li>
                     })
                  }
 
