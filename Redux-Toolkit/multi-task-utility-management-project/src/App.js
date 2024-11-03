@@ -9,7 +9,7 @@ function App() {
             <h3><Link to='/'>Mutyam App</Link></h3>
 
 
-          <div className='m-4 p-2 '>
+          <div className='m-2 p-2 '>
                 <Outlet/>
           </div>
 
