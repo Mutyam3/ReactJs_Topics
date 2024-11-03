@@ -1,0 +1,18 @@
+.box{
+
+    background-color: black;
+    border:1px solid whitesmoke;
+    color:white
+}
+
+.navbartext{
+
+    text-decoration: none;
+    color:white;
+    font-size: large;
+}
+
+.footertext h5{
+
+    color: gold;
+}
