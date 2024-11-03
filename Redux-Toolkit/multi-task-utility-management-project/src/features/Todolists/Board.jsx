@@ -3,6 +3,7 @@ import { useAddTodolistMutation, useLazyGetAllTodoListsQuery } from '../../servi
 
 import { Outlet } from 'react-router-dom'
 import BoardMaster from './BoardMaster'
+import Sidebar from './Sidebar'
 
 function Board()
 {
@@ -26,13 +27,20 @@ function Board()
 
 
     return (
-        <section>
+        <section className='d-flex border border-2'>
          
           
-           
+           <div className='w-20 p-5 vh-100 bg-secondary text-center'>
               <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                  + Add Todolist
               </button>
+
+              <Sidebar></Sidebar>
+           </div>
+
+           <div className='m-2 p-2 w-100'>
+                <Outlet/>
+           </div>
 
 
                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,7 +63,7 @@ function Board()
                           </div>
                    </div>
 
-              <Outlet/>
+              
             
 
         </section>
