@@ -6,19 +6,28 @@
       "todos": [
         {
           "task": "apply bank loan",
-          "status": false
+          "status": "todo",
+          "id": "t1"
         },
         {
           "task": "send bank statements to CA",
-          "status": true
+          "status": "doing",
+          "id": "t2"
         },
         {
           "task": "apply gold loan",
-          "status": false
+          "status": "done",
+          "id": "t3"
         },
         {
           "task": "get money from bank",
-          "status": false
+          "status": "doing",
+          "id": "t4"
+        },
+        {
+          "task": "get gold from bank",
+          "status": "todo",
+          "id": "t5"
         }
       ]
     },
@@ -28,13 +37,25 @@
       "todos": [
         {
           "task": "get a new laptop",
-          "status": false
+          "status": "doing",
+          "id": "t1"
         },
         {
           "task": "get a new Tennis ball",
-          "status": false
+          "status": "done",
+          "id": "t2"
+        },
+        {
+          "task": "get new books",
+          "status": "todo",
+          "id": "t3"
         }
       ]
+    },
+    {
+      "title": "Movies",
+      "todos": [],
+      "id": 3
     }
   ]
 }

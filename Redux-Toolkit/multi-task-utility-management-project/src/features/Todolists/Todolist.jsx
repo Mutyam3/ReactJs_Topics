@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAddNewTaskMutation, useGetTodoListByIdQuery, useLazyGetTodoListByIdQuery } from '../../services/boardApi'
 import { useParams } from 'react-router-dom'
+import StatusBoards from './StatusBoards'
 
 function Todolist()
 {
@@ -32,7 +33,7 @@ function Todolist()
    async function addTodo()
    {
        var temp = JSON.parse(JSON.stringify(data))
-       temp.todos.push({task : newTodo, status : false})
+       temp.todos.push({task : newTodo, status : "todo", id:`t${data?.todos.length+1}`})
        console.log(temp)
        await addTodoFn(temp)        // ikkada await addTodoFn anedi asynchronous function dani temporary ga marchesindi synchronous ga  
                                    // [basic ga asynchronous functions are non-blocking , await will convert that non-blocking nature to blocking nature]
@@ -61,13 +62,28 @@ function Todolist()
                  <input type='text' onChange={(e)=>{setNewTodo(e.target.value)}}/>
                  <button onClick = {()=>{addTodo()}}>Add Task</button>
 
-                 {
+                 {/* {
                     !isLoading && data.todos.map((t, ind)=>{
                            return <li  key = {`${t.title}+${ind}`} >{t.task}
                                        <button onClick={()=>{delTodo(ind)}}>Delete</button>
                                   </li>
                     })
+                 } */}
+
+                 {
+
+                     !isLoading  && (
+                        <div className='d-flex justify-content-evenly'>
+
+                        <StatusBoards  todolist= {data} type = 'todo'></StatusBoards>
+                        <StatusBoards  todolist={data} type = 'doing'></StatusBoards>
+                        <StatusBoards  todolist={data} type = 'done'></StatusBoards>
+       
+                        </div>
+                     )
                  }
+
+               
 
         </section>
     )
