@@ -9,7 +9,7 @@ function Footer()
       const download = ['Android', 'iOS'] 
 
     return (
-        <section className=' box m-4 p-4 border border-dark rounded d-flex justify-content-evenly'>
+        <section className=' box marginMania  p-4 border border-light rounded d-flex justify-content-evenly'>
 
               <ul type='none' className='footertext'>
                     <h5>Links</h5>

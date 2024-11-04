@@ -6,15 +6,18 @@ import Footer from './features/Footer/Footer';
 
 function App() {
   return (
-    <section className="App">
+    <section className="App p-4">
       
-         <Navbar/>
 
-         <div>
-             <Outlet/>
-         </div>
+      <Navbar/>
 
-         <Footer/>
+          <div>
+              <Outlet/>
+          </div>
+
+      <Footer/> 
+
+       
 
     </section>
   );

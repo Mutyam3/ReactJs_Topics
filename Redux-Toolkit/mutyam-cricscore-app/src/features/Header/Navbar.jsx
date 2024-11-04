@@ -5,7 +5,7 @@ import Logo from './../../assets/Mutyam cricscore (1).png'
 function Navbar()
 {
     return (
-        <section className=' box d-flex justify-content-evenly align-items-center m-4 p-2 border border-dark  rounded'> 
+        <section className=' box d-flex justify-content-evenly align-items-center marginMania p-2 border border-light  rounded'> 
 
                <Link to='/home' ><img src= {Logo} width='200px' height='100px'/></Link>
                <Link to='/matches' className='navbartext'><li className='m-2 p-2' type='none'>Matches</li></Link>
