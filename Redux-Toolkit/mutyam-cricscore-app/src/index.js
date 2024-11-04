@@ -9,6 +9,13 @@ import { store } from './app/store';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
 import Home from './features/Body/Home/Home';
+import Matches from './features/Body/Matches/Matches';
+import Players from './features/Body/Players/Players';
+import Teams from './features/Body/Teams/Teams';
+import Products from './features/Body/Products/Products';
+import MatchDashboard from './features/Body/Matches/MatchDashboard';
+import CreateMatch from './features/Body/Matches/CreateMatch';
+
 
 const myRouter = createBrowserRouter([
                   {
@@ -22,9 +29,39 @@ const myRouter = createBrowserRouter([
                        {
                           path : '/',
                           element : <Home/>
+                       },
+                       {
+                          path : '/matches',
+                          element : <Matches/>,
+                          children : [{
+                              path : '/matches/matches-dashboard',
+                              element : <MatchDashboard/>
+                          },
+                          {
+                              path : '/matches',
+                              element : <MatchDashboard/>
+                          },
+                          {
+                             path : '/matches/create-match',
+                             element: <CreateMatch/>
+                          },
+                          ]
+                       },
+                       {
+                          path : '/players',
+                          element : <Players/>
+                       },
+                       {
+                         path : '/teams',
+                         element : <Teams/>
+                       },
+                       {
+                        path : '/products',
+                        element : <Products/>
                        }
                     ]
                   }, 
+
                  
 ])
 
