@@ -1,8 +1,19 @@
 .box{
 
     background-color: black;
-    border:1px solid whitesmoke;
-    color:white
+    /* border:0.5px solid whitesmoke; */
+    color:rgb(235, 235, 235)
+}
+
+.App{
+
+    background-color: black;
+    color:rgb(235, 235, 235)
+}
+
+.marginMania{
+
+    margin : 0px  24px 0px 24px
 }
 
 .navbartext{
@@ -16,3 +27,30 @@
 
     color: gold;
 }
+
+.headingText{
+
+    font-size: 4rem;
+    font-family: 'Trebuchet MS' sans-serif;
+    font-weight: bolder;
+    color:grey;
+    text-align: center;
+    -webkit-text-fill-color: rgb(235, 235, 235);
+    /* -webkit-text-stroke: 1px whitesmoke; */
+}
+
+.cricBall{
+
+   animation: ball 6s infinite linear ;
+}
+
+@keyframes ball {
+
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

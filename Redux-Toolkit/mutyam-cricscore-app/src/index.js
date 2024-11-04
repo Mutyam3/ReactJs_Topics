@@ -8,7 +8,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import { store } from './app/store';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
-
+import Home from './features/Body/Home/Home';
 
 const myRouter = createBrowserRouter([
                   {
@@ -17,7 +17,11 @@ const myRouter = createBrowserRouter([
                     children : [
                        {
                           path : '/home',
-                          
+                          element : <Home/>
+                       },
+                       {
+                          path : '/',
+                          element : <Home/>
                        }
                     ]
                   }, 
