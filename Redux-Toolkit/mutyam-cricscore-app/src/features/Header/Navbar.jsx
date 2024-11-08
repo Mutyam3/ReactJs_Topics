@@ -17,7 +17,7 @@ function Navbar()
                          dashboard : 'Dashboard',
                          dashboardPath : '/teams/teams-dashboard',
                          custom : 'CreateTeams',
-                         customPath :'teams/create-teams'
+                         customPath :'/teams/create-teams'
                           
                       },
                       {

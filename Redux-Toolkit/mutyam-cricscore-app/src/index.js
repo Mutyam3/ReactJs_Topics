@@ -15,7 +15,10 @@ import Teams from './features/Body/Teams/Teams';
 import Products from './features/Body/Products/Products';
 import MatchDashboard from './features/Body/Matches/MatchDashboard';
 import CreateMatch from './features/Body/Matches/CreateMatch';
-
+import CreateTeams from './features/Body/Teams/CreateTeams';
+import TeamsDashboard from './features/Body/Teams/TeamsDashboard';
+import PlayersDashboard from './features/Body/Players/PlayerDashboard';
+import AddPlayer from './features/Body/Players/AddPlayers';
 
 const myRouter = createBrowserRouter([
                   {
@@ -43,21 +46,50 @@ const myRouter = createBrowserRouter([
                           },
                           {
                              path : '/matches/create-match',
-                             element: <CreateMatch/>
+                             element: <CreateMatch/>,
                           },
                           ]
                        },
                        {
                           path : '/players',
-                          element : <Players/>
+                          element : <Players/>,  
+                          children : [{
+                               path : '/players',
+                               element : <PlayersDashboard/>
+                            },
+
+                            {
+                              path : '/players/players-dashboard',
+                              element : <PlayersDashboard/>
+                            },
+                            {
+                             path : '/players/create-players',
+                             element : <AddPlayer/>
+                            }
+                           ]
                        },
                        {
                          path : '/teams',
-                         element : <Teams/>
+                         element : <Teams/>,
+                         children : [
+                                 {
+                                    path : '/teams',
+                                    element : <TeamsDashboard/>
+                                 },
+                                 {
+                                    path : '/teams/teams-dashboard',
+                                    element: <TeamsDashboard/>
+                                 },
+                                 {
+                                    path : '/teams/create-teams',
+                                    element : <CreateTeams/>
+                                 }
+                         ]
                        },
                        {
                         path : '/products',
-                        element : <Products/>
+                        element : <Products/>,
+                      
                        }
                     ]
                   }, 
