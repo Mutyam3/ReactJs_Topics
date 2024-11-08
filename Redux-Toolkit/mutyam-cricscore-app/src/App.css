@@ -89,3 +89,29 @@
     color:black
 }
 
+.playersDisplay{
+
+   
+    overflow-x: scroll;
+    
+}
+
+.clickedPlayer{
+
+    border : 1px solid white;
+    text-align: center;
+    background-color: green;
+    color : white
+
+    
+}
+
+.unclickedPlayer{
+
+    border : 1px solid rgb(4, 4, 4);
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    color : black
+
+}
+
