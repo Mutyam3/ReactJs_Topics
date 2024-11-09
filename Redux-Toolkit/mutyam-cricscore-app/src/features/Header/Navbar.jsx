@@ -29,7 +29,7 @@ function Navbar()
                     ]
 
     return (
-        <section className = 'box marginMania border border-light  rounded'> 
+        <section className = 'box marginMania border border-light rounded' style={{position:'sticky', top:'0%'}} > 
 
            <div className='d-flex justify-content-evenly align-items-center p-2'>
                <Link to='/home' ><img src= {Logo} width='200px' height='100px'/></Link>

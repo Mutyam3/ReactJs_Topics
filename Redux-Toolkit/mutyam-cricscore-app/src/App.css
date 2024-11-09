@@ -96,6 +96,11 @@
     
 }
 
+.playersDisplay::-webkit-scrollbar { 
+  
+    display: none;
+}
+
 .clickedPlayer{
 
     border : 1px solid white;
@@ -114,4 +119,30 @@
     color : black
 
 }
+
+.overFlowProp{
+
+    overflow: hidden;
+}
+
+.manaColor{
+
+    color :rgb(219, 219, 219);
+    font-size: large;
+
+}
+
+
+
+.teamsPara{
+
+    background-color: rgb(58, 67, 228);
+    color: rgb(255, 255, 255);
+    /* border:1px solid white; */
+    border-radius: 12px;
+    font-size: 14px;
+    padding:7px 15px;
+    margin : 10px
+}
+
 

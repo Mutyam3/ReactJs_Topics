@@ -3,6 +3,7 @@
     {
       "teamName": "SRH",
       "teamOwner": "KavyaPapa",
+      "logo": "https://www.iplcricketmatch.com/wp-content/uploads/2024/01/SRH.jpg",
       "players": [
         {
           "fullName": "David Warner",
@@ -142,6 +143,7 @@
     {
       "teamName": "CSK",
       "teamOwner": "Srinivasan",
+      "logo": "https://wallpapercave.com/wp/wp2496943.jpg",
       "players": [
         {
           "fullName": "Mahendra Singh Dhoni",
@@ -281,6 +283,7 @@
     {
       "teamName": "Mumbai Indians",
       "teamOwner": "Mrs. Nita Ambani",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbBbpIeQliJY-LAhgsW3TlQhipLF9TrCv0rw&s",
       "players": [
         {
           "fullName": "Rohit Sharma",
@@ -419,7 +422,8 @@
     },
     {
       "teamName": "RCB",
-      "teamOwner": "Prathamesh Mishra",
+      "teamOwner": "Bhargav",
+      "logo": "https://brandmusiq.com/assets/work_banner_gOayM_RCB.jpg",
       "players": [
         {
           "fullName": "Virat Kohli",
@@ -546,17 +550,29 @@
       "id": 4
     }
   ],
-
-
-
   "matches": [],
-
-
-
   "venue": [],
-
-
-  
+  "teamLogos": [
+    "https://www.iplcricketmatch.com/wp-content/uploads/2024/01/SRH.jpg",
+    "https://wallpapercave.com/wp/wp2496943.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbBbpIeQliJY-LAhgsW3TlQhipLF9TrCv0rw&s",
+    "https://i.pinimg.com/736x/c8/e9/e6/c8e9e65d1d2f9d2472dd64a875c5c238.jpg",
+    "https://www.rajasthanroyals.com/static-assets/images/cssimages/static/rr-old.png?v=6.49",
+    "https://sportsmintmedia.com/wp-content/uploads/2021/02/IPL-2021-Kings-XI-Punjab-may-change-team-name-and-logo-1024x538.jpg",
+    "https://brandmusiq.com/assets/work_banner_gOayM_RCB.jpg",
+    "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Generator-With-Elephant-Graphic3.jpg",
+    "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Template-for-a-Cricket-Team.png",
+    "https://placeit-assets0.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Team-Logo-Generator.png",
+    "https://placeit-assets0.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/Cricket-Logo-Maker-with-a-Badge.png",
+    "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/56069/optimized_large_thumb_stage.jpg",
+    "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/57043/optimized_large_thumb_stage.jpg",
+    "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/56210/optimized_large_thumb_stage.jpg",
+    "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/33199/optimized_large_thumb_stage.jpg",
+    "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/87759/optimized_large_thumb_stage.jpg",
+    "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/33191/optimized_large_thumb_stage.jpg",
+    "https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png",
+    "https://placeit-img-1-p.cdn.aws.placeit.net/uploads/stage/stage_image/57925/optimized_large_thumb_stage.jpg"
+  ],
   "players": [
     {
       "fullName": "David Warner",
@@ -1492,6 +1508,16 @@
       "photo": "https://staticg.sportskeeda.com/skm/assets/player-images/cricket/sandeep-sharma.png?w=268",
       "status": false,
       "id": 85
+    },
+    {
+      "fullName": "Mutyam",
+      "dateOfBirth": "2024-11-10",
+      "battingStyle": "Left-arm-batsman",
+      "bowlingStyle": "Left-arm-spinner",
+      "phoneNumber": "9142533666",
+      "email": "mutyam@gmail.com",
+      "photo": "blob:http://localhost:3000/a12b6f26-1e7c-419d-be3e-30fd8bde23a5",
+      "id": 86
     }
   ]
 }

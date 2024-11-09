@@ -1,9 +1,14 @@
 import React from 'react'
 import {useFormik} from 'formik'
+import { useDispatch } from 'react-redux'
+import { addStorePlayers } from './PlayersSlice'
+import { useAddPlayerMutation } from '../../../services/PlayerApi'
 
 function AddPlayer()
 {
 
+           const dispatch =  useDispatch()
+           const [addPlayerFn] = useAddPlayerMutation()
            
             const playerDetails   =  useFormik({
 
@@ -20,7 +25,8 @@ function AddPlayer()
                 onSubmit : (values)=>{
                     console.log(values)
 
-                    
+                    addPlayerFn(values)
+                    dispatch(addStorePlayers(values))
 
                     playerDetails.resetForm()
 
