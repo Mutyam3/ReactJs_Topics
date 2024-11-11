@@ -6,7 +6,7 @@ import Footer from './features/Footer/Footer';
 
 function App() {
   return (
-    <section className="App p-4" style={{position:'relative'}}>
+    <section className="App p-4" >
       
 
       <Navbar/>
