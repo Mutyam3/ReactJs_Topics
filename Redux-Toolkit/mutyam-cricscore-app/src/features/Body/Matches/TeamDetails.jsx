@@ -41,7 +41,7 @@ function TeamDetails({data, matchDetails, type})
                     </div>
                 
                  
-                 <div className='border border-light p-2' style={{height:'210px',overflowY:'scroll'}}>
+                 <div className='border border-light p-2 playersDisplay' style={{height:'210px',overflowY:'scroll'}}>
                  {
                      data.map((el)=>{
                         return (

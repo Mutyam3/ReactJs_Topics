@@ -42,7 +42,7 @@
 }
 
 .cricBall{
-
+   
    animation: ball 6s infinite linear ;
 }
 
@@ -101,7 +101,7 @@
     display: none;
 }
 
-.clickedPlayer{
+.clickedPlayer {
 
     border : 1px solid white;
     text-align: center;
@@ -145,4 +145,33 @@
     margin : 10px
 }
 
+.paraSize{
+
+    font-size: small;
+}
+
+.clicked{
+
+    background-color: rgb(3, 252, 3);
+    color : whitesmoke;
+    margin : 5px;
+    padding : 5px 10px;
+    border-radius: 12px;
+    
+}
+
+.unClicked{
+
+    background-color: rgb(252, 231, 3);
+    color : rgb(0, 0, 0);
+    margin : 5px;
+    padding : 5px 10px;
+    border-radius: 12px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+
+    filter: brightness(0) invert(1); 
+
+}
 

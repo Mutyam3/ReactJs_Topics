@@ -1,7 +1,5 @@
 import React from 'react'
 import StepOne from './StepOne'
-import StepTwo from './StepTwo'
-import StepThree from './StepThree'
 import {useFormik} from 'formik'
 
 function MultiStepFrom()
@@ -13,7 +11,12 @@ function MultiStepFrom()
                   teamBName : '',
                   teamALogo : '',
                   teamBLogo : '',
-                  venue : ''
+                  venue : '',
+                  date  :'',
+                  time : '',
+                  overs :'',
+                  matchFormat : '',
+                  wickets : ''
 
               },
               onSubmit : (values)=>{
@@ -23,21 +26,14 @@ function MultiStepFrom()
     })
 
 
-    const [stepIndex, setStepIndex] = React.useState(0)
-
-    const handleBtn = (manaStep)=>{
-
-               setStepIndex(prev=>prev + manaStep)
-    }
 
     return (
         <section>
             <form onSubmit={matchDetails.handleSubmit}>
 
             
-                {stepIndex === 0 && <StepOne matchDetails = {matchDetails} handleBtnFn={handleBtn}/>}
-                {stepIndex === 1 && <StepTwo matchDetails = {matchDetails} handleBtnFn={handleBtn}/>}
-                {stepIndex === 2 && <StepThree matchDetails = {matchDetails} handleBtnFn={handleBtn}/>}
+             <StepOne matchDetails = {matchDetails} />
+               
 
 
             </form>
