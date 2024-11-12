@@ -14,9 +14,14 @@ export const CricketApi = createApi({
             
                     query : () => '/teamLogos'
        
+               }),
+
+               getVenues : builder.query({
+
+                  query : () => '/venues'
                })
 
              })
 })
 
-export const {useGetTeamLogosQuery} = CricketApi
+export const {useGetTeamLogosQuery, useGetVenuesQuery} = CricketApi
