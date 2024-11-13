@@ -19,9 +19,25 @@ export const CricketApi = createApi({
                getVenues : builder.query({
 
                   query : () => '/venues'
+               }),
+
+               addMatch : builder.mutation({
+
+                  query : (match) => ({
+                     url : '/matches',
+                     method : 'POST',
+                     body : match
+                  })
+               }),
+
+               getMatches  : builder.query({
+
+                  query : () => '/matches'
                })
+
+
 
              })
 })
 
-export const {useGetTeamLogosQuery, useGetVenuesQuery} = CricketApi
+export const {useGetTeamLogosQuery, useGetVenuesQuery, useAddMatchMutation, useGetMatchesQuery} = CricketApi

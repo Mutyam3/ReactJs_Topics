@@ -1,9 +1,11 @@
 import React from 'react'
 import StepOne from './StepOne'
 import {useFormik} from 'formik'
+import { useAddMatchMutation } from '../../../services/cricketApi'
 
-function MultiStepFrom()
+function MatchFrom()
 {
+      const [addMatchFn] = useAddMatchMutation()
    const matchDetails =  useFormik({
               initialValues : {
                  
@@ -21,6 +23,8 @@ function MultiStepFrom()
               },
               onSubmit : (values)=>{
                 console.log(values)
+                 addMatchFn(values)
+
               }
 
     })
@@ -41,4 +45,4 @@ function MultiStepFrom()
     )
 }
 
-export default MultiStepFrom
+export default MatchFrom

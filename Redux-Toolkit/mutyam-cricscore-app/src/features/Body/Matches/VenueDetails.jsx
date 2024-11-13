@@ -9,7 +9,7 @@ function VenueDetails({data, matchDetails})
                  {
                      data.map((el)=>{
                         return (
-                           <div className='d-flex  align-items-center gap-3 w-100 border ' onClick={()=>{matchDetails.setFieldValue('venue', el.GroundName)}}>
+                           <div className='d-flex  align-items-center gap-3 w-100 border ' onClick={()=>{matchDetails.setFieldValue('venue', {...el})}}>
                                 <img src={el.CityImage} width='100px' height='70px'/>
                                 <div>
 

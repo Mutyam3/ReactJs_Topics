@@ -50,7 +50,7 @@ function StepOne({matchDetails})
 
               <div className='m-2 p-2 text-center w-100'>
 
-                 <input type='text' value={matchDetails.values.venue} className='field text-center w-75' placeholder='venue'  onClick = {()=>{setStatus('venueD')}}/><br/><br/>
+                 <input type='text' value={matchDetails.values.venue.GroundName} className='field text-center w-75' placeholder='venue'  onClick = {()=>{setStatus('venueD')}}/><br/><br/>
 
 
                  <input type='date' className='field text-center w-75'  {...matchDetails.getFieldProps('date')}/>  <br/><br/>
