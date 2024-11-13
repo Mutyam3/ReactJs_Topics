@@ -1,60 +1,131 @@
 import React from 'react'
+import { useGetTeamsQuery } from '../../../services/TeamsApi'
+import { useGetMatchesQuery, useGetVenuesQuery } from '../../../services/cricketApi'
+import MatchCard from './MatchCard'
 
 function MatchDashboard()
 {
+
+      const {isLoading : teamsLoading, data : teamsData}    =   useGetTeamsQuery()
+      const {isLoading : venueLoading, data : venueData}   =   useGetVenuesQuery()
+      const {isLoading : matchLoading, data : matchData}   =   useGetMatchesQuery()
+
+      const [matchCompo, setMatchCompo]  = React.useState([])
+
+      console.log(matchData)
+
+      function teamsNameById(id)
+      {   
+           if(teamsData)
+           {
+               return teamsData.find((team)=>{
+                  return team.id == id
+                }).teamName
+           }
+               
+      }
+
+      function handleFilterMatches(e, type)
+      {
+            if(type == 'DATE')
+            {
+            console.log(e.target.value)
+            var temp = [...matchData]
+            temp =  matchData.filter((m)=>{
+                  if(m.date == e.target.value){
+                         return true
+                  }
+                  else 
+                  {
+                        return  false
+                  }
+             }) 
+
+            setMatchCompo([...temp])
+            }
+
+            if(type == 'TEAM')
+            {
+                console.log(e.target.value)
+                var temp = [...matchData]
+                temp =  matchData.filter((m)=>{
+                      if(m.teamAName == e.target.value || m.teamBName == e.target.value){
+                             return true
+                      }
+                      else 
+                      {
+                            return  false
+                      }
+                 }) 
+    
+                setMatchCompo([...temp])
+            }
+
+            if(type=='VENUE'){
+
+                console.log(e.target.value)
+                var temp = [...matchData]
+                temp = matchData.filter((m)=>{
+                        if(m.venue.GroundName == e.target.value)
+                        {
+                            return true
+                        }
+                        else 
+                        {
+                            return false
+                        }
+                })
+
+                setMatchCompo([...temp])
+            }
+        
+      }
 
     return (
         <>
                <h4>Match Dashboard</h4>
 
-               <section className='d-flex justify-content-evenly'>
+               {teamsLoading && <b>Loading.....</b> }
+               {venueLoading && <b>Loading.....</b> }
+
+               <section className='d-flex justify-content-evenly m-3 p-3'>
                      <h5>Sort by </h5>
                     
 
-                        <input type='date' className='field text-light' />
+                        <input type='date' className='field text-light' onChange = {(e)=>{handleFilterMatches(e, 'DATE')}} />
                          
-                        <select className='field'>
+                        <select className='field' onChange={(e)=>{handleFilterMatches(e, 'TEAM')}}>
                             <option value={null} disabled selected>Teams</option>
-                            <option>CSK</option>
-                            <option>SRH</option>
-                            <option>MUMBAI INDIANS</option>
+                            {
+                                !teamsLoading && teamsData.map((el)=>{
+                                    return (
+                                        <option value={el.id} >
+                                               <h3>{el.teamName}</h3>
+                                        </option>
+                                    )
+                                })
+                            }
                         </select>
 
 
-                        <select className='field'>
+                        <select className='field' onChange = {(e)=>{handleFilterMatches(e,'VENUE')}}>
                             <option value={null} disabled selected>Venues</option>
+                             {
+                                !venueLoading && venueData.map((el)=>{
+                                    return (
+                                        <option>
+                                             <h3>{el.GroundName}</h3>
+                                        </option>
+                                    )
+                                })
+                             }
                              
                         </select>
                     
                   
                </section>
 
-               {/* ------------------------------------------------- */}
-
-               <section>
-
-                      <h5>Today Matches  </h5>
-
-                      <section className='border border-dark m-4 p-5'>
-
-                      </section>
-
-
-               </section>
-
-
-               <section>
-
-                    <h5>UpComming Matches  </h5>
-
-                    <section className='border border-dark m-4 p-5'>
-
-                          
-                    </section>
-
-
-               </section>
-                  
+               <MatchCard   matchCompo = {matchCompo} teamsNameById = {teamsNameById}/>
 
              
         </>

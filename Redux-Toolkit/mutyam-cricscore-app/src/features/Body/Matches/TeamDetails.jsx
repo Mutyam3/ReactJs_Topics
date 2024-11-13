@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 function TeamDetails({data, matchDetails, type})
 {
         
+
+
          function handleTeamName(data)
          {
             if(type=='TEAMA')
@@ -13,12 +15,15 @@ function TeamDetails({data, matchDetails, type})
                 matchDetails.setFieldValue('teamAName', data.id)
                 matchDetails.setFieldValue('teamALogo', data.logo)
                 
+                
+                
             }
 
             if(type=='TEAMB')
             {
                 matchDetails.setFieldValue('teamBName', data.id)
                 matchDetails.setFieldValue('teamBLogo', data.logo)
+               
             }
             
          }
@@ -45,7 +50,7 @@ function TeamDetails({data, matchDetails, type})
                  {
                      data.map((el)=>{
                         return (
-                           <div className='d-flex  align-items-center gap-3 w-25 ' onClick={()=>{handleTeamName(el)}}>
+                           <div className='d-flex  align-items-center gap-3 w-25 ' style={(matchDetails.values.teamAName==el.id || matchDetails.values.teamBName==el.id) ? {pointerEvents:"none", color:'grey'} : {}} onClick={()=>{handleTeamName(el)}}>
                                 <img src={el.logo} width='100px' height='70px'/>
                                 <h6>{el.teamName}</h6>
                            </div>
