@@ -19,6 +19,7 @@ import CreateTeams from './features/Body/Teams/CreateTeams';
 import TeamsDashboard from './features/Body/Teams/TeamsDashboard';
 import PlayersDashboard from './features/Body/Players/PlayerDashboard';
 import AddPlayer from './features/Body/Players/AddPlayers';
+import MatchCenter from './features/Body/Matches/MatchCenter';
 
 const myRouter = createBrowserRouter([
                   {
@@ -49,6 +50,10 @@ const myRouter = createBrowserRouter([
                              path : '/matches/create-match',
                              element: <CreateMatch/>,
                           },
+                          {
+                             path : '/matches/:id',
+                             element : <MatchCenter/>
+                          }
                           ]
                        },
                        {

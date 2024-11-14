@@ -7,12 +7,21 @@ function MatchDashboard()
 {
 
       const {isLoading : teamsLoading, data : teamsData}    =   useGetTeamsQuery()
-      const {isLoading : venueLoading, data : venueData}   =   useGetVenuesQuery()
-      const {isLoading : matchLoading, data : matchData}   =   useGetMatchesQuery()
+      const {isLoading : venueLoading, data : venueData}    =   useGetVenuesQuery()
+      const {isLoading : matchLoading, data : matchData}    =   useGetMatchesQuery()
 
       const [matchCompo, setMatchCompo]  = React.useState([])
 
       console.log(matchData)
+
+      React.useEffect(()=>{
+
+           if(matchData)
+           {
+            setMatchCompo([...matchData])
+           }
+           
+      },[])
 
       function teamsNameById(id)
       {   
