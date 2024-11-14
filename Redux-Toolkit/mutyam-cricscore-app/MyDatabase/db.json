@@ -18,6 +18,25 @@
       "matchFormat": "T20",
       "wickets": "10",
       "id": 1
+    },
+    {
+      "teamAName": 4,
+      "teamBName": 3,
+      "teamALogo": "https://brandmusiq.com/assets/work_banner_gOayM_RCB.jpg",
+      "teamBLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbBbpIeQliJY-LAhgsW3TlQhipLF9TrCv0rw&s",
+      "venue": {
+        "GroundName": "M.CHINNASWAMY STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Bangalore_compress.jpg",
+        "Address": "BENGALURU, INDIA",
+        "Capacity": "33,800",
+        "CityImage": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcREJnJP6aCA6rxQZ69GIwOn3m0PuW_RJ7VXQs9QMx7ygpOe8zyj3dcA_7d2CdpTQqnDckkxdqc74SDBPRSpyvNilmIKOLHFDVk891UodA"
+      },
+      "date": "2024-11-15",
+      "time": "19:00",
+      "overs": 20,
+      "matchFormat": "T20",
+      "wickets": "10",
+      "id": 2
     }
   ],
   "teams": [

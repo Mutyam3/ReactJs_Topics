@@ -1,19 +1,19 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 
 function MatchCard({matchCompo, teamsNameById})
 {
     console.log(matchCompo)
     return (
-        <section className='m-3 border border-light p-4 rounded'>
+        <section className='m-3 border border-light p-4 rounded d-flex flex-wrap gap-5 align-items-center justify-content-center'>
 
               {
                    matchCompo.map((el)=>{
-                        return <section className='border border-light w-50 rounded-3'>
+                        return <Link to={`/matches/${el.id}`} style={{textDecoration:'none', color:'whitesmoke'}}><section className='border border-light rounded-3' style={{width:'600px'}}>
                                     <div className='p-2 d-flex justify-content-around '>
                                         <p>Match Date - {el.date}</p>
                                         <p>Match Time - {el.time}</p>
-
                                     </div>
 
                                     <div className='d-flex justify-content-evenly align-items-center border border-light p-3'>
@@ -49,7 +49,7 @@ function MatchCard({matchCompo, teamsNameById})
 
                                          
                                     </div>
-                               </section>
+                               </section></Link>
                    })
               }
 

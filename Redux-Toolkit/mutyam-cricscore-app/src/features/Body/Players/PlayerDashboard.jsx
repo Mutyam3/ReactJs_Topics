@@ -22,7 +22,7 @@ function PlayersDashboard()
             
                  <h5>ALL PLAYERS  ( { !isLoading && <span style={{color:'gold'}}>{data.length}</span> })</h5>
                  
-                 <div className = 'border border-light rounded d-flex playersDisplay m-2' style={{height : '205px'}} >
+                 <div className = ' rounded-2 d-flex playersDisplay m-2' style={{height : '205px'}} >
                      {
                           !isLoading && (
                               data.map((el)=>{
