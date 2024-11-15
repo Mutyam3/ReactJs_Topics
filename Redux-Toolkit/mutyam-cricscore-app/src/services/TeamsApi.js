@@ -18,12 +18,18 @@ export const teamsApi = createApi({
 
         getTeams : builder.query({
             query : () => '/'
+        }),
+
+        getTeamsById : builder.query({
+               
+              query : (id) => `/${id}`
+              
         })
             
         }),
 
     })
     
-export const {useAddTeamMutation, useGetTeamsQuery} = teamsApi
+export const {useAddTeamMutation, useGetTeamsQuery, useGetTeamsByIdQuery} = teamsApi
 
 
