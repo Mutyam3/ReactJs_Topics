@@ -175,3 +175,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 }
 
+
+.teamBg{
+
+    background-image: url('https://img.freepik.com/premium-photo/cricket-stadium-background-hitting-recreation-equipment-vector-design_933530-8861.jpg');
+    background-repeat: no-repeat;
+
+}

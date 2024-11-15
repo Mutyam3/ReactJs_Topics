@@ -12,7 +12,7 @@ function MatchDashboard()
 
       const [matchCompo, setMatchCompo]  = React.useState([])
 
-      console.log(matchData)
+    //   console.log(matchCompo)
 
       React.useEffect(()=>{
 
@@ -133,8 +133,9 @@ function MatchDashboard()
                     
                   
                </section>
+               {matchLoading && <b>Loading......</b>}
 
-               <MatchCard   matchCompo = {matchCompo} teamsNameById = {teamsNameById}/>
+               { !matchLoading &&  <MatchCard   matchCompo = {matchCompo} teamsNameById = {teamsNameById}/>}
 
              
         </>

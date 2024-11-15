@@ -20,6 +20,9 @@ import TeamsDashboard from './features/Body/Teams/TeamsDashboard';
 import PlayersDashboard from './features/Body/Players/PlayerDashboard';
 import AddPlayer from './features/Body/Players/AddPlayers';
 import MatchCenter from './features/Body/Matches/MatchCenter';
+import SelectSquad from './features/Body/Matches/SelectSquad';
+import ScoreCard from './features/Body/Matches/ScoreCard';
+import Scoring from './features/Body/Matches/Scoring';
 
 const myRouter = createBrowserRouter([
                   {
@@ -52,7 +55,21 @@ const myRouter = createBrowserRouter([
                           },
                           {
                              path : '/matches/:id',
-                             element : <MatchCenter/>
+                             element : <MatchCenter/>,
+                             children : [
+                                        {
+                                          path : '/matches/:id/selectSquad',
+                                          element : <SelectSquad/>
+
+                                        },
+                                        {
+                                           path : '/matches/:id/scoring',
+                                           element : <Scoring/>
+                                        },
+                                        {
+                                           path : '/matches/:id/scoreCard',
+                                           element : <ScoreCard/>
+                                        }]
                           }
                           ]
                        },
