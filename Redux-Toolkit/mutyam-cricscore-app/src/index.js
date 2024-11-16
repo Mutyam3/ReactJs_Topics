@@ -58,10 +58,16 @@ const myRouter = createBrowserRouter([
                              element : <MatchCenter/>,
                              children : [
                                         {
+                                           path : '/matches/:id',
+                                           element : <SelectSquad/>
+
+                                        },
+                                        {
                                           path : '/matches/:id/selectSquad',
                                           element : <SelectSquad/>
 
                                         },
+                                     
                                         {
                                            path : '/matches/:id/scoring',
                                            element : <Scoring/>

@@ -1,41 +1,113 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
-import { useGetMatchByIdQuery } from '../../../services/cricketApi'
-import { useGetTeamsByIdQuery, useGetTeamsQuery } from '../../../services/TeamsApi'
+import { useLocation ,useParams} from 'react-router-dom'
+import { useGetMatchByIdQuery, useUpdateMatchWithPlayersMutation } from '../../../services/cricketApi'
+import { useGetTeamsByIdQuery, } from '../../../services/TeamsApi'
 import TeamASquad from './TeamASquad'
+import SquadDashboard from './SquadDashboard'
+
 
 function SelectSquad()
 {
-   var { state } =   useLocation()
-//    console.log(state)
- 
 
-   const [manateams, setmanaTeams] = React.useState({teamAData : [], teamBData : []})
+   const {id}=  useParams()
 
-   const {isLoading : teamALoading , data :teamAData} =  useGetTeamsByIdQuery(state.teamAId)
-   const {isLoading : teamBLoading , data :teamBData} = useGetTeamsByIdQuery(state.teamBId)
+   const {isLoading : matchLoading, data : matchData} =  useGetMatchByIdQuery(id)
 
-//    console.log(teamAData)
-//    console.log(teamBData)
+   const {isLoading : teamALoading , data : teamAData} =  useGetTeamsByIdQuery(matchData?.teamAName)
+   const {isLoading : teamBLoading , data : teamBData} =  useGetTeamsByIdQuery(matchData?.teamBName)
+
+   const [selectedPlayers, setSelectedPlayers] = React.useState({
+                       teamAXIPlayers : [],
+                       teamBXIPlayers : []
+   })
+
+   const [step, setStep] = React.useState('TEAMA')
+
+   const [matchPlayersFn]    =   useUpdateMatchWithPlayersMutation()
+   
+
+
+          function handleRemoveTeamA(i)
+          {
+              
+              var temp = [...selectedPlayers.teamAXIPlayers]
+                temp = temp.filter((e)=>{
+                        if(e.id == i)
+                        {
+                            return false 
+                        }
+                        else 
+                        {
+                            return true
+                        }
+                })
+
+               setSelectedPlayers({...selectedPlayers, teamAXIPlayers : [...temp]})
+          }
+
+          function handleRemoveTeamB(i)
+          {
+              
+              var temp = [...selectedPlayers.teamBXIPlayers]
+                temp = temp.filter((e)=>{
+                        if(e.id == i)
+                        {
+                            return false 
+                        }
+                        else 
+                        {
+                            return true
+                        }
+                })
+
+               setSelectedPlayers({...selectedPlayers, teamBXIPlayers : [...temp]})
+          }
+
+          function handleSubmit()
+          {
+               var temp = {...matchData}
+                   temp = {...temp, XIplayers : selectedPlayers}
+
+               matchPlayersFn({id:id, players : temp})
+          }
 
 
     return (
-        <section className='d-flex flex-column align-items-center'>
+        <section className='d-flex flex-column align-items-center m-5'>
                 
-               <h5>Select squad</h5>
 
-               <section className='teamBg' style={{width:'100%', height:'500px'}}>
+            {
+                step == 'TEAMA' && 
+
+                <>
+                    <SquadDashboard type='teamA'   teamXIPlayers = {selectedPlayers.teamAXIPlayers} handleRemove = {handleRemoveTeamA} />
+                    <TeamASquad type='teamA'  teamData = {teamAData} setFn = {setSelectedPlayers} teamXIPlayers={selectedPlayers?.teamAXIPlayers} selectedPlayers={selectedPlayers}/>
+                    <div className='w-50 text-center m-5'>
+                         <button className='border border-0 p-2 rounded-2' onClick={()=>{setStep('TEAMB')}}>Next</button>
+                    </div>
                     
-               </section>
+                    
+                </>
+                    
 
-               <TeamASquad teamAData = {teamAData}/>
+                
+            }
+               
+            {
 
-               <section>
-                    {
+                 step == 'TEAMB' && 
 
-                    }
-               </section>
+                <>
+                    <SquadDashboard type='teamB' teamXIPlayers = {selectedPlayers.teamBXIPlayers} handleRemove = {handleRemoveTeamB} />
+                    <TeamASquad type='teamB'  teamData = {teamBData} setFn = {setSelectedPlayers} teamXIPlayers={selectedPlayers?.teamBXIPlayers} selectedPlayers={selectedPlayers}/>
+                    <div className='w-50 d-flex justify-content-between m-5'>
+                        <button className= 'border border-0 p-2 rounded-2' onClick = {()=>{setStep('TEAMA')}}>Prev</button>
+                        <button className= 'border border-0 p-2 rounded-2' onClick = {()=>{handleSubmit()}}>Submit</button>
+                    </div>
+               </>
 
+            }
+            
         </section>
     )
 }
