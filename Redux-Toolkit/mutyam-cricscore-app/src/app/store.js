@@ -5,13 +5,13 @@ import { teamsApi } from '../services/TeamsApi'
 import playersReducer from '../features/Body/Players/PlayersSlice'
 import { CricketApi } from '../services/cricketApi'
 
-
 export const store = configureStore({
 
     reducer : {
 
         players : playersReducer,
-                  
+       
+
         [PlayerApi.reducerPath] : PlayerApi.reducer,
         [teamsApi.reducerPath] : teamsApi.reducer,
         [CricketApi.reducerPath] : CricketApi.reducer

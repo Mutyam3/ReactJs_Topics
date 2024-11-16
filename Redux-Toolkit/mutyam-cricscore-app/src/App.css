@@ -180,5 +180,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     background-image: url('https://img.freepik.com/premium-photo/cricket-stadium-background-hitting-recreation-equipment-vector-design_933530-8861.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
+   
 
+}
+
+.playerBox{
+
+    width : 100px;
+    height : 100px;
+    border : 1px solid whitesmoke;
+    background-color: rgba(212, 212, 212, 0.5);
+    backdrop-filter: blur(6px);
 }
