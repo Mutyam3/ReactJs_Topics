@@ -193,3 +193,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: rgba(212, 212, 212, 0.5);
     backdrop-filter: blur(6px);
 }
+
+
+.clickedToss{
+
+    border : 2px solid rgb(77, 255, 0);
+    padding:10px;
+    border-radius: 12px;
+}
+
+.unClickedToss{
+  
+}

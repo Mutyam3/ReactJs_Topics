@@ -39,13 +39,13 @@ export const CricketApi = createApi({
                   query : (id) => `/matches/${id}`
                }),
 
-               updateMatchWithPlayers : builder.mutation({
+               updateMatch : builder.mutation({
 
-                       query : ({id, players}) => (
+                       query : ({id, match}) => (
                         {
                              url : `/matches/${id}`,
                              method : 'PUT',
-                             body : players
+                             body : match
                         }
                        )
 
@@ -56,4 +56,4 @@ export const CricketApi = createApi({
              })
 })
 
-export const {useGetTeamLogosQuery, useGetVenuesQuery, useAddMatchMutation, useGetMatchesQuery, useGetMatchByIdQuery, useUpdateMatchWithPlayersMutation} = CricketApi
+export const {useGetTeamLogosQuery, useGetVenuesQuery, useAddMatchMutation, useGetMatchesQuery, useGetMatchByIdQuery, useUpdateMatchMutation} = CricketApi
