@@ -5,23 +5,22 @@ import MatchCard from './MatchCard'
 
 function MatchDashboard()
 {
-
+      const {isLoading : matchLoading, data : matchData}    =   useGetMatchesQuery()
       const {isLoading : teamsLoading, data : teamsData}    =   useGetTeamsQuery()
       const {isLoading : venueLoading, data : venueData}    =   useGetVenuesQuery()
-      const {isLoading : matchLoading, data : matchData}    =   useGetMatchesQuery()
-
+    
       const [matchCompo, setMatchCompo]  = React.useState([])
 
     //   console.log(matchCompo)
 
       React.useEffect(()=>{
 
-           if(matchData)
+           if(matchData && matchData.length>0)
            {
-            setMatchCompo([...matchData])
-           }
+                setMatchCompo([...matchData])
+           }  
            
-      },[])
+      },[matchData])
 
       function teamsNameById(id)
       {   

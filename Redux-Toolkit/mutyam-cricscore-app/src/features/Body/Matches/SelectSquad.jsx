@@ -1,9 +1,10 @@
 import React from 'react'
 import { useLocation ,useParams} from 'react-router-dom'
-import { useGetMatchByIdQuery, useUpdateMatchWithPlayersMutation } from '../../../services/cricketApi'
+import { useGetMatchByIdQuery, useUpdateMatchMutation } from '../../../services/cricketApi'
 import { useGetTeamsByIdQuery, } from '../../../services/TeamsApi'
 import TeamASquad from './TeamASquad'
 import SquadDashboard from './SquadDashboard'
+import Toss from './Toss'
 
 
 function SelectSquad()
@@ -23,7 +24,7 @@ function SelectSquad()
 
    const [step, setStep] = React.useState('TEAMA')
 
-   const [matchPlayersFn]    =   useUpdateMatchWithPlayersMutation()
+   const [matchPlayersFn]    =   useUpdateMatchMutation()
    
 
 
@@ -68,7 +69,7 @@ function SelectSquad()
                var temp = {...matchData}
                    temp = {...temp, XIplayers : selectedPlayers}
 
-               matchPlayersFn({id:id, players : temp})
+               matchPlayersFn({id:id, match : temp})
           }
 
 
@@ -103,8 +104,23 @@ function SelectSquad()
                     <div className='w-50 d-flex justify-content-between m-5'>
                         <button className= 'border border-0 p-2 rounded-2' onClick = {()=>{setStep('TEAMA')}}>Prev</button>
                         <button className= 'border border-0 p-2 rounded-2' onClick = {()=>{handleSubmit()}}>Submit</button>
+                        <button className='border border-0 p-2 rounded-2' onClick = {()=>{setStep('TOSS')}}>Next</button>
                     </div>
                </>
+
+            }
+
+
+            {
+
+                step == 'TOSS' && 
+
+                <>
+                   
+                    <Toss matchData = {matchData && matchData} id = {id}/>
+                   
+                
+                </>
 
             }
             
