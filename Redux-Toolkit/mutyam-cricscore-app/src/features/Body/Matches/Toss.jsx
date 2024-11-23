@@ -4,7 +4,7 @@ import { useAddMatchMutation, useUpdateMatchMutation } from '../../../services/c
 function Toss({matchData, id})
 {
 
-          const [addTossFn]   =   useUpdateMatchMutation()
+    const [addTossFn]   =   useUpdateMatchMutation()
  
     const [TossDetails, setTossDetails] = React.useState(
            
@@ -35,7 +35,7 @@ function Toss({matchData, id})
           var temp = {...matchData}
           temp = {...temp, tossDetails : {...TossDetails}}
           console.log(temp)
-        //   addTossFn({id:id, match : temp})
+          addTossFn({id:id, match : temp})
 
 
     }
@@ -69,9 +69,6 @@ function Toss({matchData, id})
               <div className='text-center m-3'> 
                        <button onClick = {handleScoring} className='m-2 p-2 rounded-3 bg-primary text-light border border-0 '>Give Scoring</button>
               </div>
-
-             
-
 
         </section>
     )

@@ -89,9 +89,7 @@ function SelectSquad()
                     
                     
                 </>
-                    
-
-                
+             
             }
                
             {

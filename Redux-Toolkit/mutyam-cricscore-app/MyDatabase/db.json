@@ -284,6 +284,14 @@
             "id": 24
           }
         ]
+      },
+      "tossDetails": {
+        "tossWon": 1,
+        "tossId": 1,
+        "tossStatus": true,
+        "decidedTo": "bat",
+        "decidedToId": 3,
+        "decidedToStatus": true
       }
     }
   ],
