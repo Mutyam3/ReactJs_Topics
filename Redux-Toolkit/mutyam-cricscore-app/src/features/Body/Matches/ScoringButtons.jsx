@@ -13,22 +13,40 @@ function ScoringButtons({type})
          
          if(type=='TeamA')
          {
-              console.log(run)
-              dispatch(addTeamARun(run))
+              if(name== 'LB' || name=='Bye' || name=='Wide' || name == 'NB')
+              {
+                dispatch(addTeamARun({name, run})) 
+              }
+              else 
+              {
+                dispatch(addTeamARun({name, run}))
+              }
+              
          }
 
          if(type=='TeamB')
          {
-              dispatch(addTeamBRun(run))
+          if(name== 'LB' || name=='Bye' || name=='Wide' || name == 'NB')
+            {
+              dispatch(addTeamBRun({name, run}))
+              
+            }
+            else 
+            {
+              dispatch(addTeamBRun({name, run}))
+            
+            }
          }
     }
 
     function handleExtraBtns({name, run})
     {
-      console.log('Out ::', name)
+      
          if(name=='Out' && type=='TeamA')
          {
+             
              dispatch(addTeamAWicket(run))
+
          }
          if(name=='Out' && type=='TeamB')
           {
@@ -52,7 +70,7 @@ function ScoringButtons({type})
                     })
                   }
                 </div>
-                <div >
+                <div>
                    <button className='w-25' onClick = {()=>{handleExtraBtns({})}}>More</button>
                    <button className='w-25' onClick = {()=>{handleExtraBtns({})}}>Penalty</button>
                    <button className='w-25' onClick = {()=>{handleExtraBtns({})}}>Ov.Thrw</button>
