@@ -76,7 +76,7 @@ function Scoring()
                                           teamType === 'TeamA' && 
                                      <>
                                            
-                                           <TeamScore type='TeamA' matchData={matchData}  scoring = {scoring.TeamAScore} scoringAll = {scoring} teamsNameById = {teamsNameById}/>
+                                           <TeamScore type='TeamA' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamAScore} scoringAll = {scoring} teamsNameById = {teamsNameById}/>
                                           
                                      </> 
                                     }
@@ -84,7 +84,7 @@ function Scoring()
                                           teamType === 'TeamB' &&  
                                         <> 
 
-                                           <TeamScore type='TeamB' matchData={matchData} scoring = {scoring.TeamBScore} scoringAll = {scoring} teamsNameById = {teamsNameById}/>
+                                           <TeamScore type='TeamB' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamBScore} scoringAll = {scoring} teamsNameById = {teamsNameById}/>
 
                                         </>
                                     }

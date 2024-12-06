@@ -55,28 +55,31 @@ function ScoringButtons({type})
     }
 
     return (
-        <section className='m-2 d-flex flex-column border border-light w-50'>
+        <section className='m-2 p-5 border border-light d-flex'>
+
+          <div className='border border-light rounded-3 p-2 d-flex flex-column justify-content-center align-items-center'>
                 <div className=''>
                   {
                     scoreButtons[0].map((btn)=>{
-                        return <button className='' style={{width:'93px'}} onClick={()=>{handleRuns(btn)}}>{btn.name}</button>
+                        return <button className='' style={{width:'65px', height:'50px'}} onClick={()=>{handleRuns(btn)}}>{btn.name}</button>
                     })
                   }
                 </div>
-                <div>
+                <div className=''>
                    {
                     scoreButtons[1].map((btn)=>{
-                        return <button  style={{width:'93px'}} onClick={()=>{handleRuns(btn)}}>{btn.name}</button>
+                        return <button  style={{width:'65px', height:'50px'}} onClick={()=>{handleRuns(btn)}}>{btn.name}</button>
                     })
                   }
                 </div>
                 <div>
-                   <button className='w-25' onClick = {()=>{handleExtraBtns({})}}>More</button>
-                   <button className='w-25' onClick = {()=>{handleExtraBtns({})}}>Penalty</button>
-                   <button className='w-25' onClick = {()=>{handleExtraBtns({})}}>Ov.Thrw</button>
-                   <button className='w-25' onClick = {()=>{handleExtraBtns({})}}>Undo</button>
-                   <button className='w-25' onClick = {()=>{handleExtraBtns({name:'Out', run:1})}}>Out</button>
+                   <button className='w-50' onClick = {()=>{handleExtraBtns({})}}>More</button>
+                   <button className='w-50' onClick = {()=>{handleExtraBtns({})}}>Penalty</button>
+                   <button className='w-50' onClick = {()=>{handleExtraBtns({})}}>Ov.Thrw</button>
+                   <button className='w-50' onClick = {()=>{handleExtraBtns({})}}>Undo</button>
+                   <button className='w-100' onClick = {()=>{handleExtraBtns({name:'Out', run:1})}}>Out</button>
                 </div>
+          </div>
 
 
         </section>
