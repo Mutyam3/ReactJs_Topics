@@ -12,19 +12,21 @@ const initialState = {
     overs : [],
     currentOver: 0,
     oversCount : 0,
+    bowlersList : [],
     overCompleted:'notCompleted',
     maxOversCount : 20,
     wickets : 0,
-    PlayersOut : [],
+    wicketStatus : false,
+    playersOut : [],
     battingPlayers : [],
-    bowlingAPlayers : [],
+    bowlingPlayers : [],
     Batsman : 
         { 
-          striker :  {playerName : '', runs:0, ballsFaced:0, fours : 0, sixes: 0},
-          nonStriker : {playerName : '', runs:0, ballsFaced:0, fours :0, sixes: 0}
+          striker :  {playerName : '', batRuns:0, ballsFaced:0, fours : 0, sixes: 0},
+          nonStriker : {playerName : '', batRuns:0, ballsFaced:0, fours :0, sixes: 0}
         },
     Bowler : {
-                playerName : '', overs:0, runs : 0, wickets : 0
+                playerName : '', overs:0, bowlRuns : 0, wickets : 0
              }
    },
 
@@ -37,15 +39,18 @@ const initialState = {
     overs : [],
     currentOver: 0,
     oversCount : 0,
+    bowlersList : [],
     overCompleted:'notCompleted',
     maxOversCount : 20,
     wickets : 0,
-    PlayersOut : [],
+    wicketStatus : false,
+    playersOut : [],
     battingPlayers : [],
-    bowlingBPlayers : [],
+    bowlingPlayers : [],
     Batsman : 
-        { striker :  {playerName : '', ballRuns:0, ballsFaced:0, fours : 0, sixes: 0},
-          nonStriker : {playerName : '', ballRuns:0, ballsFaced:0, fours :0, sixes: 0}
+        { 
+          striker :  {playerName : '', batRuns:0, ballsFaced:0, fours : 0, sixes: 0},
+          nonStriker : {playerName : '', batRuns:0, ballsFaced:0, fours :0, sixes: 0}
         },
     Bowler : {
                 playerName : '', overs:0, bowlRuns : 0, wickets : 0
@@ -61,27 +66,29 @@ const scoring = createSlice({
 
     reducers : {
         addTeamARun : (state, action)=>{
-          
+                state.TeamBScore.wicketStatus = false
                 state.TeamAScore.score = state.TeamAScore.score + action.payload.run
                 state.TeamAScore.overs.push(action.payload.name)
                 
+        
                 if(state.TeamAScore.oversCount < state.TeamAScore.maxOversCount && !(action.payload.name =='LB' || action.payload.name =='Bye' ||action.payload.name =='Wide' || action.payload.name =='NB'))
                 {
-                   
                     
+                    state.TeamAScore.overCompleted = 'notCompleted'
                     state.TeamAScore.balls += 1
                     state.TeamAScore.oversCount=  Math.floor((state.TeamAScore.oversCount + 0.1) * 10) / 10
-                    state.TeamAScore.Bowler.overs = state.TeamAScore.oversCount
+                    state.TeamAScore.Bowler.overs = Math.floor((state.TeamAScore.Bowler.overs + 0.1) * 10) / 10
 
                     if(state.TeamAScore.balls === 6 )
                         {
                             state.TeamAScore.balls = 0
                             state.TeamAScore.oversCount += 0.4
+                            state.TeamAScore.Bowler.overs +=0.4
                             state.TeamAScore.currentOver += 1
                             state.TeamAScore.totalOvers.push({overCount : [...state.TeamAScore.overs]})
                             state.TeamAScore.overCompleted = 'Completed'
                             state.TeamAScore.overs = []
-
+                           
                         }
 
                         state.TeamAScore.Bowler.bowlRuns += action.payload.run 
@@ -122,6 +129,21 @@ const scoring = createSlice({
                 
          },
 
+         addToBowlerList : (state, action)=>{
+
+                 if(action.payload.type=='TeamA'){
+                        state.TeamAScore.bowlingPlayers = action.payload.bowlingPlayersArray      
+                        state.TeamAScore.bowlersList.push({...action.payload.scoringBowler})
+                 }
+         },
+
+         addToPlayersOut : (state, action)=>{
+               if(action.payload.type=='TeamA'){
+                      state.TeamAScore.battingPlayers = action.payload.battingPlayersArray
+                      state.TeamAScore.playersOut.push({...action.payload.scoringBatting})
+               }
+         },
+
          addTeamAPlayers : (state, action) =>{
               if(action.payload.name=='striker'){
                       state.TeamAScore.Batsman.striker = action.payload.value
@@ -156,11 +178,11 @@ const scoring = createSlice({
 
          addBowlingPlayers : (state, action)=>{
                 if(action.payload.name=='TeamA'){
-                        state.TeamAScore.bowlingAPlayers = action.payload.value
+                        state.TeamAScore.bowlingPlayers = action.payload.value
                    }
     
                    if(action.payload.name =='TeamB'){
-                        state.TeamBScore.bowlingBPlayers = action.payload.value
+                        state.TeamBScore.bowlingPlayers = action.payload.value
                    }
          },
 
@@ -175,22 +197,23 @@ const scoring = createSlice({
          },
 
         addTeamBRun : (state, action)=>{
-                
+                state.TeamBScore.wicketStatus = false
                 state.TeamBScore.score = state.TeamBScore.score + action.payload.run
                 state.TeamBScore.overs.push(action.payload.name)
                 
                 if(state.TeamBScore.oversCount < state.TeamBScore.maxOversCount && !(action.payload.name =='LB' || action.payload.name =='Bye' ||action.payload.name =='Wide' || action.payload.name =='NB'))
                 {
                    
-                    
+                    state.TeamBScore.overCompleted = 'notCompleted'
                     state.TeamBScore.balls += 1
                     state.TeamBScore.oversCount=  Math.floor((state.TeamBScore.oversCount + 0.1) * 10) / 10
-                    state.TeamBScore.Bowler.overs = state.TeamBScore.oversCount
+                    state.TeamBScore.Bowler.overs = Math.floor((state.TeamBScore.Bowler.overs + 0.1) * 10) / 10
 
                     if(state.TeamBScore.balls === 6 )
                         {
                             state.TeamBScore.balls = 0
                             state.TeamBScore.oversCount += 0.4
+                            state.TeamBScore.Bowler.overs +=0.4
                             state.TeamBScore.currentOver += 1
                             state.TeamBScore.totalOvers.push({overCount : [...state.TeamBScore.overs]})
                             state.TeamBScore.overCompleted = 'Completed'
@@ -215,28 +238,80 @@ const scoring = createSlice({
         },
 
         addTeamAWicket : (state, action)=>{
-
+                state.TeamAScore.balls += 1
+                state.TeamAScore.oversCount=  Math.floor((state.TeamAScore.oversCount + 0.1) * 10) / 10
+                state.TeamAScore.Bowler.overs = Math.floor((state.TeamAScore.Bowler.overs + 0.1) * 10) / 10
                 state.TeamAScore.wickets = state.TeamAScore.wickets + action.payload
                 state.TeamAScore.Bowler.wickets++
+                state.TeamAScore.overs.push('w')
+                state.TeamAScore.wicketStatus = true
+
+                if(state.TeamAScore.balls === 6 )
+                        {
+                            state.TeamAScore.balls = 0
+                            state.TeamAScore.oversCount += 0.4
+                            state.TeamAScore.Bowler.overs +=0.4
+                            state.TeamAScore.currentOver += 1
+                            state.TeamAScore.totalOvers.push({overCount : [...state.TeamAScore.overs]})
+                            state.TeamAScore.overCompleted = 'Completed'
+                            state.TeamAScore.overs = []
+                           
+                        }
+                
+
         },
 
         addTeamBWicket : (state, action)=>{
-      
+                state.TeamBScore.balls += 1
+                state.TeamBScore.oversCount=  Math.floor((state.TeamBScore.oversCount + 0.1) * 10) / 10
+                state.TeamBScore.Bowler.overs = Math.floor((state.TeamBScore.Bowler.overs + 0.1) * 10) / 10
                 state.TeamBScore.wickets = state.TeamBScore.wickets + action.payload
                 state.TeamBScore.Bowler.wickets++
+                state.TeamBScore.overs.push('w')
+                state.TeamBScore.wicketStatus = true
+                if(state.TeamBScore.balls === 6 )
+                        {
+                            state.TeamBScore.balls = 0
+                            state.TeamBScore.oversCount += 0.4
+                            state.TeamBScore.Bowler.overs +=0.4
+                            state.TeamBScore.currentOver += 1
+                            state.TeamBScore.totalOvers.push({overCount : [...state.TeamBScore.overs]})
+                            state.TeamBScore.overCompleted = 'Completed'
+                            state.TeamBScore.overs = []
+
+                        }
         },
 
         resetIniatialState : (state, action)=>{
            state = {...initialState.TeamAScore}
            state = {...initialState.TeamBScore}
 
-    }
+        },
+
+        resetPlayers : (state,action)=>{
+                if(action.payload.type=='TeamA'){
+                      if(action.payload.index=='striker'){
+                           state.TeamAScore.Batsman.striker = {...initialState.TeamAScore.Batsman.striker}
+
+                       }
+                       if(action.payload.index=='nonStriker'){
+                             state.TeamAScore.Batsman.nonStriker = {...initialState.TeamAScore.Batsman.nonStriker}
+                       }
+                       if(action.payload.index=='bowler'){
+                        state.TeamAScore.Bowler = {...initialState.TeamAScore.Bowler}
+                       }
+           
+                     
+                }
+
+               
+        }
     
     }
 })
 
 export const {addTeamARun, addTeamBRun, addTeamBWicket, addTeamAWicket, selectTeamPlayers, addTeamAPlayers, addTeamBPlayers, handleSwap, addBowlerPlayer
-        , addBattingPlayers, addBowlingPlayers
+        , addBattingPlayers, addBowlingPlayers, addToBowlerList, addToPlayersOut,resetPlayers
 } = scoring.actions
 const scoringReducer = scoring.reducer
 export  default scoringReducer

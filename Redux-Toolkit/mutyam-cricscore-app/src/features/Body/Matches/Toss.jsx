@@ -46,25 +46,25 @@ function Toss({matchData, id})
     React.useEffect(()=>{
 
         const {teamAXIPlayers, teamBXIPlayers}  =  matchData.XIplayers
-        const teamABattingPlayers =  teamAXIPlayers.map((el)=>{
-                                 return {playerName : el.fullName, batRuns : 0, ballsFaced: 0, bowlRuns: 0 ,fours: 0, sixes:0 , overs:0, wickets:0}
+        const teamABattingPlayers =  teamAXIPlayers.map((el,ind)=>{
+                                 return {playerName : el.fullName, batRuns : 0, ballsFaced: 0, bowlRuns: 0 ,fours: 0, sixes:0 , overs:0, wickets:0, out:false ,id:`${el.fullName.split(" ").join("") +ind}`}
                                })
-        const teamBBattingPlayers =  teamBXIPlayers.map((el)=>{
-                                return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0 }
+        const teamBBattingPlayers =  teamBXIPlayers.map((el, ind)=>{
+                                return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0 , out:false, id:`${el.fullName.split(" ").join("") +ind}`}
                               })
 
-        const teamABowlingPlayers =  teamAXIPlayers.map((el)=>{
-                                return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0 }
+        const teamABowlingPlayers =  teamAXIPlayers.map((el, ind)=>{
+                                return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0, out:false, id:`${el.fullName.split(" ").join("") +ind}` }
                               })
-        const teamBBowlingPlayers =  teamBXIPlayers.map((el)=>{
-                               return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0 }
+        const teamBBowlingPlayers =  teamBXIPlayers.map((el, ind)=>{
+                               return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0, out:false, id:`${el.fullName.split(" ").join("") +ind}` }
                              })
 
         dispatch(addBattingPlayers({name:'TeamA', value:teamABattingPlayers}))
         dispatch(addBattingPlayers({name:'TeamB', value:teamBBattingPlayers}))
 
-        dispatch(addBowlingPlayers({name: 'TeamA', value:teamABowlingPlayers}))
-        dispatch(addBowlingPlayers({name: 'TeamB', value:teamBBowlingPlayers}))
+        dispatch(addBowlingPlayers({name: 'TeamA', value:teamBBowlingPlayers}))
+        dispatch(addBowlingPlayers({name: 'TeamB', value:teamABowlingPlayers}))
             
       },[])
 

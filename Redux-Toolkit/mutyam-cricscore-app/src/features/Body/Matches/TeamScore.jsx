@@ -2,24 +2,89 @@ import React from 'react'
 import ScoringButtons from './ScoringButtons'
 import { useParams } from 'react-router-dom'
 import { useUpdateMatchMutation } from '../../../services/cricketApi'
-import { addBattingPlayers, addBowlerPlayer, addTeamAPlayers, addTeamBPlayers, handleSwap, selectTeamPlayers } from './ScoringSlice'
+import { addBattingPlayers, addBowlerPlayer, addTeamAPlayers, addTeamBPlayers, addToBowlerList, addToPlayersOut, handleSwap, resetPlayers, selectTeamPlayers } from './ScoringSlice'
 import { useDispatch } from 'react-redux'
 import TeamASquad from './TeamASquad'
-
-function TeamScore({type, matchData, scoring, teamsNameById, scoringAll})
+import CricketBat from './../../../assets/cricket-bat.png'
+import CricketBall from './../../.././assets/cricket.png'
+function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeamType})
 {
   console.log('scoring ::', scoring)
 
   var {id} = useParams()          
   const [updateMatchFn]  = useUpdateMatchMutation(id)
   const dispatch = useDispatch()
+  const [playerIndex, setPlayerIndex] = React.useState('')
 
-  if(scoring.overCompleted=='Completed'){
+ React.useEffect(()=>{
 
-       console.log('mass:: a',{...matchData, scoring:{...scoring}}) 
+    console.log('scoringbowler::', scoring.Bowler)
+   if(scoring.overCompleted=='Completed') 
+   {
+    const bowlingPlayersArray  = scoring.bowlingPlayers.map((el)=>{
+      if(el.id==scoring.Bowler.id)
+      {
+           el = scoring.Bowler
+           
+      }
+      return el 
       
-        //  updateMatchFn({...matchData, ...scoring})
-  }
+        })
+      dispatch(addToBowlerList({scoringBowler: scoring.Bowler,bowlingPlayersArray, type:type}))
+   }
+   
+     
+  //   console.log('mass:: a',{...matchData, scoring:{...scoring}}) 
+  //   updateMatchFn({...matchData, ...scoring})
+
+ },[scoring.overCompleted=='Completed'])
+
+React.useEffect(()=>{
+     
+  
+     if(scoring.wickets >= 10 && type=='TeamA' ){
+           console.log('mass:: a',{...matchData, scoring:{...scoring}}) 
+          // updateMatchFn({...matchData, ...scoring})
+          console.log('TeamB')
+          setTeamType('TeamB')
+     }
+
+},[scoring.wickets])
+
+
+ React.useEffect(()=>{
+        
+     if(playerIndex=='striker'){
+         console.log('nn', scoring.Batsman.striker)
+        const battingPlayersArray = scoring.battingPlayers.map((el)=>{
+               if(el.id==scoring.Batsman.striker.id){
+                   return {...scoring.Batsman.striker,out:true} 
+               }
+               return el
+        })
+        console.log('babu::', battingPlayersArray)
+        dispatch(addToPlayersOut({type:type, scoringBatting: scoring.Batsman.striker, battingPlayersArray}))
+        dispatch(resetPlayers({type:type, index: playerIndex}))
+     }
+     if(playerIndex=='nonStriker'){
+      console.log('nn', scoring.Batsman.nonStriker)
+     const battingPlayersArray = scoring.battingPlayers.map((el)=>{
+            if(el.id==scoring.Batsman.nonStriker.id){
+                return {...scoring.Batsman.nonStriker,out:true} 
+            }
+            return el
+     })
+     console.log('babu::', battingPlayersArray)
+     dispatch(addToPlayersOut({type:type, scoringBatting: scoring.Batsman.nonStriker, battingPlayersArray}))
+     dispatch(resetPlayers({type:type, index: playerIndex}))
+    }
+
+       setPlayerIndex('') 
+   
+ },[playerIndex])
+    
+  
+ 
 
 
   function handleStrikerPlayers(e){
@@ -58,9 +123,21 @@ function TeamScore({type, matchData, scoring, teamsNameById, scoringAll})
     }
   }
 
-console.log("mmm::", scoring.battingPlayers)
-// console.log('bbb::', scoring.bowlingBPlayers)
-console.log('mm', scoring.Batsman.striker)
+  function handleActionPlayers(name){
+
+    if(name=='striker'){
+      setPlayerIndex('striker')
+      
+    }
+    if(name=='nonStriker'){
+      setPlayerIndex('nonStriker')
+     
+    }
+    if(name=='bowler'){
+      dispatch(resetPlayers({type:type, index:name}))
+    }
+
+  }
 
 
     return (
@@ -110,13 +187,14 @@ console.log('mm', scoring.Batsman.striker)
                                 <div className='border border-2 rounded-3 p-2 m-2'>
 
                                   <div>
-                                    <div className='d-flex justify-content-between bg-warning text-dark p-2'><span></span><span>Batsman</span> <span>R</span> <span>B</span><span>4s</span><span>6s</span></div>
+                                    <div className='d-flex justify-content-between bg-warning text-dark p-2'><span></span><span>Batsman</span><span></span> <span></span><span>R</span> <span>B</span><span>4s</span><span>6s</span></div>
                                     <div className='d-flex justify-content-between'>
                                        <p className='d-flex gap-3'>
                                           {
                                               scoring?.Batsman?.striker?.playerName
                                           }
-                                          <i class="bi bi-pencil-square"></i>
+                                          <i class="bi bi-pencil-square" onClick={()=>{handleActionPlayers('striker')}}></i>
+                                          <img src={CricketBat} width='20px'/>
                                        </p>
                                         
                                        
@@ -131,7 +209,7 @@ console.log('mm', scoring.Batsman.striker)
                                           {
                                               scoring?.Batsman?.nonStriker?.playerName
                                           }
-                                          <i class="bi bi-pencil-square"></i>
+                                          <i class="bi bi-pencil-square" onClick={()=>{handleActionPlayers('nonStriker')}}></i>
                                        </p>
                                        
                                        <span>{scoring?.Batsman?.nonStriker?.batRuns}</span>
@@ -148,7 +226,8 @@ console.log('mm', scoring.Batsman.striker)
                                           {
                                               scoring?.Bowler?.playerName
                                           }
-                                          <i class="bi bi-pencil-square"></i>
+                                          <i class="bi bi-pencil-square" onClick={()=>{handleActionPlayers('bowler')}}></i>
+                                          <img src={CricketBall} width='20px'/>
                                        </p>
                                        
                                        <span>{scoring?.Bowler?.overs}</span>
@@ -172,13 +251,13 @@ console.log('mm', scoring.Batsman.striker)
                             <option value={null} disabled selected >--Select option--</option>
                              { type=='TeamA' && 
                                   scoring.battingPlayers.map((el)=>{
-                                        return <option value={JSON.stringify(el)}>{el.playerName}</option>
+                                        return <option value={JSON.stringify(el)} disabled={el.out}>{el.playerName}</option>
                                   })
                              }
                              {
                               type=='TeamB' && 
                                    scoring.battingPlayers.map((el)=>{
-                                      return <option value={JSON.stringify(el)}>{el.playerName}</option>
+                                      return <option value={JSON.stringify(el)} disabled={el.out}>{el.playerName}</option>
                                 })
                             
                              }
@@ -190,13 +269,13 @@ console.log('mm', scoring.Batsman.striker)
                             <option value={null} disabled selected>--Select option--</option>
                              { type=='TeamA' && 
                                   scoring?.battingPlayers.map((el)=>{
-                                        return <option value={JSON.stringify(el)}>{el.playerName}</option>
+                                        return <option value={JSON.stringify(el)} disabled={el.out}>{el.playerName}</option>
                                   })
                              }
                              {
                               type=='TeamB' && 
                                     scoring?.battingPlayers.map((el)=>{
-                                      return <option value={JSON.stringify(el)}>{el.playerName}</option>
+                                      return <option value={JSON.stringify(el)} disabled={el.out}>{el.playerName}</option>
                                 })
                             
                              }
@@ -208,13 +287,13 @@ console.log('mm', scoring.Batsman.striker)
                          <select onChange={(e)=>{handleBowler(e)}}>
                               <option value={null} disabled selected>--Select option--</option>
                              { type=='TeamA' && 
-                                  scoringAll.TeamBScore.bowlingBPlayers?.map((el)=>{
+                                  scoring.bowlingPlayers?.map((el)=>{
                                         return <option value={JSON.stringify(el)}>{el.playerName}</option>
                                   })
                              }
                              {
                               type=='TeamB' && 
-                              scoringAll.TeamAScore.bowlingAPlayers?.map((el)=>{
+                              scoring.bowlingPlayers?.map((el)=>{
                                       return <option value={JSON.stringify(el)}>{el.playerName}</option>
                                 })
                             
