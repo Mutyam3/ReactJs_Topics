@@ -16,7 +16,7 @@ function Scoring()
        const dispatch  = useDispatch()
        const {isLoading: matchLoading, data : matchData} =useGetMatchByIdQuery(id)
        const {isLoading : teamsLoading, data : teamsData} = useGetTeamsQuery()
-       console.log(matchData)
+      //  console.log(matchData)
        const [teamType, setTeamType] = React.useState('')
 
        function teamsNameById(id)
@@ -67,6 +67,8 @@ function Scoring()
                                    </div>
                                 
                              </div>
+
+
 
                              <h5>Scoring Team </h5>
                              <div className=' m-auto p-4  w-75 border border-light rounded-3'> 
