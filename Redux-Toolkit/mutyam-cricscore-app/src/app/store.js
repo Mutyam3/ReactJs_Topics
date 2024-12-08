@@ -5,6 +5,7 @@ import { teamsApi } from '../services/TeamsApi'
 import playersReducer from '../features/Body/Players/PlayersSlice'
 import { CricketApi } from '../services/cricketApi'
 import scoringReducer from '../features/Body/Matches/ScoringSlice'
+import productReducer from '../features/Body/Products/products.slice'
 
 export const store = configureStore({
 
@@ -12,6 +13,7 @@ export const store = configureStore({
 
         players : playersReducer,
         scoring : scoringReducer ,
+        products: productReducer,
        
 
         [PlayerApi.reducerPath] : PlayerApi.reducer,

@@ -49,6 +49,11 @@ export const CricketApi = createApi({
                         }
                        )
 
+               }),
+
+               getIplJersery : builder.query({
+
+                  query : () => '/iplJerseys'
                })
 
 
@@ -56,4 +61,4 @@ export const CricketApi = createApi({
              })
 })
 
-export const {useGetTeamLogosQuery, useGetVenuesQuery, useAddMatchMutation, useGetMatchesQuery, useGetMatchByIdQuery, useUpdateMatchMutation} = CricketApi
+export const {useGetTeamLogosQuery, useGetVenuesQuery, useAddMatchMutation, useGetMatchesQuery, useGetMatchByIdQuery, useUpdateMatchMutation, useGetIplJerseryQuery} = CricketApi

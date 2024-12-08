@@ -205,3 +205,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .unClickedToss{
   
 }
+
+
+.count{
+
+   border-right : 1px solid whitesmoke;
+   border-left : 1px solid whitesmoke;
+
+}

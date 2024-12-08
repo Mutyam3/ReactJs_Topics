@@ -55,6 +55,11 @@ React.useEffect(()=>{
 
      if(scoring.wickets >=9 && type=='TeamB'){
         console.log('mass:: a',{...matchData, TeamBScoring:{...scoringAll.TeamBScore}})
+        var temp = {...matchData}
+        temp = {...temp, TeamBScoring:{...scoringAll.TeamBScore}}
+        updateMatchFn({id:id, match : temp}).then(()=>{
+           
+       })
      }
 
 },[scoring.wickets])

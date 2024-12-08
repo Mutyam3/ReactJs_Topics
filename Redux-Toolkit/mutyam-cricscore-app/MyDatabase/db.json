@@ -2674,5 +2674,89 @@
       "Capacity": "45,000",
       "CityImage": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR-NIy4l9iI6-KFDIqaOCC4Qq9gf7KcBYcpQX1CjoQhW8UQXHbw5lA0woBOA5npKej5pt_RJAj4eZHo9j4iUQQXG8ak2vY2MI-yrvSO5kc"
     }
+  ],
+
+   "iplJerseys" : [
+    {
+      "team": "Mumbai Indians",
+      "jerseyImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH5VY-nqbioktR7yWTsnPr7aiSJQZptdi_9w&s",
+      "productName": "Mumbai Indians Official Team Jersey",
+      "price" : 899,
+      "lineTotalPrice" : 899,
+      "id":1
+    },
+    {
+      "team": "Chennai Super Kings",
+      "jerseyImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202103/cskjersey2021-1200x1493.jpg?KthqWqg53oxE5cfWSlzTlcWQlea_ckOR?size=750:*",
+      "productName": "Chennai Super Kings Official Team Jersey",
+      "price" : 999,
+      "lineTotalPrice" : 999,
+      "id":2
+    },
+    {
+      "team": "Royal Challengers Bangalore",
+      "jerseyImage": "https://i.pinimg.com/originals/34/5b/af/345baf1a35a76b56209c3d2959624c00.jpg",
+      "productName": "Royal Challengers Bangalore Official Team Jersey",
+      "price" : 1200,
+      "lineTotalPrice" : 1200,
+      "id":3
+
+    },
+    {
+      "team": "Kolkata Knight Riders",
+      "jerseyImage": "https://pbs.twimg.com/media/FONqPy5aIAQ2VnH.jpg",
+      "productName": "Kolkata Knight Riders Official Team Jersey",
+      "price" : 850,
+      "lineTotalPrice" : 850,
+      "id":4
+    },
+    {
+      "team": "Delhi Capitals",
+      "jerseyImage": "https://pbs.twimg.com/media/FKfzBJ8UUAMd9rZ.jpg",
+      "productName": "Delhi Capitals Official Team Jersey",
+      "price" : 950,
+      "lineTotalPrice" : 950,
+      "id": 5
+    },
+    {
+      "team": "Sunrisers Hyderabad",
+      "jerseyImage": "https://mir-s3-cdn-cf.behance.net/projects/404/16d3b6170012581.Y3JvcCwxNDAwLDEwOTUsMCwz.jpg",
+      "productName": "Sunrisers Hyderabad Official Team Jersey",
+      "price" : 999,
+      "lineTotalPrice" : 999,
+      "id": 6
+    },
+    {
+      "team": "Punjab Kings",
+      "jerseyImage": "https://static.wixstatic.com/media/66a994_cab1247e12cf4ca7ab1a510a466d04cd~mv2.jpeg/v1/fit/w_500,h_500,q_90/file.jpg",
+      "productName": "Punjab Kings Official Team Jersey",
+      "price" : 899,
+      "lineTotalPrice" : 899,
+      "id": 7
+    },
+    {
+      "team": "Rajasthan Royals",
+      "jerseyImage": "https://preview.redd.it/tell-me-one-reason-why-this-shouldnt-be-our-jersey-next-v0-ubamvo64ixnc1.jpeg?width=640&crop=smart&auto=webp&s=175479764d214d0b058c84f90b292cf3ffd75b4b",
+      "productName": "Rajasthan Royals Official Team Jersey",
+      "price" : 799,
+      "lineTotalPrice" : 799,
+      "id": 8
+    },
+    {
+     "team": "Lucknow Super Giants",
+      "jerseyImage": "https://dm3sportswear.com/wp-content/uploads/2024/03/Customized-Cricket-1-LSG-Jersey-2024-1-800x800.webp",
+      "productName": "Lucknow Super Giants Official Team Jersey",
+      "price" : 999,
+      "lineTotalPrice" : 999,
+      "id": 9
+    },
+    {
+      "team": "Gujarat Titans",
+      "jerseyImage": "https://scontent.fhyd14-2.fna.fbcdn.net/v/t39.30808-6/275771983_132936265936771_5350078909918333698_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=eISQHOoeM_sQ7kNvgFKkxVd&_nc_zt=23&_nc_ht=scontent.fhyd14-2.fna&_nc_gid=ADGJD1PbYB5_PXpugW6bddX&oh=00_AYB3GxGUqJSG8iBWkoXXBi57mjX2XqcWIdOq2zTmTSSscA&oe=675B1749",
+      "productName": "Gujarat Titans Official Team Jersey",
+      "price" : 1100,
+      "lineTotalPrice" : 1100,
+      "id": 10
+    }
   ]
 }
