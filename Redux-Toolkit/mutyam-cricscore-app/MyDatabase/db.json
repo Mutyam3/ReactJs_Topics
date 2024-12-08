@@ -292,6 +292,667 @@
         "decidedTo": "bat",
         "decidedToId": 3,
         "decidedToStatus": true
+      },
+      "TeamAScoring": {
+        "type": "TeamAScore",
+        "score": 160,
+        "runs": 0,
+        "balls": 62,
+        "totalOvers": [
+          {
+            "overCount": [
+              1,
+              6,
+              2,
+              1,
+              2,
+              1
+            ]
+          },
+          {
+            "overCount": [
+              6,
+              2,
+              1,
+              4,
+              "w",
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              3,
+              6,
+              2,
+              6,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "overCount": [
+              6,
+              2,
+              "w",
+              1,
+              6,
+              4
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              4,
+              3,
+              2,
+              "w",
+              1
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              6,
+              "w",
+              1,
+              6,
+              1
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              6,
+              4,
+              "w",
+              1,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              4
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              "w",
+              4,
+              1,
+              3,
+              6
+            ]
+          }
+        ],
+        "overs": [
+          1,
+          "w"
+        ],
+        "currentOver": 10,
+        "oversCount": 10.2,
+        "bowlersList": [
+          {
+            "playerName": "Ravindra Jadeja",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 13,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "RavindraJadeja1",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Dwayne Bravo",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 19,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "DwayneBravo3",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Sam Curran",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 18,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "SamCurran7",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Moeen Ali",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 17,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "MoeenAli8",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Ravindra Jadeja",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 32,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 1,
+            "out": false,
+            "id": "RavindraJadeja1",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Prashant Solanki",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 11,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "PrashantSolanki10",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Dwayne Bravo",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 34,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "DwayneBravo3",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Deepak Chahar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 12,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 2,
+            "out": false,
+            "id": "DeepakChahar6",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Moeen Ali",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 37,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 0,
+            "out": false,
+            "id": "MoeenAli8",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Sam Curran",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 33,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "SamCurran7",
+            "ballsBowled": 12
+          }
+        ],
+        "overCompleted": "notCompleted",
+        "maxOversCount": 20,
+        "wickets": 9,
+        "wicketStatus": false,
+        "playersOut": [
+          {
+            "playerName": "Kane Williamson",
+            "batRuns": 16,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KaneWilliamson1"
+          },
+          {
+            "playerName": "David Warner",
+            "batRuns": 16,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "DavidWarner0"
+          },
+          {
+            "playerName": "Jonny Bairstow",
+            "batRuns": 26,
+            "ballsFaced": 7,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "JonnyBairstow4"
+          },
+          {
+            "playerName": "Manish Pandey",
+            "batRuns": 27,
+            "ballsFaced": 10,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ManishPandey5"
+          },
+          {
+            "playerName": "Abhishek Sharma",
+            "batRuns": 18,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "AbhishekSharma10"
+          },
+          {
+            "playerName": "Jason Holder",
+            "batRuns": 19,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "JasonHolder6"
+          },
+          {
+            "playerName": "Kedar Jadhav",
+            "batRuns": 1,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KedarJadhav8"
+          },
+          {
+            "playerName": "Priyam Garg",
+            "batRuns": 8,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "PriyamGarg9"
+          }
+        ],
+        "battingPlayers": [
+          {
+            "playerName": "David Warner",
+            "batRuns": 16,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "DavidWarner0"
+          },
+          {
+            "playerName": "Kane Williamson",
+            "batRuns": 16,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "KaneWilliamson1"
+          },
+          {
+            "playerName": "Bhuvneshwar Kumar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "BhuvneshwarKumar2"
+          },
+          {
+            "playerName": "Rashid Khan",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RashidKhan3"
+          },
+          {
+            "playerName": "Jonny Bairstow",
+            "batRuns": 26,
+            "ballsFaced": 7,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "JonnyBairstow4"
+          },
+          {
+            "playerName": "Manish Pandey",
+            "batRuns": 27,
+            "ballsFaced": 10,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "ManishPandey5"
+          },
+          {
+            "playerName": "Jason Holder",
+            "batRuns": 19,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "JasonHolder6"
+          },
+          {
+            "playerName": "Shahbaz Nadeem",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ShahbazNadeem7"
+          },
+          {
+            "playerName": "Kedar Jadhav",
+            "batRuns": 1,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "KedarJadhav8"
+          },
+          {
+            "playerName": "Priyam Garg",
+            "batRuns": 8,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "PriyamGarg9"
+          },
+          {
+            "playerName": "Abhishek Sharma",
+            "batRuns": 18,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "AbhishekSharma10"
+          }
+        ],
+        "bowlingPlayers": [
+          {
+            "playerName": "Mahendra Singh Dhoni",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "MahendraSinghDhoni0"
+          },
+          {
+            "playerName": "Ravindra Jadeja",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 32,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 1,
+            "out": false,
+            "id": "RavindraJadeja1",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Suresh Raina",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "SureshRaina2"
+          },
+          {
+            "playerName": "Dwayne Bravo",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 34,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "DwayneBravo3",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Faf du Plessis",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "FafduPlessis4"
+          },
+          {
+            "playerName": "Ruturaj Gaikwad",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RuturajGaikwad5"
+          },
+          {
+            "playerName": "Deepak Chahar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 12,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 2,
+            "out": false,
+            "id": "DeepakChahar6",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Sam Curran",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 33,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "SamCurran7",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Moeen Ali",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 37,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 0,
+            "out": false,
+            "id": "MoeenAli8",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Tushar Deshpande",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "TusharDeshpande9"
+          },
+          {
+            "playerName": "Prashant Solanki",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 11,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "PrashantSolanki10",
+            "ballsBowled": 6
+          }
+        ],
+        "Batsman": {
+          "striker": {
+            "playerName": "Shahbaz Nadeem",
+            "batRuns": 15,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ShahbazNadeem7"
+          },
+          "nonStriker": {
+            "playerName": "Bhuvneshwar Kumar",
+            "batRuns": 14,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "BhuvneshwarKumar2"
+          }
+        },
+        "Bowler": {
+          "playerName": "Moeen Ali",
+          "batRuns": 0,
+          "ballsFaced": 0,
+          "bowlRuns": 38,
+          "fours": 0,
+          "sixes": 0,
+          "overs": 2.2,
+          "wickets": 1,
+          "out": false,
+          "id": "MoeenAli8",
+          "ballsBowled": 14
+        }
       }
     }
   ],
@@ -2012,6 +2673,90 @@
       "Address": "CUTTACK, INDIA",
       "Capacity": "45,000",
       "CityImage": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR-NIy4l9iI6-KFDIqaOCC4Qq9gf7KcBYcpQX1CjoQhW8UQXHbw5lA0woBOA5npKej5pt_RJAj4eZHo9j4iUQQXG8ak2vY2MI-yrvSO5kc"
+    }
+  ],
+
+   "iplJerseys" : [
+    {
+      "team": "Mumbai Indians",
+      "jerseyImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH5VY-nqbioktR7yWTsnPr7aiSJQZptdi_9w&s",
+      "productName": "Mumbai Indians Official Team Jersey",
+      "price" : 899,
+      "lineTotalPrice" : 899,
+      "id":1
+    },
+    {
+      "team": "Chennai Super Kings",
+      "jerseyImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202103/cskjersey2021-1200x1493.jpg?KthqWqg53oxE5cfWSlzTlcWQlea_ckOR?size=750:*",
+      "productName": "Chennai Super Kings Official Team Jersey",
+      "price" : 999,
+      "lineTotalPrice" : 999,
+      "id":2
+    },
+    {
+      "team": "Royal Challengers Bangalore",
+      "jerseyImage": "https://i.pinimg.com/originals/34/5b/af/345baf1a35a76b56209c3d2959624c00.jpg",
+      "productName": "Royal Challengers Bangalore Official Team Jersey",
+      "price" : 1200,
+      "lineTotalPrice" : 1200,
+      "id":3
+
+    },
+    {
+      "team": "Kolkata Knight Riders",
+      "jerseyImage": "https://pbs.twimg.com/media/FONqPy5aIAQ2VnH.jpg",
+      "productName": "Kolkata Knight Riders Official Team Jersey",
+      "price" : 850,
+      "lineTotalPrice" : 850,
+      "id":4
+    },
+    {
+      "team": "Delhi Capitals",
+      "jerseyImage": "https://pbs.twimg.com/media/FKfzBJ8UUAMd9rZ.jpg",
+      "productName": "Delhi Capitals Official Team Jersey",
+      "price" : 950,
+      "lineTotalPrice" : 950,
+      "id": 5
+    },
+    {
+      "team": "Sunrisers Hyderabad",
+      "jerseyImage": "https://mir-s3-cdn-cf.behance.net/projects/404/16d3b6170012581.Y3JvcCwxNDAwLDEwOTUsMCwz.jpg",
+      "productName": "Sunrisers Hyderabad Official Team Jersey",
+      "price" : 999,
+      "lineTotalPrice" : 999,
+      "id": 6
+    },
+    {
+      "team": "Punjab Kings",
+      "jerseyImage": "https://static.wixstatic.com/media/66a994_cab1247e12cf4ca7ab1a510a466d04cd~mv2.jpeg/v1/fit/w_500,h_500,q_90/file.jpg",
+      "productName": "Punjab Kings Official Team Jersey",
+      "price" : 899,
+      "lineTotalPrice" : 899,
+      "id": 7
+    },
+    {
+      "team": "Rajasthan Royals",
+      "jerseyImage": "https://preview.redd.it/tell-me-one-reason-why-this-shouldnt-be-our-jersey-next-v0-ubamvo64ixnc1.jpeg?width=640&crop=smart&auto=webp&s=175479764d214d0b058c84f90b292cf3ffd75b4b",
+      "productName": "Rajasthan Royals Official Team Jersey",
+      "price" : 799,
+      "lineTotalPrice" : 799,
+      "id": 8
+    },
+    {
+     "team": "Lucknow Super Giants",
+      "jerseyImage": "https://dm3sportswear.com/wp-content/uploads/2024/03/Customized-Cricket-1-LSG-Jersey-2024-1-800x800.webp",
+      "productName": "Lucknow Super Giants Official Team Jersey",
+      "price" : 999,
+      "lineTotalPrice" : 999,
+      "id": 9
+    },
+    {
+      "team": "Gujarat Titans",
+      "jerseyImage": "https://scontent.fhyd14-2.fna.fbcdn.net/v/t39.30808-6/275771983_132936265936771_5350078909918333698_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=eISQHOoeM_sQ7kNvgFKkxVd&_nc_zt=23&_nc_ht=scontent.fhyd14-2.fna&_nc_gid=ADGJD1PbYB5_PXpugW6bddX&oh=00_AYB3GxGUqJSG8iBWkoXXBi57mjX2XqcWIdOq2zTmTSSscA&oe=675B1749",
+      "productName": "Gujarat Titans Official Team Jersey",
+      "price" : 1100,
+      "lineTotalPrice" : 1100,
+      "id": 10
     }
   ]
 }

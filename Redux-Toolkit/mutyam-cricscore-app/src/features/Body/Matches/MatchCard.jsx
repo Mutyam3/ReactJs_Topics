@@ -6,11 +6,11 @@ function MatchCard({matchCompo, teamsNameById})
 {
     console.log(matchCompo)
     return (
-        <section className='m-3 border border-light p-4 rounded d-flex flex-wrap gap-5 align-items-center justify-content-center'>
+        <section className='m-3  p-4 rounded d-flex flex-wrap gap-5 align-items-center justify-content-center'>
 
               {
                    matchCompo.map((el)=>{
-                        return <Link to={`/matches/${el.id}`} style={{textDecoration:'none', color:'whitesmoke'}}><section className='border border-light rounded-3' style={{width:'600px'}}>
+                        return <Link to={`/matches/${el.id}`} style={{textDecoration:'none', color:'whitesmoke'}}><section className='border border-ligh rounded-3' style={{width:'600px'}}>
                                     <div className='p-2 d-flex justify-content-around '>
                                         <p>Match Date - {el.date}</p>
                                         <p>Match Time - {el.time}</p>

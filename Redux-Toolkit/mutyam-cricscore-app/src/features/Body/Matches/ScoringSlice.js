@@ -65,48 +65,53 @@ const scoring = createSlice({
     initialState,
 
     reducers : {
-        addTeamARun : (state, action)=>{
-                state.TeamBScore.wicketStatus = false
-                state.TeamAScore.score = state.TeamAScore.score + action.payload.run
-                state.TeamAScore.overs.push(action.payload.name)
-                
-        
-                if(state.TeamAScore.oversCount < state.TeamAScore.maxOversCount && !(action.payload.name =='LB' || action.payload.name =='Bye' ||action.payload.name =='Wide' || action.payload.name =='NB'))
-                {
+        addTeamARun: (state, action) => {
+                // state.TeamBScore.wicketStatus = false;
+                state.TeamAScore.score += action.payload.run;
+                state.TeamAScore.overs.push(action.payload.name);
+            
+                if (
+                    state.TeamAScore.oversCount < state.TeamAScore.maxOversCount &&
+                    !(action.payload.name === "LB" || action.payload.name === "Bye" || action.payload.name === "Wide" || action.payload.name === "NB" || action.payload.name === "Out")
+                 ) {
+                    state.TeamAScore.overCompleted = "notCompleted";
+                    state.TeamAScore.balls += 1;
+            
                     
-                    state.TeamAScore.overCompleted = 'notCompleted'
-                    state.TeamAScore.balls += 1
-                    state.TeamAScore.oversCount=  Math.floor((state.TeamAScore.oversCount + 0.1) * 10) / 10
-                    state.TeamAScore.Bowler.overs = Math.floor((state.TeamAScore.Bowler.overs + 0.1) * 10) / 10
+                    const totalBalls = state.TeamAScore.balls; // Total balls bowled
+                    const completedOvers = Math.floor(totalBalls / 6); // idi overs ni completed aina count ni isthadi
+                    const ballsInCurrentOver = totalBalls % 6; // ippudu unna over lo enni balls unnayo isthadi
+            
+                    state.TeamAScore.oversCount = parseFloat(`${completedOvers}.${ballsInCurrentOver}`); // idi 0.1 ane string ni number ga marustadi 
+                    state.TeamAScore.Bowler.ballsBowled = (state.TeamAScore.Bowler.ballsBowled || 0) + 1;
 
-                    if(state.TeamAScore.balls === 6 )
-                        {
-                            state.TeamAScore.balls = 0
-                            state.TeamAScore.oversCount += 0.4
-                            state.TeamAScore.Bowler.overs +=0.4
-                            state.TeamAScore.currentOver += 1
-                            state.TeamAScore.totalOvers.push({overCount : [...state.TeamAScore.overs]})
-                            state.TeamAScore.overCompleted = 'Completed'
-                            state.TeamAScore.overs = []
-                           
-                        }
-
-                        state.TeamAScore.Bowler.bowlRuns += action.payload.run 
-                        state.TeamAScore.Batsman.striker.batRuns += action.payload.run 
-                        state.TeamAScore.Batsman.striker.ballsFaced++
-                        if(action.payload.name==4)
-                        {
-                           state.TeamAScore.Batsman.striker.fours++
-                        }
-                        if(action.payload.name==6){
-                          state.TeamAScore.Batsman.striker.sixes++
-                        }
-                        
-                   
-                 
-                }    
+                    // Update bowler's overs count
+                    const bowlerCompletedOvers = Math.floor(state.TeamAScore.Bowler.ballsBowled / 6);
+                    const bowlerBallsInCurrentOver = state.TeamAScore.Bowler.ballsBowled % 6;
+                    state.TeamAScore.Bowler.overs = parseFloat(`${bowlerCompletedOvers}.${bowlerBallsInCurrentOver}`);
                   
-        },
+                    // Handle over completion for both team and bowler
+                    if (state.TeamAScore.balls % 6 === 0) {
+                      state.TeamAScore.currentOver += 1; // Increment team current over
+                      state.TeamAScore.totalOvers.push({ overCount: [...state.TeamAScore.overs] });
+                      state.TeamAScore.overs = []; // Reset team overs array for new over
+                      state.TeamAScore.overCompleted = "Completed";
+                    }
+                    state.TeamAScore.Bowler.bowlRuns += action.payload.run;
+                    state.TeamAScore.Batsman.striker.batRuns += action.payload.run;
+                    state.TeamAScore.Batsman.striker.ballsFaced++;
+            
+                    if (action.payload.name == 4) {
+                        state.TeamAScore.Batsman.striker.fours++;
+                    }
+                    if (action.payload.name == 6) {
+                        state.TeamAScore.Batsman.striker.sixes++;
+                    }
+                }
+                
+            },
+            
+            
 
        
 
@@ -135,6 +140,10 @@ const scoring = createSlice({
                         state.TeamAScore.bowlingPlayers = action.payload.bowlingPlayersArray      
                         state.TeamAScore.bowlersList.push({...action.payload.scoringBowler})
                  }
+                 if(action.payload.type=='TeamB'){
+                        state.TeamBScore.bowlingPlayers = action.payload.bowlingPlayersArray      
+                        state.TeamBScore.bowlersList.push({...action.payload.scoringBowler})
+                 }
          },
 
          addToPlayersOut : (state, action)=>{
@@ -142,6 +151,10 @@ const scoring = createSlice({
                       state.TeamAScore.battingPlayers = action.payload.battingPlayersArray
                       state.TeamAScore.playersOut.push({...action.payload.scoringBatting})
                }
+               if(action.payload.type=='TeamB'){
+                state.TeamBScore.battingPlayers = action.payload.battingPlayersArray
+                state.TeamBScore.playersOut.push({...action.payload.scoringBatting})
+         }
          },
 
          addTeamAPlayers : (state, action) =>{
@@ -197,89 +210,104 @@ const scoring = createSlice({
          },
 
         addTeamBRun : (state, action)=>{
-                state.TeamBScore.wicketStatus = false
-                state.TeamBScore.score = state.TeamBScore.score + action.payload.run
-                state.TeamBScore.overs.push(action.payload.name)
-                
-                if(state.TeamBScore.oversCount < state.TeamBScore.maxOversCount && !(action.payload.name =='LB' || action.payload.name =='Bye' ||action.payload.name =='Wide' || action.payload.name =='NB'))
-                {
-                   
-                    state.TeamBScore.overCompleted = 'notCompleted'
-                    state.TeamBScore.balls += 1
-                    state.TeamBScore.oversCount=  Math.floor((state.TeamBScore.oversCount + 0.1) * 10) / 10
-                    state.TeamBScore.Bowler.overs = Math.floor((state.TeamBScore.Bowler.overs + 0.1) * 10) / 10
+               
+                state.TeamBScore.score += action.payload.run;
+                state.TeamBScore.overs.push(action.payload.name);
+            
+                if (
+                    state.TeamBScore.oversCount < state.TeamBScore.maxOversCount &&
+                    !(action.payload.name === "LB" || action.payload.name === "Bye" || action.payload.name === "Wide" || action.payload.name === "NB" || action.payload.name === "Out")
+                 ) {
+                    state.TeamBScore.overCompleted = "notCompleted";
+                    state.TeamBScore.balls += 1;
+            
+                    
+                    const totalBalls = state.TeamBScore.balls; // Total balls bowled
+                    const completedOvers = Math.floor(totalBalls / 6); // idi overs ni completed aina count ni isthadi
+                    const ballsInCurrentOver = totalBalls % 6; // ippudu unna over lo enni balls unnayo isthadi
+            
+                    state.TeamBScore.oversCount = parseFloat(`${completedOvers}.${ballsInCurrentOver}`); // idi 0.1 ane string ni number ga marustadi 
 
-                    if(state.TeamBScore.balls === 6 )
-                        {
-                            state.TeamBScore.balls = 0
-                            state.TeamBScore.oversCount += 0.4
-                            state.TeamBScore.Bowler.overs +=0.4
-                            state.TeamBScore.currentOver += 1
-                            state.TeamBScore.totalOvers.push({overCount : [...state.TeamBScore.overs]})
-                            state.TeamBScore.overCompleted = 'Completed'
-                            state.TeamBScore.overs = []
-
-                        }
-
-                        state.TeamBScore.Bowler.bowlRuns += action.payload.run 
-                        state.TeamBScore.Batsman.striker.batRuns += action.payload.run 
-                        state.TeamBScore.Batsman.striker.ballsFaced++
-                        if(action.payload.name==4)
-                        {
-                           state.TeamBScore.Batsman.striker.fours++
-                        }
-                        if(action.payload.name==6){
-                          state.TeamBScore.Batsman.striker.sixes++
-                        }
-                        
-                   
-                 
-                }    
+                    state.TeamBScore.Bowler.ballsBowled = (state.TeamBScore.Bowler.ballsBowled || 0) + 1;
+                    const bowlerCompletedOvers = Math.floor(state.TeamBScore.Bowler.ballsBowled / 6);
+                    const bowlerBallsInCurrentOver = state.TeamBScore.Bowler.ballsBowled % 6;
+                    state.TeamBScore.Bowler.overs = parseFloat(`${bowlerCompletedOvers}.${bowlerBallsInCurrentOver}`);
+                  
+                    // Handle over completion for both team and bowler
+                    if (state.TeamBScore.balls % 6 === 0) {
+                      state.TeamBScore.currentOver += 1; // Increment team current over
+                      state.TeamBScore.totalOvers.push({ overCount: [...state.TeamBScore.overs] });
+                      state.TeamBScore.overs = []; // Reset team overs array for new over
+                      state.TeamBScore.overCompleted = "Completed";
+                    }
+            
+                    state.TeamBScore.Bowler.bowlRuns += action.payload.run;
+                    state.TeamBScore.Batsman.striker.batRuns += action.payload.run;
+                    state.TeamBScore.Batsman.striker.ballsFaced++;
+            
+                    if (action.payload.name == 4) {
+                        state.TeamBScore.Batsman.striker.fours++;
+                    }
+                    if (action.payload.name == 6) {
+                        state.TeamBScore.Batsman.striker.sixes++;
+                    }
+                }   
         },
 
         addTeamAWicket : (state, action)=>{
-                state.TeamAScore.balls += 1
-                state.TeamAScore.oversCount=  Math.floor((state.TeamAScore.oversCount + 0.1) * 10) / 10
-                state.TeamAScore.Bowler.overs = Math.floor((state.TeamAScore.Bowler.overs + 0.1) * 10) / 10
-                state.TeamAScore.wickets = state.TeamAScore.wickets + action.payload
-                state.TeamAScore.Bowler.wickets++
-                state.TeamAScore.overs.push('w')
-                state.TeamAScore.wicketStatus = true
+               
+                    state.TeamAScore.overCompleted = "notCompleted";
+                    state.TeamAScore.balls += 1;
+                    
+                    const totalBalls = state.TeamAScore.balls; // Total balls bowled
+                    const completedOvers = Math.floor(totalBalls / 6); // idi overs ni completed aina count ni isthadi
+                    const ballsInCurrentOver = totalBalls % 6; // ippudu unna over lo enni balls unnayo isthadi
+            
+                    state.TeamAScore.oversCount = parseFloat(`${completedOvers}.${ballsInCurrentOver}`); // idi 0.1 ane string ni number ga marustadi 
+                    
+                    state.TeamAScore.Bowler.ballsBowled = (state.TeamAScore.Bowler.ballsBowled || 0) + 1;
 
-                if(state.TeamAScore.balls === 6 )
-                        {
-                            state.TeamAScore.balls = 0
-                            state.TeamAScore.oversCount += 0.4
-                            state.TeamAScore.Bowler.overs +=0.4
-                            state.TeamAScore.currentOver += 1
-                            state.TeamAScore.totalOvers.push({overCount : [...state.TeamAScore.overs]})
-                            state.TeamAScore.overCompleted = 'Completed'
-                            state.TeamAScore.overs = []
-                           
-                        }
-                
-
+                    const bowlerCompletedOvers = Math.floor(state.TeamAScore.Bowler.ballsBowled / 6);
+                    const bowlerBallsInCurrentOver = state.TeamAScore.Bowler.ballsBowled % 6;
+                    state.TeamAScore.Bowler.overs = parseFloat(`${bowlerCompletedOvers}.${bowlerBallsInCurrentOver}`);
+                    state.TeamAScore.wickets = state.TeamAScore.wickets + action.payload
+                    state.TeamAScore.Bowler.wickets++
+                    state.TeamAScore.overs.push('w')
+                  
+                    // Handle over completion for both team and bowler
+                    if (state.TeamAScore.balls % 6 === 0) {
+                      state.TeamAScore.currentOver += 1; // Increment team current over
+                      state.TeamAScore.totalOvers.push({ overCount: [...state.TeamAScore.overs] });
+                      state.TeamAScore.overs = []; // Reset team overs array for new over
+                      state.TeamAScore.overCompleted = "Completed";
+                    }
         },
 
         addTeamBWicket : (state, action)=>{
-                state.TeamBScore.balls += 1
-                state.TeamBScore.oversCount=  Math.floor((state.TeamBScore.oversCount + 0.1) * 10) / 10
-                state.TeamBScore.Bowler.overs = Math.floor((state.TeamBScore.Bowler.overs + 0.1) * 10) / 10
+                state.TeamBScore.overCompleted = "notCompleted";
+                state.TeamBScore.balls += 1;
+                
+                const totalBalls = state.TeamBScore.balls; // Total balls bowled
+                const completedOvers = Math.floor(totalBalls / 6); // idi overs ni completed aina count ni isthadi
+                const ballsInCurrentOver = totalBalls % 6; // ippudu unna over lo enni balls unnayo isthadi
+        
+                state.TeamBScore.oversCount = parseFloat(`${completedOvers}.${ballsInCurrentOver}`); // idi 0.1 ane string ni number ga marustadi 
+
+                state.TeamBScore.Bowler.ballsBowled = (state.TeamBScore.Bowler.ballsBowled || 0) + 1;
+
+                const bowlerCompletedOvers = Math.floor(state.TeamBScore.Bowler.ballsBowled / 6);
+                const bowlerBallsInCurrentOver = state.TeamBScore.Bowler.ballsBowled % 6;
+                state.TeamBScore.Bowler.overs = parseFloat(`${bowlerCompletedOvers}.${bowlerBallsInCurrentOver}`);
                 state.TeamBScore.wickets = state.TeamBScore.wickets + action.payload
                 state.TeamBScore.Bowler.wickets++
                 state.TeamBScore.overs.push('w')
-                state.TeamBScore.wicketStatus = true
-                if(state.TeamBScore.balls === 6 )
-                        {
-                            state.TeamBScore.balls = 0
-                            state.TeamBScore.oversCount += 0.4
-                            state.TeamBScore.Bowler.overs +=0.4
-                            state.TeamBScore.currentOver += 1
-                            state.TeamBScore.totalOvers.push({overCount : [...state.TeamBScore.overs]})
-                            state.TeamBScore.overCompleted = 'Completed'
-                            state.TeamBScore.overs = []
-
-                        }
+                 // oka over aipoyaka em cheyalo ikkada rastuna
+                if (ballsInCurrentOver === 0 && state.TeamBScore.balls > 0) {  //6%6==0
+                    state.TeamBScore.overCompleted = "Completed";
+                    state.TeamBScore.currentOver += 1;
+                    state.TeamBScore.totalOvers.push({ overCount: [...state.TeamBScore.overs] }); // Add the completed over
+                    state.TeamBScore.overs = []; // Reset for the next over
+                }
         },
 
         resetIniatialState : (state, action)=>{
@@ -303,6 +331,20 @@ const scoring = createSlice({
            
                      
                 }
+                if(action.payload.type=='TeamB'){
+                        if(action.payload.index=='striker'){
+                             state.TeamBScore.Batsman.striker = {...initialState.TeamBScore.Batsman.striker}
+  
+                         }
+                         if(action.payload.index=='nonStriker'){
+                               state.TeamBScore.Batsman.nonStriker = {...initialState.TeamBScore.Batsman.nonStriker}
+                         }
+                         if(action.payload.index=='bowler'){
+                          state.TeamBScore.Bowler = {...initialState.TeamBScore.Bowler}
+                         }
+             
+                       
+                  }
 
                
         }

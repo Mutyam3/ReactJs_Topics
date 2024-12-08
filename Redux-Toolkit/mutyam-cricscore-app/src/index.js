@@ -23,6 +23,8 @@ import MatchCenter from './features/Body/Matches/MatchCenter';
 import SelectSquad from './features/Body/Matches/SelectSquad';
 import ScoreCard from './features/Body/Matches/ScoreCard';
 import Scoring from './features/Body/Matches/Scoring';
+import ProductsList from './features/Body/Products/ProductsList';
+import Cart from './features/Body/Products/Cart';
 
 const myRouter = createBrowserRouter([
                   {
@@ -118,6 +120,18 @@ const myRouter = createBrowserRouter([
                        {
                         path : '/products',
                         element : <Products/>,
+                        children : [{
+                           path : '/products/productsList',
+                           element : <ProductsList/>
+                        }, 
+                           {
+                              path : '/products',
+                              element : <ProductsList/>
+                           },
+                         {
+                            path : '/products/cart',
+                            element : <Cart/>
+                         }]
                       
                        }
                     ]

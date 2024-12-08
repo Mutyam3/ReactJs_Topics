@@ -9,7 +9,7 @@ import CricketBat from './../../../assets/cricket-bat.png'
 import CricketBall from './../../.././assets/cricket.png'
 function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeamType})
 {
-  console.log('scoring ::', scoring)
+  
 
   var {id} = useParams()          
   const [updateMatchFn]  = useUpdateMatchMutation(id)
@@ -18,7 +18,7 @@ function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeam
 
  React.useEffect(()=>{
 
-    console.log('scoringbowler::', scoring.Bowler)
+    // console.log('scoringbowler::', scoring.Bowler)
    if(scoring.overCompleted=='Completed') 
    {
     const bowlingPlayersArray  = scoring.bowlingPlayers.map((el)=>{
@@ -34,7 +34,7 @@ function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeam
    }
    
      
-  //   console.log('mass:: a',{...matchData, scoring:{...scoring}}) 
+  //  console.log('idi over completed:: a',{...matchData, TeamAScoring:{...scoringAll.TeamAScore}}) 
   //   updateMatchFn({...matchData, ...scoring})
 
  },[scoring.overCompleted=='Completed'])
@@ -42,11 +42,24 @@ function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeam
 React.useEffect(()=>{
      
   
-     if(scoring.wickets >= 10 && type=='TeamA' ){
-           console.log('mass:: a',{...matchData, scoring:{...scoring}}) 
-          // updateMatchFn({...matchData, ...scoring})
-          console.log('TeamB')
-          setTeamType('TeamB')
+     if(scoring.wickets >= 9 && type=='TeamA' ){
+           console.log('idi wickets:: a',{...matchData, TeamAScoring:{...scoringAll.TeamAScore}}) 
+           var temp = {...matchData}
+           temp = {...temp, TeamAScoring:{...scoringAll.TeamAScore}}
+           updateMatchFn({id:id, match : temp}).then(()=>{
+                 setTeamType('TeamB')
+          })
+
+         
+     }
+
+     if(scoring.wickets >=9 && type=='TeamB'){
+        console.log('mass:: a',{...matchData, TeamBScoring:{...scoringAll.TeamBScore}})
+        var temp = {...matchData}
+        temp = {...temp, TeamBScoring:{...scoringAll.TeamBScore}}
+        updateMatchFn({id:id, match : temp}).then(()=>{
+           
+       })
      }
 
 },[scoring.wickets])
@@ -62,7 +75,7 @@ React.useEffect(()=>{
                }
                return el
         })
-        console.log('babu::', battingPlayersArray)
+        // console.log('babu::', battingPlayersArray)
         dispatch(addToPlayersOut({type:type, scoringBatting: scoring.Batsman.striker, battingPlayersArray}))
         dispatch(resetPlayers({type:type, index: playerIndex}))
      }
@@ -74,14 +87,14 @@ React.useEffect(()=>{
             }
             return el
      })
-     console.log('babu::', battingPlayersArray)
+    //  console.log('babu::', battingPlayersArray)
      dispatch(addToPlayersOut({type:type, scoringBatting: scoring.Batsman.nonStriker, battingPlayersArray}))
      dispatch(resetPlayers({type:type, index: playerIndex}))
     }
 
        setPlayerIndex('') 
    
- },[playerIndex])
+ },[playerIndex || scoring.overCompleted=='Completed'])
     
   
  
