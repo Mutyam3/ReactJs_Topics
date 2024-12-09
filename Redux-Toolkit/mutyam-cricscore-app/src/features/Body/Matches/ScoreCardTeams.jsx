@@ -3,9 +3,10 @@ import CricketBat from './../../../assets/cricket-bat.png'
 import CricketBall from './../../.././assets/cricket.png'
 
 function ScoreCardTeam({scoring}){
+    console.log('scoring::', scoring)
     return (
         <>
-        <div className='border border-light p-4 w-50 text-center '>
+        <div className=' p-4 w-50 text-center '>
                        <div className='border border-light w-50 m-auto rounded-3'>
                            <h1>{scoring.score}/{scoring.wickets}</h1>
                        </div>
@@ -18,7 +19,7 @@ function ScoreCardTeam({scoring}){
                             {
                                 scoring?.Batsman?.striker?.playerName
                             }
-                            <img src={CricketBat} width='20px'/>
+                            <img src={CricketBat} width='30px'/>
                            </p>
       
      
@@ -51,7 +52,7 @@ function ScoreCardTeam({scoring}){
                              scoring?.Bowler?.playerName
                        }
                        
-                       <img src={CricketBall} width='20px'/>
+                       <img src={CricketBall} width='15px'/>
                       </p>
      
                            <span>{scoring?.Bowler?.overs}</span>

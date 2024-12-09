@@ -61,4 +61,4 @@ export const CricketApi = createApi({
              })
 })
 
-export const {useGetTeamLogosQuery, useGetVenuesQuery, useAddMatchMutation, useGetMatchesQuery, useGetMatchByIdQuery, useUpdateMatchMutation, useGetIplJerseryQuery} = CricketApi
+export const {useGetTeamLogosQuery, useGetVenuesQuery, useAddMatchMutation, useGetMatchesQuery, useGetMatchByIdQuery, useUpdateMatchMutation, useGetIplJerseryQuery, useLazyGetMatchByIdQuery} = CricketApi

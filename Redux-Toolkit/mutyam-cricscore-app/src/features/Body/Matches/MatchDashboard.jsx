@@ -2,6 +2,7 @@ import React from 'react'
 import { useGetTeamsQuery } from '../../../services/TeamsApi'
 import { useGetMatchesQuery, useGetVenuesQuery } from '../../../services/cricketApi'
 import MatchCard from './MatchCard'
+import Cricketball from '../../../assets/bestCricBallAni.png' 
 
 function MatchDashboard()
 {
@@ -93,8 +94,8 @@ function MatchDashboard()
         <>
                <h4>Match Dashboard</h4>
 
-               {teamsLoading && <b>Loading.....</b> }
-               {venueLoading && <b>Loading.....</b> }
+               {teamsLoading && <><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></> }
+               {venueLoading && <><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></> }
 
                <section className='d-flex justify-content-evenly m-3 p-3'>
                      <h5>Sort by </h5>

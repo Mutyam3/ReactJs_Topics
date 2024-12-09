@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGetTeamsQuery } from '../../../services/TeamsApi'
 import { useSelector } from 'react-redux'
+import Cricketball from '../../../assets/bestCricBallAni.png'
 function TeamsDashboard()
 {
 
@@ -10,7 +11,7 @@ function TeamsDashboard()
     return(
         <section>
             {
-                isLoading && (<b>Loading.....</b>)
+                isLoading && (<><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></>)
             }
             
             <section>
