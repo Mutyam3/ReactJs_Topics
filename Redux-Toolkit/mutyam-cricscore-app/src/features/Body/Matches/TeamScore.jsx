@@ -42,7 +42,7 @@ function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeam
 React.useEffect(()=>{
      
   
-     if(scoring.wickets >= 9 && type=='TeamA' ){
+     if(scoring.wickets == 10 && type=='TeamA' ){
            console.log('idi wickets:: a',{...matchData, TeamAScoring:{...scoringAll.TeamAScore}}) 
            var temp = {...matchData}
            temp = {...temp, TeamAScoring:{...scoringAll.TeamAScore}}
@@ -53,7 +53,7 @@ React.useEffect(()=>{
          
      }
 
-     if(scoring.wickets >=9 && type=='TeamB'){
+     if(scoring.wickets ==10 && type=='TeamB'){
         console.log('mass:: a',{...matchData, TeamBScoring:{...scoringAll.TeamBScore}})
         var temp = {...matchData}
         temp = {...temp, TeamBScoring:{...scoringAll.TeamBScore}}

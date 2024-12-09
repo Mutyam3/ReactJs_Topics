@@ -45,7 +45,7 @@ function Toss({matchData, id})
 
     React.useEffect(()=>{
 
-        const {teamAXIPlayers, teamBXIPlayers}  =  matchData.XIplayers
+        const {teamAXIPlayers, teamBXIPlayers}  =  matchData?.XIplayers
         const teamABattingPlayers =  teamAXIPlayers.map((el,ind)=>{
                                  return {playerName : el.fullName, batRuns : 0, ballsFaced: 0, bowlRuns: 0 ,fours: 0, sixes:0 , overs:0, wickets:0, out:false ,id:`${el.fullName.split(" ").join("") +ind}`}
                                })

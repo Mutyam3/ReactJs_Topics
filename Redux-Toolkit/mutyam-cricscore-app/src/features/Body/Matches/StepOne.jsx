@@ -4,6 +4,7 @@ import { useGetTeamsQuery } from '../../../services/TeamsApi'
 import { useGetVenuesQuery } from '../../../services/cricketApi'
 import VenueDetails from './VenueDetails'
 import MatchFormat from './MatchFormat'
+import Cricketball from '../../../assets/bestCricBallAni.png'
 
 function StepOne({matchDetails})
 {
@@ -67,7 +68,7 @@ function StepOne({matchDetails})
 
             <section className=''>
 
-               { isTeamsLoading && (<b>Loading...</b>)}
+               { isTeamsLoading && (<><img src= {Cricketball} className='cricBall' /> <b>Loading...</b></>)}
 
                {
                  !isTeamsLoading && (
@@ -83,7 +84,7 @@ function StepOne({matchDetails})
                }
 
                {
-                  isVenueLoading && <b>Loading....</b>
+                  isVenueLoading && <img src= {Cricketball} />
                }
 
                {

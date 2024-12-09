@@ -3,6 +3,7 @@ import { useGetIplJerseryQuery } from '../../../services/cricketApi'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from './products.slice'
 import { useNavigate } from 'react-router-dom'
+import Cricketball from '../../../assets/bestCricBallAni.png'
 
 function ProductsList(){
 
@@ -23,7 +24,7 @@ function ProductsList(){
     return (<section>
         
                
-                    {isLoading && <b>Loading...</b>}
+                    {isLoading && <><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></>}
 
                
              {!isLoading &&
