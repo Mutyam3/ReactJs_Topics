@@ -18,6 +18,14 @@
       "matchFormat": "T20",
       "wickets": "10",
       "id": 2,
+      "tossDetails": {
+        "tossWon": 3,
+        "tossId": 2,
+        "tossStatus": true,
+        "decidedTo": "bat",
+        "decidedToId": 3,
+        "decidedToStatus": true
+      },
       "XIplayers": {
         "teamAXIPlayers": [
           {
@@ -266,13 +274,1403 @@
           }
         ]
       },
-      "tossDetails": {
-        "tossWon": 3,
-        "tossId": 2,
-        "tossStatus": true,
-        "decidedTo": "bowl",
-        "decidedToId": 4,
-        "decidedToStatus": true
+      "TeamAScoring": {
+        "type": "TeamAScore",
+        "score": 197,
+        "runs": 0,
+        "balls": 70,
+        "totalOvers": [
+          {
+            "overCount": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              4,
+              6,
+              2,
+              3,
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              4,
+              3,
+              6,
+              2,
+              1
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              3,
+              6,
+              "w",
+              1,
+              3
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              "w",
+              1,
+              3,
+              4
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              3,
+              4,
+              "w",
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              4,
+              6,
+              "w",
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              6,
+              4,
+              6,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              3,
+              4,
+              6,
+              "w",
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              3,
+              "w",
+              6,
+              6
+            ]
+          }
+        ],
+        "overs": [
+          1,
+          2,
+          "w",
+          "w"
+        ],
+        "currentOver": 11,
+        "oversCount": 11.4,
+        "bowlersList": [
+          {
+            "playerName": "Jasprit Bumrah",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 22,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "JaspritBumrah1",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Kieron Pollard",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 22,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "KieronPollard3",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Ishan Kishan",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 17,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "IshanKishan5",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Suryakumar Yadav",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 14,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "SuryakumarYadav6",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Jasprit Bumrah",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 33,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 1,
+            "out": false,
+            "id": "JaspritBumrah1",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Rahul Chahar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 16,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "RahulChahar7",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Trent Boult",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 16,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "TrentBoult8",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Rahul Chahar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 35,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "RahulChahar7",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Mitchell McClenaghan",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 19,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "MitchellMcClenaghan9",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Mitchell McClenaghan",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 39,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "MitchellMcClenaghan9",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Trent Boult",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 34,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "TrentBoult8",
+            "ballsBowled": 12
+          }
+        ],
+        "overCompleted": "notCompleted",
+        "maxOversCount": 20,
+        "wickets": 10,
+        "wicketStatus": false,
+        "playersOut": [
+          {
+            "playerName": "Virat Kohli",
+            "batRuns": 28,
+            "ballsFaced": 7,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ViratKohli0"
+          },
+          {
+            "playerName": "Glenn Maxwell",
+            "batRuns": 7,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "GlennMaxwell2"
+          },
+          {
+            "playerName": "AB de Villiers",
+            "batRuns": 43,
+            "ballsFaced": 14,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ABdeVilliers1"
+          },
+          {
+            "playerName": "Faf du Plessis",
+            "batRuns": 10,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "FafduPlessis5"
+          },
+          {
+            "playerName": "Dinesh Karthik",
+            "batRuns": 19,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "DineshKarthik10"
+          },
+          {
+            "playerName": "Devdutt Padikkal",
+            "batRuns": 25,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "DevduttPadikkal8"
+          },
+          {
+            "playerName": "Washington Sundar",
+            "batRuns": 14,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "WashingtonSundar9"
+          },
+          {
+            "playerName": "Karn Sharma",
+            "batRuns": 6,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KarnSharma6"
+          },
+          {
+            "playerName": "Kyle Jamieson",
+            "batRuns": 6,
+            "ballsFaced": 3,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KyleJamieson7"
+          },
+          {
+            "playerName": "Yuzvendra Chahal",
+            "batRuns": 15,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "YuzvendraChahal4"
+          }
+        ],
+        "battingPlayers": [
+          {
+            "playerName": "Virat Kohli",
+            "batRuns": 28,
+            "ballsFaced": 7,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "ViratKohli0"
+          },
+          {
+            "playerName": "AB de Villiers",
+            "batRuns": 43,
+            "ballsFaced": 14,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "ABdeVilliers1"
+          },
+          {
+            "playerName": "Glenn Maxwell",
+            "batRuns": 7,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "GlennMaxwell2"
+          },
+          {
+            "playerName": "Mohammed Siraj",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "MohammedSiraj3"
+          },
+          {
+            "playerName": "Yuzvendra Chahal",
+            "batRuns": 15,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "YuzvendraChahal4"
+          },
+          {
+            "playerName": "Faf du Plessis",
+            "batRuns": 10,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "FafduPlessis5"
+          },
+          {
+            "playerName": "Karn Sharma",
+            "batRuns": 6,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "KarnSharma6"
+          },
+          {
+            "playerName": "Kyle Jamieson",
+            "batRuns": 6,
+            "ballsFaced": 3,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "KyleJamieson7"
+          },
+          {
+            "playerName": "Devdutt Padikkal",
+            "batRuns": 25,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "DevduttPadikkal8"
+          },
+          {
+            "playerName": "Washington Sundar",
+            "batRuns": 14,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "WashingtonSundar9"
+          },
+          {
+            "playerName": "Dinesh Karthik",
+            "batRuns": 19,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "DineshKarthik10"
+          }
+        ],
+        "bowlingPlayers": [
+          {
+            "playerName": "Rohit Sharma",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RohitSharma0"
+          },
+          {
+            "playerName": "Jasprit Bumrah",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 33,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 1,
+            "out": false,
+            "id": "JaspritBumrah1",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Hardik Pandya",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "HardikPandya2"
+          },
+          {
+            "playerName": "Kieron Pollard",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 22,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "KieronPollard3",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Quinton de Kock",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "QuintondeKock4"
+          },
+          {
+            "playerName": "Ishan Kishan",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 17,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "IshanKishan5",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Suryakumar Yadav",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 14,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "SuryakumarYadav6",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Rahul Chahar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 35,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "RahulChahar7",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Trent Boult",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 34,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "TrentBoult8",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Mitchell McClenaghan",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 39,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "MitchellMcClenaghan9",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Krunal Pandya",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KrunalPandya10"
+          }
+        ],
+        "Batsman": {
+          "striker": {
+            "playerName": "",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "fours": 0,
+            "sixes": 0
+          },
+          "nonStriker": {
+            "playerName": "Mohammed Siraj",
+            "batRuns": 24,
+            "ballsFaced": 8,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "MohammedSiraj3"
+          }
+        },
+        "Bowler": {
+          "playerName": "Ishan Kishan",
+          "batRuns": 0,
+          "ballsFaced": 0,
+          "bowlRuns": 20,
+          "fours": 0,
+          "sixes": 0,
+          "overs": 1.4,
+          "wickets": 2,
+          "out": false,
+          "id": "IshanKishan5",
+          "ballsBowled": 10
+        }
+      },
+      "TeamBScoring": {
+        "type": "TeamBScore",
+        "score": 190,
+        "runs": 0,
+        "balls": 63,
+        "totalOvers": [
+          {
+            "overCount": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              1
+            ]
+          },
+          {
+            "overCount": [
+              2,
+              "Bye",
+              "Wide",
+              4,
+              6,
+              1,
+              2,
+              4
+            ]
+          },
+          {
+            "overCount": [
+              "w",
+              1,
+              2,
+              6,
+              4,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              6,
+              6,
+              6,
+              6,
+              "w",
+              1
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              4,
+              6,
+              6,
+              6,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              3,
+              4,
+              "w",
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              6,
+              6,
+              1,
+              6,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              3,
+              4,
+              "w",
+              1,
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              "NB",
+              "Wide",
+              6,
+              6,
+              4,
+              "w",
+              1
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              4,
+              3,
+              "w",
+              2,
+              4
+            ]
+          }
+        ],
+        "overs": [
+          2,
+          4,
+          "w"
+        ],
+        "currentOver": 10,
+        "oversCount": 10.3,
+        "bowlersList": [
+          {
+            "playerName": "Mohammed Siraj",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 17,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "MohammedSiraj3",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Yuzvendra Chahal",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 19,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "YuzvendraChahal4",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Yuzvendra Chahal",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 19,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 0,
+            "out": false,
+            "id": "YuzvendraChahal4",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Mohammed Siraj",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 30,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "MohammedSiraj3",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Washington Sundar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 25,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "WashingtonSundar9",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Washington Sundar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 48,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "WashingtonSundar9",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Kyle Jamieson",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 16,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "KyleJamieson7",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Karn Sharma",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 20,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "KarnSharma6",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Devdutt Padikkal",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 15,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "DevduttPadikkal8",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Washington Sundar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 66,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 3,
+            "wickets": 3,
+            "out": false,
+            "id": "WashingtonSundar9",
+            "ballsBowled": 18
+          },
+          {
+            "playerName": "Yuzvendra Chahal",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 33,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 1,
+            "out": false,
+            "id": "YuzvendraChahal4",
+            "ballsBowled": 12
+          }
+        ],
+        "overCompleted": "notCompleted",
+        "maxOversCount": 20,
+        "wickets": 10,
+        "wicketStatus": false,
+        "playersOut": [
+          {
+            "playerName": "Jasprit Bumrah",
+            "batRuns": 19,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "JaspritBumrah1"
+          },
+          {
+            "playerName": "Rohit Sharma",
+            "batRuns": 17,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RohitSharma0"
+          },
+          {
+            "playerName": "Kieron Pollard",
+            "batRuns": 24,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 4,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KieronPollard3"
+          },
+          {
+            "playerName": "Quinton de Kock",
+            "batRuns": 24,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "QuintondeKock4"
+          },
+          {
+            "playerName": "Hardik Pandya",
+            "batRuns": 23,
+            "ballsFaced": 8,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "HardikPandya2"
+          },
+          {
+            "playerName": "Suryakumar Yadav",
+            "batRuns": 13,
+            "ballsFaced": 3,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "SuryakumarYadav6"
+          },
+          {
+            "playerName": "Rahul Chahar",
+            "batRuns": 8,
+            "ballsFaced": 3,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RahulChahar7"
+          },
+          {
+            "playerName": "Trent Boult",
+            "batRuns": 24,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 3,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "TrentBoult8"
+          },
+          {
+            "playerName": "Ishan Kishan",
+            "batRuns": 21,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "IshanKishan5"
+          },
+          {
+            "playerName": "Krunal Pandya",
+            "batRuns": 12,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KrunalPandya10"
+          }
+        ],
+        "battingPlayers": [
+          {
+            "playerName": "Rohit Sharma",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RohitSharma0"
+          },
+          {
+            "playerName": "Jasprit Bumrah",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "JaspritBumrah1"
+          },
+          {
+            "playerName": "Hardik Pandya",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "HardikPandya2"
+          },
+          {
+            "playerName": "Kieron Pollard",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KieronPollard3"
+          },
+          {
+            "playerName": "Quinton de Kock",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "QuintondeKock4"
+          },
+          {
+            "playerName": "Ishan Kishan",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "IshanKishan5"
+          },
+          {
+            "playerName": "Suryakumar Yadav",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "SuryakumarYadav6"
+          },
+          {
+            "playerName": "Rahul Chahar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RahulChahar7"
+          },
+          {
+            "playerName": "Trent Boult",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "TrentBoult8"
+          },
+          {
+            "playerName": "Mitchell McClenaghan",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "MitchellMcClenaghan9"
+          },
+          {
+            "playerName": "Krunal Pandya",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KrunalPandya10"
+          }
+        ],
+        "bowlingPlayers": [
+          {
+            "playerName": "Virat Kohli",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ViratKohli0"
+          },
+          {
+            "playerName": "AB de Villiers",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ABdeVilliers1"
+          },
+          {
+            "playerName": "Glenn Maxwell",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "GlennMaxwell2"
+          },
+          {
+            "playerName": "Mohammed Siraj",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "MohammedSiraj3"
+          },
+          {
+            "playerName": "Yuzvendra Chahal",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "YuzvendraChahal4"
+          },
+          {
+            "playerName": "Faf du Plessis",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "FafduPlessis5"
+          },
+          {
+            "playerName": "Karn Sharma",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KarnSharma6"
+          },
+          {
+            "playerName": "Kyle Jamieson",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KyleJamieson7"
+          },
+          {
+            "playerName": "Devdutt Padikkal",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "DevduttPadikkal8"
+          },
+          {
+            "playerName": "Washington Sundar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "WashingtonSundar9"
+          },
+          {
+            "playerName": "Dinesh Karthik",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "DineshKarthik10"
+          }
+        ],
+        "Batsman": {
+          "striker": {
+            "playerName": "",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "fours": 0,
+            "sixes": 0
+          },
+          "nonStriker": {
+            "playerName": "Mitchell McClenaghan",
+            "batRuns": 1,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "MitchellMcClenaghan9"
+          }
+        },
+        "Bowler": {
+          "playerName": "Kyle Jamieson",
+          "batRuns": 0,
+          "ballsFaced": 0,
+          "bowlRuns": 22,
+          "fours": 0,
+          "sixes": 0,
+          "overs": 1.3,
+          "wickets": 2,
+          "out": false,
+          "id": "KyleJamieson7",
+          "ballsBowled": 9
+        }
       }
     },
     {

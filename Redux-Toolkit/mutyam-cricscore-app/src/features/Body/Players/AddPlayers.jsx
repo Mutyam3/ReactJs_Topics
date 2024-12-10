@@ -19,7 +19,8 @@ function AddPlayer()
                     bowlingStyle : '',
                     phoneNumber : '',
                     email : '',
-                    photo : ''
+                    photo : '',
+                    
                    },
 
                 onSubmit : (values)=>{

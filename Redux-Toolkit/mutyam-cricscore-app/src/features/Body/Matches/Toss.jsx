@@ -1,13 +1,16 @@
 import React from 'react'
-import { useAddMatchMutation, useUpdateMatchMutation } from '../../../services/cricketApi'
+import { useAddMatchMutation, useLazyGetMatchByIdQuery, useUpdateMatchMutation } from '../../../services/cricketApi'
 import { addBattingPlayers, addBowlingPlayers } from './ScoringSlice'
 import { useDispatch } from 'react-redux'
 
+
 function Toss({matchData, id})
 {
-  
+    console.log('matchData toss:: ', matchData)
     const [addTossFn]   =   useUpdateMatchMutation()
     const dispatch = useDispatch()
+    const [matchDataCallFn] = useLazyGetMatchByIdQuery()
+    
  
     const [TossDetails, setTossDetails] = React.useState(
            
@@ -33,40 +36,21 @@ function Toss({matchData, id})
            setTossDetails({...TossDetails, decidedTo : d, decidedToId : i, decidedToStatus : true }) 
     }
 
+ 
+
     function handleScoring()
     {
           var temp = {...matchData}
           temp = {...temp, tossDetails : {...TossDetails}}
           console.log(temp)
-          addTossFn({id:id, match : temp})
+          addTossFn({id:id, match : temp}).then(
+            matchDataCallFn(id)
+
+          )
 
 
     }
 
-    React.useEffect(()=>{
-
-        const {teamAXIPlayers, teamBXIPlayers}  =  matchData?.XIplayers
-        const teamABattingPlayers =  teamAXIPlayers.map((el,ind)=>{
-                                 return {playerName : el.fullName, batRuns : 0, ballsFaced: 0, bowlRuns: 0 ,fours: 0, sixes:0 , overs:0, wickets:0, out:false ,id:`${el.fullName.split(" ").join("") +ind}`}
-                               })
-        const teamBBattingPlayers =  teamBXIPlayers.map((el, ind)=>{
-                                return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0 , out:false, id:`${el.fullName.split(" ").join("") +ind}`}
-                              })
-
-        const teamABowlingPlayers =  teamAXIPlayers.map((el, ind)=>{
-                                return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0, out:false, id:`${el.fullName.split(" ").join("") +ind}` }
-                              })
-        const teamBBowlingPlayers =  teamBXIPlayers.map((el, ind)=>{
-                               return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0, out:false, id:`${el.fullName.split(" ").join("") +ind}` }
-                             })
-
-        dispatch(addBattingPlayers({name:'TeamA', value:teamABattingPlayers}))
-        dispatch(addBattingPlayers({name:'TeamB', value:teamBBattingPlayers}))
-
-        dispatch(addBowlingPlayers({name: 'TeamA', value:teamBBowlingPlayers}))
-        dispatch(addBowlingPlayers({name: 'TeamB', value:teamABowlingPlayers}))
-            
-      },[])
 
     return (
         <section className='border border-light w-75 ' >
