@@ -19,7 +19,7 @@ function Scoring()
        const {isLoading: matchLoading, data : matchData} =useGetMatchByIdQuery(id)
        const {isLoading : teamsLoading, data : teamsData} = useGetTeamsQuery()
        const [getMatchDataFn] = useLazyGetMatchByIdQuery()
-       console.log('idi babu::',matchData)
+       console.log('firstMatchData::',matchData)
        const [teamType, setTeamType] = React.useState('')
 
        function teamsNameById(id)
@@ -33,14 +33,14 @@ function Scoring()
                 
        }
 
+     
+
        React.useEffect(()=>{
        
-         getMatchDataFn(id)
+         
 
          if( matchData?.teamBName === matchData?.tossDetails?.tossWon)
             {
-               console.log(matchData?.teamBName )
-               console.log(matchData?.tossDetails?.tossWon)
                if(matchData?.tossDetails?.decidedTo === "bat" ){
                   setTeamType('TeamB') // b batting chestadi
                }
@@ -62,16 +62,41 @@ function Scoring()
                   }
                   
                }
+         getMatchDataFn(id)
              
        },[])
 
 
-     
-
-     
-
-
+   function handleStartGame(){
+      console.log('mutyam:: ',matchData)
+      if(matchData?.XIplayers){
+         const {teamAXIPlayers}  =  matchData?.XIplayers
+         const {teamBXIPlayers}  =  matchData?.XIplayers
       
+         const teamABattingPlayers =  teamAXIPlayers.map((el,ind)=>{
+                                  return {playerName : el.fullName, batRuns : 0, ballsFaced: 0, bowlRuns: 0 ,fours: 0, sixes:0 , overs:0, wickets:0, out:false ,id:`${el.fullName.split(" ").join("") +ind}`}
+                                })
+         const teamBBattingPlayers =  teamBXIPlayers.map((el, ind)=>{
+                                 return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0 , out:false, id:`${el.fullName.split(" ").join("") +ind}`}
+                               })
+      
+         const teamABowlingPlayers =  teamAXIPlayers.map((el, ind)=>{
+                                 return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0, out:false, id:`${el.fullName.split(" ").join("") +ind}` }
+                               })
+         const teamBBowlingPlayers =  teamBXIPlayers.map((el, ind)=>{
+                                return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0, out:false, id:`${el.fullName.split(" ").join("") +ind}` }
+                              })
+      
+         dispatch(addBattingPlayers({name:'TeamA', value:teamABattingPlayers}))
+         dispatch(addBattingPlayers({name:'TeamB', value:teamBBattingPlayers}))
+      
+         dispatch(addBowlingPlayers({name: 'TeamA', value:teamBBowlingPlayers}))
+         dispatch(addBowlingPlayers({name: 'TeamB', value:teamABowlingPlayers}))
+      }
+  
+
+   }
+     
 
     return (
         <>
@@ -115,9 +140,12 @@ function Scoring()
                                 
                              </div>
 
-
-
+                             <div className='m-2 '>
+                                <button onClick = {()=>{handleStartGame()}} className='border-0 rounded-3 bg-primary text-light'>Start Giving Score</button>
+                             </div>
+                             
                              <h5>Scoring Team </h5>
+                             
                              <div className=' m-auto p-4  w-75 border border-light rounded-3'> 
                                 
                                     {

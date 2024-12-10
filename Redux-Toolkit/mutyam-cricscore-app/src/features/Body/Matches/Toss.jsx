@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux'
 
 function Toss({matchData, id})
 {
-    console.log('matchData toss:: ', matchData)
+    // console.log('matchData toss:: ', matchData)
     const [addTossFn]   =   useUpdateMatchMutation()
     const dispatch = useDispatch()
     const [matchDataCallFn] = useLazyGetMatchByIdQuery()
@@ -43,12 +43,10 @@ function Toss({matchData, id})
           var temp = {...matchData}
           temp = {...temp, tossDetails : {...TossDetails}}
           console.log(temp)
-          addTossFn({id:id, match : temp}).then(
-            matchDataCallFn(id)
-
+          addTossFn({id:id, match : temp}).then(()=>{
+                     matchDataCallFn(id) 
+          }
           )
-
-
     }
 
 
