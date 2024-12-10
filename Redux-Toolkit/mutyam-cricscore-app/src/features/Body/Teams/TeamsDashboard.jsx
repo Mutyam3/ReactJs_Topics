@@ -22,7 +22,7 @@ function TeamsDashboard()
                   <div>
                       {
 
-                          !isLoading && data.map((el)=>{
+                          !isLoading && data?.map((el)=>{
                                  return (
                                     <div className='m-2 p-2'>
                                         <h5>{el.teamName}</h5>
