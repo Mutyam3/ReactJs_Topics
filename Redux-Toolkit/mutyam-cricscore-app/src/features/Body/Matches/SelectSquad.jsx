@@ -68,9 +68,11 @@ function SelectSquad()
           {
                var temp = {...matchData}
                    temp = {...temp, XIplayers : selectedPlayers}
-
-               matchPlayersFn({id:id, match : temp}).then(
-                     matchDataCallFn(id)
+                    console.log('temp::', temp)
+               matchPlayersFn({id:id, match : temp}).then(()=>{
+                       matchDataCallFn(id)
+                       console.log('selectSquad ::', matchData)
+               }    
                )
           }
 
@@ -109,7 +111,7 @@ function SelectSquad()
                </>
 
             }
-
+            {/* {console.log(matchData)} */}
 
             {
 

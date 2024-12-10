@@ -3243,6 +3243,913 @@
           "ballsBowled": 18
         }
       }
+    },
+    {
+      "teamAName": 5,
+      "teamBName": 2,
+      "teamALogo": "https://i.pinimg.com/736x/c8/e9/e6/c8e9e65d1d2f9d2472dd64a875c5c238.jpg",
+      "teamBLogo": "https://wallpapercave.com/wp/wp2496943.jpg",
+      "venue": {
+        "GroundName": "ARUN JAITLEY STADIUM",
+        "GroundImage": "https://documents.bcci.tv/resizedimageskirti/Delhi_compress.jpg",
+        "Address": "DELHI, INDIA",
+        "Capacity": "35,200",
+        "CityImage": "https://lh5.googleusercontent.com/proxy/Wjn-MZbtcTiGNoeguVIHalSW8ACnEK8aQKGeg47MacSlJHLitMkIsyGghAR1ZNlh1A8mKYcOhhd51ZFwzU8EBxqByuIiGNoBLC4DFR68wHOhye6SHpXywLUZUtZzPQVScZwaSu2jHRvwdko0o6m66RxcstOFQG8=w675-h390-n-k-no"
+      },
+      "date": "2024-12-10",
+      "time": "14:00",
+      "overs": 20,
+      "matchFormat": "T20",
+      "wickets": "10",
+      "id": 4,
+      "XIplayers": {
+        "teamAXIPlayers": [
+          {
+            "fullName": "Shreyas Iyer",
+            "dateOfBirth": "1994-06-06",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-123-4567",
+            "emailId": "shreyas.iyer@kkr.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyAbxqgNyX9VU9rXC1IRtOJNXAhY-x0sSf2g&s",
+            "status": false,
+            "id": 61
+          },
+          {
+            "fullName": "Andre Russell",
+            "dateOfBirth": "1988-04-29",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm fast",
+            "phoneNumber": "890-234-5678",
+            "emailId": "andre.russell@kkr.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQkSuUO29Hl-ixX38SGY5XPBjC8qtbWO0uQ&s",
+            "status": false,
+            "id": 62
+          },
+          {
+            "fullName": "Sunil Narine",
+            "dateOfBirth": "1988-05-26",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm off-spin",
+            "phoneNumber": "890-345-6789",
+            "emailId": "sunil.narine@kkr.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_NkntY0jPI9P1pU8ih1Y4Xp7J9e-MxLOpg&s",
+            "status": false,
+            "id": 63
+          },
+          {
+            "fullName": "Nitish Rana",
+            "dateOfBirth": "1993-12-27",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Right-arm off-spin",
+            "phoneNumber": "890-456-7890",
+            "emailId": "nitish.rana@kkr.com",
+            "photo": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202410/nitish-rana-22503467-16x9.jpg?VersionId=ARSXaLRELg4nSbCldR57XCuPgOb0VUd2&size=690:388",
+            "status": false,
+            "id": 64
+          },
+          {
+            "fullName": "Venkatesh Iyer",
+            "dateOfBirth": "1994-12-25",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-567-8901",
+            "emailId": "venkatesh.iyer@kkr.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGmCrrwE_emTLaqQihdxbmwteejjo858tng&s",
+            "status": false,
+            "id": 65
+          },
+          {
+            "fullName": "Lockie Ferguson",
+            "dateOfBirth": "1991-06-13",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm fast",
+            "phoneNumber": "890-678-9012",
+            "emailId": "lockie.ferguson@kkr.com",
+            "photo": "https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2023/09/02/f475f254226fe3555ca549db58449929.jpg?quality=80&zoom=1&ssl=1",
+            "status": false,
+            "id": 66
+          },
+          {
+            "fullName": "Rahul Tripathi",
+            "dateOfBirth": "1990-03-02",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm off-spin",
+            "phoneNumber": "890-789-0123",
+            "emailId": "rahul.tripathi@kkr.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVmqKrKz0VgUUIlBQqVHL2tWSFT_bdAwl4_Q&s",
+            "status": false,
+            "id": 67
+          },
+          {
+            "fullName": "Kuldeep Yadav",
+            "dateOfBirth": "1994-12-14",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Left-arm wrist-spin",
+            "phoneNumber": "890-890-1234",
+            "emailId": "kuldeep.yadav@kkr.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzp4DzJANk7dg179iG1kltgFB9MDmv_6c8irRYUMuPQURlM_6ANAqgAlALFnbjt67xKrA&usqp=CAU",
+            "status": false,
+            "id": 68
+          },
+          {
+            "fullName": "Prasidh Krishna",
+            "dateOfBirth": "1996-05-19",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm fast",
+            "phoneNumber": "890-901-2345",
+            "emailId": "prasidh.krishna@kkr.com",
+            "photo": "https://pbs.twimg.com/profile_images/1493970538875670533/VYoaS6zi_400x400.jpg",
+            "status": false,
+            "id": 69
+          },
+          {
+            "fullName": "Shivam Mavi",
+            "dateOfBirth": "1998-11-26",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm fast",
+            "phoneNumber": "890-012-3456",
+            "emailId": "shivam.mavi@kkr.com",
+            "photo": "https://i.pinimg.com/736x/2e/48/aa/2e48aa049ac77e634ef8280247a4cf7b.jpg",
+            "status": false,
+            "id": 70
+          },
+          {
+            "fullName": "Rinku singh",
+            "dateOfBirth": "1990-09-14",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-123-4568",
+            "emailId": "Rinku singh@kkr.com",
+            "photo": "https://i.pinimg.com/736x/85/18/39/85183939dde0b7982579c2044e80a2ab.jpg",
+            "status": false,
+            "id": 71
+          }
+        ],
+        "teamBXIPlayers": [
+          {
+            "fullName": "Mahendra Singh Dhoni",
+            "dateOfBirth": "1981-07-07",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-123-4567",
+            "emailId": "ms.dhoni@cricket.com",
+            "photo": "https://wallpapers.com/images/hd/vector-cartoon-ms-dhoni-hd-575intsd0dxp6iwi.jpg",
+            "status": false,
+            "id": 13
+          },
+          {
+            "fullName": "Ravindra Jadeja",
+            "dateOfBirth": "1988-12-06",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Left-arm orthodox",
+            "phoneNumber": "890-234-5678",
+            "emailId": "ravindra.jadeja@cricket.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlsMrvzKeZ0gsHyTE5-bOwt5S95mhO80wtbA&s",
+            "status": false,
+            "id": 14
+          },
+          {
+            "fullName": "Suresh Raina",
+            "dateOfBirth": "1986-11-27",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Right-arm off-spin",
+            "phoneNumber": "890-345-6789",
+            "emailId": "suresh.raina@cricket.com",
+            "photo": "https://www.creativehatti.com/wp-content/uploads/2021/02/Suresh-Raina-Indian-Cricket-Player-Vector-Illustration-Thumbnail-2.jpg",
+            "status": false,
+            "id": 15
+          },
+          {
+            "fullName": "Dwayne Bravo",
+            "dateOfBirth": "1983-10-07",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium-fast",
+            "phoneNumber": "890-456-7890",
+            "emailId": "dwayne.bravo@cricket.com",
+            "photo": "https://staticg.sportskeeda.com/skm/assets/player-images/cricket/dwayne-bravo.png?w=268",
+            "status": false,
+            "id": 16
+          },
+          {
+            "fullName": "Faf du Plessis",
+            "dateOfBirth": "1984-07-13",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "N/A",
+            "phoneNumber": "890-567-8901",
+            "emailId": "faf.duplessis@cricket.com",
+            "photo": "https://pbs.twimg.com/media/Dx5O2c7XcAEkCz2.jpg",
+            "status": false,
+            "id": 17
+          },
+          {
+            "fullName": "Ruturaj Gaikwad",
+            "dateOfBirth": "1997-01-31",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "N/A",
+            "phoneNumber": "890-678-9012",
+            "emailId": "ruturaj.gaikwad@cricket.com",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQnjhVRclF4ATf0WemPmW57vJpEsnZvV-tLA&s",
+            "status": false,
+            "id": 18
+          },
+          {
+            "fullName": "Deepak Chahar",
+            "dateOfBirth": "1992-08-07",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium-fast",
+            "phoneNumber": "890-789-0123",
+            "emailId": "deepak.chahar@cricket.com",
+            "photo": "https://i.pinimg.com/originals/8c/3d/b2/8c3db2a73b7c0df43f99174905662311.jpg",
+            "status": false,
+            "id": 19
+          },
+          {
+            "fullName": "Sam Curran",
+            "dateOfBirth": "1998-06-03",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Left-arm medium-fast",
+            "phoneNumber": "890-890-1234",
+            "emailId": "sam.curran@cricket.com",
+            "photo": "https://cricketvectors.akamaized.net/players/org/CG.png?impolicy=default_web",
+            "status": false,
+            "id": 20
+          },
+          {
+            "fullName": "Shivam Dube",
+            "dateOfBirth": "1993-06-26",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-012-3456",
+            "emailId": "shivam.dube@cricket.com",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/6/63/Shivam_Dube_in_PMO_New_Delhi.jpg",
+            "status": false,
+            "id": 22
+          },
+          {
+            "fullName": "Moeen Ali",
+            "dateOfBirth": "1987-06-18",
+            "battingStyle": "Left-hand bat",
+            "bowlingStyle": "Right-arm off-spin",
+            "phoneNumber": "890-901-2345",
+            "emailId": "moeen.ali@cricket.com",
+            "photo": "https://worcesterobserver.co.uk/wp-content/uploads/2021/11/Moeen-Ali-Colour-scaled-1-362x434.jpg",
+            "status": false,
+            "id": 21
+          },
+          {
+            "fullName": "Tushar Deshpande",
+            "dateOfBirth": "1995-07-15",
+            "battingStyle": "Right-hand bat",
+            "bowlingStyle": "Right-arm medium",
+            "phoneNumber": "890-123-4568",
+            "emailId": "tushar.deshpande@cricket.com",
+            "photo": "https://devdiscourse.blob.core.windows.net/devnews/06_05_2023_13_59_54_9458976.jpg",
+            "status": false,
+            "id": 23
+          }
+        ]
+      },
+      "tossDetails": {
+        "tossWon": 5,
+        "tossId": 1,
+        "tossStatus": true,
+        "decidedTo": "bat",
+        "decidedToId": 3,
+        "decidedToStatus": true
+      },
+      "TeamAScoring": {
+        "type": "TeamAScore",
+        "score": 143,
+        "runs": 0,
+        "balls": 52,
+        "totalOvers": [
+          {
+            "overCount": [
+              1,
+              2,
+              3,
+              "w",
+              4,
+              6
+            ]
+          },
+          {
+            "overCount": [
+              4,
+              6,
+              1,
+              3,
+              "w",
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              4,
+              "Wide",
+              "NB",
+              6,
+              "w",
+              6
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              3,
+              4,
+              2,
+              "LB",
+              6,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              3,
+              6,
+              3,
+              2,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              4,
+              3,
+              6,
+              "w"
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              "w",
+              6,
+              4,
+              "w",
+              1
+            ]
+          },
+          {
+            "overCount": [
+              1,
+              2,
+              4,
+              6,
+              "w",
+              1
+            ]
+          }
+        ],
+        "overs": [
+          4,
+          6,
+          2,
+          "w"
+        ],
+        "currentOver": 8,
+        "oversCount": 8.4,
+        "bowlersList": [
+          {
+            "playerName": "Ravindra Jadeja",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 16,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "RavindraJadeja1",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Dwayne Bravo",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 20,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "DwayneBravo3",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Deepak Chahar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 19,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "DeepakChahar6",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Ravindra Jadeja",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 32,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "RavindraJadeja1",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Suresh Raina",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 15,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "SureshRaina2",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Dwayne Bravo",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 36,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "DwayneBravo3",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Moeen Ali",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 12,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 2,
+            "out": false,
+            "id": "MoeenAli9",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Shivam Dube",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 14,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "ShivamDube8",
+            "ballsBowled": 6
+          }
+        ],
+        "overCompleted": "notCompleted",
+        "maxOversCount": 20,
+        "wickets": 10,
+        "wicketStatus": false,
+        "playersOut": [
+          {
+            "playerName": "Shreyas Iyer",
+            "batRuns": 6,
+            "ballsFaced": 3,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ShreyasIyer0"
+          },
+          {
+            "playerName": "Andre Russell",
+            "batRuns": 14,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "AndreRussell1"
+          },
+          {
+            "playerName": "Sunil Narine",
+            "batRuns": 23,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "SunilNarine2"
+          },
+          {
+            "playerName": "Venkatesh Iyer",
+            "batRuns": 22,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "VenkateshIyer4"
+          },
+          {
+            "playerName": "Nitish Rana",
+            "batRuns": 6,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "NitishRana3"
+          },
+          {
+            "playerName": "Rahul Tripathi",
+            "batRuns": 16,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RahulTripathi6"
+          },
+          {
+            "playerName": "Kuldeep Yadav",
+            "batRuns": 1,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "KuldeepYadav7"
+          },
+          {
+            "playerName": "Prasidh Krishna",
+            "batRuns": 10,
+            "ballsFaced": 2,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "PrasidhKrishna8"
+          },
+          {
+            "playerName": "Shivam Mavi",
+            "batRuns": 7,
+            "ballsFaced": 2,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "ShivamMavi9"
+          }
+        ],
+        "battingPlayers": [
+          {
+            "playerName": "Shreyas Iyer",
+            "batRuns": 6,
+            "ballsFaced": 3,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "ShreyasIyer0"
+          },
+          {
+            "playerName": "Andre Russell",
+            "batRuns": 14,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "AndreRussell1"
+          },
+          {
+            "playerName": "Sunil Narine",
+            "batRuns": 23,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 2,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "SunilNarine2"
+          },
+          {
+            "playerName": "Nitish Rana",
+            "batRuns": 6,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "NitishRana3"
+          },
+          {
+            "playerName": "Venkatesh Iyer",
+            "batRuns": 22,
+            "ballsFaced": 6,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 2,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "VenkateshIyer4"
+          },
+          {
+            "playerName": "Lockie Ferguson",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "LockieFerguson5"
+          },
+          {
+            "playerName": "Rahul Tripathi",
+            "batRuns": 16,
+            "ballsFaced": 5,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "RahulTripathi6"
+          },
+          {
+            "playerName": "Kuldeep Yadav",
+            "batRuns": 1,
+            "ballsFaced": 1,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "KuldeepYadav7"
+          },
+          {
+            "playerName": "Prasidh Krishna",
+            "batRuns": 10,
+            "ballsFaced": 2,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "PrasidhKrishna8"
+          },
+          {
+            "playerName": "Shivam Mavi",
+            "batRuns": 7,
+            "ballsFaced": 2,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": true,
+            "id": "ShivamMavi9"
+          },
+          {
+            "playerName": "Rinku singh",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "Rinkusingh10"
+          }
+        ],
+        "bowlingPlayers": [
+          {
+            "playerName": "Mahendra Singh Dhoni",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "MahendraSinghDhoni0"
+          },
+          {
+            "playerName": "Ravindra Jadeja",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 32,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "RavindraJadeja1",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Suresh Raina",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 15,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "SureshRaina2",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Dwayne Bravo",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 36,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 2,
+            "wickets": 2,
+            "out": false,
+            "id": "DwayneBravo3",
+            "ballsBowled": 12
+          },
+          {
+            "playerName": "Faf du Plessis",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "FafduPlessis4"
+          },
+          {
+            "playerName": "Ruturaj Gaikwad",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "RuturajGaikwad5"
+          },
+          {
+            "playerName": "Deepak Chahar",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 19,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "DeepakChahar6",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Sam Curran",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "SamCurran7"
+          },
+          {
+            "playerName": "Shivam Dube",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 14,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 1,
+            "out": false,
+            "id": "ShivamDube8",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Moeen Ali",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 12,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 1,
+            "wickets": 2,
+            "out": false,
+            "id": "MoeenAli9",
+            "ballsBowled": 6
+          },
+          {
+            "playerName": "Tushar Deshpande",
+            "batRuns": 0,
+            "ballsFaced": 0,
+            "bowlRuns": 0,
+            "fours": 0,
+            "sixes": 0,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "TusharDeshpande10"
+          }
+        ],
+        "Batsman": {
+          "striker": {
+            "playerName": "Rinku singh",
+            "batRuns": 13,
+            "ballsFaced": 4,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "Rinkusingh10"
+          },
+          "nonStriker": {
+            "playerName": "Lockie Ferguson",
+            "batRuns": 22,
+            "ballsFaced": 8,
+            "bowlRuns": 0,
+            "fours": 1,
+            "sixes": 1,
+            "overs": 0,
+            "wickets": 0,
+            "out": false,
+            "id": "LockieFerguson5"
+          }
+        },
+        "Bowler": {
+          "playerName": "Ravindra Jadeja",
+          "batRuns": 0,
+          "ballsFaced": 0,
+          "bowlRuns": 44,
+          "fours": 0,
+          "sixes": 0,
+          "overs": 2.4,
+          "wickets": 3,
+          "out": false,
+          "id": "RavindraJadeja1",
+          "ballsBowled": 16
+        }
+      }
     }
   ],
   "teams": [
@@ -3794,6 +4701,146 @@
         }
       ],
       "id": 4
+    },
+    {
+      "teamName": "KKR",
+      "teamOwner": "Manik Baasha",
+      "logo": "https://i.pinimg.com/736x/c8/e9/e6/c8e9e65d1d2f9d2472dd64a875c5c238.jpg",
+      "players": [
+        {
+          "fullName": "Shreyas Iyer",
+          "dateOfBirth": "1994-06-06",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm medium",
+          "phoneNumber": "890-123-4567",
+          "emailId": "shreyas.iyer@kkr.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyAbxqgNyX9VU9rXC1IRtOJNXAhY-x0sSf2g&s",
+          "status": false,
+          "id": 61
+        },
+        {
+          "fullName": "Andre Russell",
+          "dateOfBirth": "1988-04-29",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm fast",
+          "phoneNumber": "890-234-5678",
+          "emailId": "andre.russell@kkr.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQkSuUO29Hl-ixX38SGY5XPBjC8qtbWO0uQ&s",
+          "status": false,
+          "id": 62
+        },
+        {
+          "fullName": "Sunil Narine",
+          "dateOfBirth": "1988-05-26",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm off-spin",
+          "phoneNumber": "890-345-6789",
+          "emailId": "sunil.narine@kkr.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_NkntY0jPI9P1pU8ih1Y4Xp7J9e-MxLOpg&s",
+          "status": false,
+          "id": 63
+        },
+        {
+          "fullName": "Nitish Rana",
+          "dateOfBirth": "1993-12-27",
+          "battingStyle": "Left-hand bat",
+          "bowlingStyle": "Right-arm off-spin",
+          "phoneNumber": "890-456-7890",
+          "emailId": "nitish.rana@kkr.com",
+          "photo": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202410/nitish-rana-22503467-16x9.jpg?VersionId=ARSXaLRELg4nSbCldR57XCuPgOb0VUd2&size=690:388",
+          "status": false,
+          "id": 64
+        },
+        {
+          "fullName": "Venkatesh Iyer",
+          "dateOfBirth": "1994-12-25",
+          "battingStyle": "Left-hand bat",
+          "bowlingStyle": "Right-arm medium",
+          "phoneNumber": "890-567-8901",
+          "emailId": "venkatesh.iyer@kkr.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGmCrrwE_emTLaqQihdxbmwteejjo858tng&s",
+          "status": false,
+          "id": 65
+        },
+        {
+          "fullName": "Lockie Ferguson",
+          "dateOfBirth": "1991-06-13",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm fast",
+          "phoneNumber": "890-678-9012",
+          "emailId": "lockie.ferguson@kkr.com",
+          "photo": "https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2023/09/02/f475f254226fe3555ca549db58449929.jpg?quality=80&zoom=1&ssl=1",
+          "status": false,
+          "id": 66
+        },
+        {
+          "fullName": "Rahul Tripathi",
+          "dateOfBirth": "1990-03-02",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm off-spin",
+          "phoneNumber": "890-789-0123",
+          "emailId": "rahul.tripathi@kkr.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVmqKrKz0VgUUIlBQqVHL2tWSFT_bdAwl4_Q&s",
+          "status": false,
+          "id": 67
+        },
+        {
+          "fullName": "Kuldeep Yadav",
+          "dateOfBirth": "1994-12-14",
+          "battingStyle": "Left-hand bat",
+          "bowlingStyle": "Left-arm wrist-spin",
+          "phoneNumber": "890-890-1234",
+          "emailId": "kuldeep.yadav@kkr.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzp4DzJANk7dg179iG1kltgFB9MDmv_6c8irRYUMuPQURlM_6ANAqgAlALFnbjt67xKrA&usqp=CAU",
+          "status": false,
+          "id": 68
+        },
+        {
+          "fullName": "Prasidh Krishna",
+          "dateOfBirth": "1996-05-19",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm fast",
+          "phoneNumber": "890-901-2345",
+          "emailId": "prasidh.krishna@kkr.com",
+          "photo": "https://pbs.twimg.com/profile_images/1493970538875670533/VYoaS6zi_400x400.jpg",
+          "status": false,
+          "id": 69
+        },
+        {
+          "fullName": "Shivam Mavi",
+          "dateOfBirth": "1998-11-26",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm fast",
+          "phoneNumber": "890-012-3456",
+          "emailId": "shivam.mavi@kkr.com",
+          "photo": "https://i.pinimg.com/736x/2e/48/aa/2e48aa049ac77e634ef8280247a4cf7b.jpg",
+          "status": false,
+          "id": 70
+        },
+        {
+          "fullName": "Rinku singh",
+          "dateOfBirth": "1990-09-14",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm medium",
+          "phoneNumber": "890-123-4568",
+          "emailId": "Rinku singh@kkr.com",
+          "photo": "https://i.pinimg.com/736x/85/18/39/85183939dde0b7982579c2044e80a2ab.jpg",
+          "status": false,
+          "id": 71
+        },
+        {
+          "fullName": "Ankul Roy",
+          "dateOfBirth": "1988-05-26",
+          "battingStyle": "Right-hand bat",
+          "bowlingStyle": "Right-arm off-spin",
+          "phoneNumber": "890-234-5679",
+          "emailId": "Ankul.Roy@kkr.com",
+          "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZITF9oxzCb8evYKoBq5h73oKds3e_2-4Dbw&s",
+          "status": false,
+          "id": 72
+        }
+      ],
+      "id": 5
     }
   ],
   "venue": [
