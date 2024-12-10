@@ -20,12 +20,12 @@ function PlayersDashboard()
             <section className='p-4'>
 
             
-                 <h5>ALL PLAYERS  ( { !isLoading && <span style={{color:'gold'}}>{data.length}</span> })</h5>
+                 <h5>ALL PLAYERS  ( { !isLoading && <span style={{color:'gold'}}>{data?.length}</span> })</h5>
                  
                  <div className = ' rounded-2 d-flex playersDisplay m-2' style={{height : '205px'}} >
                      {
                           !isLoading && (
-                              data.map((el)=>{
+                              data?.map((el)=>{
                                 return (
                                     <div className={el.status ? 'clickedPlayer': 'unclickedPlayer'} onClick ={()=>{setPlayerData(el)}}>
                                         <img src = {el.photo} width='150px' height ='150px'/>

@@ -16,7 +16,7 @@ function MatchDashboard()
 
       React.useEffect(()=>{
 
-           if(matchData && matchData.length>0)
+           if(matchData && matchData?.length>0)
            {
                 setMatchCompo([...matchData])
            }  
@@ -95,7 +95,7 @@ function MatchDashboard()
                <h4>Match Dashboard</h4>
 
                {teamsLoading && <><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></> }
-               {venueLoading && <><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></> }
+               {venueLoading && <> <b>Loading....</b></> }
 
                <section className='d-flex justify-content-evenly m-3 p-3'>
                      <h5>Sort by </h5>
@@ -106,7 +106,7 @@ function MatchDashboard()
                         <select className='field' onChange={(e)=>{handleFilterMatches(e, 'TEAM')}}>
                             <option value={null} disabled selected>Teams</option>
                             {
-                                !teamsLoading && teamsData.map((el)=>{
+                                !teamsLoading && teamsData?.map((el)=>{
                                     return (
                                         <option value={el.id} >
                                                <h3>{el.teamName}</h3>
@@ -120,7 +120,7 @@ function MatchDashboard()
                         <select className='field' onChange = {(e)=>{handleFilterMatches(e,'VENUE')}}>
                             <option value={null} disabled selected>Venues</option>
                              {
-                                !venueLoading && venueData.map((el)=>{
+                                !venueLoading && venueData?.map((el)=>{
                                     return (
                                         <option>
                                              <h3>{el.GroundName}</h3>
@@ -133,7 +133,7 @@ function MatchDashboard()
                     
                   
                </section>
-               {matchLoading && <b>Loading......</b>}
+               {matchLoading && <><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></>}
 
                { !matchLoading &&  <MatchCard   matchCompo = {matchCompo} teamsNameById = {teamsNameById}/>}
 

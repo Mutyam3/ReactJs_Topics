@@ -5,7 +5,7 @@ export const PlayerApi = createApi({
        
              reducerPath : 'PlayerApi',
              baseQuery : fetchBaseQuery({
-                baseUrl : 'http://localhost:5000/players'
+                baseUrl : 'https://json-server-cricapp.onrender.com/players'
              }),
              endpoints : (builder)=>({
 

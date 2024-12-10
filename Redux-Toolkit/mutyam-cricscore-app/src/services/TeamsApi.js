@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const teamsApi = createApi({
     reducerPath : 'teamsApi',
    
-    baseQuery : fetchBaseQuery({baseUrl:'http://localhost:5000/teams'}),
+    baseQuery : fetchBaseQuery({baseUrl:'https://json-server-cricapp.onrender.com/teams'}),
     endpoints : (builder)=>({
 
         addTeam : builder.mutation({

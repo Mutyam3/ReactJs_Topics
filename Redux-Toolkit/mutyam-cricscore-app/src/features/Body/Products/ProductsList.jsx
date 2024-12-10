@@ -31,7 +31,7 @@ function ProductsList(){
              
                 <ul className='d-flex flex-wrap m-5 p-0 justify-content-center' type='none'>{
 
-                     data.map((product)=>{
+                     data?.map((product)=>{
                         return <li className='m-3 rounded-2 overflow-hidden border border-dark d-flex flex-column' style={{width:'200px'}}>
                                     <img src={product.jerseyImage} width='200px' height='200px'/>
                                     <div className='d-flex flex-column justify-content-between' style={{height:'130px'}}>

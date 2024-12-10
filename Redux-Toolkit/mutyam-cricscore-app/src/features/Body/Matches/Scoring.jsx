@@ -22,6 +22,8 @@ function Scoring()
        console.log('firstMatchData::',matchData)
        const [teamType, setTeamType] = React.useState('')
 
+  
+
        function teamsNameById(id)
        {   
             if(teamsData)
@@ -97,10 +99,14 @@ function Scoring()
 
    }
      
+  
 
     return (
         <>
+          
+          
            {
+            
             
             
            <section>
@@ -114,8 +120,8 @@ function Scoring()
                              
                              <div className='m-4 p-3 d-flex justify-content-evenly align-items-center  '>
                                 <div onClick= {()=>{setTeamType('TeamA')}}>
-                                   <img src = {matchData.teamALogo} width = '110px' height='80px'/>
-                                   <h5>{teamsNameById(matchData.teamAName)}</h5>
+                                   <img src = {matchData?.teamALogo} width = '110px' height='80px'/>
+                                   <h5>{teamsNameById(matchData?.teamAName)}</h5>
                                    <>{
                                           (matchData?.teamAName === matchData?.tossDetails?.tossWon) ? 
                                           (matchData?.tossDetails?.decidedTo === "bat" ? <img src= {batIcon} alt='Bat' width='50px' className='cricBall'/> : <img src= {Cricketball} alt='Bowl' width='50px' className='cricBall'/> ) : 
@@ -129,8 +135,8 @@ function Scoring()
 
                                 <b className='fs-3'>Vs</b>
                                    <div onClick= {()=>{setTeamType('TeamB')}}>
-                                        <img src = {matchData.teamBLogo} width = '110px' height='80px'/>
-                                        <h5>{teamsNameById(matchData.teamBName)}</h5>
+                                        <img src = {matchData?.teamBLogo} width = '110px' height='80px'/>
+                                        <h5>{teamsNameById(matchData?.teamBName)}</h5>
                                         <>{
                                           (matchData?.teamBName === matchData?.tossDetails?.tossWon) ? 
                                           (matchData?.tossDetails?.decidedTo === "bat" ? <img src= {batIcon} alt='Bat' width='50px' className='cricBall'/> : <img src= {Cricketball} alt='Bowl' width='50px' className='cricBall'/> ) : 
@@ -153,7 +159,8 @@ function Scoring()
                                           teamType === 'TeamA' && 
                                      <>
                                            
-                                           <TeamScore type='TeamA' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamAScore} scoringAll = {scoring} selectPlayers = {matchData.TeamAScoring} teamsNameById = {teamsNameById}/>
+                                           <TeamScore type='TeamA' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamAScore} scoringAll = {scoring} 
+                                                  selectPlayers = {matchData.TeamAScoring} teamsNameById = {teamsNameById}/>
                                           
                                      </> 
                                     }
@@ -161,7 +168,8 @@ function Scoring()
                                           teamType === 'TeamB' &&  
                                         <> 
 
-                                           <TeamScore type='TeamB' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamBScore} scoringAll = {scoring} selectPlayers =  {matchData.TeamBScoring}  teamsNameById = {teamsNameById}/>
+                                           <TeamScore type='TeamB' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamBScore} scoringAll = {scoring} 
+                                                       selectPlayers =  {matchData.TeamBScoring}  teamsNameById = {teamsNameById}/>
 
                                         </>
                                     }

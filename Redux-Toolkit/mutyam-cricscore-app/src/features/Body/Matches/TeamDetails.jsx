@@ -48,7 +48,7 @@ function TeamDetails({data, matchDetails, type})
                  
                  <div className='border border-light p-2 playersDisplay' style={{height:'210px',overflowY:'scroll'}}>
                  {
-                     data.map((el)=>{
+                     data?.map((el)=>{
                         return (
                            <div className='d-flex  align-items-center gap-3 w-25 ' style={(matchDetails.values.teamAName==el.id || matchDetails.values.teamBName==el.id) ? {pointerEvents:"none", color:'grey'} : {}} onClick={()=>{handleTeamName(el)}}>
                                 <img src={el.logo} width='100px' height='70px'/>
