@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation ,useParams} from 'react-router-dom'
-import { useGetMatchByIdQuery, useUpdateMatchMutation } from '../../../services/cricketApi'
+import { useGetMatchByIdQuery, useLazyGetMatchByIdQuery, useUpdateMatchMutation } from '../../../services/cricketApi'
 import { useGetTeamsByIdQuery, } from '../../../services/TeamsApi'
 import TeamASquad from './TeamASquad'
 import SquadDashboard from './SquadDashboard'
@@ -24,8 +24,8 @@ function SelectSquad()
 
    const [step, setStep] = React.useState('TEAMA')
 
-   const [matchPlayersFn]    =   useUpdateMatchMutation()
-   
+   const [matchPlayersFn]     =   useUpdateMatchMutation()
+    const [matchDataCallFn]   =   useLazyGetMatchByIdQuery()
 
 
           function handleRemoveTeamA(i)
@@ -69,7 +69,9 @@ function SelectSquad()
                var temp = {...matchData}
                    temp = {...temp, XIplayers : selectedPlayers}
 
-               matchPlayersFn({id:id, match : temp})
+               matchPlayersFn({id:id, match : temp}).then(
+                     matchDataCallFn(id)
+               )
           }
 
 
@@ -111,7 +113,7 @@ function SelectSquad()
 
             {
 
-                step == 'TOSS' && 
+                step == 'TOSS' && matchData &&
 
                 <>
                    

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useGetMatchByIdQuery, useLazyGetMatchByIdQuery } from '../../../services/cricketApi'
 import { useParams } from 'react-router-dom'
 import { useGetTeamsByIdQuery, useGetTeamsQuery } from '../../../services/TeamsApi'
-import { addRun, addWicket } from './ScoringSlice'
+import { addBattingPlayers, addBowlerPlayer, addBowlingPlayers, addRun, addWicket } from './ScoringSlice'
 import ScoringButtons from './ScoringButtons'
 import TeamScore from './TeamScore'
 import Cricketball from '../../../assets/bestCricBallAni.png'
@@ -35,7 +35,6 @@ function Scoring()
 
        React.useEffect(()=>{
        
-
          getMatchDataFn(id)
 
          if( matchData?.teamBName === matchData?.tossDetails?.tossWon)
@@ -67,6 +66,11 @@ function Scoring()
        },[])
 
 
+     
+
+     
+
+
       
 
     return (
@@ -81,7 +85,7 @@ function Scoring()
 
                     { !matchLoading && 
                         scoring && 
-                        <section className='border border-light text-center'>
+                        <section className='text-center'>
                              
                              <div className='m-4 p-3 d-flex justify-content-evenly align-items-center  '>
                                 <div onClick= {()=>{setTeamType('TeamA')}}>
@@ -121,7 +125,7 @@ function Scoring()
                                           teamType === 'TeamA' && 
                                      <>
                                            
-                                           <TeamScore type='TeamA' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamAScore} scoringAll = {scoring} teamsNameById = {teamsNameById}/>
+                                           <TeamScore type='TeamA' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamAScore} scoringAll = {scoring} selectPlayers = {matchData.TeamAScoring} teamsNameById = {teamsNameById}/>
                                           
                                      </> 
                                     }
@@ -129,7 +133,7 @@ function Scoring()
                                           teamType === 'TeamB' &&  
                                         <> 
 
-                                           <TeamScore type='TeamB' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamBScore} scoringAll = {scoring} teamsNameById = {teamsNameById}/>
+                                           <TeamScore type='TeamB' matchData={matchData} setTeamType={setTeamType} scoring = {scoring.TeamBScore} scoringAll = {scoring} selectPlayers =  {matchData.TeamBScoring}  teamsNameById = {teamsNameById}/>
 
                                         </>
                                     }

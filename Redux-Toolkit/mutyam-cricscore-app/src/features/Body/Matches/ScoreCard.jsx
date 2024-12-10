@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useGetMatchByIdQuery } from '../../../services/cricketApi'
+import { useGetMatchByIdQuery, useLazyGetMatchByIdQuery } from '../../../services/cricketApi'
 import { useParams } from 'react-router-dom'
 import { useGetTeamsByIdQuery, useGetTeamsQuery } from '../../../services/TeamsApi'
 import ScoreCardTeam from './ScoreCardTeams'
@@ -15,7 +15,7 @@ function ScoreCard()
   const  {TeamBScore}   = useSelector(state=>state.scoring)
   const {isLoading: matchLoading, data : matchData} =useGetMatchByIdQuery(id)
   const {isLoading : teamsLoading, data : teamsData} = useGetTeamsQuery()
-  const [matchOver, setMatchOver]   =  React.useState(false)
+  const [updateMatchFn]  =  useLazyGetMatchByIdQuery()
   
      console.log(TeamAScore)
   function teamsNameById(id)
@@ -29,12 +29,12 @@ function ScoreCard()
            
   }
 
-      //  function handleSaveScoreCard(){
-            
-      //    setMatchOver(true)
-         
+  React.useEffect(()=>{
+       
+      updateMatchFn(id)
 
-      //  }
+  },[])
+
 
 
     return (
@@ -93,19 +93,24 @@ function ScoreCard()
 </div>
 }
            
-              <>{ 
+              {/* <>{ matchOver && 
                   <div className='d-flex justify-content-between gap-5'>
                      <ScoreCardTeam scoring={TeamAScore}/>
                      <ScoreCardTeam scoring={TeamBScore}/>
                   </div> 
                }
-               </>
+               </> */}
 
                <>{
-                 matchData?.TeamAScoring?.score && matchData?.TeamBScoring?.score && 
+               
                   <div className='d-flex justify-content-between gap-5'>
-                  <ScoreCardTeam scoring={matchData?.TeamAScoring}/>
-                  <ScoreCardTeam scoring={matchData?.TeamBScoring}/>
+                     {
+                         matchData?.TeamAScoring?.score ?  <ScoreCardTeam scoring={matchData?.TeamAScoring}/> : <></>
+                     }
+                     {
+                        matchData?.TeamBScoring?.score ? <ScoreCardTeam scoring={matchData?.TeamBScoring}/> : <></>
+                     }
+                  
                   </div>
                }</>
             

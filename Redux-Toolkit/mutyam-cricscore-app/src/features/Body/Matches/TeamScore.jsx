@@ -2,7 +2,7 @@ import React from 'react'
 import ScoringButtons from './ScoringButtons'
 import { useParams } from 'react-router-dom'
 import { useUpdateMatchMutation } from '../../../services/cricketApi'
-import { addBattingPlayers, addBowlerPlayer, addTeamAPlayers, addTeamBPlayers, addToBowlerList, addToPlayersOut, handleSwap, resetPlayers, selectTeamPlayers } from './ScoringSlice'
+import { addBattingPlayers, addBowlerPlayer, addBowlingPlayers, addTeamAPlayers, addTeamBPlayers, addToBowlerList, addToPlayersOut, handleSwap, resetPlayers, selectTeamPlayers } from './ScoringSlice'
 import { useDispatch } from 'react-redux'
 import TeamASquad from './TeamASquad'
 import CricketBat from './../../../assets/cricket-bat.png'
@@ -10,11 +10,41 @@ import CricketBall from './../../.././assets/cricket.png'
 function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeamType})
 {
   
-
+  console.log('scoring::', scoring)
   var {id} = useParams()          
   const [updateMatchFn]  = useUpdateMatchMutation(id)
   const dispatch = useDispatch()
   const [playerIndex, setPlayerIndex] = React.useState('')
+
+  React.useEffect(()=>{
+    const {teamAXIPlayers}  =  matchData?.XIplayers
+    const {teamBXIPlayers}  =  matchData?.XIplayers
+
+    const teamABattingPlayers =  teamAXIPlayers.map((el,ind)=>{
+                             return {playerName : el.fullName, batRuns : 0, ballsFaced: 0, bowlRuns: 0 ,fours: 0, sixes:0 , overs:0, wickets:0, out:false ,id:`${el.fullName.split(" ").join("") +ind}`}
+                           })
+    const teamBBattingPlayers =  teamBXIPlayers.map((el, ind)=>{
+                            return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0 , out:false, id:`${el.fullName.split(" ").join("") +ind}`}
+                          })
+
+    const teamABowlingPlayers =  teamAXIPlayers.map((el, ind)=>{
+                            return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0, out:false, id:`${el.fullName.split(" ").join("") +ind}` }
+                          })
+    const teamBBowlingPlayers =  teamBXIPlayers.map((el, ind)=>{
+                           return {playerName : el.fullName, batRuns : 0, ballsFaced: 0,bowlRuns: 0 , fours: 0, sixes:0,overs:0, wickets:0, out:false, id:`${el.fullName.split(" ").join("") +ind}` }
+                         })
+
+    dispatch(addBattingPlayers({name:'TeamA', value:teamABattingPlayers}))
+    dispatch(addBattingPlayers({name:'TeamB', value:teamBBattingPlayers}))
+
+    dispatch(addBowlingPlayers({name: 'TeamA', value:teamBBowlingPlayers}))
+    dispatch(addBowlingPlayers({name: 'TeamB', value:teamABowlingPlayers}))
+
+
+
+
+  },[matchData])
+
 
  React.useEffect(()=>{
 
@@ -47,7 +77,13 @@ React.useEffect(()=>{
            var temp = {...matchData}
            temp = {...temp, TeamAScoring:{...scoringAll.TeamAScore}}
            updateMatchFn({id:id, match : temp}).then(()=>{
-                 setTeamType('TeamB')
+            if(type=='TeamA'){
+              setTeamType('TeamB')
+            }
+            if(type=='TeamB'){
+              setTeamType('TeamA')
+            }
+                 
           })
 
          
@@ -94,7 +130,7 @@ React.useEffect(()=>{
 
        setPlayerIndex('') 
    
- },[playerIndex || scoring.overCompleted=='Completed'])
+ },[playerIndex, scoring.overCompleted=='Completed'])
     
   
  
@@ -263,13 +299,13 @@ React.useEffect(()=>{
                          <select onChange={(e)=>{handleStrikerPlayers(e)}}>
                             <option value={null} disabled selected >--Select option--</option>
                              { type=='TeamA' && 
-                                  scoring.battingPlayers.map((el)=>{
+                                  scoring?.battingPlayers?.map((el)=>{
                                         return <option value={JSON.stringify(el)} disabled={el.out}>{el.playerName}</option>
                                   })
                              }
                              {
                               type=='TeamB' && 
-                                   scoring.battingPlayers.map((el)=>{
+                                  scoring?.battingPlayers?.map((el)=>{
                                       return <option value={JSON.stringify(el)} disabled={el.out}>{el.playerName}</option>
                                 })
                             
@@ -281,13 +317,13 @@ React.useEffect(()=>{
                          <select onChange={(e)=>{ handleNonStrikerPlayers(e)}}>
                             <option value={null} disabled selected>--Select option--</option>
                              { type=='TeamA' && 
-                                  scoring?.battingPlayers.map((el)=>{
+                                  scoring?.battingPlayers?.map((el)=>{
                                         return <option value={JSON.stringify(el)} disabled={el.out}>{el.playerName}</option>
                                   })
                              }
                              {
                               type=='TeamB' && 
-                                    scoring?.battingPlayers.map((el)=>{
+                                    scoring?.battingPlayers?.map((el)=>{
                                       return <option value={JSON.stringify(el)} disabled={el.out}>{el.playerName}</option>
                                 })
                             
@@ -299,14 +335,16 @@ React.useEffect(()=>{
 
                          <select onChange={(e)=>{handleBowler(e)}}>
                               <option value={null} disabled selected>--Select option--</option>
+                              {console.log(scoring?.bowlingPlayers)}
                              { type=='TeamA' && 
-                                  scoring.bowlingPlayers?.map((el)=>{
+                                         
+                                  scoring?.bowlingPlayers?.map((el)=>{
                                         return <option value={JSON.stringify(el)}>{el.playerName}</option>
                                   })
                              }
                              {
                               type=='TeamB' && 
-                              scoring.bowlingPlayers?.map((el)=>{
+                                    scoring?.bowlingPlayers?.map((el)=>{
                                       return <option value={JSON.stringify(el)}>{el.playerName}</option>
                                 })
                             
