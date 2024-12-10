@@ -95,7 +95,7 @@ function MatchDashboard()
                <h4>Match Dashboard</h4>
 
                {teamsLoading && <><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></> }
-               {venueLoading && <><img src= {Cricketball} className='cricBall' /> <b>Loading....</b></> }
+               {venueLoading && <> <b>Loading....</b></> }
 
                <section className='d-flex justify-content-evenly m-3 p-3'>
                      <h5>Sort by </h5>

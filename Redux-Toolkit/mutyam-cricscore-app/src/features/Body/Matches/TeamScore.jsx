@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux'
 import TeamASquad from './TeamASquad'
 import CricketBat from './../../../assets/cricket-bat.png'
 import CricketBall from './../../.././assets/cricket.png'
-function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeamType})
+function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeamType, setMessage})
 {
   
   console.log('scoring::', scoring)
@@ -15,7 +15,7 @@ function TeamScore({type, matchData, scoring, teamsNameById, scoringAll, setTeam
   const [updateMatchFn]  = useUpdateMatchMutation(id)
   const dispatch = useDispatch()
   const [playerIndex, setPlayerIndex] = React.useState('')
-
+  
     
 
   
@@ -53,7 +53,8 @@ React.useEffect(()=>{
            temp = {...temp, TeamAScoring:{...scoringAll.TeamAScore}}
            updateMatchFn({id:id, match : temp}).then(()=>{
          
-              setTeamType('TeamB')      
+            
+
           })
 
          
@@ -64,11 +65,12 @@ React.useEffect(()=>{
         var temp = {...matchData}
         temp = {...temp, TeamBScoring:{...scoringAll.TeamBScore}}
         updateMatchFn({id:id, match : temp}).then(()=>{
-             setTeamType('TeamA')
+             
        })
      }
 
 },[scoring.wickets])
+
 
 
  React.useEffect(()=>{

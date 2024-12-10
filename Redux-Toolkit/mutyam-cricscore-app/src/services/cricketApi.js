@@ -5,7 +5,7 @@ export const CricketApi = createApi({
        
              reducerPath : 'CricketApi',
              baseQuery : fetchBaseQuery({
-                baseUrl : 'http://localhost:5000'
+                baseUrl : 'https://json-server-cricapp.onrender.com'
              }),
              endpoints : (builder)=>({
 
